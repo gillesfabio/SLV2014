@@ -13,8 +13,11 @@ var SCRIPTS_CONCAT = 'scripts.js';
 var STYLES_CONCAT = 'styles.css';
 var MODERNIZR = 'vendor/foundation/js/vendor/modernizr.js';
 var SCRIPTS = [
-  'vendor/foundation/js/vendor/jquery.js',
+  'vendor/jquery/dist/jquery.min.js',
   'vendor/foundation/js/foundation.min.js',
+  'vendor/underscore/underscore.js',
+  'vendor/backbone/backbone.js',
+  'vendor/handlebars/handlebars.min.js',
   'src/app.js'
 ];
 var STYLES = [

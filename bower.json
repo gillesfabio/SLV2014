@@ -16,6 +16,10 @@
     "tests"
   ],
   "dependencies": {
+    "jquery": "2.x",
+    "underscore": "1.x",
+    "backbone": "1.x",
+    "handlebars": "1.x",
     "foundation": "zurb/bower-foundation#~5.1.1"
   }
 }
