@@ -2,8 +2,33 @@
 
   'use strict';
 
+  /**
+   * Home Template.
+   */
   var homeTemplate = $('#home').html();
+
+  /**
+   * Candidate Template.
+   */
   var candidateTemplate = $('#candidate').html();
+
+  /**
+   * Candidate Model.
+   */
+  var CandidateModel = Backbone.Model.extend({});
+
+  /**
+   * Candidate Collection.
+   */
+  var CandidateCollection = Backbone.Collection.extend({
+    model: CandidateModel,
+    url: '/data.json'
+  });
+
+  /**
+   * Candidate Collection Instance.
+   */
+  var Candidates = new CandidateCollection();
 
   /**
    * Home view.
@@ -13,12 +38,13 @@
     el: $('#content'),
 
     initialize: function initialize() {
-      this.render();
+      this.listenTo(Candidates, 'sync', this.render);
+      Candidates.fetch();
     },
 
     render: function render() {
       var template = Handlebars.compile(homeTemplate);
-      this.$el.html(template);
+      this.$el.html(template({candidates: Candidates.toJSON()}));
     }
   });
 
@@ -37,6 +63,21 @@
   });
 
   /**
+   * Application router.
+   */
+  var Router = Backbone.Router.extend({
+    routes: {
+      '': 'home',
+      'candidate/:slug': 'candidate'
+    }
+  });
+
+  /**
+   * The router instance.
+   */
+  var router = new Router();
+
+  /**
    * The homepage.
    */
   function home() {
@@ -50,22 +91,11 @@
     var candidateView = new CandidateView();
   }
 
-  /**
-   * Application router.
-   */
-  var Router = Backbone.Router.extend({
-    routes: {
-      '': 'home',
-      'candidate/:slug': 'candidate'
-    }
-  });
-
   // Foundation
   $(document).foundation();
 
   // DOM Ready
   $(function() {
-    var router = new Router();
     router.on('route:home', home);
     router.on('route:candidate', candidate);
     Backbone.history.start();
