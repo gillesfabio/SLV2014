@@ -1,37 +1,65 @@
 {
   "Marc Orsatti": {
-    "parti": "PS",
-    "projets": [
+    "party": {
+      "acronym": "PS",
+      "name": "Parti Socialiste",
+      "url": "http://www.parti-socialiste.fr/"
+    },
+    "projects": [
     ]
   },
   "Henri Revel": {
-    "parti": "UMP",
-    "projets": [
+    "party": {
+      "acronym": "UMP",
+      "name": "Union pour un Mouvement Populaire",
+      "url": "http://www.u-m-p.org/"
+    },
+    "projects": [
     ]
   },
   "Marc Moschetti": {
-    "parti": "DVD",
-    "projets": [
+    "party": {
+      "acronym": "DVD",
+      "name": "Divers Droite",
+      "url": "http://fr.wikipedia.org/wiki/Divers_droite"
+    },
+    "projects": [
     ]
   },
   "Raymond Lévy": {
-    "parti": "RPF",
-    "projets": [
+    "party": {
+      "acronym": "RPF",
+      "name": "Rassemblement pour la France",
+      "url": "http://www.rpf-site.fr/"
+    },
+    "projects": [
     ]
   },
   "Joseph Segura": {
-    "parti": "DVD",
-    "projets": [
+    "party": {
+      "acronym": "DVD",
+      "name": "Divers Droite",
+      "url": "http://fr.wikipedia.org/wiki/Divers_droite"
+    },
+    "projects": [
     ]
   },
   "Lionel Prados": {
-    "parti": "FN",
-    "projets": [
+    "party": {
+      "acronym": "FN",
+      "name": "Front National",
+      "url": "http://www.frontnational.com/"
+    },
+    "projects": [
     ]
   },
   "Françoise Benne": {
-    "parti": "SE",
-    "projets": [
+    "party": {
+      "acronym": "SE",
+      "name": "Sans Étiquette",
+      "url": "http://fr.wikipedia.org/wiki/Sans_%C3%A9tiquette"
+    },
+    "projects": [
     ]
   }
 }
