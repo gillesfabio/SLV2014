@@ -14,5 +14,8 @@
     "vendor",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.1.1"
+  }
 }
