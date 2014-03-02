@@ -4,9 +4,7 @@
       "acronym": "PS",
       "name": "Parti Socialiste",
       "url": "http://www.parti-socialiste.fr/"
-    },
-    "projects": [
-    ]
+    }
   },
   "Henri Revel": {
     "party": {
@@ -60,6 +58,21 @@
       "url": "http://fr.wikipedia.org/wiki/Sans_%C3%A9tiquette"
     },
     "projects": [
+      {
+        "title": "La création de lieux de proximité",
+        "tags": [],
+        "description": "Avec la mise en place de services de quartiers facilitant les démarches administratives, avec accès informatiques et internet, lieu de rencontre et d’écoute, permanence d’élus… Ces lieux de proximité, organisés grâce à l’optimisation des moyens logistiques et humains déjà existants, seront de véritables centres de vie qui permettront d’accompagner les Laurentins dans leur quotidien."
+      },
+      {
+        "title": "La création d’une Maison des Associations, du Sport et de la Culture",
+        "tags": [],
+        "description": "Afin de mutualiser l’aide apportée à tous les dirigeants bénévoles qui s’impliquent dans la vie de notre commune. Il sera créé dans ce même complexe une salle des fêtes modulables, et un centre culturel multimédia en développant les ressources existantes."
+      },
+      {
+        "title": "La ville se dotera d’un réseau HANDICAP ASSISTANCE",
+        "tags": [],
+        "description": "Qui se dotera de l’appui de professionnels dans le cadre de l’aménagement général de la Ville."
+      }
     ]
   }
 }
