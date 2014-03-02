@@ -1,57 +1,177 @@
 {
   "Marc Orsatti": {
+    "homepage": "http://marc.orsatti.over-blog.com/",
+    "twitter": "MarcOrsatti",
+    "facebook": "marc.orsatti",
+    "picture": "https://pbs.twimg.com/profile_images/2502671541/305.jpg",
     "party": {
       "acronym": "PS",
       "name": "Parti Socialiste",
       "url": "http://www.parti-socialiste.fr/"
-    }
+    },
+    "projects": [
+      {
+        "title": "project 1",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 2",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 3",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      }
+    ]
   },
   "Henri Revel": {
+    "homepage": "http://www.henrirevel.fr/",
+    "twitter": "",
+    "facebook": "henri.revel.7",
+    "picture": "http://www.nicematin.com/media_nicematin/imagecache/article-taille-normale-nm/nm_photo/2008/03/26/photo-122894.jpg",
     "party": {
       "acronym": "UMP",
       "name": "Union pour un Mouvement Populaire",
       "url": "http://www.u-m-p.org/"
     },
     "projects": [
+      {
+        "title": "project 1",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 2",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 3",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      }
     ]
   },
   "Marc Moschetti": {
+    "homepage": "http://www.marcmoschetti.fr/",
+    "twitter": "MarcMoschetti",
+    "facebook": "moschetti.marc",
+    "picture": "https://scontent-a-fra.xx.fbcdn.net/hphotos-prn2/t1/1621716_10203176695278178_1692297471_n.jpg",
     "party": {
       "acronym": "DVD",
       "name": "Divers Droite",
       "url": "http://fr.wikipedia.org/wiki/Divers_droite"
     },
     "projects": [
+      {
+        "title": "project 1",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 2",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 3",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      }
     ]
   },
   "Raymond Lévy": {
+    "homepage": "http://raymondlevy.fr/",
+    "twitter": "levy06700",
+    "facebook": "raymond.levy.311",
+    "picture": "https://pbs.twimg.com/profile_images/378800000628262596/1e90100fba68195f64962613de105acc.jpeg",
     "party": {
       "acronym": "RPF",
       "name": "Rassemblement pour la France",
       "url": "http://www.rpf-site.fr/"
     },
     "projects": [
+      {
+        "title": "project 1",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 2",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 3",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      }
     ]
   },
   "Joseph Segura": {
+    "homepage": "http://www.josephsegura.fr/",
+    "twitter": "JSegura2014",
+    "facebook": "2014segura",
+    "picture": "https://lh6.googleusercontent.com/-jtvCqjHRO7o/AAAAAAAAAAI/AAAAAAAAAC0/Fi780n4NPGI/photo.jpg",
     "party": {
       "acronym": "DVD",
       "name": "Divers Droite",
       "url": "http://fr.wikipedia.org/wiki/Divers_droite"
     },
     "projects": [
+      {
+        "title": "project 1",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 2",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 3",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      }
     ]
   },
   "Lionel Prados": {
+    "homepage": "",
+    "twitter": "",
+    "facebook": "lionel.prados",
+    "picture": "https://lh3.googleusercontent.com/-Gl4CTFjcSBY/AAAAAAAAAAI/AAAAAAAACP0/eA-qDy-87ok/photo.jpg",
     "party": {
       "acronym": "FN",
       "name": "Front National",
       "url": "http://www.frontnational.com/"
     },
     "projects": [
+      {
+        "title": "project 1",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 2",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      },
+      {
+        "title": "project 3",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
+      }
     ]
   },
   "Françoise Benne": {
+    "homepage": "http://www.francoisebenne.fr/",
+    "twitter": "francoisebenne",
+    "facebook": "",
+    "picture": "http://www.nicematin.com/media_nicematin/imagecache/article-taille-normale-nm/image/ouch/2013/10/08/9b274c2967d7e236a32798492e9c333b.jpg",
     "party": {
       "acronym": "SE",
       "name": "Sans Étiquette",
@@ -59,19 +179,19 @@
     },
     "projects": [
       {
-        "title": "La création de lieux de proximité",
-        "tags": [],
-        "description": "Avec la mise en place de services de quartiers facilitant les démarches administratives, avec accès informatiques et internet, lieu de rencontre et d’écoute, permanence d’élus… Ces lieux de proximité, organisés grâce à l’optimisation des moyens logistiques et humains déjà existants, seront de véritables centres de vie qui permettront d’accompagner les Laurentins dans leur quotidien."
+        "title": "project 1",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
       },
       {
-        "title": "La création d’une Maison des Associations, du Sport et de la Culture",
-        "tags": [],
-        "description": "Afin de mutualiser l’aide apportée à tous les dirigeants bénévoles qui s’impliquent dans la vie de notre commune. Il sera créé dans ce même complexe une salle des fêtes modulables, et un centre culturel multimédia en développant les ressources existantes."
+        "title": "project 2",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
       },
       {
-        "title": "La ville se dotera d’un réseau HANDICAP ASSISTANCE",
-        "tags": [],
-        "description": "Qui se dotera de l’appui de professionnels dans le cadre de l’aménagement général de la Ville."
+        "title": "project 3",
+        "tags": ["one", "two", "three"],
+        "description": "Lorem ipsum Enim qui enim Duis ullamco reprehenderit amet esse reprehenderit dolor in labore dolor."
       }
     ]
   }
