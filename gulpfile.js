@@ -23,7 +23,11 @@ var SCRIPTS = [
 var STYLES = [
   'vendor/foundation/css/normalize.css',
   'vendor/foundation/css/foundation.css',
+  'vendor/font-awesome/css/font-awesome.min.css',
   'src/app.css'
+];
+var FONTS = [
+  'vendor/font-awesome/fonts/**'
 ];
 var DATA = [
   'data/data.json'
@@ -47,6 +51,11 @@ gulp.task('serve', function() {
 
 gulp.task('data', function() {
   gulp.src(DATA).pipe(gulp.dest(BUILD));
+});
+
+gulp.task('fonts', function() {
+  gulp.src(FONTS)
+    .pipe(gulp.dest(BUILD + '/fonts'));
 });
 
 gulp.task('scripts', function() {
@@ -76,6 +85,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', [
   'data',
+  'fonts',
   'scripts',
   'styles',
   'html',
