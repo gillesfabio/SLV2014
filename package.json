@@ -1,0 +1,12 @@
+{
+  "name": "slv-municipales-2014",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gillesfabio/slv-municipales-2014.git"
+  },
+  "author": "Gilles Fabio <gilles@gillesfabio.com",
+  "license": "MIT",
+  "homepage": "https://github.com/gillesfabio/slv-municipales-2014",
+  "private": true
+}
