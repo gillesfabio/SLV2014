@@ -8,5 +8,8 @@
   "author": "Gilles Fabio <gilles@gillesfabio.com",
   "license": "MIT",
   "homepage": "https://github.com/gillesfabio/slv-municipales-2014",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "gulp": "~3.5.5"
+  }
 }
