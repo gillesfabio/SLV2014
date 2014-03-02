@@ -1,3 +1,7 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 #content {
   padding-top: 20px;
 }
@@ -8,4 +12,9 @@
 
 .row.candidate {
   margin-bottom: 30px;
+}
+
+.panel {
+  background: #f7f7f7 !important;
+  border: none;
 }

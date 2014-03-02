@@ -29,6 +29,7 @@
    * Candidate Collection Instance.
    */
   var Candidates = new CandidateCollection();
+  Candidates.fetch();
 
   /**
    * Home view.
@@ -39,7 +40,6 @@
 
     initialize: function initialize() {
       this.listenTo(Candidates, 'sync', this.render);
-      Candidates.fetch();
     },
 
     render: function render() {
@@ -52,13 +52,13 @@
 
     el: $('#content'),
 
-    initialize: function initialize() {
+    initialize: function() {
       this.render();
     },
 
     render: function render() {
       var template = Handlebars.compile(candidateTemplate);
-      this.$el.html(template);
+      this.$el.html(template(this.model.toJSON()));
     }
   });
 
@@ -80,15 +80,16 @@
   /**
    * The homepage.
    */
-  function home() {
+  function homeHandler() {
     var homeView = new HomeView();
   }
 
   /**
    * Candidate Profile.
    */
-  function candidate(slug) {
-    var candidateView = new CandidateView();
+  function candidateHandler(slug) {
+    var candidate = Candidates.findWhere({slug: slug});
+    var candidateView = new CandidateView({model: candidate});
   }
 
   // Foundation
@@ -96,8 +97,8 @@
 
   // DOM Ready
   $(function() {
-    router.on('route:home', home);
-    router.on('route:candidate', candidate);
+    router.on('route:home', homeHandler);
+    router.on('route:candidate', candidateHandler);
     Backbone.history.start();
   });
 
