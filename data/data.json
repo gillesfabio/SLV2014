@@ -1,5 +1,6 @@
 {
   "Marc Orsatti": {
+    "slug": "marc-orsatti",
     "homepage": "http://marc.orsatti.over-blog.com/",
     "twitter": "MarcOrsatti",
     "facebook": "marc.orsatti",
@@ -28,6 +29,7 @@
     ]
   },
   "Henri Revel": {
+    "slug": "henri-revel",
     "homepage": "http://www.henrirevel.fr/",
     "twitter": "",
     "facebook": "henri.revel.7",
@@ -56,6 +58,7 @@
     ]
   },
   "Marc Moschetti": {
+    "slug": "marc-moschetti",
     "homepage": "http://www.marcmoschetti.fr/",
     "twitter": "MarcMoschetti",
     "facebook": "moschetti.marc",
@@ -84,6 +87,7 @@
     ]
   },
   "Raymond Lévy": {
+    "slug": "raymond-levy",
     "homepage": "http://raymondlevy.fr/",
     "twitter": "levy06700",
     "facebook": "raymond.levy.311",
@@ -112,6 +116,7 @@
     ]
   },
   "Joseph Segura": {
+    "slug": "joseph-segura",
     "homepage": "http://www.josephsegura.fr/",
     "twitter": "JSegura2014",
     "facebook": "2014segura",
@@ -140,6 +145,7 @@
     ]
   },
   "Lionel Prados": {
+    "slug": "lionel-prados",
     "homepage": "",
     "twitter": "",
     "facebook": "lionel.prados",
@@ -168,6 +174,7 @@
     ]
   },
   "Françoise Benne": {
+    "slug": "francoise-benne",
     "homepage": "http://www.francoisebenne.fr/",
     "twitter": "francoisebenne",
     "facebook": "",
