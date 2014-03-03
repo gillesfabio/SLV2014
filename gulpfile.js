@@ -1,19 +1,26 @@
 'use strict';
 
-var path = require('path');
-var gulp = require('gulp');
-var concat = require('gulp-concat');
+var fs        = require('fs');
+var path      = require('path');
+var clean     = require('gulp-clean');
+var concat    = require('gulp-concat');
+var express   = require('express');
+var gulp      = require('gulp');
 var minifyCSS = require('gulp-minify-css');
-var clean = require('gulp-clean');
-var express = require('express');
-var YAML = require('yamljs');
-var utils = require('./utils');
+var swig      = require('swig');
+var YAML      = require('yamljs');
+var utils     = require('./utils');
 
-var SERVER_PORT = 3000;
-var BUILD = 'build';
+// -----------------------------------------------------------------------------
+// Constants
+// -----------------------------------------------------------------------------
+
+var SERVER_PORT    = 3000;
+var BUILD          = 'build';
 var SCRIPTS_CONCAT = 'scripts.js';
-var STYLES_CONCAT = 'styles.css';
-var MODERNIZR = 'vendor/foundation/js/vendor/modernizr.js';
+var STYLES_CONCAT  = 'styles.css';
+var MODERNIZR      = 'vendor/foundation/js/vendor/modernizr.js';
+
 var SCRIPTS = [
   'vendor/jquery/dist/jquery.min.js',
   'vendor/foundation/js/foundation.min.js',
@@ -22,79 +29,117 @@ var SCRIPTS = [
   'vendor/handlebars/handlebars.min.js',
   'src/app.js'
 ];
+
 var STYLES = [
   'vendor/foundation/css/normalize.css',
   'vendor/foundation/css/foundation.css',
   'vendor/font-awesome/css/font-awesome.min.css',
   'src/app.css'
 ];
+
 var FONTS = [
   'vendor/font-awesome/fonts/**'
 ];
-var DATA = [
-  'data/data.json'
-];
+
+// -----------------------------------------------------------------------------
+// Templates
+// -----------------------------------------------------------------------------
+
+// Custom Swig instance (to avoid conflicts with Handlebars delimiters).
+var customSwig = new swig.Swig({
+  varControls: ['<%=', '%>'],
+  tagControls: ['<%', '%>'],
+  cmtControls: ['<#', '#>']
+});
+
+// Template context
+var context = {
+  env: 'development',
+  modernizr: MODERNIZR,
+  scripts: SCRIPTS,
+  styles: STYLES
+};
+
+// -----------------------------------------------------------------------------
+// Express Server
+// -----------------------------------------------------------------------------
 
 var server = express();
 server.use(express.logger());
 server.use(express.compress());
 server.use(express.json());
 server.use(express.urlencoded());
-server.use(express.static(path.join(__dirname, 'build')));
+
+// -----------------------------------------------------------------------------
+// Tasks
+// -----------------------------------------------------------------------------
+
+var productionTasks  = ['clean', 'build-data', 'build-fonts', 'build-scripts', 'build-styles'];
+var developmentTasks = ['create-json'];
 
 gulp.task('clean', function() {
-  return gulp.src(BUILD, {read: false})
-    .pipe(clean());
+  return gulp.src(BUILD, {read: false}).pipe(clean());
 });
 
-gulp.task('serve', function() {
-  server.listen(SERVER_PORT);
-});
-
-gulp.task('data', function() {
+gulp.task('create-json', function() {
   var output = path.join(__dirname, 'data', 'data.json');
   var obj = YAML.load(path.join(__dirname, 'data', 'data.yaml'));
   utils.createJSON(obj, output);
-  gulp.src(output)
-    .pipe(gulp.dest(BUILD));
 });
 
-gulp.task('fonts', function() {
-  gulp.src(FONTS)
-    .pipe(gulp.dest(BUILD + '/fonts'));
+gulp.task('build-data', ['create-json'], function() {
+  var file = path.join(__dirname, 'data', 'data.json');
+  return gulp.src(file).pipe(gulp.dest(BUILD));
 });
 
-gulp.task('scripts', function() {
+gulp.task('build-fonts', function() {
+  return gulp.src(FONTS).pipe(gulp.dest(BUILD + '/fonts'));
+});
+
+gulp.task('build-scripts', function() {
   gulp.src(MODERNIZR).pipe(gulp.dest(BUILD));
   gulp.src(SCRIPTS)
     .pipe(concat(SCRIPTS_CONCAT))
     .pipe(gulp.dest(BUILD));
 });
 
-gulp.task('styles', function() {
-  gulp.src(STYLES)
+gulp.task('build-styles', function() {
+  return gulp.src(STYLES)
     .pipe(minifyCSS())
     .pipe(concat(STYLES_CONCAT))
     .pipe(gulp.dest(BUILD));
 });
 
-gulp.task('html', function() {
-  gulp.src('index.html')
-    .pipe(gulp.dest(BUILD));
-});
-
 gulp.task('watch', function() {
-  gulp.watch('src/**', ['scripts', 'styles']);
-  gulp.watch('data/**', ['data']);
-  gulp.watch('index.html', ['html']);
+  var files = ['src/**', 'data/**', 'views/**'];
+  var tasks = ['build-data', 'build-fonts', 'build-scripts', 'build-styles'];
+  gulp.watch(files, tasks);
 });
 
-gulp.task('default', [
-  'data',
-  'fonts',
-  'scripts',
-  'styles',
-  'html',
-  'serve',
-  'watch'
-]);
+gulp.task('production-server', productionTasks, function() {
+  // Don't use Express to render template. Create a static index.html in
+  // build directory and expose this directory.
+  context.env = 'production';
+  var output = path.join(BUILD, 'index.html');
+  var compiled = customSwig.compileFile(path.join(__dirname, 'views', 'index.html'));
+  var tpl = compiled(context);
+  var file = fs.openSync(output, 'w+');
+  fs.writeSync(file, tpl);
+  fs.closeSync(file);
+  server.use(express.static(path.join(__dirname, 'build')));
+  server.listen(SERVER_PORT);
+});
+
+gulp.task('development-server', developmentTasks, function() {
+  server.engine('html', customSwig.renderFile);
+  server.set('view engine', 'html');
+  server.set('views', path.join(__dirname, 'views'));
+  server.use(express.static(__dirname));
+  server.get('/', function(req, res) { res.render('index', context); });
+  server.get('/data.json', function(req, res) { res.json('../data/data.json'); });
+  server.listen(SERVER_PORT);
+});
+
+gulp.task('dev', ['development-server']);
+gulp.task('prod', ['production-server', 'watch']);
+gulp.task('default', ['dev']);

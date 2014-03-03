@@ -17,6 +17,7 @@
     "gulp-clean": "0.x"
   },
   "dependencies": {
-    "yamljs": "0.x"
+    "yamljs": "0.x",
+    "swig": "~1.3.2"
   }
 }
