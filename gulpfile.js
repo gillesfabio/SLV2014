@@ -68,14 +68,10 @@ var server = express();
 server.use(express.compress());
 server.use(express.json());
 server.use(express.urlencoded());
-//server.use(server.router);
 
 // -----------------------------------------------------------------------------
 // Tasks
 // -----------------------------------------------------------------------------
-
-var productionTasks  = ['clean', 'build-data', 'build-fonts', 'build-scripts', 'build-styles'];
-var developmentTasks = ['create-json'];
 
 gulp.task('clean', function() {
   return gulp.src(BUILD, {read: false}).pipe(clean());
@@ -116,9 +112,7 @@ gulp.task('watch', function() {
   gulp.watch(files, tasks);
 });
 
-gulp.task('production-server', productionTasks, function() {
-  // Don't use Express to render template. Create a static index.html in
-  // build directory and expose this directory.
+gulp.task('production-server', ['build-data', 'build-fonts', 'build-scripts', 'build-styles'], function() {
   context.env = 'production';
   var output = path.join(BUILD, 'index.html');
   var compiled = customSwig.compileFile(path.join(__dirname, 'views', 'index.html'));
@@ -127,10 +121,11 @@ gulp.task('production-server', productionTasks, function() {
   fs.writeSync(file, tpl);
   fs.closeSync(file);
   server.use(express.static(path.join(__dirname, 'build')));
+  server.get('*', function(req, res) { res.sendfile(path.join(BUILD, 'index.html')); });
   server.listen(SERVER_PORT);
 });
 
-gulp.task('development-server', developmentTasks, function() {
+gulp.task('development-server', ['create-json'], function() {
   var json = require('./data/data.json');
   server.engine('html', customSwig.renderFile);
   server.set('view engine', 'html');
