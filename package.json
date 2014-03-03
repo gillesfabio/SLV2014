@@ -17,6 +17,6 @@
     "gulp-clean": "0.x"
   },
   "dependencies": {
-    "js-yaml": "~3.0.2"
+    "yamljs": "0.x"
   }
 }

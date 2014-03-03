@@ -6,6 +6,8 @@ var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var express = require('express');
+var YAML = require('yamljs');
+var utils = require('./utils');
 
 var SERVER_PORT = 3000;
 var BUILD = 'build';
@@ -50,7 +52,11 @@ gulp.task('serve', function() {
 });
 
 gulp.task('data', function() {
-  gulp.src(DATA).pipe(gulp.dest(BUILD));
+  var output = path.join(__dirname, 'data', 'data.json');
+  var obj = YAML.load(path.join(__dirname, 'data', 'data.yaml'));
+  utils.createJSON(obj, output);
+  gulp.src(output)
+    .pipe(gulp.dest(BUILD));
 });
 
 gulp.task('fonts', function() {
