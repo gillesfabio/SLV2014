@@ -3,71 +3,68 @@
   /*jshint unused:false */
   'use strict';
 
+  // Namespace
+  // ---------------------------------------------------------------------------
+  var App = window.App = {
+    templates: {},
+    models: {},
+    collections: {},
+    views: {}
+  };
+
   // Templates
   // ---------------------------------------------------------------------------
-  var homeTemplate = $('#home').html();
-  var candidateTemplate = $('#candidate').html();
+  App.templates.home = $('#home').html();
+  App.templates.candidate = $('#candidate').html();
 
   // Models
   // ---------------------------------------------------------------------------
-  var CategoryModel  = Backbone.Model.extend({});
-  var PartyModel     = Backbone.Model.extend({});
-  var CandidateModel = Backbone.Model.extend({});
-  var ProgramModel   = Backbone.Model.extend({});
+  App.models.Category  = Backbone.Model.extend({});
+  App.models.Party     = Backbone.Model.extend({});
+  App.models.Candidate = Backbone.Model.extend({});
+  App.models.Program   = Backbone.Model.extend({});
 
   // Collections
   // ---------------------------------------------------------------------------
-  var CategoryCollection = Backbone.Collection.extend({
-    model: CategoryModel,
+  App.collections.Category = Backbone.Collection.extend({
+    model: App.models.Category,
     url: '/data.json',
     parse: function(res) { return res.categories; }
   });
 
-  var PartyCollection = Backbone.Collection.extend({
-    model: PartyModel,
+  App.collections.Party = Backbone.Collection.extend({
+    model: App.models.Party,
     url: '/data.json',
     parse: function(res) { return res.parties; }
   });
 
-  var CandidateCollection = Backbone.Collection.extend({
-    model: CandidateModel,
+  App.collections.Candidate = Backbone.Collection.extend({
+    model: App.models.Candidate,
     url: '/data.json',
     parse: function(res) { return res.candidates; }
   });
 
-  var ProgramCollection = Backbone.Collection.extend({
-    model: ProgramModel,
+  App.collections.Program = Backbone.Collection.extend({
+    model: App.models.Program,
     url: '/data.json',
     parse: function(res) { return res.programs; }
   });
 
-  // Collection instances
+  // Views
   // ---------------------------------------------------------------------------
-  var Categories = new CategoryCollection();
-  var Parties    = new PartyCollection();
-  var Candidates = new CandidateCollection();
-  var Programs   = new ProgramCollection();
-
-  // Fetching
-  // ---------------------------------------------------------------------------
-
-  // Home view
-  // ---------------------------------------------------------------------------
-  var HomeView = Backbone.View.extend({
+  App.views.Home = Backbone.View.extend({
     el: $('#content'),
     initialize: function initialize() {
       this.listenTo(this.collection, 'sync', this.render);
       this.collection.fetch();
     },
     render: function render() {
-      var template = Handlebars.compile(homeTemplate);
+      var template = Handlebars.compile(App.templates.home);
       this.$el.html(template({candidates: this.collection.toJSON()}));
     }
   });
 
-  // Candidate View
-  // ---------------------------------------------------------------------------
-  var CandidateView = Backbone.View.extend({
+  App.views.Candidate = Backbone.View.extend({
     el: $('#content'),
     initialize: function(options) {
       this.options = options || {};
@@ -77,28 +74,27 @@
     },
     render: function render() {
       var model = this.collection.findWhere({slug: this.slug});
-      var template = Handlebars.compile(candidateTemplate);
+      var template = Handlebars.compile(App.templates.candidate);
       this.$el.html(template(model.toJSON()));
     }
   });
 
   // Router
   // ---------------------------------------------------------------------------
-  var Router = Backbone.Router.extend({
+  App.Router = Backbone.Router.extend({
     routes: {
       '': 'home',
       'candidate/:slug': 'candidate'
     },
     initialize: function initialize() {
-      this.homeView      = null;
-      this.candidateView = null;
+      this.candidates = new App.collections.Candidate();
     },
     home: function home() {
-      this.homeView = this.homeView || new HomeView({collection: Candidates});
+      var view = new App.views.Home({collection: this.candidates});
     },
     candidate: function candidate(slug) {
-      this.candidateView = this.candidateView || new CandidateView({
-        collection: Candidates,
+      var view = new App.views.Candidate({
+        collection: this.candidates,
         slug: slug
       });
     }
@@ -111,7 +107,7 @@
   // DOM Ready
   // ---------------------------------------------------------------------------
   $(function() {
-    var router = new Router();
+    var router = new App.Router();
     Backbone.history.start({pushState: true});
   });
 
