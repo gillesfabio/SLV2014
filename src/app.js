@@ -50,22 +50,18 @@
 
   // Fetching
   // ---------------------------------------------------------------------------
-  Categories.fetch();
-  Parties.fetch();
-  Candidates.fetch();
-  Programs.fetch();
 
   // Home view
   // ---------------------------------------------------------------------------
   var HomeView = Backbone.View.extend({
     el: $('#content'),
     initialize: function initialize() {
-      this.listenTo(Candidates, 'sync', this.render);
+      this.listenTo(this.collection, 'sync', this.render);
+      this.collection.fetch();
     },
     render: function render() {
-      console.log(Candidates);
       var template = Handlebars.compile(homeTemplate);
-      this.$el.html(template({candidates: Candidates.toJSON()}));
+      this.$el.html(template({candidates: this.collection.toJSON()}));
     }
   });
 
@@ -73,12 +69,16 @@
   // ---------------------------------------------------------------------------
   var CandidateView = Backbone.View.extend({
     el: $('#content'),
-    initialize: function() {
-      this.render();
+    initialize: function(options) {
+      this.options = options || {};
+      this.slug = this.options.slug;
+      this.listenTo(this.collection, 'sync', this.render);
+      this.collection.fetch();
     },
     render: function render() {
+      var model = this.collection.findWhere({slug: this.slug});
       var template = Handlebars.compile(candidateTemplate);
-      this.$el.html(template(this.model.toJSON()));
+      this.$el.html(template(model.toJSON()));
     }
   });
 
@@ -89,12 +89,18 @@
       '': 'home',
       'candidate/:slug': 'candidate'
     },
+    initialize: function initialize() {
+      this.homeView      = null;
+      this.candidateView = null;
+    },
     home: function home() {
-      var homeView = new HomeView();
+      this.homeView = this.homeView || new HomeView({collection: Candidates});
     },
     candidate: function candidate(slug) {
-      var model = Candidates.findWhere({slug: slug});
-      var candidateView = new CandidateView({model: model});
+      this.candidateView = this.candidateView || new CandidateView({
+        collection: Candidates,
+        slug: slug
+      });
     }
   });
 
@@ -106,7 +112,7 @@
   // ---------------------------------------------------------------------------
   $(function() {
     var router = new Router();
-    Backbone.history.start();
+    Backbone.history.start({pushState: true});
   });
 
 })(jQuery, _, Backbone, Handlebars);

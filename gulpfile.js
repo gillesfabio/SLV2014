@@ -65,10 +65,10 @@ var context = {
 // -----------------------------------------------------------------------------
 
 var server = express();
-server.use(express.logger());
 server.use(express.compress());
 server.use(express.json());
 server.use(express.urlencoded());
+//server.use(server.router);
 
 // -----------------------------------------------------------------------------
 // Tasks
@@ -136,8 +136,8 @@ gulp.task('development-server', developmentTasks, function() {
   server.set('view engine', 'html');
   server.set('views', path.join(__dirname, 'views'));
   server.use(express.static(__dirname));
-  server.get('/', function(req, res) { res.render('index', context); });
   server.get('/data.json', function(req, res) { res.send(json); });
+  server.get('*', function(req, res) { res.render('index', context); });
   server.listen(SERVER_PORT);
 });
 

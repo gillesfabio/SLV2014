@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saint-Laurent-du-Var Municipales 2014</title>
     <% if env == 'development' %>
-      <% for style in styles %><link rel="stylesheet" href="<%= style %>"><% endfor %>
-      <script src="<%= modernizr %>"></script>
+      <% for style in styles %><link rel="stylesheet" href="/<%= style %>"><% endfor %>
+      <script src="/<%= modernizr %>"></script>
     <% else %>
       <link rel="stylesheet" href="/styles.css">
       <script src="/modernizr.js"></script>
@@ -42,7 +42,7 @@
             {{#if twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{twitter}}">@{{twitter}}</a></li>{{/if}}
             {{#if facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{facebook}}</a></li>{{/if}}
           </ul>
-          <a href="/#candidate/{{slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
+          <a href="/candidate/{{slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
         </div>
       </div>
       {{/each}}
@@ -66,7 +66,7 @@
       </div>
     </script>
     <% if env == 'development' %>
-      <% for script in scripts %><script src="<%= script %>"></script><% endfor %>
+      <% for script in scripts %><script src="/<%= script %>"></script><% endfor %>
     <% else %>
       <script src="/scripts.js"></script>
     <% endif %>
