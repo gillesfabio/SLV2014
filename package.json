@@ -15,5 +15,8 @@
     "gulp-concat": "2.x",
     "gulp-minify-css": "0.x",
     "gulp-clean": "0.x"
+  },
+  "dependencies": {
+    "js-yaml": "~3.0.2"
   }
 }
