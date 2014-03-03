@@ -34,7 +34,7 @@
     <script id="home" type="text/x-handlebars-template">
       {{#each candidates}}
       <div class="row candidate panel">
-        <div class="small-12 medium-2 large-2 columns"><img src="{{picture}}"></div>
+        <div class="small-12 medium-2 large-2 columns"><img src="{{picture}}" class="circle" alt="{{name}}"></div>
         <div class="small-12 medium-10 large-10 columns">
           <h4>{{name}} <small>{{party.acronym}} ({{party.name}})</small></h4>
           <ul class="no-bullet">
@@ -49,7 +49,7 @@
     </script>
     <script id="candidate" type="text/x-handlebars-template">
       <div class="row panel">
-        <div class="small-12 medium-2 large-2 columns"><img src="{{picture}}"></div>
+        <div class="small-12 medium-2 large-2 columns"><img src="{{picture}}" class="circle" alt="{{name}}"></div>
         <div class="small-12 medium-10 large-10 columns">
           <h2>{{name}}</h2>
           <h4 class="subheader">{{party.acronym}} ({{party.name}})</h4>
