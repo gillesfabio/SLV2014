@@ -131,12 +131,13 @@ gulp.task('production-server', productionTasks, function() {
 });
 
 gulp.task('development-server', developmentTasks, function() {
+  var json = require('./data/data.json');
   server.engine('html', customSwig.renderFile);
   server.set('view engine', 'html');
   server.set('views', path.join(__dirname, 'views'));
   server.use(express.static(__dirname));
   server.get('/', function(req, res) { res.render('index', context); });
-  server.get('/data.json', function(req, res) { res.json('../data/data.json'); });
+  server.get('/data.json', function(req, res) { res.send(json); });
   server.listen(SERVER_PORT);
 });
 
