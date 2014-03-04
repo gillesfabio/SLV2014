@@ -3098,7 +3098,7 @@ var e,f=a.opcodes;this.i=0;for(var g=f.length;this.i<g;this.i++)e=f[this.i],"DEC
   $(function() {
     var router = new App.Router();
     Backbone.history.start({
-      pushState: true,
+      //pushState: true,
       root: window.APP_BASE_URL
     });
   });
