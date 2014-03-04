@@ -16,5 +16,6 @@ node_modules
 vendor
 bower_components
 build
+.venv
 
 data.json

@@ -1,8 +1,6 @@
 'use strict';
 
-var fs = require('fs');
-
-function createJSON(obj, output) {
+function formatJSON(obj) {
   var formatted = {
     categories: [],
     parties: [],
@@ -18,12 +16,9 @@ function createJSON(obj, output) {
   Object.keys(obj.candidates).forEach(function(key) {
     formatted.candidates.push(obj.candidates[key]);
   });
-  var json = JSON.stringify(formatted, null, 2);
-  var file = fs.openSync(output, 'w+');
-  fs.writeSync(file, json);
-  fs.closeSync(file);
+  return JSON.stringify(formatted, null, 2);
 }
 
 module.exports = {
-  createJSON: createJSON
+  formatJSON: formatJSON
 };

@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saint-Laurent-du-Var Municipales 2014</title>
     <% if env == 'development' %>
-      <% for style in styles %><link rel="stylesheet" href="/<%= style %>"><% endfor %>
-      <script src="/<%= modernizr %>"></script>
+      <% for style in styles %>
+      <link rel="stylesheet" href="<%= baseurl %><%= style %>"><% endfor %>
+      <script src="<%= baseurl %><%= modernizr %>"></script>
     <% else %>
-      <link rel="stylesheet" href="/styles.css">
-      <script src="/modernizr.js"></script>
+      <link rel="stylesheet" href="<%= baseurl %>css/styles.css">
+      <script src="<%= baseurl %>js/modernizr.js"></script>
     <% endif %>
   </head>
   <body>
@@ -18,7 +19,7 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="/">SLV Municipales 2014</a></h1>
+            <h1><a href="<%= baseurl %>">SLV Municipales 2014</a></h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
         </ul>
@@ -42,7 +43,7 @@
             {{#if twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{twitter}}">@{{twitter}}</a></li>{{/if}}
             {{#if facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{facebook}}</a></li>{{/if}}
           </ul>
-          <a href="/candidate/{{slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
+          <a href="<%= baseurl %>#/candidate/{{slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
         </div>
       </div>
       {{/each}}
@@ -65,10 +66,13 @@
         </div>
       </div>
     </script>
+    <script>window.APP_BASE_URL="<%= baseurl %>";</script>
     <% if env == 'development' %>
-      <% for script in scripts %><script src="/<%= script %>"></script><% endfor %>
+      <% for script in scripts %>
+      <script src="<%= baseurl %><%= script %>"></script>
+      <% endfor %>
     <% else %>
-      <script src="/scripts.js"></script>
+      <script src="<%= baseurl %>js/scripts.js"></script>
     <% endif %>
   </body>
 </html>

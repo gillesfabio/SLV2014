@@ -28,25 +28,25 @@
   // ---------------------------------------------------------------------------
   App.collections.Category = Backbone.Collection.extend({
     model: App.models.Category,
-    url: '/data.json',
+    url: window.APP_BASE_URL + 'data.json',
     parse: function(res) { return res.categories; }
   });
 
   App.collections.Party = Backbone.Collection.extend({
     model: App.models.Party,
-    url: '/data.json',
+    url: window.APP_BASE_URL + 'data.json',
     parse: function(res) { return res.parties; }
   });
 
   App.collections.Candidate = Backbone.Collection.extend({
     model: App.models.Candidate,
-    url: '/data.json',
+    url: window.APP_BASE_URL + 'data.json',
     parse: function(res) { return res.candidates; }
   });
 
   App.collections.Program = Backbone.Collection.extend({
     model: App.models.Program,
-    url: '/data.json',
+    url: window.APP_BASE_URL + 'data.json',
     parse: function(res) { return res.programs; }
   });
 
@@ -108,7 +108,9 @@
   // ---------------------------------------------------------------------------
   $(function() {
     var router = new App.Router();
-    Backbone.history.start({pushState: true});
+    Backbone.history.start({
+      root: window.APP_BASE_URL
+    });
   });
 
 })(jQuery, _, Backbone, Handlebars);
