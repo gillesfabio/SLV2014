@@ -13,7 +13,7 @@ To install it locally:
 git clone https://github.com/gillesfabio/SLVM2014.git
 cd SLVM2014
 make install
-gulp
+make runserver-dev
 ```
 
 Open your favorite browser and go to http://localhost:3000.
