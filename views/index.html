@@ -25,6 +25,8 @@
         </ul>
         <section class="top-bar-section">
           <ul class="right">
+            <li><a href="<%= baseurl %>#/candidates">Candidats</a></li>
+            <li><a href="<%= baseurl %>#/categories">Thèmes</a></li>
             <li><a href="#">À propos</a></li>
           </ul>
         </section>
@@ -47,7 +49,7 @@
             {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{model.facebook}}</a></li>{{/if}}
           </ul>
           {{#if showButton}}
-            <a href="<%= baseurl %>#/candidate/{{model.slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
+            <a href="<%= baseurl %>#/candidates/{{model.slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
           {{/if}}
         </div>
       </div>
@@ -62,6 +64,15 @@
           {{/each}}
         </ul>
       {{/each}}
+    </script>
+
+    <script id="category-list-template" type="text/x-handlebars-template">
+      <h2>Thèmes</h2>
+      <ul>
+        {{#each this}}
+        <li><a href="<%= baseurl %>#/categories/{{slug}}">{{name}}</a></li>
+        {{/each}}
+      </ul>
     </script>
 
     <script id="category-template" type="text/x-handlebars-template">

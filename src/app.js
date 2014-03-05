@@ -24,22 +24,27 @@
   // ---------------------------------------------------------------------------
 
   /**
-   * Candidate card Handlebars template.
+   * Candidate Card Handlebars Template.
    * @type String
    */
   App.templates.candidateCard = $('#candidate-card-template').html();
 
   /**
-   * Candidate program Handlebars template.
+   * Candidate Program Handlebars Template.
    * @type String
    */
   App.templates.candidateProgram = $('#candidate-program-template').html();
 
   /**
-   * Category Handlebars template.
+   * Category Handlebars Template.
    * @type String
    */
   App.templates.category = $('#category-template').html();
+
+  /**
+   * Category List Handlebars Template.
+   */
+  App.templates.categoryList = $('#category-list-template').html();
 
   // ---------------------------------------------------------------------------
   // Models
@@ -374,6 +379,22 @@
     }
   });
 
+  /**
+   * Displays the list of categories.
+   */
+  App.views.CategoryList = Backbone.View.extend({
+
+    initialize: function(options) {
+      this.options = options || {};
+      this.template = Handlebars.compile(App.templates.categoryList);
+      this.listenTo(this.collection, 'sync', this.render);
+      this.collection.fetch();
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.collection.toJSON()));
+    }
+  });
 
   // ---------------------------------------------------------------------------
   // Router
@@ -385,9 +406,11 @@
   App.Router = Backbone.Router.extend({
 
     routes: {
-      ''                : 'homeController',
-      'candidate/:slug' : 'candidateController',
-      'category/:slug'  : 'categoryController'
+      ''                 : 'homeController',
+      'candidates'       : 'homeController',
+      'candidates/:slug' : 'candidateController',
+      'categories'       : 'categoryListController',
+      'categories/:slug' : 'categoryController'
     },
 
     initialize: function() {
@@ -433,6 +456,15 @@
         slug       : slug,
         programs   : this.programs
       });
+      this.content.html(view.el);
+    },
+
+    /**
+     * The Category List Controller.
+     * Use {@link App.views.CategoryList} view.
+     */
+    categoryListController: function() {
+      var view = new App.views.CategoryList({collection: this.categories});
       this.content.html(view.el);
     }
   });
