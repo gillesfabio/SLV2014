@@ -344,22 +344,17 @@
     className: 'category',
 
     initialize: function(options) {
-      this.options = _.extend({
-        slug       : null,
-        categories : null,
-        programs   : null
-      });
-      this.slug       = this.options.slug;
-      this.categories = this.options.categories;
-      this.programs   = this.options.programs;
-      this.template   = Handlebars.compile(App.templates.category);
-      this.category   = null;
-      this.listenTo(this.categories, 'sync', this.fetch);
-      this.categories.fetch();
+      this.options  = _.extend({slug: null, programs: null}, options);
+      this.slug     = this.options.slug;
+      this.programs = this.options.programs;
+      this.template = Handlebars.compile(App.templates.category);
+      this.category = null;
+      this.listenTo(this.collection, 'sync', this.fetch);
+      this.collection.fetch();
     },
 
     fetch: function() {
-      this.category = this.categories.findWhere({slug: this.slug});
+      this.category = this.collection.findWhere({slug: this.slug});
       if (!this.category) return this.notFound();
       this.programs.fetch({success: function(collection) {
         this.programs = this.programs.findByCategoryAndGroupByCandidate(this.slug);
@@ -397,9 +392,9 @@
 
     initialize: function() {
       this.candidates = new App.collections.Candidate();
-      this.programs = new App.collections.Program();
+      this.programs   = new App.collections.Program();
       this.categories = new App.collections.Category();
-      this.content = $('#content');
+      this.content    = $('#content');
     },
 
     /**
