@@ -411,12 +411,12 @@
   App.Router = Backbone.Router.extend({
 
     routes: {
-      ''                 : 'homeController',
-      'candidates'       : 'homeController',
-      'candidates/:slug' : 'candidateController',
-      'categories'       : 'categoryListController',
-      'categories/:slug' : 'categoryController',
-      'about'            : 'aboutController'
+      ''                : 'homeController',
+      'candidats'       : 'homeController',
+      'candidats/:slug' : 'candidateController',
+      'themes'          : 'categoryListController',
+      'themes/:slug'    : 'categoryController',
+      'a-propos'        : 'aboutController'
     },
 
     initialize: function() {
