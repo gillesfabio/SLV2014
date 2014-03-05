@@ -46,6 +46,11 @@
    */
   App.templates.categoryList = $('#category-list-template').html();
 
+  /**
+   * About Handlebars Template.
+   */
+  App.templates.about = $('#about-template').html();
+
   // ---------------------------------------------------------------------------
   // Models
   // ---------------------------------------------------------------------------
@@ -410,7 +415,8 @@
       'candidates'       : 'homeController',
       'candidates/:slug' : 'candidateController',
       'categories'       : 'categoryListController',
-      'categories/:slug' : 'categoryController'
+      'categories/:slug' : 'categoryController',
+      'about'            : 'aboutController'
     },
 
     initialize: function() {
@@ -466,6 +472,10 @@
     categoryListController: function() {
       var view = new App.views.CategoryList({collection: this.categories});
       this.content.html(view.el);
+    },
+
+    aboutController: function() {
+      this.content.html(Handlebars.compile(App.templates.about)());
     }
   });
 
