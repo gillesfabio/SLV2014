@@ -101,167 +101,126 @@ programs:
     candidate: *orsatti
     propositions:
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category2
       -
+        category: *category3
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category3
-          - *category4
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category4
   -
     candidate: *revel
     propositions:
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category2
       -
+        category: *category3
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category3
-          - *category4
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category4
   -
     candidate: *moschetti
     propositions:
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category2
       -
+        category: *category3
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category3
-          - *category4
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category4
   -
     candidate: *levy
     propositions:
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category2
       -
+        category: *category3
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category3
-          - *category4
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category4
   -
     candidate: *segura
     propositions:
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category2
       -
+        category: *category3
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category3
-          - *category4
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category4
+
   -
     candidate: *prados
     propositions:
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category2
       -
+        category: *category3
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category3
-          - *category4
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category4
   -
     candidate: *benne
     propositions:
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category2
       -
+        category: *category3
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category3
-          - *category4
       -
+        category: *category1
         description: >
           Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
           nostrud adipisicing dolor nostrud Ut.
-        categories:
-          - *category1
-          - *category4

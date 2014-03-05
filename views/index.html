@@ -32,40 +32,38 @@
     </div>
     <div id="content" class="row">
     </div>
-    <script id="home" type="text/x-handlebars-template">
-      {{#each candidates}}
-      <div class="row candidate panel">
-        <div class="small-12 medium-2 large-2 columns"><img src="{{picture}}" class="circle" alt="{{name}}"></div>
+
+    <script id="candidate-card-template" type="text/x-handlebars-template">
+      <div class="row panel">
+        <div class="small-12 medium-2 large-2 columns">
+          <img src="{{model.picture}}" class="circle" alt="{{model.name}}">
+        </div>
         <div class="small-12 medium-10 large-10 columns">
-          <h4>{{name}} <small>{{party.acronym}} ({{party.name}})</small></h4>
-          <ul class="no-bullet">
-            {{#if homepage}}<li><i class="fa fa-globe"></i> <a href="{{homepage}}">{{homepage}}</a></li>{{/if}}
-            {{#if twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{twitter}}">@{{twitter}}</a></li>{{/if}}
-            {{#if facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{facebook}}</a></li>{{/if}}
+          <h2>{{model.name}}</h2>
+          <h4 class="subheader">{{model.party.acronym}} ({{model.party.name}})</h4>
+          <ul class="no-bullet candidate-links">
+            {{#if model.homepage}}<li><i class="fa fa-globe"></i> <a href="{{model.homepage}}">{{model.homepage}}</a></li>{{/if}}
+            {{#if model.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{model.twitter}}">@{{model.twitter}}</a></li>{{/if}}
+            {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{model.facebook}}</a></li>{{/if}}
           </ul>
-          <a href="<%= baseurl %>#/candidate/{{slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
+          {{#if showButton}}
+            <a href="<%= baseurl %>#/candidate/{{model.slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
+          {{/if}}
         </div>
       </div>
+    </script>
+
+    <script id="candidate-program-template" type="text/x-handlebars-template">
+      {{#each propositions}}
+        <h3>{{@key}}</h3>
+        <ul>
+          {{#each this}}
+          <li>{{description}}</li>
+          {{/each}}
+        </ul>
       {{/each}}
     </script>
-    <script id="candidate" type="text/x-handlebars-template">
-      <div class="row panel">
-        <div class="small-12 medium-2 large-2 columns"><img src="{{picture}}" class="circle" alt="{{name}}"></div>
-        <div class="small-12 medium-10 large-10 columns">
-          <h2>{{name}}</h2>
-          <h4 class="subheader">{{party.acronym}} ({{party.name}})</h4>
-          <ul class="no-bullet">
-            {{#if homepage}}<li><i class="fa fa-globe"></i> <a href="{{homepage}}">{{homepage}}</a></li>{{/if}}
-            {{#if twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{twitter}}">@{{twitter}}</a></li>{{/if}}
-            {{#if facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{facebook}}</a></li>{{/if}}
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 columns">
-        </div>
-      </div>
-    </script>
+
     <script>window.APP_BASE_URL="<%= baseurl %>";</script>
     <% if env == 'development' %>
       <% for script in scripts %>
@@ -74,5 +72,6 @@
     <% else %>
       <script src="<%= baseurl %>js/scripts.js"></script>
     <% endif %>
+
   </body>
 </html>
