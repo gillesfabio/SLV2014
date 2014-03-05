@@ -45,6 +45,8 @@ var FONTS = [
 // Templates
 // -----------------------------------------------------------------------------
 
+swig.setDefaults({cache: false});
+
 // Custom Swig instance (to avoid conflicts with Handlebars delimiters).
 var customSwig = new swig.Swig({
   varControls: ['<%=', '%>'],
@@ -69,6 +71,7 @@ var server = express();
 server.use(express.compress());
 server.use(express.json());
 server.use(express.urlencoded());
+server.set('view cache', false);
 
 // -----------------------------------------------------------------------------
 // Tasks
