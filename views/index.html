@@ -64,6 +64,20 @@
       {{/each}}
     </script>
 
+    <script id="category-template" type="text/x-handlebars-template">
+      <h2>{{category.name}}</h2>
+      {{#each programs}}
+        <h4>{{@key}}</h4>
+        {{#each this}}
+        <ul>
+          {{#each propositions}}
+          <li>{{description}}</li>
+          {{/each}}
+        </ul>
+        {{/each}}
+      {{/each}}
+    </script>
+
     <script>window.APP_BASE_URL="<%= baseurl %>";</script>
     <% if env == 'development' %>
       <% for script in scripts %>
