@@ -385,9 +385,9 @@
   App.Router = Backbone.Router.extend({
 
     routes: {
-      ''                : 'home',
-      'candidate/:slug' : 'candidate',
-      'category/:slug'  : 'category'
+      ''                : 'homeController',
+      'candidate/:slug' : 'candidateController',
+      'category/:slug'  : 'categoryController'
     },
 
     initialize: function() {
@@ -401,7 +401,7 @@
      * The Home Page.
      * Use {@link App.views.Home} view.
      */
-    home: function() {
+    homeController: function() {
       var view = new App.views.Home({candidates: this.candidates});
       this.content.html(view.el);
     },
@@ -412,7 +412,7 @@
      *
      * @param  {String}  slug  The candidate slug.
      */
-    candidate: function(slug) {
+    candidateController: function(slug) {
       var view = new App.views.Candidate({
         slug       : slug,
         collection : this.candidates,
@@ -427,7 +427,7 @@
      *
      * @param  {String}  slug  The category slug.
      */
-    category: function(slug) {
+    categoryController: function(slug) {
       var view = new App.views.Category({
         collection : this.categories,
         slug       : slug,
