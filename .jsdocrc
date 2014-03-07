@@ -1,6 +1,6 @@
 {
   "opts": {
-    "destination": "./doc/",
+    "destination": "./docs/",
     "recursive": true
   },
   "source": {
@@ -15,21 +15,21 @@
     "parser": "gfm",
     "hardwrap": true
   },
-"templates": {
-    "applicationName": "Demo",
+  "templates": {
+    "applicationName": "SLVM2014",
     "disqus": "",
     "googleAnalytics": "",
     "openGraph": {
-        "title": "",
-        "type": "website",
-        "image": "",
-        "site_name": "",
-        "url": ""
+      "title": "",
+      "type": "website",
+      "image": "",
+      "site_name": "",
+      "url": ""
     },
     "meta": {
-        "title": "",
-        "description": "",
-        "keyword": ""
+      "title": "SLVM2014",
+      "description": "",
+      "keyword": ""
     }
-}
+  }
 }
