@@ -13,13 +13,13 @@ categories:
     slug: category-4
 
   education: &education
-    name: Éducation
+    name: Éducation (+ petite enfance / scolarité)
     slug: education
   transport: &transport
-    name: transport
+    name: transport (+ déplacements)
     slug: transport
   securite: &education
-    name: Sécurité
+    name: Sécurité (+ prévention)
     slug: securite
   logement: &logement
     name: Logement
@@ -28,20 +28,20 @@ categories:
     name: Solidarité
     slug: solidarite
   environnement: &environnement
-    name: Environnement
+    name: Environnement (+ écologie)
     slug: environnement
-  sport: &sport
-    name: Sport
-    slug: sport
-  culture: &culture
-    name: Culture
-    slug: culture
+  jslc: &jslc
+    name: "Jeunesse, Sports, Loisirs et Culture"
+    slug: jslc
   tourisme: &tourisme
-    name: Tourisme
+    name: Tourisme (+ patrimoine)
     slug: tourisme
   emploi: &emploi
-    name: Emploi
+    name: Emploi (+ développement économique)
     slug: emploi
+  local: &local
+    name: Local
+    slug: local
 
 parties:
   dvd: &dvd
@@ -120,20 +120,311 @@ programs:
     candidate: *orsatti
     propositions:
       -
-        category: *category1
+        category: *local
         description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+          Créer des comités de quartier afin d'associer les Laurentins aux prises
+          de décisions.
       -
-        category: *category3
+        category: *local
         description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+          Mettre en place des réunions thématiques pour l'aménagement de notre
+          commune.
       -
-        category: *category1
+        category: *local
         description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+          Consulter le tissu associatif sur tous les projets structurants.
+      -
+        category: *local
+        description: >
+          Mettre en place un numéro vert "Allo Monsieur le Maire" pour plus de
+          proximité.
+      -
+        category: *local
+        description: >
+          Créer un conseil municipal des jeunes.
+      -
+        category: *education
+        description: >
+          Créer une nouvelle crèche à Saint-Laurent-du-Var.
+      -
+        category: *education
+        description: >
+          Augmenter le nombre d'agréments d'assistantes maternelles.
+      -
+        category: *education
+        description: >
+          Développer les actions de la protection maternelle et infantile
+          (prévention, éducation et santé).
+      -
+        category: *education
+        description: >
+          Offrir des transports scolaires gratuits pour les collèges et lycées.
+      -
+        category: *education
+        description: >
+          Renforcer le soutien scolaire
+      -
+        category: *education
+        description: >
+          Affecter du personnel supplémentaire pour les bibliothèques et centres
+          de documentation (BCD) et les doter de nouveaux ouvrages.
+      -
+        category: *education
+        description: >
+          Faciliter l'accessibilité des groupes scolaires au numérique et à internet.
+      -
+        category: *education
+        description: >
+          Renforcer le dialogue avec les parents d'élèves, les équipes pédagogiques,
+          les éducateurs sportifs et culturels.
+      -
+        category: *education
+        description: >
+          Développer une initiation à l'Anglais dès le primaire.
+      -
+        category: *education
+        description: >
+          Favoriser l'implantation d'un lycée à Saint-Laurent-du-Var en collaboration
+          avec la Région.
+      -
+        category: *transport
+        description: >
+          Revoir totalement le plan de circulation et demander à la Métropole la
+          création de deux nouvelles routes transversales. La première, reliera
+          la Moyenne Corniche des Pugets au futur échangeur de la M6202 bis. La
+          seconde, débutera au boulevard Jean Ossola, vers l'avenue Général
+          de Gaulle pour rejoindre l'autoroute.
+      -
+        category: *transport
+        description: >
+          Ouvrir une ligne de tramway entre Nice et Cagnes-sur-Mer desservant
+          Saint-Laurent-du-Var.
+      -
+        category: *transport
+        description: >
+          Engager rapidement les travaux nécessaires, Corniche Fanhestock, pour
+          rouvrir et sécuriser la circulation dans les deux sens.
+      -
+        category: *transport
+        description: >
+          Créer des parkings publics gratuits au centre ville, à proximité de la
+          gare, des groupes scolaires et des pôles d'activités commerciales.
+      -
+        category: *transport
+        description: >
+          Améliorer la fréquence et les trajets des transports en commun.
+      -
+        category: *transport
+        description: >
+          Créer des pistes cyclable sécurisées.
+      -
+        category: *transport
+        description: >
+          Obtenir de la Métropole l'entretien et l'aménagement des voies
+          communales et la création de trottoirs sur les routes en dehors des
+          centres villes afin de protéger les piétons.
+      -
+        category: *securite
+        description: >
+          Obtenir l'ouverture d'un commissariat 24h/24 à Saint-Laurent-du-Var
+          (et non d'une subdivision).
+      -
+        category: *securite
+        description: >
+          Renforcer les effectifs des forces de police, afin de mettre en place
+          une police de proximité dans les quartiers.
+      -
+        category: *securite
+        description: >
+          Créer une caserne de pompiers à Saint-Laurent-du-Var.
+      -
+        category: *securite
+        description: >
+          Instaurer un plan de prévention des risques naturels.
+      -
+        category: *securite
+        description: >
+          Coordonner le travail des associations dans le domaine de la prévention.
+      -
+        category: *securite
+        description: >
+          Créer une antenne de justice.
+      -
+        category: *securite
+        description: >
+          Créer un observatoire contre la délinquance.
+      -
+        category: *securite
+        description: >
+          Sécuriser les voies de circulation considérées comme dangereuses.
+      -
+        category: *solidarite
+        description: >
+          Construire une Maison de Retraite Publique accessible financièrement
+          aux personnes en perte d'autonomie avec la participation du
+          Conseil Général.
+      -
+        category: *solidarite
+        description: >
+          Ouvrir une Maison Régionale de Santé, où travailleront en réseau des
+          médecins, des pédiatres, des ophtalmologistes, des psychologues, et
+          des auxiliaires médicaux : infirmières, kinésithérapeutes, podologues,
+          orthophonistes, orthoptistes.
+      -
+        category: *solidarite
+        description: >
+          Améliorer les services d'aide à domicile, afin de maintenir les séniors
+          dans leur appartement s'ils le souhaitent.
+      -
+        category: *solidarite
+        description: >
+          Créer une maison de services publics avec un guichet social unique
+          (CPAM, CAF, CARSAT, caisses de retraites complémentaires, Pôle Emploi).
+      -
+        category: *solidarite
+        description: >
+          Créer une Maison des Associations, lieu d'échanges et de culture, au
+          sein de l'ancienne clinique Djibouti.
+      -
+        category: *jslc
+        description: >
+          Créer une Maison des Jeunes, lieu de vie et d'épanouissement avec
+          multimédias, activités ludiques, mise à disposition d'une antenne
+          d'écoute, notamment pour la proposition de nouveaux projets.
+      -
+        category: *jslc
+        description: >
+          Implanter un plateau culturel polyvalent intercommunal sur Saint-Laurent-du-Var
+          comportant salle de spectacle, cinéma, ludothèque, médiathèque, bibliothèque,
+          théâtre.
+      -
+        category: *jslc
+        description: >
+          Aménager des salles de réunion pour les associations.
+      -
+        category: *jslc
+        description: >
+          Renforcer la création d'évènements culturels et sportifs.
+      -
+        category: *jslc
+        description: >
+          Rénover le stade Léon Bérenger et réaménager le complexe sportif des Iscles.
+      -
+        category: *jslc
+        description: >
+          Créer un nouveau gymnase.
+      -
+        category: *jslc
+        description: >
+          Créer une nouvelle piscine intercommunale, en limite de Saint-Laurent-du-Var
+          et Cagnes-sur-Mer.
+      -
+        category: *tourisme
+        description: >
+          Favoriser le développement de l'hôtellerie.
+      -
+        category: *tourisme
+        description: >
+          Render piétonne la rue Desjobert un samedi par mois pour des animations
+          commerciales et culturelles.
+      -
+        category: *tourisme
+        description: >
+          Mettre en place une signalétique centralisée sur une table d'orientation
+          au bord de mer.
+      -
+        category: *tourisme
+        description: >
+          Aménager nos plages pour les rendre plus agréables et plus attractives.
+      -
+        category: *tourisme
+        description: >
+          Mettre en place des initiatives de jumelages et d'échanges culturels
+          internationaux dans une perspective de promotion touristiques.
+      -
+        category: *tourisme
+        description: >
+          Restaurer le Vieux Moulin des Pugets pour y créer un musée de l'histoire
+          et de la culture Laurentine.
+      -
+        category: *environnement
+        description: >
+          Supprimer la pollution de nos plages en demandant à la Métropole de
+          créer une nouvelle station d'épuration pour traiter les eaux usées
+          des communes en amont de Saint-Laurent-du-Var et éviter la saturation
+          de celle proche de Cap 3000.
+      -
+        category: *environnement
+        description: >
+          Créer un centre de recyclage des encombrants, sans aucune pollution,
+          avec une collecte gratuite.
+      -
+        category: *environnement
+        description: >
+          Dépolluer et nettoyer les berges du Var et protéger les nappes
+          phréatiques en faisant respecter la réglementation.
+      -
+        category: *environnement
+        description: >
+          Mettre en sécurité notre commune contre les inondations.
+      -
+        category: *environnement
+        description: >
+          Créer des ouvrages anti-bruits le long de l'autoroute.
+      -
+        category: *environnement
+        description: >
+          Aménager la couverture de l'autoroute entre l'avenue du Zoo et du boulevard
+          Jean Ossola, en collaboration avec le groupe Vinci, pour créer des parkings
+          gratuits et des édifices publics.
+      -
+        category: *environnement
+        description: >
+          Refuser l'extension du port de plaisance de Saint-Laurent-du-Var afin
+          de protéger les plages, les activités aquatiques et la réserve
+          ornithologique "La Petite Camargue" et créer un port à sec enterré
+          identique au projet de Beaulieu-sur-Mer financé par des fonds privés.
+      -
+        category: *environnement
+        description: >
+          Favoriser la mise en place des énergies renouvelables pour les
+          particuliers et les services publics.
+      -
+        category: *environnement
+        description: >
+          Instaurer une régie municipale de l'eau.
+      -
+        category: *environnement
+        description: >
+          Rouvrir le parcours de santé au sein de la forêt des Pugets.
+      -
+        category: *emploi
+        description: >
+          Défendre l'artisanat et le commerce, et de favoriser son implantation
+          au coeur de la ville et du vieux village.
+      -
+        category: *emploi
+        description: >
+          Dynamiser les zones d'activités (zone industrielle, commerces du centre
+          ville, de la gare et du port).
+      -
+        category: *emploi
+        description: >
+          Favoriser l'aide à la création d'entreprise.
+      -
+        category: *emploi
+        description: >
+          Améliorer les actions d'insertion pour les personnes en situation
+          professionnelle précaire.
+      -
+        category: *emploi
+        description: >
+          Maintenir une agriculture de production locale.
+      -
+        category: *emploi
+        description: >
+          Mettre en place au printemps et à l'automne des braderies et vide greniers.
+
   -
     candidate: *revel
     propositions:
