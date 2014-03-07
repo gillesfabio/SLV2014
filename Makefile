@@ -38,7 +38,7 @@ runserver-dev:
 
 .PHONY: docs
 docs:
-	@$(NODE_LOCAL_BIN)/jsdoc -t jaguarjs-jsdoc -c .jsdocrc README.md
+	@$(NODE_LOCAL_BIN)/jsdoc -c .jsdocrc README.md
 
 .PHONY: publish
 publish: build-github
