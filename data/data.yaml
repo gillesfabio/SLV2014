@@ -1,17 +1,4 @@
 categories:
-  category1: &category1
-    name: Category 1
-    slug: category-1
-  category2: &category2
-    name: Category 2
-    slug: category-2
-  category3: &category3
-    name: Category 3
-    slug: category-3
-  category4: &category4
-    name: Category 4
-    slug: category-4
-
   education: &education
     name: "Éducation, Petite enfance & Scolarité"
     slug: education
