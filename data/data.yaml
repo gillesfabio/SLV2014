@@ -28,7 +28,7 @@ categories:
     name: Solidarité
     slug: solidarite
   environnement: &environnement
-    name: "Environnement & Écologie"
+    name: "Environnement, Écologie & Développement Durable"
     slug: environnement
   jslc: &jslc
     name: "Jeunesse, Sports, Loisirs & Culture"
@@ -40,8 +40,14 @@ categories:
     name: "Emploi & Développement économique"
     slug: emploi
   local: &local
-    name: Local
+    name: Local / Proximité
     slug: local
+  urbanisme: &urbanisme
+    name: Urbanisme
+    slug: local
+  accessibilite: &accessibilite
+    name: Accessibilité
+    slug: accessibilite
 
 parties:
   dvd: &dvd
@@ -69,6 +75,7 @@ candidates:
   orsatti: &orsatti
     name: Marc Orsatti
     slug: marc-orsatti
+    slogan: Mieux Vivre Ensemble à Saint-Laurent du Var
     homepage: http://marc.orsatti.over-blog.com/
     twitter: MarcOrsatti
     facebook: marc.orsatti
@@ -78,6 +85,7 @@ candidates:
   revel: &revel
     name: Henri Revel
     slug: henri-revel
+    slogan: Saint-Laurent pour tous !
     homepage: http://www.henrirevel.fr/
     twitter: ~
     facebook: henri.revel.7
@@ -87,6 +95,7 @@ candidates:
   moschetti: &moschetti
     name: Marc Moschetti
     slug: marc-moschetti
+    slogan: Le Parti des Laurentins
     homepage: http://www.marcmoschetti.fr/
     twitter: MarcMoschetti
     facebook: moschetti.marc
@@ -96,6 +105,7 @@ candidates:
   segura: &segura
     name: Joseph Segura
     slug: joseph-segura
+    slogan: "Ensemble, Agissons pour l'Avenir de Saint-Laurent-du-Var !"
     homepage: http://www.josephsegura.fr/
     twitter: JSegura2014
     facebook: 2014segura
@@ -105,6 +115,7 @@ candidates:
   prados: &prados
     name: Lionel Prados
     slug: lionel-prados
+    slogan: ~
     homepage: ~
     twitter: ~
     facebook: lionel.prados
@@ -114,6 +125,7 @@ candidates:
   benne: &benne
     name: Françoise Benne
     slug: francoise-benne
+    slogan: "Pour Saint-Laurent, l'énergie d'une équipe"
     homepage: http://www.francoisebenne.fr/
     twitter: francoisebenne
     facebook: ~
@@ -292,6 +304,67 @@ programs:
           Créer une Maison des Associations, lieu d'échanges et de culture, au
           sein de l'ancienne clinique Djibouti.
       -
+        category: *solidarite
+        description: >
+          Créer un accueil approprié pour les personnes en grandes difficultés.
+      -
+        category: *solidarite
+        description: >
+          Créer une antenne locale pour lutter contre la toxicomanie.
+      -
+        category: *accessibilite
+        description: >
+          Réserver des appartements situés en rez-de-chaussée dans toutes les
+          nouvelles constructions et rénovation de logements sociaux.
+      -
+        category: *accessibilite
+        description: >
+          Aménager des accès handicapés dans tous les services publics.
+      -
+        category: *accessibilite
+        description: >
+          Faciliter l'accessibilité dans les transports en commun.
+      -
+        category: *accessibilite
+        description: >
+          Favoriser la libre circulation des personnes handicapées et à mobilité
+          réduite dans leur transport individuel en sécurisant et en faisant
+          respecter les places de parking réservées.
+      -
+        category: *accessibilite
+        description: >
+          Surbaisser les trottoirs pour les rendre plus accessibles.
+      -
+        category: *logement
+        description: >
+          Utiliser les réserves foncières, pour construire des logements locatifs
+          en petites unités accessibles à tous.
+      -
+        category: *logement
+        description: >
+          Établir un plan de rénovation des logements anciens destinés à la location.
+      -
+        category: *logement
+        description: >
+          Créer des logements d'urgence en secteur diffus, afin de tenir compte de
+          la mixité sociale et favoriser l'insertion des personnes en grande difficulté.
+      -
+        category: *logement
+        description: >
+          Réhabiliter la partie Nord des HLM du Point du Jour et en associant
+          espaces verts, infrastructures sportives et culturelles, commerces,
+          lieux d'échanges et de soutien social, et reloger les autres résidents.
+      -
+        category: *logement
+        description: >
+          Obtenir des bailleurs sociaux l'entretien de l'habitat et l'amélioration
+          du cadre de vie des résidents.
+      -
+        category: *logement
+        description: >
+          Créer un partenariat entre la Mairie et les constructeurs privés afin
+          de favoriser l'accession à la propriété.
+      -
         category: *jslc
         description: >
           Créer une Maison des Jeunes, lieu de vie et d'épanouissement avec
@@ -430,95 +503,457 @@ programs:
         category: *emploi
         description: >
           Mettre en place au printemps et à l'automne des braderies et vide greniers.
-
   -
     candidate: *revel
-    propositions:
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category3
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+    propositions: []
   -
     candidate: *moschetti
     propositions:
       -
-        category: *category1
+        category: *local
         description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+          Développer la démocratie participative par la création de Conseils de
+          Quartiers, représentant les différents secteurs de la commune. Issus de
+          la loi, ces Conseils de Quartiers seront composés de représentants des
+          associations, de représentants de la population et d'élus. Ils se
+          réuniront trimestriellement pour donner leurs avis sur tout projet de
+          la Mairie concernant leur secteur et pourront également faire des propositions
+          au Conseil Municipal.
       -
-        category: *category3
+        category: *local
         description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+          Mise en place d'un plan de développement du débit internet sur toute
+          la commune.
       -
-        category: *category1
+        category: *local
         description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+          Favoriser la dématérialisation des documents administratifs. Créer
+          un guichet unique municipal permettant d'orienter les Laurentins dans
+          toutes leurs démarches, aussi bien sur les services de la ville que
+          sur les autres services institutionnels (CAF, CPAM, etc).
+      -
+        category: *local
+        description: >
+          Favoriser la communication interne, ainsi d'ailleurs que la formation
+          des agents municipaux.
+      -
+        category: *local
+        description: >
+          Le Maire se droit d'être un facilitateur pour les Laurentins. Il est
+          là pour rendre la vie en collectivité plus simple, plus agréable.
+      -
+        category: *education
+        description: >
+          Aucun enfant ne doit sortir de l'École primaire sans maîtriser les savoirs
+          fondamentaux (lire, écrire et compter).
+      -
+        category: *education
+        description: >
+          Développer le soutien scolaire spécifique aux enfants de CP en difficultés.
+      -
+        category: *education
+        description: >
+          Libérer deux classes (1 à Castillon - 1 à la Gare) pour les enfants
+          scolarisés dès 2 ans et demie, avec obligation de mettre à disposition
+          2 ATSEM pour chacune des 2 classes.
+      -
+        category: *education
+        description: >
+          Faire entrer l'école dans l'ère du numérique (salle informatique).
+      -
+        category: *education
+        description: >
+          Prévoir un rapprochement des deux collèges avec la Mairie
+          (réception des délégués des élèves pour appel à projets).
+      -
+        category: *education
+        description: >
+          Carnaval des Écoles à thème, en centre ville, avec remise de prix pour
+          les écoles (déguisements, chars, etc) et manifestation sportive,
+          type mini-olympiade.
+      -
+        category: *education
+        description: >
+          Remise d'un Prix d'Excellence et d'un Prix de l'élève méritant
+          (pour chaque école et par niveau de classe).
+      -
+        category: *education
+        description: >
+          Maison de colonie pour les classes vertes, voire pour le ski-club.
+      -
+        category: *education
+        description: >
+          Développer le festival du livre (la semaine pour les scolaires et le
+          week-end pour le grand public).
+      -
+        category: *education
+        description: >
+          Prévoir une nouvelle extension des Bigaradiers.
+      -
+        category: *education
+        description: >
+          Signalétique des Écoles (ex : nom de l'école sur un pot à crayons géant),
+          panneaux signalisant les abords des écoles et renforcement de la lumière
+          sur les passages piétons.
+      -
+        category: *education
+        description: >
+          Repas unique pour toutes les écoles (cuisine centrale) et développer
+          les produits BIO dans les cantines et les crèches.
+      -
+        category: *education
+        description: >
+          Favoriser l'insertion des jeunes laurentins au monde professionnel par
+          l'apprentissage et l'alternance.
+      -
+        category: *education
+        description: >
+          Augmenter fortement le nombre d'apprentis sur la commune en liaison
+          notamment avec les entreprises de la Zone Industrielle.
+      -
+        category: *education
+        description: >
+          Aider les PME et les TPE à accueillir des apprentis et développer de
+          nouvelles formations professionnelles pour tous, en phase avec les
+          réalités économiques.
+      -
+        category: *jslc
+        description: >
+          Projet de construction d'un nouveau stade, dès que l'inondabilité sera
+          levée en 2015, à l'endroit même de l'ancien stade, avec une salle
+          omnisports, salle de théâtre et salle de conférence.
+      -
+        category: *jslc
+        description: >
+          Le Dojo doit être la Maison des Arts Martiaux (agrandissement et extension).
+      -
+        category: *jslc
+        description: >
+          Les équipes doivent porter les couleurs laurentines bleu et blanc
+          (sur toutes les tenues de sport).
+      -
+        category: *jslc
+        description: >
+          Entretenir les tribunes de la salle Carton et création d'une buvette.
+      -
+        category: *jslc
+        description: >
+          Prévoir deux vestiaires supplémentaires à la salle H et réaliser un
+          meilleur éclairage.
+      -
+        category: *jslc
+        description: >
+          Fêtes des sports et organisation d'un défilé des sportifs de toutes
+          les associations Laurentines.
+      -
+        category: *jslc
+        description: >
+          Mini-Olympiade des écoles pour les scolaires.
+      -
+        category: *jslc
+        description: >
+          Soutenir une manifestation handisport et des installations sportives
+          (dans le cadre des aides du handisport et des sports adaptés).
+      -
+        category: *jslc
+        description: >
+          Lorsque cela sera possible, des microsites à activités sportives
+          polyvalentes seront mis en place dans les quartiers.
+      -
+        category: *jslc
+        description: >
+          La restauration du Moulin des Pugets (ou ECO MUSE) en ajoutant un
+          bâtiment moderne, avec des parkings souterrains pour préserver
+          l'environnement et accueillir les scolaires, ainsi qu'une salle de
+          conférence/projection/polyvalente.
+      -
+        category: *jslc
+        description: >
+          Créations d'une salle d'exposition proche de la mer, d'une maison de
+          la culture et d'une bibliothèque interactive, avec des ateliers de
+          lecture.
+      -
+        category: *jslc
+        description: >
+          Multiplier le nombre de concerts et d'expositions.
+      -
+        category: *jslc
+        description: >
+          Développer les manifestations culturelles, avec une forte information
+          et participation des habitants et des associations.
+      -
+        category: *jslc
+        description: >
+          Réunions bimensuelles avec les associations, les comités/conseils de
+          quartiers et les représentants de la Mairie.
+      -
+        category: *jslc
+        description: >
+          Soutenir des évènements festifs, avec des journées à thèmes dans le
+          centre ville et dans les différents quartiers.
+      -
+        category: *jslc
+        description: >
+          Créer une Web Radio et/ou une Web TV Laurentin.
+      -
+        category: *jslc
+        description: >
+          Donner la possibilité d'accueillir des concerts musicaux dans le nouveau
+          stade.
+      -
+        category: *jslc
+        description: >
+          Décorations et animations de Noël à renforcer.
+      -
+        category: *jslc
+        description: >
+          Refaire de nos plages des lieux de vie et réengraisser/réaménager les
+          plages des Flots Bleus avec du sable.
+      -
+        category: *jslc
+        description: >
+          Créer des aménagements sportifs et de loisirs sur les bords du Var,
+          ainsi que dans la forêt des Pugets.
+      -
+        category: *jslc
+        description: >
+          Récupérer compétences de l'AGASC dans le cadre municipal.
+      -
+        category: *securite
+        description: >
+          Renforcer les postes de Police d'ilotage avec la création d'une brigade
+          de Police d'intervention de Proximité et, ainsi, accentuer la proximité
+          avec les laurentins.
+      -
+        category: *securite
+        description: >
+          Renforcer la surveillance des patrouilles de la Police Municipale aux
+          alentours des collèges et écoles.
+      -
+        category: *securite
+        description: >
+          Définir de nouveaux quartiers "des voisins vigilants" et aider les référents.
+      -
+        category: *securite
+        description: >
+          Renforcer le Contrat Local de Sécurité et de Prévention de la Délinquance,
+          avec un dispositif très structuré qui permettra de suivre l'avancé de nos
+          actions dans tous les micros secteurs.
+      -
+        category: *securite
+        description: >
+          Renforcer et développer la vidéosurveillance.
+      -
+        category: *securite
+        description: >
+          Lutter contre toutes les pollutions sonores, visuelles (tags), sanitaires
+          (déjections animales), etc.
+      -
+        category: *securite
+        description: >
+          De manière générale, s'assurer que la sécurité, sous toutes ses formes,
+          couvre bien tous les aspects de la vie quotidienne des Laurentins.
+      -
+        category: *solidarite
+        description: >
+          Mettre en place des emplois tremplins pour les jeunes, qui bénéficieront
+          ainsi de l'ascenseur social avec un contrat de type CAE (Contrat
+          d'Accompagnement dans l'Emploi).
+      -
+        category: *solidarite
+        description: >
+          Mise en place d'un service emploi municipal en liaison avec Pôle Emploi,
+          véritable médiateur entre les demandeurs d'emploi et les chefs d'entreprises.
+      -
+        category: *solidarite
+        description: >
+          Réinstaurer la Mission Locale et les relations avec les entreprises de
+          la Zone Industrielle.
+      -
+        category: *solidarite
+        description: >
+          Développer en diversifiant l'offre d'accueil des -3 ans : crèches, crèches
+          familiales, crèches d'entreprises, haltes garderies.
+      -
+        category: *solidarite
+        description: >
+          Création d'une colonie de vacances pour tous.
+      -
+        category: *solidarite
+        description: >
+          Privilégier l'aide à la personne avec la mise en place d'une partenariat
+          fort entre le CCAS et le Conseil Général.
+      -
+        category: *solidarite
+        description: >
+          Renforcer le maintien à domicile avec la mise en place d'un réseau de
+          surveillance sous l'autorité d'un Conseiller Municipal délégué.
+      -
+        category: *solidarite
+        description: >
+          Créer un fort lien intergénérationnel en développant les activités du
+          Bel Âge et les intégrer à toutes celles de la commune.
+      -
+        category: *solidarite
+        description: >
+          Mise en accessibilité de tous les bâtiments publics (prévue par la loi de 2015),
+          avec le suivi d'un Conseiller Municipal délégué.
+      -
+        category: *solidarite
+        description: >
+          Trottoirs adaptés à la circulation et à la traversée des voies.
+      -
+        category: *environnement
+        description: >
+          Création d'éco-quartiers, partout où cela est possible, tout
+          particulièrement pour Le Point du Jour (qui sera totalement refait) et
+          les Iscles.
+      -
+        category: *environnement
+        description: >
+          Une ville avec un haut niveau de qualité de vie urbaine, avec des
+          logements HQE (Haute Qualité Environnementale) et des bâtiments publics
+          à totale efficience énergétique, pour réduire au maximum la facture
+          énergétique.
+      -
+        category: *environnement
+        description: >
+          Des actions en matière de santé environnementale : création d'une
+          association spécifique, d'éco-manifestations, ouverture d'un parc
+          public dans la forêt des Pugets, redynamisation des marchés BIO.
+      -
+        category: *environnement
+        description: >
+          Dans les marchés publics, privilégier l'impact écologique, afin d'ouvrir
+          la porte aux sociétés laurentines, par apport aux émissions CO2.
+      -
+        category: *environnement
+        description: >
+          Mise en place d'un service d'enlèvement des déchets verts sur simple
+          demande et installation de puces électroniques permettant de vider les
+          bacs avant qu'ils ne soient totalement pleins.
+      -
+        category: *environnement
+        description: >
+          Rechercher à développer la mise en place du photovoltaïque sur les toits
+          de la Zone Industrielle, pour créer la première Zone Industrielle à
+          énergie positive.
+      -
+        category: *environnement
+        description: >
+          Une ville solidaire qui s'adapte, développe la croissance verte et
+          propose de nouvelles formes de solidarité.
+      -
+        category: *emploi
+        description: >
+          Dynamiser le commerce et rétablir le dialogue avec les commerçants.
+      -
+        category: *emploi
+        description: >
+          Mener une politique volontariste, accompagnée d'une écoute permanente
+          des commerçants et être réactif face à leurs attentes.
+      -
+        category: *emploi
+        description: >
+          L'artisanat doit aussi retrouver sa place, toute sa place, dans la ville.
+      -
+        category: *emploi
+        description: >
+          Faciliter la vie des entreprises, avec des initiatives de soutien à
+          l'implantation des PME.
+      -
+        category: *emploi
+        description: >
+          Créer un club des entrepreneurs.
+      -
+        category: *emploi
+        description: >
+          Simplification administrative par la mise en place d'une cellule de support
+          aux entreprises locales, pour leur permettre de répondre aux appels d'offre
+          publics.
+      -
+        category: *emploi
+        description: >
+          Soutenir les pôles commerciaux de quartier de dynamiser l'offre commerciale
+          en menant une politique offensive de recherche et d'accueil d'enseignes
+          nationales.
+      -
+        category: *urbanisme
+        description: >
+          Redonner vie à chaque quartier de Saint-Laurent-du-Var, les repenser
+          et les restructurer.
+      -
+        category: *urbanisme
+        description: >
+          Revoir le Plan Local d'Urbanisme en veillant à gommer les inégalités,
+          particulièrement pour les Iscles.
+      -
+        category: *urbanisme
+        description: >
+          Tolérance Zéro en matière d'Urbanisme et d'Environnement.
+      -
+        category: *urbanisme
+        description: >
+          Projet adapté à l'objectif de reconquête des berges du Var, finançable
+          et réalisable sur la durée du mandat. Un grand espace dédié aux piétons,
+          ouvert sur le Var, avec jardin d'enfant, terrains de jeux, commerces, etc.
+      -
+        category: *urbanisme
+        description: >
+          Point du Jour : reconstruction totale du quartier.
+      -
+        category: *urbanisme
+        description: >
+          Améliorer et, si besoin, restructurer les entrées de ville : Gare, RN7,
+          Iscles, Le Point du Jour.
+      -
+        category: *urbanisme
+        description: >
+          Le Point du Jour sera totalement déconstruit et reconstruit, pour
+          devenir un éco-quartier modèle et emblématique, ouvert par ses voies
+          d'accès sur le centre ville.
+      -
+        category: *urbanisme
+        description: >
+          Créer un coeur de ville : une place centrale à Saint-Laurent-du-Var.
+      -
+        category: *urbanisme
+        description: >
+          Création d'un pôle service public dans le quartier des Pugets, en
+          regroupant maison de quartier et antenne de Police Municipale.
+
+      -
+        category: *transport
+        description: >
+          Ligne de tramway de Nice avec une continuité et un axe Nord-Sud de
+          préférence en bordure du Var.
+      -
+        category: *transport
+        description: >
+          Obtenir du Conseil Général des Alpes-Maritimes l'élargissement/doublement
+          du CD6095 (chemin des Iscles).
+      -
+        category: *transport
+        description: >
+          Obtenir, également, un accès entrée et sortie sur la RD6202 Bis à
+          Saint-Laurent-du-Var au niveau de la Zone Industrielle.
+      -
+        category: *transport
+        description: >
+          Mettre en place un schéma de cohésion urbaine, en revoyant totalement
+          le plan de circulation, tout en préservant les espaces piétons.
+      -
+        category: *transport
+        description: >
+          Multiplier les places de stationnement, notamment en créant des parkings
+          souterrains en centre ville, sans oublier les Pugets et Saint-Joseph.
   -
     candidate: *segura
-    propositions:
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category3
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+    propositions: []
 
   -
     candidate: *prados
-    propositions:
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category3
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+    propositions: []
   -
     candidate: *benne
-    propositions:
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category3
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
+    propositions: []
