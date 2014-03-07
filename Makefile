@@ -36,6 +36,10 @@ runserver: build
 runserver-dev:
 	@gulp runserver-dev
 
+.PHONY: runserver-test
+runserver-test:
+	@gulp runserver-test
+
 .PHONY: docs
 docs:
 	@$(NODE_LOCAL_BIN)/jsdoc -c .jsdocrc README.md

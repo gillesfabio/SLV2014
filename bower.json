@@ -21,6 +21,9 @@
     "backbone": "1.x",
     "handlebars": "1.x",
     "foundation": "zurb/bower-foundation#~5.1.1",
-    "font-awesome": "FortAwesome/Font-Awesome#~4.0.3"
+    "font-awesome": "FortAwesome/Font-Awesome#~4.0.3",
+    "mocha": "1.x",
+    "chai": "1.x",
+    "sinon": "1.x"
   }
 }

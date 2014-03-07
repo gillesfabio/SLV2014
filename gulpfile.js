@@ -149,7 +149,17 @@ gulp.task('server-development', ['build-json'], function() {
   server.listen(SERVER_PORT);
 });
 
+gulp.task('server-test', ['build-json'], function() {
+  context.env = 'development';
+  var json = require('./data/data.json');
+  server.use(express.static(__dirname));
+  server.get('/data.json', function(req, res) { res.send(json); });
+  server.get('*', function(req, res) { res.sendfile('test/index.html'); });
+  server.listen(SERVER_PORT);
+});
+
 gulp.task('build', buildTasks);
 gulp.task('runserver-dev', ['server-development']);
+gulp.task('runserver-test', ['server-test']);
 gulp.task('runserver', ['server-production', 'watch']);
 gulp.task('default', ['dev']);
