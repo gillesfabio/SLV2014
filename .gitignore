@@ -17,6 +17,7 @@ vendor
 bower_components
 build
 .venv
+docs
 doc
 
 data.json
