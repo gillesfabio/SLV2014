@@ -36,6 +36,10 @@ runserver: build
 runserver-dev:
 	@gulp runserver-dev
 
+.PHONY: doc
+doc:
+	@$(NODE_LOCAL_BIN)/jsdoc -t jaguarjs-jsdoc -c .jsdocrc README.md
+
 .PHONY: publish
 publish: build-github
 	ghp-import $(BUILDDIR)

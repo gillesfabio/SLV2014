@@ -9,14 +9,45 @@
 
   /**
    * The Application.
-   * @type Object
+   * @namespace App
    */
   var App = window.App = {
-    dataURL     : window.APP_BASE_URL + 'data.json', // Collections URL
-    templates   : {},                                // Handlebars templates
-    models      : {},                                // Backbone models
-    collections : {},                                // Backbone collections
-    views       : {}                                 // Backbone views
+
+    /**
+     * Data URL.
+     *
+     * @type {string}
+     * @memberof App
+     */
+    dataURL: window.APP_BASE_URL + 'data.json',
+
+    /**
+     * Application Templates.
+     *
+     * @namespace App.templates
+     */
+    templates: {},
+
+    /**
+     * Application models.
+     *
+     * @namespace App.models
+     */
+    models: {},
+
+    /**
+     * Application collections.
+     *
+     * @namespace App.collections
+     */
+    collections: {},
+
+    /**
+     * Application views.
+     *
+     * @namespace App.views
+     */
+    views: {}
   };
 
   // ---------------------------------------------------------------------------
@@ -25,29 +56,41 @@
 
   /**
    * Candidate Card Handlebars Template.
-   * @type String
+   *
+   * @type {String}
+   * @memberof App.templates
    */
   App.templates.candidateCard = $('#candidate-card-template').html();
 
   /**
    * Candidate Program Handlebars Template.
-   * @type String
+   *
+   * @type {String}
+   * @memberof App.templates
    */
   App.templates.candidateProgram = $('#candidate-program-template').html();
 
   /**
    * Category Handlebars Template.
-   * @type String
+   *
+   * @type {String}
+   * @memberof App.templates
    */
   App.templates.category = $('#category-template').html();
 
   /**
    * Category List Handlebars Template.
+   *
+   * @type {String}
+   * @memberof App.templates
    */
   App.templates.categoryList = $('#category-list-template').html();
 
   /**
    * About Handlebars Template.
+   *
+   * @type {String}
+   * @memberof App.templates
    */
   App.templates.about = $('#about-template').html();
 
@@ -57,25 +100,33 @@
 
   /**
    * Category Model.
+   *
    * @class
+   * @memberof App.models
    */
   App.models.Category = Backbone.Model.extend(/** @lends Backbone.Model */{});
 
   /**
    * Party Model.
+   *
    * @class
+   * @memberof App.models
    */
   App.models.Party = Backbone.Model.extend(/** @lends Backbone.Model */{});
 
   /**
    * Candidate Model.
+   *
    * @class
+   * @memberof App.models
    */
   App.models.Candidate = Backbone.Model.extend(/** @lends Backbone.Model */{});
 
   /**
    * Program Model.
+   *
    * @class
+   * @memberof App.models
    */
   App.models.Program = Backbone.Model.extend(/** @lends Backbone.Model */{});
 
@@ -85,7 +136,9 @@
 
   /**
    * Category Collection.
+   *
    * @class
+   * @memberof App.collections
    */
   App.collections.Category = Backbone.Collection.extend(/** @lends Backbone.Collection */{
 
@@ -99,7 +152,9 @@
 
   /**
    * Party Collection.
+   *
    * @class
+   * @memberof App.collections
    */
   App.collections.Party = Backbone.Collection.extend({
 
@@ -113,7 +168,9 @@
 
   /**
    * Candidate Collection.
+   *
    * @class
+   * @memberof App.collections
    */
   App.collections.Candidate = Backbone.Collection.extend(/** @lends Backbone.Collection */{
 
@@ -127,7 +184,9 @@
 
   /**
    * Program Collection.
+   *
    * @class
+   * @memberof App.collections
    */
   App.collections.Program = Backbone.Collection.extend(/** @lends Backbone.Collection */{
 
@@ -196,6 +255,7 @@
   /**
    * Displays Candidate Information.
    *
+   * @memberof App.views
    * @param {Object}               options             The view options.
    * @param {App.models.Candidate} options.model       The Candidate model instance.
    * @param {Boolean}              options.showButton  Show candidate page button (defaults to false).
@@ -223,6 +283,7 @@
   /**
    * Displays Candidate Program.
    *
+   * @memberof App.views
    * @param {Object}                 options             The view options.
    * @param {String}                 options.slug        The candidate's slug.
    * @param {App.collection.Program} options.collection  The Program collection instance.
@@ -254,6 +315,7 @@
    * Displays Candidate List.
    * {@link App.views.CandidateCard}
    *
+   * @memberof App.views
    * @param  {Object}               options             View options.
    * @param  {Backbone.Collection}  options.collection  `Candidate` collection instance.
    */
@@ -278,9 +340,9 @@
 
   /**
    * Displays Home Page.
-   *
    * {@link App.views.CandidateList}
    *
+   * @memberof App.views
    * @param {Object}                    options             View options.
    * @param {App.collections.Candidate} options.collection  The collection instance.
    */
@@ -307,6 +369,7 @@
    * {@link App.views.CandidateCard}
    * {@link App.views.ProgramView}
    *
+   * @memberof App.views
    * @param {Object}                   options            View options.
    * @param {String}                   options.slug       The candidate slug.
    * @param {App.collection.Candidate} options.collection Candidate collection instance.
@@ -343,6 +406,7 @@
   /**
    * Displays Category Page.
    *
+   * @memberof App.views
    * @param {Object}                  options             The view options.
    * @param {String}                  options.slug        The category slug.
    * @param {App.collection.Category} options.categories  The Category collection instance.
@@ -386,6 +450,8 @@
 
   /**
    * Displays the list of categories.
+   *
+   * @memberof App.views
    */
   App.views.CategoryList = Backbone.View.extend({
 
@@ -407,8 +473,10 @@
 
   /**
    * Router.
+   *
+   * @memberof App
    */
-  App.Router = Backbone.Router.extend({
+  App.Router = Backbone.Router.extend(/** @lends Backbone.Router */{
 
     routes: {
       ''                : 'homeController',
