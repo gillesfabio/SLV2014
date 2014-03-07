@@ -56,10 +56,6 @@ parties:
     acronym: UMP
     name: Union pour un Mouvement Populaire
     url: http://www.u-m-p.org/
-  rpf: &rpf
-    acronym: RPF
-    name: Rassemblement pour la France
-    url: http://www.rpf-site.fr/
   fn: &fn
     acronym: "FN"
     name: "Front National"
@@ -94,14 +90,6 @@ candidates:
     facebook: moschetti.marc
     picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/moschetti.jpg
     party: *dvd
-  levy: &levy
-    name: Raymond Lévy
-    slug: raymond-levy
-    homepage: http://raymondlevy.fr/
-    twitter: levy06700
-    facebook: raymond.levy.311
-    picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/levy.jpg
-    party: *rpf
   segura: &segura
     name: Joseph Segura
     slug: joseph-segura
@@ -166,24 +154,6 @@ programs:
           nostrud adipisicing dolor nostrud Ut.
   -
     candidate: *moschetti
-    propositions:
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category3
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-      -
-        category: *category1
-        description: >
-          Lorem ipsum Voluptate ex aute proident non nostrud aliqua in amet non quis velit
-          nostrud adipisicing dolor nostrud Ut.
-  -
-    candidate: *levy
     propositions:
       -
         category: *category1
