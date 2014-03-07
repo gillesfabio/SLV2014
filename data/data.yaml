@@ -13,13 +13,13 @@ categories:
     slug: category-4
 
   education: &education
-    name: Éducation (+ petite enfance / scolarité)
+    name: "Éducation, Petite enfance & Scolarité"
     slug: education
   transport: &transport
-    name: transport (+ déplacements)
+    name: "Transport & Déplacements"
     slug: transport
-  securite: &education
-    name: Sécurité (+ prévention)
+  securite: &securite
+    name: "Sécurité & Prévention"
     slug: securite
   logement: &logement
     name: Logement
@@ -28,16 +28,16 @@ categories:
     name: Solidarité
     slug: solidarite
   environnement: &environnement
-    name: Environnement (+ écologie)
+    name: "Environnement & Écologie"
     slug: environnement
   jslc: &jslc
-    name: "Jeunesse, Sports, Loisirs et Culture"
+    name: "Jeunesse, Sports, Loisirs & Culture"
     slug: jslc
   tourisme: &tourisme
-    name: Tourisme (+ patrimoine)
+    name: "Tourisme & Patrimoine"
     slug: tourisme
   emploi: &emploi
-    name: Emploi (+ développement économique)
+    name: "Emploi & Développement économique"
     slug: emploi
   local: &local
     name: Local
