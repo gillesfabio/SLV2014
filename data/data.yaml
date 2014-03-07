@@ -74,6 +74,7 @@ candidates:
     facebook: marc.orsatti
     picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/orsatti.jpg
     party: *ps
+    programUrl: http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html
   revel: &revel
     name: Henri Revel
     slug: henri-revel
@@ -82,6 +83,7 @@ candidates:
     facebook: henri.revel.7
     picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/revel.jpg
     party: *ump
+    programUrl: ~
   moschetti: &moschetti
     name: Marc Moschetti
     slug: marc-moschetti
@@ -90,6 +92,7 @@ candidates:
     facebook: moschetti.marc
     picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/moschetti.jpg
     party: *dvd
+    programUrl: http://www.marcmoschetti.fr/mon-programme/
   segura: &segura
     name: Joseph Segura
     slug: joseph-segura
@@ -98,6 +101,7 @@ candidates:
     facebook: 2014segura
     picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/segura.jpg
     party: *dvd
+    programUrl: http://www.josephsegura.fr/actu/presentation-du-programme-de-la-liste-agir-pour-lavenir-de-saint-laurent-du-var-menee-par-joseph-segura/
   prados: &prados
     name: Lionel Prados
     slug: lionel-prados
@@ -106,6 +110,7 @@ candidates:
     facebook: lionel.prados
     picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/prados.jpg
     party: *fn
+    programUrl: ~
   benne: &benne
     name: Françoise Benne
     slug: francoise-benne
@@ -114,6 +119,7 @@ candidates:
     facebook: ~
     picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/benne.jpg
     party: *se
+    programUrl: https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf
 
 programs:
   -
