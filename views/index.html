@@ -47,7 +47,8 @@
           <ul class="no-bullet candidate-links">
             {{#if model.homepage}}<li><i class="fa fa-globe"></i> <a href="{{model.homepage}}">{{model.homepage}}</a></li>{{/if}}
             {{#if model.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{model.twitter}}">@{{model.twitter}}</a></li>{{/if}}
-            {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{model.facebook}}</a></li>{{/if}}
+            {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{model.facebook}}">{{model.facebook}}</a></li>{{/if}}
+            {{#if model.programUrl}}<li><i class="fa fa-link"></i> <a href="{{model.programUrl}}">Source</a></li>{{/if}}
           </ul>
           {{#if showButton}}
             <a href="<%= baseurl %>#/candidats/{{model.slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>

@@ -388,7 +388,8 @@
      */
     render: function() {
       this.collection.each(function(model) {
-        var view = new App.views.CandidateCardView({model: model, showButton: true});
+        var showButton = model.toJSON().hasProgram;
+        var view = new App.views.CandidateCardView({model: model, showButton: showButton});
         this.$el.append(view.el);
       }.bind(this));
     }
