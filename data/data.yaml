@@ -12,6 +12,37 @@ categories:
     name: Category 4
     slug: category-4
 
+  education: &education
+    name: Éducation
+    slug: education
+  transport: &transport
+    name: transport
+    slug: transport
+  securite: &education
+    name: Sécurité
+    slug: securite
+  logement: &logement
+    name: Logement
+    slug: logement
+  solidarite: &solidarite
+    name: Solidarité
+    slug: solidarite
+  environnement: &environnement
+    name: Environnement
+    slug: environnement
+  sport: &sport
+    name: Sport
+    slug: sport
+  culture: &culture
+    name: Culture
+    slug: culture
+  tourisme: &tourisme
+    name: Tourisme
+    slug: tourisme
+  emploi: &emploi
+    name: Emploi
+    slug: emploi
+
 parties:
   dvd: &dvd
     acronym: DVD
