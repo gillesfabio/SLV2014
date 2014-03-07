@@ -516,7 +516,7 @@
       this.category = this.collection.findWhere({slug: this.slug});
       if (!this.category) return this.notFound();
       this.programs.fetch({success: function(collection) {
-        this.programs = this.programs.findByCategoryAndGroupByCandidate(this.slug);
+        this.groupedPrograms = this.programs.findByCategoryAndGroupByCandidate(this.slug);
         this.render();
       }.bind(this)});
     },
@@ -538,7 +538,7 @@
     render: function() {
       this.$el.html(this.template({
         category: this.category.toJSON(),
-        programs: this.programs
+        programs: this.groupedPrograms
       }));
     }
   });
