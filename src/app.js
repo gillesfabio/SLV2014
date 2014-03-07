@@ -376,7 +376,7 @@
     className: 'candidate-list',
 
     initialize: function(options) {
-      this.options = options || {};
+      this.options = options || {};
       this.listenTo(this.collection, 'sync', this.render);
       this.collection.fetch();
     },
