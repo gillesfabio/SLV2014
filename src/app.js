@@ -8,7 +8,8 @@
   // ---------------------------------------------------------------------------
 
   /**
-   * The Application.
+   * The Application Namespace.
+   *
    * @namespace App
    */
   var App = window.App = {
@@ -60,7 +61,7 @@
    * @type {String}
    * @memberof App.templates
    */
-  App.templates.candidateCard = $('#candidate-card-template').html();
+  App.templates.CandidateCardTemplate = $('#candidate-card-template').html();
 
   /**
    * Candidate Program Handlebars Template.
@@ -68,7 +69,7 @@
    * @type {String}
    * @memberof App.templates
    */
-  App.templates.candidateProgram = $('#candidate-program-template').html();
+  App.templates.CandidateProgramTemplate = $('#candidate-program-template').html();
 
   /**
    * Category Handlebars Template.
@@ -76,7 +77,7 @@
    * @type {String}
    * @memberof App.templates
    */
-  App.templates.category = $('#category-template').html();
+  App.templates.CategoryTemplate = $('#category-template').html();
 
   /**
    * Category List Handlebars Template.
@@ -84,7 +85,7 @@
    * @type {String}
    * @memberof App.templates
    */
-  App.templates.categoryList = $('#category-list-template').html();
+  App.templates.CategoryListTemplate = $('#category-list-template').html();
 
   /**
    * About Handlebars Template.
@@ -92,7 +93,7 @@
    * @type {String}
    * @memberof App.templates
    */
-  App.templates.about = $('#about-template').html();
+  App.templates.AboutTemplate = $('#about-template').html();
 
   // ---------------------------------------------------------------------------
   // Models
@@ -103,32 +104,44 @@
    *
    * @class
    * @memberof App.models
+   * @augments Backbone.Model
    */
-  App.models.Category = Backbone.Model.extend(/** @lends Backbone.Model */{});
+  App.models.CategoryModel = Backbone.Model.extend(
+    /** @lends App.models.CategoryModel.prototype */{}
+  );
 
   /**
    * Party Model.
    *
    * @class
    * @memberof App.models
+   * @augments Backbone.Model
    */
-  App.models.Party = Backbone.Model.extend(/** @lends Backbone.Model */{});
+  App.models.PartyModel = Backbone.Model.extend(
+    /** @lends App.models.PartyModel.prototype */{}
+  );
 
   /**
    * Candidate Model.
    *
    * @class
    * @memberof App.models
+   * @augments Backbone.Model
    */
-  App.models.Candidate = Backbone.Model.extend(/** @lends Backbone.Model */{});
+  App.models.CandidateModel = Backbone.Model.extend(
+    /** @lends App.models.CandidateModel.prototype */{}
+  );
 
   /**
    * Program Model.
    *
    * @class
    * @memberof App.models
+   * @augments Backbone.Model
    */
-  App.models.Program = Backbone.Model.extend(/** @lends Backbone.Model */{});
+  App.models.ProgramModel = Backbone.Model.extend(
+    /** @lends App.models.ProgramModel.prototype */{}
+  );
 
   // ---------------------------------------------------------------------------
   // Collections
@@ -139,11 +152,13 @@
    *
    * @class
    * @memberof App.collections
+   * @augments Backbone.Collection
    */
-  App.collections.Category = Backbone.Collection.extend(/** @lends Backbone.Collection */{
+  App.collections.CategoryCollection = Backbone.Collection.extend(
+    /** @lends App.collections.CategoryCollection.prototype */ {
 
-    model : App.models.Category,
-    url   : App.dataURL,
+    model: App.models.CategoryModel,
+    url: App.dataURL,
 
     parse: function(res) {
       return res.categories;
@@ -155,11 +170,13 @@
    *
    * @class
    * @memberof App.collections
+   * @augments Backbone.Collection
    */
-  App.collections.Party = Backbone.Collection.extend({
+  App.collections.PartyCollection = Backbone.Collection.extend(
+    /** @lends App.collections.PartyCollection.prototype */ {
 
-    model : App.models.Party,
-    url   : App.dataURL,
+    model: App.models.PartyModel,
+    url: App.dataURL,
 
     parse: function(res) {
       return res.parties;
@@ -171,11 +188,13 @@
    *
    * @class
    * @memberof App.collections
+   * @augments Backbone.Collection
    */
-  App.collections.Candidate = Backbone.Collection.extend(/** @lends Backbone.Collection */{
+  App.collections.CandidateCollection = Backbone.Collection.extend(
+    /** @lends App.collections.CandidateCollection.prototype */ {
 
-    model : App.models.Candidate,
-    url   : App.dataURL,
+    model: App.models.CandidateModel,
+    url: App.dataURL,
 
     parse: function(res) {
       return res.candidates;
@@ -187,11 +206,13 @@
    *
    * @class
    * @memberof App.collections
+   * @augments Backbone.Collection
    */
-  App.collections.Program = Backbone.Collection.extend(/** @lends Backbone.Collection */{
+  App.collections.ProgramCollection = Backbone.Collection.extend(
+    /** @lends App.collections.ProgramCollection.prototype */ {
 
-    model : App.models.Program,
-    url   : App.dataURL,
+    model: App.models.ProgramModel,
+    url: App.dataURL,
 
     parse: function(response) {
       return response.programs;
@@ -200,8 +221,9 @@
     /**
      * Returns models which have `candidate.slug` equals to `slug` parameter.
      *
-     * @param   {String}  slug  The candidate's slug.
-     * @returns {Backbone.Collection}
+     * @memberof App.collections.ProgramCollection#
+     * @param {String} slug The candidate's slug.
+     * @returns {App.collection.ProgramCollection}
      */
     findByCandidate: function(slug) {
       return this.find(function(model) {
@@ -212,8 +234,9 @@
     /**
      * Returns models which have the given category in `propositions` objects.
      *
-     * @param  {String} slug  The category slug.
-     * @return {Array}
+     * @memberof App.collections.ProgramCollection#
+     * @param {String} slug The category slug.
+     * @returns {Array}
      */
     findByCategory: function(slug) {
       return this.filter(function(model) {
@@ -227,18 +250,20 @@
      * Returns models which have the given category in `propositions` objects
      * grouped by candidate.
      *
-     * @param  {String}  slug  The category slug.
-     * @return {Object}
+     * @memberof App.collections.ProgramCollection#
+     * @param {String} slug The category slug.
+     * @returns {Object}
      */
     findByCategoryAndGroupByCandidate: function(slug) {
-      var models = new App.collections.Program(this.findByCategory(slug));
+      var models = new App.collections.ProgramCollection(this.findByCategory(slug));
       return _.groupBy(models.toJSON(), function(model) { return model.candidate.name; });
     },
 
     /**
      * Returns candidate propositions grouped by category.
      *
-     * @param  {String}  slug  The candidate slug.
+     * @memberof App.collections.ProgramCollection#
+     * @param {String} slug The candidate slug.
      * @return {Object}
      */
     candidatePropositions: function(slug) {
@@ -255,27 +280,35 @@
   /**
    * Displays Candidate Information.
    *
+   * @class
    * @memberof App.views
-   * @param {Object}               options             The view options.
-   * @param {App.models.Candidate} options.model       The Candidate model instance.
-   * @param {Boolean}              options.showButton  Show candidate page button (defaults to false).
+   * @augments Backbone.View
+   * @param {Object} options The view options.
+   * @param {App.models.CandidateModel} options.model The Candidate model instance.
+   * @param {Boolean} options.showButton Show candidate page button (defaults to `false`).
    */
-  App.views.CandidateCard = Backbone.View.extend({
+  App.views.CandidateCardView = Backbone.View.extend(
+    /** @lends App.views.CandidateCardView.prototype */ {
 
     tagName   : 'div',
     className : 'candidate-card',
 
     initialize: function(options) {
-      this.options    = _.extend({showButton: false}, options);
+      this.options = _.extend({showButton: false}, options);
       this.showButton = options.showButton;
-      this.template   = Handlebars.compile(App.templates.candidateCard);
+      this.template = Handlebars.compile(App.templates.CandidateCardTemplate);
       this.render();
     },
 
+    /**
+     * Renders view.
+     *
+     * @memberof App.views.CandidateCardView#
+     */
     render: function() {
       this.$el.html(this.template({
-        model      : this.model.toJSON(),
-        showButton : this.showButton
+        model: this.model.toJSON(),
+        showButton: this.showButton
       }));
     }
   });
@@ -283,29 +316,42 @@
   /**
    * Displays Candidate Program.
    *
+   * @class
    * @memberof App.views
-   * @param {Object}                 options             The view options.
-   * @param {String}                 options.slug        The candidate's slug.
-   * @param {App.collection.Program} options.collection  The Program collection instance.
+   * @augments Backbone.View
+   * @param {Object} options The view options.
+   * @param {String} options.slug The candidate's slug.
+   * @param {App.collection.ProgramCollection} options.collection The Program collection instance.
    */
-  App.views.CandidateProgram = Backbone.View.extend({
+  App.views.CandidateProgramView = Backbone.View.extend(
+    /** @lends App.views.CandidateProgramView.prototype */ {
 
     tagName: 'div',
     className: 'candidate-program',
 
     initialize: function(options) {
-      this.options  = _.extend({slug: null}, options);
-      this.slug     = this.options.slug;
-      this.template = Handlebars.compile(App.templates.candidateProgram);
+      this.options = _.extend({slug: null}, options);
+      this.slug = this.options.slug;
+      this.template = Handlebars.compile(App.templates.CandidateProgramTemplate);
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
     },
 
+    /**
+     * Prepare template context.
+     *
+     * @memberof App.views.CandidateProgramView#
+     */
     prepare: function() {
       this.propositions = this.collection.candidatePropositions(this.slug);
       this.render();
     },
 
+    /**
+     * Renders view.
+     *
+     * @memberof App.views.CandidateProgramView#
+     */
     render: function() {
       this.$el.html(this.template({propositions: this.propositions}));
     }
@@ -313,13 +359,18 @@
 
   /**
    * Displays Candidate List.
-   * {@link App.views.CandidateCard}
    *
+   * Subviews:
+   *
+   * - {@link App.views.CandidateCardView}
+   *
+   * @class
    * @memberof App.views
-   * @param  {Object}               options             View options.
-   * @param  {Backbone.Collection}  options.collection  `Candidate` collection instance.
+   * @param {Object} options The view options.
+   * @param {App.collection.CandidateCollection} options.collection `CandidateCollection` instance.
    */
-  App.views.CandidateList = Backbone.View.extend({
+  App.views.CandidateListView = Backbone.View.extend(
+    /** @lends App.views.CandidateListView.prototype */ {
 
     tagName: 'div',
     className: 'candidate-list',
@@ -330,9 +381,14 @@
       this.collection.fetch();
     },
 
+    /**
+     * Renders view.
+     *
+     * @memberof App.views.CandidateListView#
+     */
     render: function() {
       this.collection.each(function(model) {
-        var view = new App.views.CandidateCard({model: model, showButton: true});
+        var view = new App.views.CandidateCardView({model: model, showButton: true});
         this.$el.append(view.el);
       }.bind(this));
     }
@@ -340,13 +396,18 @@
 
   /**
    * Displays Home Page.
-   * {@link App.views.CandidateList}
    *
+   * Subviews:
+   *
+   * - {@link App.views.CandidateListView}
+   *
+   * @class
    * @memberof App.views
-   * @param {Object}                    options             View options.
-   * @param {App.collections.Candidate} options.collection  The collection instance.
+   * @param {Object} options View options.
+   * @param {App.collections.CandidateCollection} options.collection The collection instance.
    */
-  App.views.Home = Backbone.View.extend({
+  App.views.HomeView = Backbone.View.extend(
+    /** @lends App.views.HomeView.prototype */{
 
     id: 'home',
     tagName: 'div',
@@ -354,10 +415,15 @@
     initialize: function(options) {
       this.options = _.extend({candidates: null}, options);
       this.candidates = this.options.candidates;
-      this.candidateListView = new App.views.CandidateList({collection: this.candidates});
+      this.candidateListView = new App.views.CandidateListView({collection: this.candidates});
       this.render();
     },
 
+    /**
+     * Renders view.
+     *
+     * @memberof App.views.HomeView#
+     */
     render: function() {
       this.$el.append(this.candidateListView.el);
     }
@@ -366,17 +432,20 @@
   /**
    * Displays Candidate Page.
    *
-   * {@link App.views.CandidateCard}
-   * {@link App.views.ProgramView}
+   * Subviews:
    *
+   * - {@link App.views.CandidateCardView}
+   * - {@link App.views.CandidateProgramView}
+   *
+   * @class
    * @memberof App.views
-   * @param {Object}                   options            View options.
-   * @param {String}                   options.slug       The candidate slug.
-   * @param {App.collection.Candidate} options.collection Candidate collection instance.
-   * @param {App.collection.Program}   options.programs   Program collection instance.
+   * @param {Object} options The view options.
+   * @param {String} options.slug The candidate slug.
+   * @param {App.collection.CandidateCollection} options.collection Candidate collection instance.
+   * @param {App.collection.ProgramCollection} options.programs Program collection instance.
    *
    */
-  App.views.Candidate = Backbone.View.extend({
+  App.views.CandidateView = Backbone.View.extend({
 
     tagName: 'div',
     className: 'candidate',
@@ -389,14 +458,23 @@
       this.collection.fetch();
     },
 
+    /**
+     * Prepares template context.
+     *
+     * @memberof App.views.CandidateView#
+     */
     prepare: function() {
       this.model = this.collection.findWhere({slug: this.slug});
-      this.cardView = new App.views.CandidateCard({model: this.model, showButton: false});
-      this.programView = new App.views.CandidateProgram({collection: this.programs, slug: this.slug});
+      this.cardView = new App.views.CandidateCardView({model: this.model, showButton: false});
+      this.programView = new App.views.CandidateProgramView({collection: this.programs, slug: this.slug});
       this.render();
-
     },
 
+    /**
+     * Renders view.
+     *
+     * @memberof App.views.CandidateView#
+     */
     render: function() {
       this.$el.append(this.cardView.el);
       this.$el.append(this.programView.el);
@@ -406,28 +484,35 @@
   /**
    * Displays Category Page.
    *
+   * @class
    * @memberof App.views
-   * @param {Object}                  options             The view options.
-   * @param {String}                  options.slug        The category slug.
-   * @param {App.collection.Category} options.categories  The Category collection instance.
-   * @param {App.collection.Program}  options.programs    The Program collection instance.
+   * @param {Object} options The view options.
+   * @param {String} options.slug The category slug.
+   * @param {App.collection.CategoryCollection} options.categories The `CategoryCollection` instance.
+   * @param {App.collection.ProgramCollection} options.programs The `ProgramCollection` instance.
    */
-  App.views.Category = Backbone.View.extend({
+  App.views.CategoryView = Backbone.View.extend(
+    /** @lends App.views.CategoryView.prototype */{
 
     tagName: 'div',
     className: 'category',
 
     initialize: function(options) {
-      this.options  = _.extend({slug: null, programs: null}, options);
-      this.slug     = this.options.slug;
+      this.options = _.extend({slug: null, programs: null}, options);
+      this.slug = this.options.slug;
       this.programs = this.options.programs;
-      this.template = Handlebars.compile(App.templates.category);
+      this.template = Handlebars.compile(App.templates.CategoryTemplate);
       this.category = null;
-      this.listenTo(this.collection, 'sync', this.fetch);
+      this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
     },
 
-    fetch: function() {
+    /**
+     * Prepares template context.
+     *
+     * @memberof App.views.CategoryView#
+     */
+    prepare: function() {
       this.category = this.collection.findWhere({slug: this.slug});
       if (!this.category) return this.notFound();
       this.programs.fetch({success: function(collection) {
@@ -436,14 +521,24 @@
       }.bind(this)});
     },
 
+    /**
+     * Informs user if category does not exist.
+     *
+     * @memberof App.views.CategoryView#
+     */
     notFound: function() {
       this.$el.html('Catégorie non trouvée.');
     },
 
+    /**
+     * Renders view.
+     *
+     * @memberof App.views.CategoryView#
+     */
     render: function() {
       this.$el.html(this.template({
-        category : this.category.toJSON(),
-        programs : this.programs
+        category: this.category.toJSON(),
+        programs: this.programs
       }));
     }
   });
@@ -451,17 +546,26 @@
   /**
    * Displays the list of categories.
    *
+   * @class
    * @memberof App.views
+   * @param {Object} options The view options.
+   * @param {App.collections.CategoryCollection} options.collection The `CategoryCollection` instance.
    */
-  App.views.CategoryList = Backbone.View.extend({
+  App.views.CategoryListView = Backbone.View.extend(
+    /** @lends App.views.CategoryListView.prototype */ {
 
     initialize: function(options) {
       this.options = options || {};
-      this.template = Handlebars.compile(App.templates.categoryList);
+      this.template = Handlebars.compile(App.templates.CategoryListTemplate);
       this.listenTo(this.collection, 'sync', this.render);
       this.collection.fetch();
     },
 
+    /**
+     * Renders view.
+     *
+     * @memberof App.views.CategoryListView#
+     */
     render: function() {
       this.$el.html(this.template(this.collection.toJSON()));
     }
@@ -474,9 +578,12 @@
   /**
    * Router.
    *
+   * @class
    * @memberof App
+   * @augments Backbone.Router
    */
-  App.Router = Backbone.Router.extend(/** @lends Backbone.Router */{
+  App.Router = Backbone.Router.extend(
+    /** @lends App.Router.prototype */{
 
     routes: {
       ''                : 'homeController',
@@ -488,62 +595,69 @@
     },
 
     initialize: function() {
-      this.candidates = new App.collections.Candidate();
-      this.programs   = new App.collections.Program();
-      this.categories = new App.collections.Category();
-      this.content    = $('#content');
+      this.candidates = new App.collections.CandidateCollection();
+      this.programs = new App.collections.ProgramCollection();
+      this.categories = new App.collections.CategoryCollection();
+      this.content = $('#content');
     },
 
     /**
-     * The Home Page.
-     * Use {@link App.views.Home} view.
+     * The Home Controller.
+     *
+     * @memberof App.Router#
      */
     homeController: function() {
-      var view = new App.views.Home({candidates: this.candidates});
+      var view = new App.views.HomeView({candidates: this.candidates});
       this.content.html(view.el);
     },
 
     /**
-     * The Candidate Page.
-     * Use {@link App.views.Candidate} view.
+     * The Candidate Controller.
      *
-     * @param  {String}  slug  The candidate slug.
+     * @memberof App.Router#
+     * @param {String} slug The candidate slug.
      */
     candidateController: function(slug) {
-      var view = new App.views.Candidate({
-        slug       : slug,
-        collection : this.candidates,
-        programs   : this.programs
+      var view = new App.views.CandidateView({
+        slug: slug,
+        collection: this.candidates,
+        programs: this.programs
       });
       this.content.html(view.el);
     },
 
     /**
-     * The Category Page.
-     * Use {@link App.views.Category} view.
+     * The Category Controller.
      *
-     * @param  {String}  slug  The category slug.
+     * @memberof App.Router#
+     * @param {String} slug The category slug.
      */
     categoryController: function(slug) {
-      var view = new App.views.Category({
-        collection : this.categories,
-        slug       : slug,
-        programs   : this.programs
+      var view = new App.views.CategoryView({
+        collection: this.categories,
+        slug: slug,
+        programs: this.programs
       });
       this.content.html(view.el);
     },
 
     /**
      * The Category List Controller.
-     * Use {@link App.views.CategoryList} view.
+     *
+     * @memberof App.Router#
      */
     categoryListController: function() {
-      var view = new App.views.CategoryList({collection: this.categories});
+      var view = new App.views.CategoryListView({collection: this.categories});
       this.content.html(view.el);
     },
 
+    /**
+     * The About Controller.
+     *
+     * @memberof App.Router#
+     */
     aboutController: function() {
-      this.content.html(Handlebars.compile(App.templates.about)());
+      this.content.html(Handlebars.compile(App.templates.AboutTemplate)());
     }
   });
 
