@@ -24,6 +24,7 @@
     "font-awesome": "FortAwesome/Font-Awesome#~4.0.3",
     "mocha": "1.x",
     "chai": "1.x",
-    "sinon": "1.x"
+    "sinon": "1.x",
+    "markdown": "0.x"
   }
 }
