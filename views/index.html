@@ -62,7 +62,7 @@
         <h4 class="theme-title"><a href="<%= baseurl %>#/themes/{{this.0.category.slug}}">{{@key}}</a></h4>
         <ol class="propositions">
           {{#each this}}
-          <li>{{description}}</li>
+          <li>{{{mdtohtml description}}}</li>
           {{/each}}
         </ol>
       {{/each}}
@@ -84,7 +84,7 @@
         {{#each this}}
         <ul>
           {{#each propositions}}
-          <li>{{description}}</li>
+          <li>{{{mdtohtml description}}}</li>
           {{/each}}
         </ul>
         {{/each}}

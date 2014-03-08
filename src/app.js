@@ -1,4 +1,4 @@
-(function($, _, Backbone, Handlebars) {
+(function($, _, Backbone, Handlebars, markdown) {
 
   /*jshint unused:false */
   'use strict';
@@ -94,6 +94,16 @@
    * @memberof App.templates
    */
   App.templates.AboutTemplate = $('#about-template').html();
+
+
+  //----------------------------------------------------------------------------
+  // Template Helpers
+  // ---------------------------------------------------------------------------
+
+  Handlebars.registerHelper('mdtohtml', function(md) {
+    console.log(md);
+    return new Handlebars.SafeString(markdown.toHTML(md));
+  });
 
   // ---------------------------------------------------------------------------
   // Models
@@ -677,4 +687,4 @@
     Backbone.history.start({root: window.APP_BASE_URL});
   });
 
-})(jQuery, _, Backbone, Handlebars);
+})(jQuery, _, Backbone, Handlebars, markdown);
