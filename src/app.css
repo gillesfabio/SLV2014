@@ -14,7 +14,8 @@ html {
   margin-bottom: 30px;
 }
 
-.panel {
+.candidate-card .panel,
+.candidate-program .panel {
   background: #f7f7f7 !important;
   border: none;
 }

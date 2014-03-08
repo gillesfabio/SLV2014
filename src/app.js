@@ -72,6 +72,14 @@
   App.templates.CandidateProgramTemplate = $('#candidate-program-template').html();
 
   /**
+   * Candidate Program Handlebars Template.
+   *
+   * @type {String}
+   * @memberof App.templates
+   */
+  App.templates.CandidateDetailTemplate = $('#candidate-detail-template').html();
+
+  /**
    * Category Handlebars Template.
    *
    * @type {String}
@@ -101,7 +109,6 @@
   // ---------------------------------------------------------------------------
 
   Handlebars.registerHelper('md2html', function(md) {
-    console.log(md);
     return new Handlebars.SafeString(markdown.toHTML(md));
   });
 
@@ -441,7 +448,7 @@
   });
 
   /**
-   * Displays Candidate Page.
+   * Displays Candidate Detail Page.
    *
    * Subviews:
    *
@@ -456,15 +463,16 @@
    * @param {App.collection.ProgramCollection} options.programs Program collection instance.
    *
    */
-  App.views.CandidateView = Backbone.View.extend({
+  App.views.CandidateDetailView = Backbone.View.extend({
 
     tagName: 'div',
-    className: 'candidate',
+    className: 'candidate-detail',
 
     initialize: function(options) {
       this.options = _.extend({slug: null, programs: null}, options);
       this.slug = this.options.slug;
       this.programs = this.options.programs;
+      this.template = Handlebars.compile(App.templates.CandidateDetailTemplate);
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
     },
@@ -487,8 +495,9 @@
      * @memberof App.views.CandidateView#
      */
     render: function() {
-      this.$el.append(this.cardView.el);
-      this.$el.append(this.programView.el);
+      this.$el.html(this.template({candidate: this.model.toJSON()}));
+      this.$el.find('.candidate-detail-card').html(this.cardView.el);
+      this.$el.find('.candidate-detail-program').html(this.programView.el);
     }
   });
 
@@ -599,7 +608,7 @@
     routes: {
       ''                : 'homeController',
       'candidats'       : 'homeController',
-      'candidats/:slug' : 'candidateController',
+      'candidats/:slug' : 'candidateDetailController',
       'themes'          : 'categoryListController',
       'themes/:slug'    : 'categoryController',
       'a-propos'        : 'aboutController'
@@ -623,13 +632,13 @@
     },
 
     /**
-     * The Candidate Controller.
+     * The Candidate Detail Controller.
      *
      * @memberof App.Router#
      * @param {String} slug The candidate slug.
      */
-    candidateController: function(slug) {
-      var view = new App.views.CandidateView({
+    candidateDetailController: function(slug) {
+      var view = new App.views.CandidateDetailView({
         slug: slug,
         collection: this.candidates,
         programs: this.programs

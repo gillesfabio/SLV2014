@@ -48,7 +48,6 @@
             {{#if model.homepage}}<li><i class="fa fa-globe"></i> <a href="{{model.homepage}}">{{model.homepage}}</a></li>{{/if}}
             {{#if model.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{model.twitter}}">@{{model.twitter}}</a></li>{{/if}}
             {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{model.facebook}}">{{model.facebook}}</a></li>{{/if}}
-            {{#if model.programUrl}}<li><i class="fa fa-link"></i> <a href="{{model.programUrl}}">Source</a></li>{{/if}}
           </ul>
           {{#if showButton}}
             <a href="<%= baseurl %>#/candidats/{{model.slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
@@ -66,6 +65,19 @@
           {{/each}}
         </ol>
       {{/each}}
+    </script>
+
+    <script id="candidate-detail-template" type="text/x-handlebars-template">
+      <div class="candidate-detail-card"></div>
+      <div class="candidate-detail-program-source panel callout">
+        <p>
+          Ce programme a été extrait manuellement, avec plusieurs relectures,
+          du <a href="{{candidate.programUrl}}">programme officiel</a>. Merci
+          de signaler toute erreur ou manquement à <a href="mailto:gilles@gillesfabio.com">Gilles</a>,
+          qui corrigera immédiatement.
+        </p>
+      </div>
+      <div class="candidate-detail-program"</div>
     </script>
 
     <script id="category-list-template" type="text/x-handlebars-template">
