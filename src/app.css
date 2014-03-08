@@ -46,13 +46,16 @@ a.circle {
 
 .theme-title {
   text-transform: uppercase;
-  border-bottom: 1px dashed #007ba0;
-  margin-bottom: 20px;
-  font-weight: 200;
+  margin: 20px 0 20px 0;
 }
 
 .propositions li {
   background: #f5f5f5;
-  padding:20px;
-  margin-bottom: 10px;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+.propositions li p {
+  font-size: 90%;
+  margin-bottom: 0;
 }

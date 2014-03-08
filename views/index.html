@@ -60,7 +60,7 @@
     <script id="candidate-program-template" type="text/x-handlebars-template">
       {{#each propositions}}
         <h4 class="theme-title"><a href="<%= baseurl %>#/themes/{{this.0.category.slug}}">{{@key}}</a></h4>
-        <ol class="propositions">
+        <ul class="no-bullet propositions">
           {{#each this}}
           <li>{{{md2html description}}}</li>
           {{/each}}
@@ -82,7 +82,7 @@
       {{#each programs}}
         <h4>{{@key}}</h4>
         {{#each this}}
-        <ol class="propositions">
+        <ul class="no-bullet propositions">
           {{#each propositions}}
           <li>{{{md2html description}}}</li>
           {{/each}}
