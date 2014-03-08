@@ -100,7 +100,7 @@
   // Template Helpers
   // ---------------------------------------------------------------------------
 
-  Handlebars.registerHelper('mdtohtml', function(md) {
+  Handlebars.registerHelper('md2html', function(md) {
     console.log(md);
     return new Handlebars.SafeString(markdown.toHTML(md));
   });
