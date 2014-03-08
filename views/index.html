@@ -107,8 +107,47 @@
     <script id="about-template" type="text/x-handlebars-template">
       <h1>À propos</h1>
       <p>
-        Designé et développé par <a href="http://gillesfabio.com">Gilles Fabio</a>,
-        laurentin.
+        Je suis <a href="http://gillesfabio.com">Gilles Fabio</a>, le créateur
+        de ce site.
+      </p>
+      <p>
+        Laurentin depuis trente-deux ans, non-militant politique
+        et développeur de profession, j'ai décidé de créer ce site pour simplifier
+        la comparaison des programmes des différents candidats aux élections
+        municipales 2014 de ma ville, Saint-Laurent-du-Var.
+      </p>
+      <p>
+        Réalisé sur mon temps libre, ce site n'est rattaché à aucun parti politique,
+        n'est sponsorisé par aucune entité et ne génère pas de revenus. Il ne stocke
+        aucune données, excepté votre IP (utilisée par <a href="http://www.google.com/analytics/">Google Analytics</a>
+        pour avoir un retour sur sa fréquentation).
+      </p>
+      <p>
+        Son code est librement disponible sur <a href="http://github.com/gillesfabio/SLVM2014">GitHub</a>,
+        sous <a href="http://opensource.org/licenses/MIT">licence MIT</a>.
+      </p>
+      <p>
+        Techniquement, ce site n'est composé que d'une seule page HTML dynamisée
+        par le langage <a href="http://fr.wikipedia.org/wiki/JavaScript">JavaScript</a>.
+        Les données (profils des candidats et leurs programmes) sont stockées dans un fichier texte au format <a href="http://www.yaml.org/">YAML</a>
+        (<a href="https://github.com/gillesfabio/SLVM2014/blob/master/data/data.yaml">disponible ici</a>).
+        Ce fichier est tansmis à un générateur qui le transforme en fichier
+        <a href="http://json.org/">JSON</a>, qui est ensuite utilisé par
+        l'application JavaScript sous-jacente pour présenter dynamiquement ces
+        données. L'application JavaScript utilise le framework <a href="http://backbonejs.org">Backbone</a>,
+        le moteur de template <a href="http://handlebarsjs.com">Handlebars</a> et
+        le framework <a href="http://foundation.zurb.com/">Foundation</a>.
+      </p>
+      <p>
+        Ce site est également gracieusement hébergé par <a href="http://github.com">GitHub</a>.
+        Si vous rencontrez des problèmes d'accès (page longue à charger), c'est qu'il
+        connaît plus de succès qu'escompté (le service hébergement de GitHub n'est pas
+        adapté pour du fort trafic).
+      </p>
+      <p>
+        Si vous rencontrez des bugs ou si vous remarquez des erreurs (fautes
+        de français, erreurs dans les profils et programmes des candidats, etc),
+        n'hésitez surtout pas à <a href="mailto:gilles@gillesfabio.com">me contacter</a>.
       </p>
     </script>
 
