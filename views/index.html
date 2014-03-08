@@ -36,14 +36,13 @@
     </div>
 
     <script id="candidate-card-template" type="text/x-handlebars-template">
-      <div class="row panel">
+      <div class="row">
         <div class="small-12 medium-2 large-2 columns">
           <img src="{{model.picture}}" class="circle" alt="{{model.name}}">
         </div>
         <div class="small-12 medium-10 large-10 columns">
-          <h2>{{model.name}}</h2>
-          <h6 class="subheader">{{model.party.acronym}} ({{model.party.name}})</h6>
-          {{#if model.slogan}}<blockquote>{{model.slogan}}</blockquote>{{/if}}
+          <h2 class="candidate-name">{{model.name}} <small>({{model.party.acronym}})</small></h2>
+          {{#if model.slogan}}<h3 class="candidate-slogan">{{model.slogan}}</h3>{{/if}}
           <ul class="no-bullet candidate-links">
             {{#if model.homepage}}<li><i class="fa fa-globe"></i> <a href="{{model.homepage}}">{{model.homepage}}</a></li>{{/if}}
             {{#if model.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{model.twitter}}">@{{model.twitter}}</a></li>{{/if}}

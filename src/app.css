@@ -11,13 +11,32 @@ html {
 }
 
 .candidate-card {
-  margin-bottom: 30px;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #ececec;
 }
 
-.candidate-card .panel,
+.candidate-card:last-child {
+  border-bottom: none;
+}
+
 .candidate-program .panel {
   background: #f7f7f7 !important;
   border: none;
+}
+
+.candidate-card .candidate-links {
+  font-size: 90%;
+}
+
+.candidate-card .candidate-name {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+}
+
+.candidate-card .candidate-slogan {
+  font-size: 18px;
+  color: #909090;
 }
 
 .circle {
@@ -59,4 +78,23 @@ a.circle {
 .propositions li p {
   font-size: 90%;
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 40em) {
+  #content {
+    padding: 20px;
+  }
+  .candidate-card {
+    text-align: center;
+  }
+  .candidate-card .candidate-slogan {
+    font-size: 90%;
+  }
+  .candidate-program .propositions li {
+    padding: 10px;
+    font-size: 80%;
+  }
+  .candidate-detail-program-source p {
+    font-size: 90%;
+  }
 }
