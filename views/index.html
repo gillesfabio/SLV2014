@@ -81,9 +81,11 @@
 
     <script id="category-list-template" type="text/x-handlebars-template">
       <h2>Thèmes</h2>
-      <ul>
+      <ul class="small-block-grid-1 medium-block-grid-3">
         {{#each this}}
-        <li><a href="<%= baseurl %>#/themes/{{slug}}">{{name}}</a></li>
+        <li class="theme-title">
+          <span><a href="<%= baseurl %>#/themes/{{slug}}">{{name}}</a></span>
+        </li>
         {{/each}}
       </ul>
     </script>
