@@ -56,9 +56,9 @@
     </script>
 
     <script id="candidate-program-template" type="text/x-handlebars-template">
-      {{#each propositions}}
-        <h4 class="theme-title"><a href="<%= baseurl %>#/themes/{{this.0.category.slug}}">{{@key}}</a></h4>
-        <ul class="no-bullet propositions">
+      {{#each projects}}
+        <h4 class="theme-title"><a href="<%= baseurl %>#/themes/{{this.0.theme.slug}}">{{@key}}</a></h4>
+        <ul class="no-bullet projects">
           {{#each this}}
           <li>{{{md2html description}}}</li>
           {{/each}}
@@ -79,7 +79,7 @@
       <div class="candidate-detail-program"</div>
     </script>
 
-    <script id="category-list-template" type="text/x-handlebars-template">
+    <script id="theme-list-template" type="text/x-handlebars-template">
       <h2>Thèmes</h2>
       <ul class="small-block-grid-1 medium-block-grid-3">
         {{#each this}}
@@ -90,13 +90,13 @@
       </ul>
     </script>
 
-    <script id="category-template" type="text/x-handlebars-template">
-      <h2>{{category.name}}</h2>
+    <script id="theme-detail-template" type="text/x-handlebars-template">
+      <h2>{{theme.name}}</h2>
       {{#each programs}}
         <h4>{{@key}}</h4>
         {{#each this}}
-        <ul class="no-bullet propositions">
-          {{#each propositions}}
+        <ul class="no-bullet projects">
+          {{#each projects}}
           <li>{{{md2html description}}}</li>
           {{/each}}
         </ul>

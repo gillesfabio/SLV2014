@@ -1,4 +1,4 @@
-categories:
+themes:
   education: &education
     name: "Éducation, Petite enfance & Scolarité"
     slug: education
@@ -36,169 +36,504 @@ categories:
     name: Accessibilité
     slug: accessibilite
 
-parties:
-  dvd: &dvd
-    acronym: DVD
-    name: Divers Droite
-    url: http://fr.wikipedia.org/wiki/Divers_droite
-  ps: &ps
-    acronym: PS
-    name: Parti Socialiste
-    url: http://www.parti-socialiste.fr/
-  ump: &ump
-    acronym: UMP
-    name: Union pour un Mouvement Populaire
-    url: http://www.u-m-p.org/
-  fn: &fn
-    acronym: "FN"
-    name: "Front National"
-    url: "http://www.frontnational.com/"
-  se: &se
-    acronym: "SE"
-    name: "Sans Étiquette"
-    url: "http://fr.wikipedia.org/wiki/Sans_%C3%A9tiquette"
-
 candidates:
+  #
+  # Marc Orsatti
+  #
   orsatti: &orsatti
-    name: Marc Orsatti
-    slug: marc-orsatti
-    slogan: Mieux Vivre Ensemble à Saint-Laurent du Var
-    homepage: http://marc.orsatti.over-blog.com/
-    twitter: MarcOrsatti
-    facebook: marc.orsatti
-    picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/orsatti.jpg
-    party: *ps
-    hasProgram: true
-    programUrl: http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html
+    name       : Marc Orsatti
+    slug       : marc-orsatti
+    slogan     : Mieux vivre ensemble à Saint-Laurent du Var
+    homepage   : http://marc.orsatti.over-blog.com/
+    twitter    : MarcOrsatti
+    facebook   : marc.orsatti
+    picture    : https://dl.dropboxusercontent.com/u/176040/SLVM2014/orsatti.jpg
+    programUrl : http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html
+    party:
+      acronym : PS
+      name    : Parti Socialiste
+      url     : http://www.parti-socialiste.fr/
+
+  #
+  # Henri Revel
+  #
   revel: &revel
-    name: Henri Revel
-    slug: henri-revel
-    slogan: Saint-Laurent pour tous !
-    homepage: http://www.henrirevel.fr/
-    twitter: ~
-    facebook: henri.revel.7
-    picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/revel.jpg
-    party: *ump
-    hasProgram: false
-    programUrl: ~
+    name       : Henri Revel
+    slug       : henri-revel
+    slogan     : Saint-Laurent pour tous
+    homepage   : http://www.henrirevel.fr/
+    twitter    : ~
+    facebook   : henri.revel.7
+    picture    : https://dl.dropboxusercontent.com/u/176040/SLVM2014/revel.jpg
+    programUrl : ~
+    party:
+      acronym : UMP
+      name    : Union pour un Mouvement Populaire
+      url     : http://www.u-m-p.org/
+
+  #
+  # Marc Moschetti
+  #
   moschetti: &moschetti
-    name: Marc Moschetti
-    slug: marc-moschetti
-    slogan: Le Parti des Laurentins
-    homepage: http://www.marcmoschetti.fr/
-    twitter: MarcMoschetti
-    facebook: moschetti.marc
-    picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/moschetti.jpg
-    party: *dvd
-    hasProgram: true
-    programUrl: http://www.marcmoschetti.fr/mon-programme/
+    name       : Marc Moschetti
+    slug       : marc-moschetti
+    slogan     : Le Parti des Laurentins
+    homepage   : http://www.marcmoschetti.fr/
+    twitter    : MarcMoschetti
+    facebook   : moschetti.marc
+    picture    : https://dl.dropboxusercontent.com/u/176040/SLVM2014/moschetti.jpg
+    programUrl : http://www.marcmoschetti.fr/mon-programme/
+    party:
+      acronym : SE
+      name    : Sans Étiquette
+      url     : http://fr.wikipedia.org/wiki/Sans_%C3%A9tiquette
+
+  #
+  # Joseph Segura
+  #  
   segura: &segura
-    name: Joseph Segura
-    slug: joseph-segura
-    slogan: "Ensemble, Agissons pour l'Avenir de Saint-Laurent-du-Var !"
-    homepage: http://www.josephsegura.fr/
-    twitter: JSegura2014
-    facebook: 2014segura
-    picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/segura.jpg
-    party: *dvd
-    hasProgram: false
-    programUrl: http://www.josephsegura.fr/actu/presentation-du-programme-de-la-liste-agir-pour-lavenir-de-saint-laurent-du-var-menee-par-joseph-segura/
-  prados: &prados
-    name: Lionel Prados
-    slug: lionel-prados
-    slogan: ~
-    homepage: ~
-    twitter: ~
-    facebook: lionel.prados
-    picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/prados.jpg
-    party: *fn
-    hasProgram: false
-    programUrl: ~
+    name       : Joseph Segura
+    slug       : joseph-segura
+    slogan     : Agir pour l'avenir de Saint-Laurent-du-Var
+    homepage   : http://www.josephsegura.fr/
+    twitter    : JSegura2014
+    facebook   : 2014segura
+    picture    : https://dl.dropboxusercontent.com/u/176040/SLVM2014/segura.jpg
+    programUrl : http://www.josephsegura.fr/actu/presentation-du-programme-de-la-liste-agir-pour-lavenir-de-saint-laurent-du-var-menee-par-joseph-segura/
+    party:
+      acronym : DVD
+      name    : Divers Droite
+      url     : http://fr.wikipedia.org/wiki/Divers_droite
+
+  #
+  # Françoise Benne
+  #
   benne: &benne
-    name: Françoise Benne
-    slug: francoise-benne
-    slogan: "Pour Saint-Laurent, l'énergie d'une équipe"
-    homepage: http://www.francoisebenne.fr/
-    twitter: francoisebenne
-    facebook: ~
-    picture: https://dl.dropboxusercontent.com/u/176040/SLVM2014/benne.jpg
-    party: *se
-    hasProgram: false
-    programUrl: https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf
+    name       : Françoise Benne
+    slug       : francoise-benne
+    slogan     : "Pour Saint-Laurent, l'énergie d'une équipe"
+    homepage   : http://www.francoisebenne.fr/
+    twitter    : francoisebenne
+    facebook   : ~
+    picture    : https://dl.dropboxusercontent.com/u/176040/SLVM2014/benne.jpg
+    programUrl : https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf
+    party:
+      acronym : DVD
+      name    : Divers Droite
+      url     : http://fr.wikipedia.org/wiki/Divers_droite
+
+  #
+  # Lionel Prados
+  #
+  prados: &prados
+    name       : Lionel Prados
+    slug       : lionel-prados
+    slogan     : Saint-Laurent-du-Var Bleu Marine
+    homepage   : ~
+    twitter    : ~
+    facebook   : lionel.prados
+    picture    : https://dl.dropboxusercontent.com/u/176040/SLVM2014/prados.jpg
+    programUrl : ~
+    party:
+      acronym : FN
+      name    : Front National
+      url     : http://www.frontnational.com/
+
+runningMates:
+  #
+  # Françoise Benne
+  #
+  -
+    candidate : *benne
+    position  : 2
+    name      : Patrice Jacquesson
+    age       : 45
+    gender    : m
+    bio: |
+      Gestionnaire de centre urbain. 
+      Maîtrise Collectivités territoriales.
+      DESS Management. 
+      Ex. Conseiller municipal (mandat 2001).
+  -
+    candidate : *benne
+    position  : 3
+    name      : Brigitte Lizée-Juan
+    age       : 54
+    gender    : f
+    bio: |
+      Directeur dans un Établissement public de l'État (secteur économique).
+      DESS Ingénierie ressources humaines. 
+      Ex. 1er adjoint au Maire (mandat 2001).
+  -
+    candidate : *benne
+    position  : 4
+    name      : Jean-Pascal Dey
+    age       : 58
+    gender    : m
+    bio: |
+      Contractuel à l'inspection générale des services et audits d'une Mairie.
+      Lieutenant-Colonel (32 ans dans l'armée de terre).
+  -
+    candidate : *benne
+    position  : 5
+    name      : Marie-France Corvest
+    age       : 69
+    gender    : f
+    bio: |
+      Députée suppléante de Lionnel Luca. 
+      Ex. Directrice administrative et des R.H. d'hôtels de luxe. 
+      Ex. adjointe au Maire (mandat 2001 et 2008).
+  -
+    candidate : *benne
+    position  : 6
+    name      : Bernard Girardot
+    age       : 67
+    gender    : m
+    bio: |
+      Ex. principal de collège. 
+      Ex. professeur d'Éducation Physique.
+  -
+    candidate : *benne
+    position  : 7
+    name      : Danielle Hebert
+    age       : 60
+    gender    : f
+    bio: |
+      Chargée de mission APF 06. 
+      Doctorat en Droit.
+      Diplôme d'Avocat.
+      Directeur de cabinet du Maire durant 9 ans.
+  -
+    candidate : *benne
+    position  : 8
+    name      : Mickaël Hutteau
+    age       : 34
+    gender    : m
+    bio: |
+      Cadre bancaire chargé d'affaires entreprises. 
+      BTS Force de vente.
+  -
+    candidate : *benne
+    position  : 9
+    name      : Geneviève Telmon
+    age       : 62
+    gender    : f
+    bio: |
+      Représentante départementale APF 06. 
+      Docteur en Droit. 
+      Administratice du CCAS.
+  -
+    candidate : *benne
+    position  : 10
+    name      : Frédéric Arsène
+    age       : 58
+    gender    : m
+    bio: |
+      Consultant et formateur en sûreté-sécurité.
+      DESS Police - Sécurité et droits de la personne.
+  -
+    candidate : *benne
+    position  : 11
+    name      : Élisabeth Adamantiadis
+    age       : 59
+    gender    : f
+    bio: |
+      Chargée de mission à la culture et à la lutte contre l'illetrisme à la Mairie de Nice.
+  -
+    candidate : *benne
+    position  : 12
+    name      : Olivier Corso
+    age       : 49
+    gender    : m
+    bio: |
+      Directeur adjoint dans un centre de formation.
+      Coordinateur d'actions sur le développement durable.
+  -
+    candidate : *benne
+    position  : 13
+    name      : Marie-Caroline Charbonnier-Montaudié
+    age       : 37
+    gender    : f
+    bio: |
+      Masseur-Kinésithérapeute D.E.
+      D.U. Sport et Santé.
+  -
+    candidate : *benne
+    position  : 14
+    name      : Grégory Chiarotto
+    age       : 37
+    gender    : m
+    bio: |
+      Directeur de magasin grande distribution.
+      DUT Gestion des entreprises et des administrations.
+  -
+    candidate : *benne
+    position  : 15
+    name      : Isabelle Brune
+    age       : 44
+    gender    : f
+    bio: |
+      Attachée commerciale bancaire.
+      Ex. secrétaire d'une association de parents d'élèves.
+  -
+    candidate : *benne
+    position  : 16
+    name      : René Estève
+    age       : 71
+    gender    : m
+    bio: |
+      Ex. cadre de la banque et des assurances.
+      Élu municipal et communautaire à Strasbourg (1995).
+  -
+    candidate : *benne
+    position  : 17
+    name      : Corinne Bagnato
+    age       : 45
+    gender    : f
+    bio: |
+      Assistante d'un syndic d'immeuble.
+      Présidente d'une association de parents d'élèves.
+  -
+    candidate : *benne
+    position  : 18
+    name      : Éric Barbot
+    age       : 50
+    gender    : m
+    bio: |
+      Superviseur d'activité industrielle.
+      Militant de l'assocation Enfance Népal.
+  -
+    candidate : *benne
+    position  : 19
+    name      : Geneviève Parisi
+    age       : 58
+    gender    : f
+    bio: |
+      Agent de maîtrise dans une société de peinture.
+      Diplômée en secrétariat.
+  -
+    candidate : *benne
+    position  : 20
+    name      : Georges Tonali
+    age       : 76
+    gender    : m
+    bio: |
+      Artisan peintre durant 23 ans.
+      Ancien trésorier de l'AGASC et membre du C.D. de voile.
+  -
+    candidate : *benne
+    position  : 21
+    name      : Laura Rolfo
+    age       : 18
+    gender    : f
+    bio: |
+      Étudiante.
+      Ceinture noire de Judo - médaillée aux champ. de France.
+  -
+    candidate : *benne
+    position  : 22
+    name      : Frédéric Chatain
+    age       : 40
+    gender    : m
+    bio: |
+      Diplôme niv. IV Maintenance sytème automatique.
+      Responsable de chantier - société intégration domotique.
+  -
+    candidate : *benne
+    position  : 23
+    name      : Marie-José Mabille
+    age       : 66
+    gender    : f
+    bio: |
+      Ex. professeur des écoles.
+      Bénévole en remise à niveau scolaire de patients hospitalisés.
+  -
+    candidate : *benne
+    position  : 24
+    name      : André Ruiz
+    age       : 67
+    gender    : m
+    bio: |
+      Ex. Maître d'oeuvre mériteur.
+      Diplôme de dessinateur de l'école des Beaux Arts.
+  -
+    candidate : *benne
+    position  : 25
+    name      : Évelyne Lautier
+    age       : 60
+    gender    : f
+    bio: |
+      Manager équipe de conseillers à Pôle Emploi.
+      Élue représentante du personnel depuis 25 ans.
+  -
+    candidate : *benne
+    position  : 26
+    name      : Stéphane Bicchierini
+    age       : 43
+    gender    : m
+    bio: |
+      Analyste programmeur.
+      DESS Gestion information.
+      Trésorier national adjoint d'un syndicat professionel.
+  -
+    candidate : *benne
+    position  : 27
+    name      : Nicole Tavaux
+    age       : 77
+    gender    : f
+    bio: |
+      Ex. cadre supérieur d'une compagnie aérienne.
+      Conseillère municipale en 2001 (Indre).
+  -
+    candidate : *benne
+    position  : 28
+    name      : Stéphane Sanchez
+    age       : 39
+    gender    : m
+    bio: |
+      Directeur général délégué en Assurances.
+      Ex. membre de la Jeune Chambre Économique.
+  -
+    candidate : *benne
+    position  : 29
+    name      : Louise Garnier
+    age       : 65
+    gender    : f
+    bio: |
+      Membre du C.A. "Institut Arnault Tzanck".
+      Directrice adjointe soins et hospitalisation à domicile.
+  -
+    candidate : *benne
+    position  : 30
+    name      : Jean-Louis Rogès
+    age       : 77
+    gender    : m
+    bio: |
+      Directeur commercial dans l'automobile.
+      Membre de la Croix Rouge Monégasque.
+  -
+    candidate : *benne
+    position  : 31
+    name      : Julia Bernardi
+    age       : 23
+    gender    : f
+    bio: |
+      Conseillère clientèle dans le prêt-à-porter.
+      Cavalière (dressage) de niveau national.
+  -
+    candidate : *benne
+    position  : 32
+    name      : Alban Thibierge
+    age       : 54
+    gender    : m
+    bio: |
+      Directeur d'une agence immobilière.
+      École des créateurs et dirigeants d'entreprises de Paris.
+  -
+    candidate : *benne
+    position  : 33
+    name      : Élisabeth Brunet
+    age       : 57
+    gender    : f
+    bio: |
+      Infirmière D.E.
+      Militante d'un organisme syndical pendant 15 ans.
+  -
+    candidate : *benne
+    position  : 34
+    name      : Alain Falsini
+    age       : 69
+    gender    : m
+    bio: |
+      A gravi l'Aconcagua (6962m) malgré sa polio.
+      Ex. pâtissier.
+      Engagé dans des associations humanitaires.
+  -
+    candidate : *benne
+    position  : 35
+    name      : Danièle Robin
+    age       : 69
+    gender    : f
+    bio: |
+      Ex. secrétaire générale faculté de droit de Nice.
+      Master de droit public.
 
 programs:
+  #
+  # Marc Orsatti
+  #
   -
     candidate: *orsatti
-    propositions:
+    projects:
       -
-        category: *local
+        theme: *local
         description: >
           Créer des comités de quartier afin d'associer les Laurentins aux prises
           de décisions.
       -
-        category: *local
+        theme: *local
         description: >
           Mettre en place des réunions thématiques pour l'aménagement de notre
           commune.
       -
-        category: *local
+        theme: *local
         description: >
           Consulter le tissu associatif sur tous les projets structurants.
       -
-        category: *local
+        theme: *local
         description: >
           Mettre en place un numéro vert "Allo Monsieur le Maire" pour plus de
           proximité.
       -
-        category: *local
+        theme: *local
         description: >
           Créer un conseil municipal des jeunes.
       -
-        category: *education
+        theme: *education
         description: >
           Créer une nouvelle crèche à Saint-Laurent-du-Var.
       -
-        category: *education
+        theme: *education
         description: >
           Augmenter le nombre d'agréments d'assistantes maternelles.
       -
-        category: *education
+        theme: *education
         description: >
           Développer les actions de la protection maternelle et infantile
           (prévention, éducation et santé).
       -
-        category: *education
+        theme: *education
         description: >
           Offrir des transports scolaires gratuits pour les collèges et lycées.
       -
-        category: *education
+        theme: *education
         description: >
           Renforcer le soutien scolaire
       -
-        category: *education
+        theme: *education
         description: >
           Affecter du personnel supplémentaire pour les bibliothèques et centres
           de documentation (BCD) et les doter de nouveaux ouvrages.
       -
-        category: *education
+        theme: *education
         description: >
           Faciliter l'accessibilité des groupes scolaires au numérique et à internet.
       -
-        category: *education
+        theme: *education
         description: >
           Renforcer le dialogue avec les parents d'élèves, les équipes pédagogiques,
           les éducateurs sportifs et culturels.
       -
-        category: *education
+        theme: *education
         description: >
           Développer une initiation à l'Anglais dès le primaire.
       -
-        category: *education
+        theme: *education
         description: >
           Favoriser l'implantation d'un lycée à Saint-Laurent-du-Var en collaboration
           avec la Région.
       -
-        category: *transport
+        theme: *transport
         description: >
           Revoir totalement le plan de circulation et demander à la Métropole la
           création de deux nouvelles routes transversales. La première, reliera
@@ -206,304 +541,311 @@ programs:
           seconde, débutera au boulevard Jean Ossola, vers l'avenue Général
           de Gaulle pour rejoindre l'autoroute.
       -
-        category: *transport
+        theme: *transport
         description: >
           Ouvrir une ligne de tramway entre Nice et Cagnes-sur-Mer desservant
           Saint-Laurent-du-Var.
       -
-        category: *transport
+        theme: *transport
         description: >
           Engager rapidement les travaux nécessaires, Corniche Fanhestock, pour
           rouvrir et sécuriser la circulation dans les deux sens.
       -
-        category: *transport
+        theme: *transport
         description: >
           Créer des parkings publics gratuits au centre ville, à proximité de la
           gare, des groupes scolaires et des pôles d'activités commerciales.
       -
-        category: *transport
+        theme: *transport
         description: >
           Améliorer la fréquence et les trajets des transports en commun.
       -
-        category: *transport
+        theme: *transport
         description: >
           Créer des pistes cyclable sécurisées.
       -
-        category: *transport
+        theme: *transport
         description: >
           Obtenir de la Métropole l'entretien et l'aménagement des voies
           communales et la création de trottoirs sur les routes en dehors des
           centres villes afin de protéger les piétons.
       -
-        category: *securite
+        theme: *securite
         description: >
           Obtenir l'ouverture d'un commissariat 24h/24 à Saint-Laurent-du-Var
           (et non d'une subdivision).
       -
-        category: *securite
+        theme: *securite
         description: >
           Renforcer les effectifs des forces de police, afin de mettre en place
           une police de proximité dans les quartiers.
       -
-        category: *securite
+        theme: *securite
         description: >
           Créer une caserne de pompiers à Saint-Laurent-du-Var.
       -
-        category: *securite
+        theme: *securite
         description: >
           Instaurer un plan de prévention des risques naturels.
       -
-        category: *securite
+        theme: *securite
         description: >
           Coordonner le travail des associations dans le domaine de la prévention.
       -
-        category: *securite
+        theme: *securite
         description: >
           Créer une antenne de justice.
       -
-        category: *securite
+        theme: *securite
         description: >
           Créer un observatoire contre la délinquance.
       -
-        category: *securite
+        theme: *securite
         description: >
           Sécuriser les voies de circulation considérées comme dangereuses.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Construire une Maison de Retraite Publique accessible financièrement
           aux personnes en perte d'autonomie avec la participation du
           Conseil Général.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Ouvrir une Maison Régionale de Santé, où travailleront en réseau des
           médecins, des pédiatres, des ophtalmologistes, des psychologues, et
           des auxiliaires médicaux : infirmières, kinésithérapeutes, podologues,
           orthophonistes, orthoptistes.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Améliorer les services d'aide à domicile, afin de maintenir les séniors
           dans leur appartement s'ils le souhaitent.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Créer une maison de services publics avec un guichet social unique
           (CPAM, CAF, CARSAT, caisses de retraites complémentaires, Pôle Emploi).
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Créer une Maison des Associations, lieu d'échanges et de culture, au
           sein de l'ancienne clinique Djibouti.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Créer un accueil approprié pour les personnes en grandes difficultés.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Créer une antenne locale pour lutter contre la toxicomanie.
       -
-        category: *accessibilite
+        theme: *accessibilite
         description: >
           Réserver des appartements situés en rez-de-chaussée dans toutes les
           nouvelles constructions et rénovation de logements sociaux.
       -
-        category: *accessibilite
+        theme: *accessibilite
         description: >
           Aménager des accès handicapés dans tous les services publics.
       -
-        category: *accessibilite
+        theme: *accessibilite
         description: >
           Faciliter l'accessibilité dans les transports en commun.
       -
-        category: *accessibilite
+        theme: *accessibilite
         description: >
           Favoriser la libre circulation des personnes handicapées et à mobilité
           réduite dans leur transport individuel en sécurisant et en faisant
           respecter les places de parking réservées.
       -
-        category: *accessibilite
+        theme: *accessibilite
         description: >
           Surbaisser les trottoirs pour les rendre plus accessibles.
       -
-        category: *logement
+        theme: *logement
         description: >
           Utiliser les réserves foncières, pour construire des logements locatifs
           en petites unités accessibles à tous.
       -
-        category: *logement
+        theme: *logement
         description: >
           Établir un plan de rénovation des logements anciens destinés à la location.
       -
-        category: *logement
+        theme: *logement
         description: >
           Créer des logements d'urgence en secteur diffus, afin de tenir compte de
           la mixité sociale et favoriser l'insertion des personnes en grande difficulté.
       -
-        category: *logement
+        theme: *logement
         description: >
           Réhabiliter la partie Nord des HLM du Point du Jour et en associant
           espaces verts, infrastructures sportives et culturelles, commerces,
           lieux d'échanges et de soutien social, et reloger les autres résidents.
       -
-        category: *logement
+        theme: *logement
         description: >
           Obtenir des bailleurs sociaux l'entretien de l'habitat et l'amélioration
           du cadre de vie des résidents.
       -
-        category: *logement
+        theme: *logement
         description: >
           Créer un partenariat entre la Mairie et les constructeurs privés afin
           de favoriser l'accession à la propriété.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Créer une Maison des Jeunes, lieu de vie et d'épanouissement avec
           multimédias, activités ludiques, mise à disposition d'une antenne
           d'écoute, notamment pour la proposition de nouveaux projets.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Implanter un plateau culturel polyvalent intercommunal sur Saint-Laurent-du-Var
           comportant salle de spectacle, cinéma, ludothèque, médiathèque, bibliothèque,
           théâtre.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Aménager des salles de réunion pour les associations.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Renforcer la création d'évènements culturels et sportifs.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Rénover le stade Léon Bérenger et réaménager le complexe sportif des Iscles.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Créer un nouveau gymnase.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Créer une nouvelle piscine intercommunale, en limite de Saint-Laurent-du-Var
           et Cagnes-sur-Mer.
       -
-        category: *tourisme
+        theme: *tourisme
         description: >
           Favoriser le développement de l'hôtellerie.
       -
-        category: *tourisme
+        theme: *tourisme
         description: >
           Render piétonne la rue Desjobert un samedi par mois pour des animations
           commerciales et culturelles.
       -
-        category: *tourisme
+        theme: *tourisme
         description: >
           Mettre en place une signalétique centralisée sur une table d'orientation
           au bord de mer.
       -
-        category: *tourisme
+        theme: *tourisme
         description: >
           Aménager nos plages pour les rendre plus agréables et plus attractives.
       -
-        category: *tourisme
+        theme: *tourisme
         description: >
           Mettre en place des initiatives de jumelages et d'échanges culturels
           internationaux dans une perspective de promotion touristiques.
       -
-        category: *tourisme
+        theme: *tourisme
         description: >
           Restaurer le Vieux Moulin des Pugets pour y créer un musée de l'histoire
           et de la culture Laurentine.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Supprimer la pollution de nos plages en demandant à la Métropole de
           créer une nouvelle station d'épuration pour traiter les eaux usées
           des communes en amont de Saint-Laurent-du-Var et éviter la saturation
           de celle proche de Cap 3000.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Créer un centre de recyclage des encombrants, sans aucune pollution,
           avec une collecte gratuite.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Dépolluer et nettoyer les berges du Var et protéger les nappes
           phréatiques en faisant respecter la réglementation.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Mettre en sécurité notre commune contre les inondations.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Créer des ouvrages anti-bruits le long de l'autoroute.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Aménager la couverture de l'autoroute entre l'avenue du Zoo et du boulevard
           Jean Ossola, en collaboration avec le groupe Vinci, pour créer des parkings
           gratuits et des édifices publics.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Refuser l'extension du port de plaisance de Saint-Laurent-du-Var afin
           de protéger les plages, les activités aquatiques et la réserve
           ornithologique "La Petite Camargue" et créer un port à sec enterré
           identique au projet de Beaulieu-sur-Mer financé par des fonds privés.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Favoriser la mise en place des énergies renouvelables pour les
           particuliers et les services publics.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Instaurer une régie municipale de l'eau.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Rouvrir le parcours de santé au sein de la forêt des Pugets.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Défendre l'artisanat et le commerce, et de favoriser son implantation
           au coeur de la ville et du vieux village.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Dynamiser les zones d'activités (zone industrielle, commerces du centre
           ville, de la gare et du port).
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Favoriser l'aide à la création d'entreprise.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Améliorer les actions d'insertion pour les personnes en situation
           professionnelle précaire.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Maintenir une agriculture de production locale.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Mettre en place au printemps et à l'automne des braderies et vide greniers.
+  #
+  # Henri Revel
+  #
   -
     candidate: *revel
     propositions: []
+
+  #
+  # Marc Moschetti
+  #
   -
     candidate: *moschetti
-    propositions:
+    projects:
       -
-        category: *local
+        theme: *local
         description: >
           Développer la démocratie participative par la création de Conseils de
           Quartiers, représentant les différents secteurs de la commune. Issus de
@@ -513,440 +855,450 @@ programs:
           la Mairie concernant leur secteur et pourront également faire des propositions
           au Conseil Municipal.
       -
-        category: *local
+        theme: *local
         description: >
           Mise en place d'un plan de développement du débit internet sur toute
           la commune.
       -
-        category: *local
+        theme: *local
         description: >
           Favoriser la dématérialisation des documents administratifs. Créer
           un guichet unique municipal permettant d'orienter les Laurentins dans
           toutes leurs démarches, aussi bien sur les services de la ville que
           sur les autres services institutionnels (CAF, CPAM, etc).
       -
-        category: *local
+        theme: *local
         description: >
           Favoriser la communication interne, ainsi d'ailleurs que la formation
           des agents municipaux.
       -
-        category: *local
+        theme: *local
         description: >
           Le Maire se droit d'être un facilitateur pour les Laurentins. Il est
           là pour rendre la vie en collectivité plus simple, plus agréable.
       -
-        category: *education
+        theme: *education
         description: >
           Aucun enfant ne doit sortir de l'École primaire sans maîtriser les savoirs
           fondamentaux (lire, écrire et compter).
       -
-        category: *education
+        theme: *education
         description: >
           Développer le soutien scolaire spécifique aux enfants de CP en difficultés.
       -
-        category: *education
+        theme: *education
         description: >
           Libérer deux classes (1 à Castillon - 1 à la Gare) pour les enfants
           scolarisés dès 2 ans et demie, avec obligation de mettre à disposition
           2 ATSEM pour chacune des 2 classes.
       -
-        category: *education
+        theme: *education
         description: >
           Faire entrer l'école dans l'ère du numérique (salle informatique).
       -
-        category: *education
+        theme: *education
         description: >
           Prévoir un rapprochement des deux collèges avec la Mairie
           (réception des délégués des élèves pour appel à projets).
       -
-        category: *education
+        theme: *education
         description: >
           Carnaval des Écoles à thème, en centre ville, avec remise de prix pour
           les écoles (déguisements, chars, etc) et manifestation sportive,
           type mini-olympiade.
       -
-        category: *education
+        theme: *education
         description: >
           Remise d'un Prix d'Excellence et d'un Prix de l'élève méritant
           (pour chaque école et par niveau de classe).
       -
-        category: *education
+        theme: *education
         description: >
           Maison de colonie pour les classes vertes, voire pour le ski-club.
       -
-        category: *education
+        theme: *education
         description: >
           Développer le festival du livre (la semaine pour les scolaires et le
           week-end pour le grand public).
       -
-        category: *education
+        theme: *education
         description: >
           Prévoir une nouvelle extension des Bigaradiers.
       -
-        category: *education
+        theme: *education
         description: >
           Signalétique des Écoles (ex : nom de l'école sur un pot à crayons géant),
           panneaux signalisant les abords des écoles et renforcement de la lumière
           sur les passages piétons.
       -
-        category: *education
+        theme: *education
         description: >
           Repas unique pour toutes les écoles (cuisine centrale) et développer
           les produits BIO dans les cantines et les crèches.
       -
-        category: *education
+        theme: *education
         description: >
           Favoriser l'insertion des jeunes laurentins au monde professionnel par
           l'apprentissage et l'alternance.
       -
-        category: *education
+        theme: *education
         description: >
           Augmenter fortement le nombre d'apprentis sur la commune en liaison
           notamment avec les entreprises de la Zone Industrielle.
       -
-        category: *education
+        theme: *education
         description: >
           Aider les PME et les TPE à accueillir des apprentis et développer de
           nouvelles formations professionnelles pour tous, en phase avec les
           réalités économiques.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Projet de construction d'un nouveau stade, dès que l'inondabilité sera
           levée en 2015, à l'endroit même de l'ancien stade, avec une salle
           omnisports, salle de théâtre et salle de conférence.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Le Dojo doit être la Maison des Arts Martiaux (agrandissement et extension).
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Les équipes doivent porter les couleurs laurentines bleu et blanc
           (sur toutes les tenues de sport).
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Entretenir les tribunes de la salle Carton et création d'une buvette.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Prévoir deux vestiaires supplémentaires à la salle H et réaliser un
           meilleur éclairage.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Fêtes des sports et organisation d'un défilé des sportifs de toutes
           les associations Laurentines.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Mini-Olympiade des écoles pour les scolaires.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Soutenir une manifestation handisport et des installations sportives
           (dans le cadre des aides du handisport et des sports adaptés).
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Lorsque cela sera possible, des microsites à activités sportives
           polyvalentes seront mis en place dans les quartiers.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           La restauration du Moulin des Pugets (ou ECO MUSE) en ajoutant un
           bâtiment moderne, avec des parkings souterrains pour préserver
           l'environnement et accueillir les scolaires, ainsi qu'une salle de
           conférence/projection/polyvalente.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Créations d'une salle d'exposition proche de la mer, d'une maison de
           la culture et d'une bibliothèque interactive, avec des ateliers de
           lecture.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Multiplier le nombre de concerts et d'expositions.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Développer les manifestations culturelles, avec une forte information
           et participation des habitants et des associations.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Réunions bimensuelles avec les associations, les comités/conseils de
           quartiers et les représentants de la Mairie.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Soutenir des évènements festifs, avec des journées à thèmes dans le
           centre ville et dans les différents quartiers.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Créer une Web Radio et/ou une Web TV Laurentin.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Donner la possibilité d'accueillir des concerts musicaux dans le nouveau
           stade.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Décorations et animations de Noël à renforcer.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Refaire de nos plages des lieux de vie et réengraisser/réaménager les
           plages des Flots Bleus avec du sable.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Créer des aménagements sportifs et de loisirs sur les bords du Var,
           ainsi que dans la forêt des Pugets.
       -
-        category: *jslc
+        theme: *jslc
         description: >
           Récupérer compétences de l'AGASC dans le cadre municipal.
       -
-        category: *securite
+        theme: *securite
         description: >
           Renforcer les postes de Police d'ilotage avec la création d'une brigade
           de Police d'intervention de Proximité et, ainsi, accentuer la proximité
           avec les laurentins.
       -
-        category: *securite
+        theme: *securite
         description: >
           Renforcer la surveillance des patrouilles de la Police Municipale aux
           alentours des collèges et écoles.
       -
-        category: *securite
+        theme: *securite
         description: >
           Définir de nouveaux quartiers "des voisins vigilants" et aider les référents.
       -
-        category: *securite
+        theme: *securite
         description: >
           Renforcer le Contrat Local de Sécurité et de Prévention de la Délinquance,
           avec un dispositif très structuré qui permettra de suivre l'avancé de nos
           actions dans tous les micros secteurs.
       -
-        category: *securite
+        theme: *securite
         description: >
           Renforcer et développer la vidéosurveillance.
       -
-        category: *securite
+        theme: *securite
         description: >
           Lutter contre toutes les pollutions sonores, visuelles (tags), sanitaires
           (déjections animales), etc.
       -
-        category: *securite
+        theme: *securite
         description: >
           De manière générale, s'assurer que la sécurité, sous toutes ses formes,
           couvre bien tous les aspects de la vie quotidienne des Laurentins.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Mettre en place des emplois tremplins pour les jeunes, qui bénéficieront
           ainsi de l'ascenseur social avec un contrat de type CAE (Contrat
           d'Accompagnement dans l'Emploi).
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Mise en place d'un service emploi municipal en liaison avec Pôle Emploi,
           véritable médiateur entre les demandeurs d'emploi et les chefs d'entreprises.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Réinstaurer la Mission Locale et les relations avec les entreprises de
           la Zone Industrielle.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Développer en diversifiant l'offre d'accueil des -3 ans : crèches, crèches
           familiales, crèches d'entreprises, haltes garderies.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Création d'une colonie de vacances pour tous.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Privilégier l'aide à la personne avec la mise en place d'une partenariat
           fort entre le CCAS et le Conseil Général.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Renforcer le maintien à domicile avec la mise en place d'un réseau de
           surveillance sous l'autorité d'un Conseiller Municipal délégué.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Créer un fort lien intergénérationnel en développant les activités du
           Bel Âge et les intégrer à toutes celles de la commune.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Mise en accessibilité de tous les bâtiments publics (prévue par la loi de 2015),
           avec le suivi d'un Conseiller Municipal délégué.
       -
-        category: *solidarite
+        theme: *solidarite
         description: >
           Trottoirs adaptés à la circulation et à la traversée des voies.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Création d'éco-quartiers, partout où cela est possible, tout
           particulièrement pour Le Point du Jour (qui sera totalement refait) et
           les Iscles.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Une ville avec un haut niveau de qualité de vie urbaine, avec des
           logements HQE (Haute Qualité Environnementale) et des bâtiments publics
           à totale efficience énergétique, pour réduire au maximum la facture
           énergétique.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Des actions en matière de santé environnementale : création d'une
           association spécifique, d'éco-manifestations, ouverture d'un parc
           public dans la forêt des Pugets, redynamisation des marchés BIO.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Dans les marchés publics, privilégier l'impact écologique, afin d'ouvrir
           la porte aux sociétés laurentines, par apport aux émissions CO2.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Mise en place d'un service d'enlèvement des déchets verts sur simple
           demande et installation de puces électroniques permettant de vider les
           bacs avant qu'ils ne soient totalement pleins.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Rechercher à développer la mise en place du photovoltaïque sur les toits
           de la Zone Industrielle, pour créer la première Zone Industrielle à
           énergie positive.
       -
-        category: *environnement
+        theme: *environnement
         description: >
           Une ville solidaire qui s'adapte, développe la croissance verte et
           propose de nouvelles formes de solidarité.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Dynamiser le commerce et rétablir le dialogue avec les commerçants.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Mener une politique volontariste, accompagnée d'une écoute permanente
           des commerçants et être réactif face à leurs attentes.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           L'artisanat doit aussi retrouver sa place, toute sa place, dans la ville.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Faciliter la vie des entreprises, avec des initiatives de soutien à
           l'implantation des PME.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Créer un club des entrepreneurs.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Simplification administrative par la mise en place d'une cellule de support
           aux entreprises locales, pour leur permettre de répondre aux appels d'offre
           publics.
       -
-        category: *emploi
+        theme: *emploi
         description: >
           Soutenir les pôles commerciaux de quartier de dynamiser l'offre commerciale
           en menant une politique offensive de recherche et d'accueil d'enseignes
           nationales.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Redonner vie à chaque quartier de Saint-Laurent-du-Var, les repenser
           et les restructurer.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Revoir le Plan Local d'Urbanisme en veillant à gommer les inégalités,
           particulièrement pour les Iscles.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Tolérance Zéro en matière d'Urbanisme et d'Environnement.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Projet adapté à l'objectif de reconquête des berges du Var, finançable
           et réalisable sur la durée du mandat. Un grand espace dédié aux piétons,
           ouvert sur le Var, avec jardin d'enfant, terrains de jeux, commerces, etc.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Point du Jour : reconstruction totale du quartier.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Améliorer et, si besoin, restructurer les entrées de ville : Gare, RN7,
           Iscles, Le Point du Jour.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Le Point du Jour sera totalement déconstruit et reconstruit, pour
           devenir un éco-quartier modèle et emblématique, ouvert par ses voies
           d'accès sur le centre ville.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Créer un coeur de ville : une place centrale à Saint-Laurent-du-Var.
       -
-        category: *urbanisme
+        theme: *urbanisme
         description: >
           Création d'un pôle service public dans le quartier des Pugets, en
           regroupant maison de quartier et antenne de Police Municipale.
-
       -
-        category: *transport
+        theme: *transport
         description: >
           Ligne de tramway de Nice avec une continuité et un axe Nord-Sud de
           préférence en bordure du Var.
       -
-        category: *transport
+        theme: *transport
         description: >
           Obtenir du Conseil Général des Alpes-Maritimes l'élargissement/doublement
           du CD6095 (chemin des Iscles).
       -
-        category: *transport
+        theme: *transport
         description: >
           Obtenir, également, un accès entrée et sortie sur la RD6202 Bis à
           Saint-Laurent-du-Var au niveau de la Zone Industrielle.
       -
-        category: *transport
+        theme: *transport
         description: >
           Mettre en place un schéma de cohésion urbaine, en revoyant totalement
           le plan de circulation, tout en préservant les espaces piétons.
       -
-        category: *transport
+        theme: *transport
         description: >
           Multiplier les places de stationnement, notamment en créant des parkings
           souterrains en centre ville, sans oublier les Pugets et Saint-Joseph.
+
+  #
+  # Joseph Segura
+  #
   -
     candidate: *segura
-    propositions: []
+    projects: []
 
+  #
+  # Lionel Prados
+  #
   -
     candidate: *prados
-    propositions: []
+    projects: []
+
+  #
+  # Françoise Benne
+  #
   -
     candidate: *benne
-    propositions: []
+    projects: []

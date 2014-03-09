@@ -64,13 +64,13 @@ a.circle {
   color: transparent;
 }
 
-.propositions li {
+.projects li {
   background: #f5f5f5;
   padding: 20px;
   margin-bottom: 5px;
 }
 
-.propositions li p {
+.projects li p {
   font-size: 90%;
   margin-bottom: 0;
 }
@@ -101,7 +101,7 @@ a.circle {
   .candidate-card .candidate-slogan {
     font-size: 90%;
   }
-  .candidate-program .propositions li {
+  .candidate-program .projects li {
     padding: 10px;
     font-size: 80%;
   }
