@@ -2,39 +2,51 @@ themes:
   education: &education
     name: "Éducation, Petite enfance & Scolarité"
     slug: education
+    icon: smile-o
   transport: &transport
     name: "Transport & Déplacements"
     slug: transport
+    icon: road
   securite: &securite
     name: "Sécurité & Prévention"
     slug: securite
+    icon: fire-extinguisher
   logement: &logement
     name: Logement
     slug: logement
+    icon: home
   solidarite: &solidarite
     name: Solidarité
     slug: solidarite
+    icon: group
   environnement: &environnement
     name: "Environnement, Écologie & Développement Durable"
     slug: environnement
+    icon: leaf
   jslc: &jslc
     name: "Jeunesse, Sports, Loisirs & Culture"
     slug: jslc
+    icon: dribbble
   tourisme: &tourisme
     name: "Tourisme & Patrimoine"
     slug: tourisme
+    icon: plane
   emploi: &emploi
     name: "Emploi & Développement économique"
     slug: emploi
+    icon: suitcase
   local: &local
     name: Local / Proximité
     slug: local
+    icon: location-arrow
   urbanisme: &urbanisme
     name: Urbanisme
-    slug: local
+    slug: urbanisme
+    icon: building-o
   accessibilite: &accessibilite
     name: Accessibilité
     slug: accessibilite
+    icon: wheelchair
 
 candidates:
   #

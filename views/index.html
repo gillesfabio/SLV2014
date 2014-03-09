@@ -101,7 +101,9 @@
       <ul class="small-block-grid-1 medium-block-grid-3">
         {{#each this}}
         <li>
-          <span><a href="<%= baseurl %>#/themes/{{slug}}">{{name}}</a></span>
+          <span>
+            <i class="fa fa-{{icon}}"></i> <a href="<%= baseurl %>#/themes/{{slug}}">{{name}}</a>
+          </span>
         </li>
         {{/each}}
       </ul>
