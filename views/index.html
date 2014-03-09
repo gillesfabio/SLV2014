@@ -108,14 +108,21 @@
     </script>
 
     <script id="theme-detail-template" type="text/x-handlebars-template">
-      <h3>{{theme.name}}</h3>
+      <h2>{{theme.name}}</h2>
       {{#each programs}}
-      <h4>{{@key}}</h4>
-      <ul class="no-bullet candidate-program-projects">
-        {{#each this.projects}}
-        <li>{{{md2html description}}}</li>
-        {{/each}}
-      </ul>
+      <div class="row candidate-projects">
+        <div class="small-12 large-3 columns text-center">
+          <img src="{{candidate.picture}}" class="circle" alt="{{candidate.name}}">
+          <h4>{{@key}}</h4>
+        </div>
+        <div class="small-12 large-9 columns">
+          <ul class="no-bullet candidate-program-projects">
+            {{#each this.projects}}
+            <li>{{{md2html description}}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
       {{/each}}
     </script>
 

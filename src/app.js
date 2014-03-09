@@ -398,7 +398,6 @@
      */
     prepare: function() {
       this.runningMates = this.collection.findByCandidate(this.slug);
-      console.log(this.runningMates.toJSON());
       this.render();
     },
 
