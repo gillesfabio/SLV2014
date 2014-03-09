@@ -278,11 +278,17 @@
      * @returns {Array}
      */
     findByTheme: function(slug) {
-      return this.filter(function(model) {
-        return _.contains(_.map(model.get('projects'), function(o) {
-          return o.theme.slug;
-        }), slug);
+      var models = [];
+      this.each(function(model) {
+        var projects = _.filter(model.get('projects'), function(project) {
+          return project.theme.slug === slug;
+        });
+        if (projects.length > 0) {
+          model.attributes.projects = projects;
+          models.push(model);
+        }
       });
+      return new App.collections.ProgramCollection(models);
     },
 
     /**
@@ -294,15 +300,12 @@
      * @returns {Object}
      */
     findByThemeAndGroupByCandidate: function(slug) {
-      var models = new App.collections.ProgramCollection(this.findByTheme(slug));
-      models = models.groupBy(function(model) {
-        return model.get('candidate').name;
-      });
+      var models = this.findByTheme(slug);
+      models = models.groupBy(function(m) { return m.get('candidate').name; });
       Object.keys(models).forEach(function(key) {
-        var col = models[key];
-        var obj = col.toJSON();
-        console.log(obj);
+        models[key] = models[key][0].toJSON();
       });
+      return models;
     },
 
     /**

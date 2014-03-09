@@ -110,14 +110,12 @@
     <script id="theme-detail-template" type="text/x-handlebars-template">
       <h3>{{theme.name}}</h3>
       {{#each programs}}
-        <h4>{{@key}}</h4>
-        {{#each this}}
-        <ul class="no-bullet projects">
-          {{#each projects}}
-          <li>{{{md2html description}}}</li>
-          {{/each}}
-        </ul>
+      <h4>{{@key}}</h4>
+      <ul class="no-bullet candidate-program-projects">
+        {{#each this.projects}}
+        <li>{{{md2html description}}}</li>
         {{/each}}
+      </ul>
       {{/each}}
     </script>
 
