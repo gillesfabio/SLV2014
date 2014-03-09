@@ -64,6 +64,14 @@
   App.templates.CandidateCardTemplate = $('#candidate-card-template').html();
 
   /**
+   * Running Mate List Handlebars Template.
+   *
+   * @type {String}
+   * @memberof App.templates
+   */
+  App.templates.RunningMateListTemplate = $('#running-mate-list-template').html();
+
+  /**
    * Candidate Program Handlebars Template.
    *
    * @type {String}
@@ -139,6 +147,17 @@
   );
 
   /**
+   * Running Mate Model.
+   *
+   * @class
+   * @memberof App.models
+   * @augments Backbone.Model
+   */
+  App.models.RunningMateModel = Backbone.Model.extend(
+    /** @lends App.models.RunningMateModel.prototype */{}
+  );
+
+  /**
    * Program Model.
    *
    * @class
@@ -186,6 +205,38 @@
 
     parse: function(res) {
       return res.candidates;
+    }
+  });
+
+  /**
+   * Running Mate Collection.
+   *
+   * @class
+   * @memberof App.collections
+   * @augments Backbone.Collection
+   */
+  App.collections.RunningMateCollection = Backbone.Collection.extend(
+    /** @lends App.collections.RunningMateCollection.prototype */ {
+
+    model: App.models.RunningMateModel,
+    url: App.dataURL,
+
+    parse: function(res) {
+      return res.runningMates;
+    },
+
+    /**
+     * Returns models for the given candidate.
+     *
+     * @memberof App.collections.RunningMateCollection#
+     * @param {String} The candidate slug.
+     * @returns {Array}
+     */
+    findByCandidate: function(slug) {
+      var models = this.filter(function(model) {
+        return model.get('candidate').slug === slug;
+      });
+      return new App.collections.RunningMateCollection(models);
     }
   });
 
@@ -309,6 +360,56 @@
   });
 
   /**
+   * Running Mate List View.
+   *
+   * @class
+   * @memberof App.views
+   * @param {Object} options The view options.
+   * @param {App.collections.RunningMateCollection} options.collection The collection instance.
+   */
+  App.views.RunningMateListView = Backbone.View.extend(
+    /** @lends App.views.RunningMateListView.prototype */ {
+
+    tagName: 'div',
+    className: 'running-mate-list',
+
+    initialize: function(options) {
+
+      this.options = _.extend({
+        slug         : null,
+        runningMates : new App.collections.RunningMateCollection()
+      }, options);
+
+      this.slug         = this.options.slug;
+      this.runningMates = this.options.runningMates;
+      this.template     = Handlebars.compile(App.templates.RunningMateListTemplate);
+
+      this.listenTo(this.collection, 'sync', this.prepare);
+      this.collection.fetch();
+    },
+
+    /**
+     * Prepare template context.
+     *
+     * @memberof App.views.RunningMateListView#
+     */
+    prepare: function() {
+      this.runningMates = this.collection.findByCandidate(this.slug);
+      console.log(this.runningMates.toJSON());
+      this.render();
+    },
+
+    /**
+     * Renders view.
+     *
+     * @memberof App.views.RunningMateListView#
+     */
+    render: function() {
+      this.$el.html(this.template({runningMates: this.runningMates.toJSON()}));
+    }
+  });
+
+  /**
    * Candidate Program View.
    *
    * @class
@@ -362,7 +463,7 @@
    * @class
    * @memberof App.views
    * @param {Object} options The view options.
-   * @param {App.collection.CandidateCollection} options.collection The collection instance.
+   * @param {App.collections.CandidateCollection} options.collection The collection instance.
    */
   App.views.CandidateListView = Backbone.View.extend(
     /** @lends App.views.CandidateListView.prototype */ {
@@ -437,8 +538,9 @@
    * @memberof App.views
    * @param {Object} options The view options.
    * @param {String} options.slug The candidate slug.
-   * @param {App.collection.CandidateCollection} options.collection The collection instance.
-   * @param {App.collection.ProgramCollection} options.programs The collection instance.
+   * @param {App.collections.CandidateCollection} options.collection The collection instance.
+   * @param {App.collections.ProgramCollection} options.programs The collection instance.
+   * @param {App.collections.RunningMateCollection} options.runningMates The collection instance.
    *
    */
   App.views.CandidateDetailView = Backbone.View.extend({
@@ -447,10 +549,18 @@
     className: 'candidate-detail',
 
     initialize: function(options) {
-      this.options = _.extend({slug: null, programs: null}, options);
-      this.slug = this.options.slug;
-      this.programs = this.options.programs;
-      this.template = Handlebars.compile(App.templates.CandidateDetailTemplate);
+
+      this.options = _.extend({
+        slug         : null,
+        programs     : new App.collections.ProgramCollection(),
+        runningMates : new App.collections.RunningMateCollection()
+      }, options);
+
+      this.slug         = this.options.slug;
+      this.programs     = this.options.programs;
+      this.runningMates = this.options.runningMates;
+      this.template     = Handlebars.compile(App.templates.CandidateDetailTemplate);
+
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
     },
@@ -461,9 +571,24 @@
      * @memberof App.views.CandidateView#
      */
     prepare: function() {
+
       this.model = this.collection.findWhere({slug: this.slug});
-      this.cardView = new App.views.CandidateCardView({model: this.model, showButton: false});
-      this.programView = new App.views.CandidateProgramView({collection: this.programs, slug: this.slug});
+
+      this.cardView = new App.views.CandidateCardView({
+        model      : this.model,
+        showButton : false
+      });
+
+      this.programView = new App.views.CandidateProgramView({
+        collection : this.programs,
+        slug       : this.slug
+      });
+
+      this.runningMateListView = new App.views.RunningMateListView({
+        collection : this.runningMates,
+        slug       : this.slug
+      });
+
       this.render();
     },
 
@@ -474,6 +599,7 @@
      */
     render: function() {
       this.$el.html(this.template({candidate: this.model.toJSON()}));
+      this.$el.find('.candidate-detail-running-mates').html(this.runningMateListView.el);
       this.$el.find('.candidate-detail-card').html(this.cardView.el);
       this.$el.find('.candidate-detail-program').html(this.programView.el);
     }
@@ -493,7 +619,7 @@
     /** @lends App.views.ThemeDetailView.prototype */{
 
     tagName: 'div',
-    className: 'category',
+    className: 'theme-detail',
 
     initialize: function(options) {
       this.options = _.extend({slug: null, programs: null}, options);
@@ -534,7 +660,6 @@
      * @memberof App.views.ThemeDetailView#
      */
     render: function() {
-      console.log(this.groupedPrograms);
       this.$el.html(this.template({
         theme: this.theme.toJSON(),
         programs: this.groupedPrograms
@@ -552,6 +677,9 @@
    */
   App.views.ThemeListView = Backbone.View.extend(
     /** @lends App.views.ThemeListView.prototype */ {
+
+    tagName: 'div',
+    className: 'theme-list',
 
     initialize: function(options) {
       this.options = options || {};
@@ -594,9 +722,10 @@
     },
 
     initialize: function() {
-      this.candidates = new App.collections.CandidateCollection();
-      this.programs = new App.collections.ProgramCollection();
-      this.themes = new App.collections.ThemeCollection();
+      this.themes       = new App.collections.ThemeCollection();
+      this.candidates   = new App.collections.CandidateCollection();
+      this.runningMates = new App.collections.RunningMateCollection();
+      this.programs     = new App.collections.ProgramCollection();
       this.content = $('#content');
     },
 
@@ -618,9 +747,10 @@
      */
     candidateDetailController: function(slug) {
       var view = new App.views.CandidateDetailView({
-        slug: slug,
-        collection: this.candidates,
-        programs: this.programs
+        slug         : slug,
+        collection   : this.candidates,
+        programs     : this.programs,
+        runningMates : this.runningMates
       });
       this.content.html(view.el);
     },
@@ -633,9 +763,9 @@
      */
     themeDetailController: function(slug) {
       var view = new App.views.ThemeDetailView({
-        collection: this.themes,
-        slug: slug,
-        programs: this.programs
+        collection : this.themes,
+        slug       : slug,
+        programs   : this.programs
       });
       this.content.html(view.el);
     },

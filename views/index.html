@@ -49,20 +49,36 @@
             {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{model.facebook}}">{{model.facebook}}</a></li>{{/if}}
           </ul>
           {{#if showButton}}
-            <a href="<%= baseurl %>#/candidats/{{model.slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
+          <a href="<%= baseurl %>#/candidats/{{model.slug}}" class="button"><i class="fa fa-list-ol"></i> Mon Programme</a>
           {{/if}}
         </div>
       </div>
     </script>
 
+    <script id="running-mate-list-template" type="text/x-handlebars-template">
+      <h2>Mes Colistiers</h2>
+      <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+        {{#each runningMates}}
+        <li class="running-mate">
+          <div class="running-mate-content">
+            <h5>{{name}}</h5>
+            {{#if age }}<h6>{{ age }} ans</h6>{{/if}}
+            {{{md2html bio}}}
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </script>
+
     <script id="candidate-program-template" type="text/x-handlebars-template">
+      <h2>Mon programme</h2>
       {{#each projects}}
-        <h4 class="theme-title"><a href="<%= baseurl %>#/themes/{{this.0.theme.slug}}">{{@key}}</a></h4>
-        <ul class="no-bullet projects">
-          {{#each this}}
-          <li>{{{md2html description}}}</li>
-          {{/each}}
-        </ol>
+      <h3 class="theme-title"><a href="<%= baseurl %>#/themes/{{this.0.theme.slug}}">{{@key}}</a></h3>
+      <ul class="no-bullet candidate-program-projects">
+        {{#each this}}
+        <li>{{{md2html description}}}</li>
+        {{/each}}
+      </ol>
       {{/each}}
     </script>
 
@@ -76,14 +92,15 @@
           qui corrigera immédiatement.
         </p>
       </div>
-      <div class="candidate-detail-program"</div>
+      <div class="candidate-detail-running-mates"></div>
+      <div class="candidate-detail-program"></div>
     </script>
 
     <script id="theme-list-template" type="text/x-handlebars-template">
       <h2>Thèmes</h2>
       <ul class="small-block-grid-1 medium-block-grid-3">
         {{#each this}}
-        <li class="theme-title">
+        <li>
           <span><a href="<%= baseurl %>#/themes/{{slug}}">{{name}}</a></span>
         </li>
         {{/each}}
@@ -91,7 +108,7 @@
     </script>
 
     <script id="theme-detail-template" type="text/x-handlebars-template">
-      <h2>{{theme.name}}</h2>
+      <h3>{{theme.name}}</h3>
       {{#each programs}}
         <h4>{{@key}}</h4>
         {{#each this}}
