@@ -117,6 +117,7 @@
   // ---------------------------------------------------------------------------
 
   Handlebars.registerHelper('md2html', function(md) {
+    var str = new Handlebars.SafeString(md);
     return new Handlebars.SafeString(markdown.toHTML(md));
   });
 

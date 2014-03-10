@@ -39,12 +39,9 @@ html {
   text-transform : uppercase;
   font-weight    : 200;
   letter-spacing : -1px;
-  border-bottom  : 1px solid #ececec;
+  margin-bottom  : 20px;
 }
 
-.candidate-detail h3 {
-
-}
 
 /* candidate-program
 ----------------------------------------------------------------------------- */
@@ -110,16 +107,32 @@ html {
 
 .running-mate-content {
   background : #f5f5f5;
-  padding    : 20px;
+  padding: 0;
 }
 
 .running-mate h5 {
+  background: #ececec;
+  padding: 10px;
+  margin: 0;
   font-weight: bold;
 }
 
 .running-mate h6 {
   font-weight : bold;
   font-size   : 80%;
+}
+
+.running-mate p {
+  padding: 10px;
+  color: #444;
+}
+
+.running-mate-community h5 {
+  background: #F3CCFF !important;
+}
+
+.running-mate-community .running-mate-content {
+  background: #F9E5FF;
 }
 
 /* Utilities

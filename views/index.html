@@ -57,9 +57,9 @@
 
     <script id="running-mate-list-template" type="text/x-handlebars-template">
       <h2>Mes Colistiers</h2>
-      <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+      <ul class="small-block-grid-1">
         {{#each runningMates}}
-        <li class="running-mate">
+        <li class="running-mate {{#if community}}running-mate-community{{/if}}">
           <div class="running-mate-content">
             <h5>{{name}}</h5>
             {{#if age }}<h6>{{ age }} ans</h6>{{/if}}
@@ -92,8 +92,14 @@
           qui corrigera immédiatement.
         </p>
       </div>
-      <div class="candidate-detail-running-mates"></div>
-      <div class="candidate-detail-program"></div>
+      <div class="row">
+        <div class="small-12 large-8 columns">
+          <div class="candidate-detail-program"></div>
+        </div>
+        <div class="small-12 large-4 columns">
+          <div class="candidate-detail-running-mates"></div>
+        </div>
+      </div>
     </script>
 
     <script id="theme-list-template" type="text/x-handlebars-template">
