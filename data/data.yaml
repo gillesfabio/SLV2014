@@ -153,11 +153,298 @@ candidates:
 
 runningMates:
   #
+  # Marc Orsatti
+  #
+  -
+    candidate : *orsatti
+    community : true
+    name      : Françoise Bormida
+    age       : ~
+    gender    : f
+    bio: |
+      Conseillère Municipale.
+      Employée commerce de l'habillement.    
+  -
+    candidate : *orsatti
+    community : true
+    name      : Antoine Marchese
+    age       : ~
+    gender    : m
+    bio: |
+      Ingénieur.
+  -
+    candidate : *orsatti
+    community : true
+    name      : Suzanne Marlier
+    age       : ~
+    gender    : f
+    bio: |
+      Cadre bancaire.
+      Retraitée.
+  -
+    candidate : *orsatti
+    community : true
+    name      : Joseph Grisoni
+    age       : ~
+    gender    : m
+    bio: |
+      Administrateur Organisme Social.
+  -
+    candidate : *orsatti
+    community : true
+    name      : Stéphanie Braganti
+    age       : ~
+    gender    : f
+    bio: |
+      Avocate au Barreau de Nice.
+  -
+    candidate : *orsatti
+    community : true
+    name      : Frédéric Candau
+    age       : ~
+    gender    : m
+    bio: |
+      Avocat au Barreau de Nice.
+  -
+    candidate : *orsatti
+    community : true
+    name      : Catherine Torcat
+    age       : ~
+    gender    : f
+    bio: |
+      Employée de La Poste.
+      Response Syndicale.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Sylvain Rossi
+    age       : ~
+    gender    : m
+    bio: |
+      Éducateur Spécialisé.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Olivia Tanoh
+    age       : ~
+    gender    : f
+    bio: |
+      Agent Territorial.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Frédérick Heller
+    age       : ~
+    gender    : m
+    bio: |
+      Fonctionnaire de Police.
+      Retraité.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Céline Dalmasso
+    age       : ~
+    gender    : f
+    bio: |
+      Hôtesse Compagnie Aérienne.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Eric Ferrari
+    age       : ~
+    gender    : m
+    bio: |
+      Employé de banque.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Giannella Sessarego
+    age       : ~
+    gender    : f
+    bio: |
+      Psychologue du travail.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Rodolphe Personnaz
+    age       : ~
+    gender    : m
+    bio: |
+      Dessinateur Projeteur.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Danièle Dubois
+    age       : ~
+    gender    : f
+    bio: |
+      Cadre Informatique Caisse de Retraite.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Alain Giretto
+    age       : ~
+    gender    : m
+    bio: |
+      Technicien Agricole.
+      Retraité.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Nicole Revello
+    age       : ~
+    gender    : f
+    bio: |
+      Secrétaire Organisme Social.
+      Retraitée.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Emmanuel Bergeret
+    age       : ~
+    gender    : m
+    bio: |
+      Chef d'Entreprise.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Colette Duchet
+    age       : ~
+    gender    : f
+    bio: |
+      Agent Territorial.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Marcel Puget
+    age       : ~
+    gender    : m
+    bio: |
+      Artisan.
+      Retraité.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Francine Mendez
+    age       : ~
+    gender    : f
+    bio: |
+      Conseillère clientèle de La Poste.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Pascal Barres
+    age       : ~
+    gender    : m
+    bio: |
+      Maçon, technicien piscinier.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Roselyne Lefèvre
+    age       : ~
+    gender    : f
+    bio: |
+      Infirmière Centre Hospitalier.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Michel Torcat
+    age       : ~
+    gender    : m
+    bio: |
+      Pilote de production de La Poste.
+      Président de club sportif.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Madeleine Courrier
+    age       : ~
+    gender    : f
+    bio: |
+      Militante Écologiste.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Éric Carbone
+    age       : ~
+    gender    : m
+    bio: |
+      Infirmier.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Chantal Ballut
+    age       : ~
+    gender    : f
+    bio: |
+      Maître d'Hôtel.
+      Retraitée.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Michel Acacio
+    age       : ~
+    gender    : m
+    bio: |
+      Export Immobilier.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Chantal Ollivault
+    age       : ~
+    gender    : f
+    bio: |
+      Employée Secteur Commercial.
+      Secrétaire Comité d'Entreprise.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Pierre Todesco
+    age       : ~
+    gender    : m
+    bio: |
+      Retraité du Bâtiment.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Marie-Laure Bertrand
+    age       : ~
+    gender    : f
+    bio: |
+      Militante Écologiste.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Jean-Pierre Bordier
+    age       : ~
+    gender    : m
+    bio: |
+      Cadre retraité du Service des Eaux.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Françoise Huleux
+    age       : ~
+    gender    : f
+    bio: |
+      Administrateur de Biens.
+      Retraitée.
+  -
+    candidate : *orsatti
+    community : false
+    name      : Jean-Pierre Braganti
+    age       : ~
+    gender    : m
+    bio: |
+      Conseiller Municipal.
+      Expert Judiciaire Honoraire.
+  #
   # Françoise Benne
   #
   -
     candidate : *benne
-    position  : 2
+    community : true
     name      : Patrice Jacquesson
     age       : 45
     gender    : m
@@ -168,7 +455,7 @@ runningMates:
       Ex. Conseiller municipal (mandat 2001).
   -
     candidate : *benne
-    position  : 3
+    community : true
     name      : Brigitte Lizée-Juan
     age       : 54
     gender    : f
@@ -178,7 +465,7 @@ runningMates:
       Ex. 1er adjoint au Maire (mandat 2001).
   -
     candidate : *benne
-    position  : 4
+    community : true
     name      : Jean-Pascal Dey
     age       : 58
     gender    : m
@@ -187,7 +474,7 @@ runningMates:
       Lieutenant-Colonel (32 ans dans l'armée de terre).
   -
     candidate : *benne
-    position  : 5
+    community : false
     name      : Marie-France Corvest
     age       : 69
     gender    : f
@@ -197,7 +484,7 @@ runningMates:
       Ex. adjointe au Maire (mandat 2001 et 2008).
   -
     candidate : *benne
-    position  : 6
+    community : false
     name      : Bernard Girardot
     age       : 67
     gender    : m
@@ -206,7 +493,7 @@ runningMates:
       Ex. professeur d'Éducation Physique.
   -
     candidate : *benne
-    position  : 7
+    community : true
     name      : Danielle Hebert
     age       : 60
     gender    : f
@@ -217,7 +504,7 @@ runningMates:
       Directeur de cabinet du Maire durant 9 ans.
   -
     candidate : *benne
-    position  : 8
+    community : true
     name      : Mickaël Hutteau
     age       : 34
     gender    : m
@@ -226,7 +513,7 @@ runningMates:
       BTS Force de vente.
   -
     candidate : *benne
-    position  : 9
+    community : false
     name      : Geneviève Telmon
     age       : 62
     gender    : f
@@ -236,7 +523,7 @@ runningMates:
       Administratice du CCAS.
   -
     candidate : *benne
-    position  : 10
+    community : false
     name      : Frédéric Arsène
     age       : 58
     gender    : m
@@ -245,7 +532,7 @@ runningMates:
       DESS Police - Sécurité et droits de la personne.
   -
     candidate : *benne
-    position  : 11
+    community : true
     name      : Élisabeth Adamantiadis
     age       : 59
     gender    : f
@@ -253,7 +540,7 @@ runningMates:
       Chargée de mission à la culture et à la lutte contre l'illetrisme à la Mairie de Nice.
   -
     candidate : *benne
-    position  : 12
+    community : true
     name      : Olivier Corso
     age       : 49
     gender    : m
@@ -262,7 +549,7 @@ runningMates:
       Coordinateur d'actions sur le développement durable.
   -
     candidate : *benne
-    position  : 13
+    community : false
     name      : Marie-Caroline Charbonnier-Montaudié
     age       : 37
     gender    : f
@@ -271,7 +558,7 @@ runningMates:
       D.U. Sport et Santé.
   -
     candidate : *benne
-    position  : 14
+    community : false
     name      : Grégory Chiarotto
     age       : 37
     gender    : m
@@ -280,7 +567,7 @@ runningMates:
       DUT Gestion des entreprises et des administrations.
   -
     candidate : *benne
-    position  : 15
+    community : false
     name      : Isabelle Brune
     age       : 44
     gender    : f
@@ -289,7 +576,7 @@ runningMates:
       Ex. secrétaire d'une association de parents d'élèves.
   -
     candidate : *benne
-    position  : 16
+    community : false
     name      : René Estève
     age       : 71
     gender    : m
@@ -298,7 +585,7 @@ runningMates:
       Élu municipal et communautaire à Strasbourg (1995).
   -
     candidate : *benne
-    position  : 17
+    community : false
     name      : Corinne Bagnato
     age       : 45
     gender    : f
@@ -307,7 +594,7 @@ runningMates:
       Présidente d'une association de parents d'élèves.
   -
     candidate : *benne
-    position  : 18
+    community : false
     name      : Éric Barbot
     age       : 50
     gender    : m
@@ -316,7 +603,7 @@ runningMates:
       Militant de l'assocation Enfance Népal.
   -
     candidate : *benne
-    position  : 19
+    community : false
     name      : Geneviève Parisi
     age       : 58
     gender    : f
@@ -325,7 +612,7 @@ runningMates:
       Diplômée en secrétariat.
   -
     candidate : *benne
-    position  : 20
+    community : false
     name      : Georges Tonali
     age       : 76
     gender    : m
@@ -334,7 +621,7 @@ runningMates:
       Ancien trésorier de l'AGASC et membre du C.D. de voile.
   -
     candidate : *benne
-    position  : 21
+    community : false
     name      : Laura Rolfo
     age       : 18
     gender    : f
@@ -343,7 +630,7 @@ runningMates:
       Ceinture noire de Judo - médaillée aux champ. de France.
   -
     candidate : *benne
-    position  : 22
+    community : false
     name      : Frédéric Chatain
     age       : 40
     gender    : m
@@ -352,7 +639,7 @@ runningMates:
       Responsable de chantier - société intégration domotique.
   -
     candidate : *benne
-    position  : 23
+    community : false
     name      : Marie-José Mabille
     age       : 66
     gender    : f
@@ -361,7 +648,7 @@ runningMates:
       Bénévole en remise à niveau scolaire de patients hospitalisés.
   -
     candidate : *benne
-    position  : 24
+    community : false
     name      : André Ruiz
     age       : 67
     gender    : m
@@ -379,7 +666,7 @@ runningMates:
       Élue représentante du personnel depuis 25 ans.
   -
     candidate : *benne
-    position  : 26
+    community : false
     name      : Stéphane Bicchierini
     age       : 43
     gender    : m
@@ -389,7 +676,7 @@ runningMates:
       Trésorier national adjoint d'un syndicat professionel.
   -
     candidate : *benne
-    position  : 27
+    community : false
     name      : Nicole Tavaux
     age       : 77
     gender    : f
@@ -398,7 +685,7 @@ runningMates:
       Conseillère municipale en 2001 (Indre).
   -
     candidate : *benne
-    position  : 28
+    community : false
     name      : Stéphane Sanchez
     age       : 39
     gender    : m
@@ -407,7 +694,7 @@ runningMates:
       Ex. membre de la Jeune Chambre Économique.
   -
     candidate : *benne
-    position  : 29
+    community : false
     name      : Louise Garnier
     age       : 65
     gender    : f
@@ -416,7 +703,7 @@ runningMates:
       Directrice adjointe soins et hospitalisation à domicile.
   -
     candidate : *benne
-    position  : 30
+    community : false
     name      : Jean-Louis Rogès
     age       : 77
     gender    : m
@@ -425,7 +712,7 @@ runningMates:
       Membre de la Croix Rouge Monégasque.
   -
     candidate : *benne
-    position  : 31
+    community : false
     name      : Julia Bernardi
     age       : 23
     gender    : f
@@ -434,7 +721,7 @@ runningMates:
       Cavalière (dressage) de niveau national.
   -
     candidate : *benne
-    position  : 32
+    community : false
     name      : Alban Thibierge
     age       : 54
     gender    : m
@@ -443,7 +730,7 @@ runningMates:
       École des créateurs et dirigeants d'entreprises de Paris.
   -
     candidate : *benne
-    position  : 33
+    community : false
     name      : Élisabeth Brunet
     age       : 57
     gender    : f
@@ -452,7 +739,7 @@ runningMates:
       Militante d'un organisme syndical pendant 15 ans.
   -
     candidate : *benne
-    position  : 34
+    community : false
     name      : Alain Falsini
     age       : 69
     gender    : m
@@ -462,7 +749,7 @@ runningMates:
       Engagé dans des associations humanitaires.
   -
     candidate : *benne
-    position  : 35
+    community : false
     name      : Danièle Robin
     age       : 69
     gender    : f
