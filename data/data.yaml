@@ -440,6 +440,320 @@ runningMates:
       Conseiller Municipal.
       Expert Judiciaire Honoraire.
   #
+  # Joseph Segura
+  #
+  -
+    candidate : *segura
+    community : ~
+    name      : Nathalie Franquelin
+    age       : ~
+    gender    : f
+    position  : 2
+    bio: |
+      Directrice de Boutique.
+  -
+    candidate : *segura
+    community : ~
+    name      : Michel Ghetti
+    age       : ~
+    gender    : m
+    position  : 3
+    bio: |
+      Président de société.
+  -
+    candidate : *segura
+    community : ~
+    name      : Mary-Claude Bauzit
+    age       : ~
+    gender    : f
+    position  : 4
+    bio: |
+      Directrice de CFA.
+      Retraitée.
+  -
+    candidate : *segura
+    community : ~
+    name      : Albert Besson
+    age       : ~
+    gender    : m
+    position  : 5
+    bio: |
+      CM.
+      Retraité.
+  -
+    candidate : *segura
+    community : ~
+    name      : Vanessa Guerrier-Buisine
+    age       : ~
+    gender    : f
+    position  : 6
+    bio: |
+      Journaliste culinaire.
+  -
+    candidate : *segura
+    community : ~
+    name      : Patrick Villardry
+    age       : ~
+    gender    : m
+    position  : 7
+    bio: |
+      Sapeur pompier professionnel.
+  -
+    candidate : *segura
+    community : ~
+    name      : Corine Nesonson
+    age       : ~
+    gender    : f
+    position  : 8
+    bio: |
+      Artisan coiffeur.
+  -
+    candidate : *segura
+    community : ~
+    name      : Thomas Berettoni
+    age       : ~
+    gender    : m
+    position  : 9
+    bio: |
+      Attaché territorial.
+  -
+    candidate : *segura
+    community : ~
+    name      : Florence Espagnol
+    age       : ~
+    gender    : f
+    position  : 10
+    bio: |
+      Mère au foyer.
+  -
+    candidate : *segura
+    community : ~
+    name      : Gilles Allari
+    age       : ~
+    gender    : m
+    position  : 11
+    bio: |
+      Policier municipal.
+  -
+    candidate : *segura
+    community : ~
+    name      : Michèle Cignetti-Bois
+    age       : ~
+    gender    : f
+    position  : 12
+    bio: |
+      CM.
+      Rédacteur territorial.
+  -
+    candidate : *segura
+    community : ~
+    name      : Marcel Vaîani
+    age       : ~
+    gender    : m
+    position  : 13
+    bio: |
+      Cadre de la restauration.
+  -
+    candidate : *segura
+    community : ~
+    name      : Marine Seli
+    age       : ~
+    gender    : f
+    position  : 14
+    bio: |
+      Conseillère en ESF.
+  -
+    candidate : *segura
+    community : ~
+    name      : Jean-Pierre Bernard
+    age       : ~
+    gender    : m
+    position  : 15
+    bio: |
+      Proviseur honoraire.
+  -
+    candidate : *segura
+    community : ~
+    name      : Juliette Bonnefoi-Cviklinski
+    age       : ~
+    gender    : f
+    position  : 16
+    bio: |
+      Médecin généraliste.
+  -
+    candidate : *segura
+    community : ~
+    name      : Christophe Dominici
+    age       : ~
+    gender    : m
+    position  : 17
+    bio: |
+      Contrôleur tech. automobile.
+  -
+    candidate : *segura
+    community : ~
+    name      : Pascale Formisano
+    age       : ~
+    gender    : f
+    position  : 18
+    bio: |
+      Agent commercial.
+  -
+    candidate : *segura
+    community : ~
+    name      : Jean-Luc Bellot
+    age       : ~
+    gender    : m
+    position  : 19
+    bio: |
+      Artisan boulanger.
+  -
+    candidate : *segura
+    community : ~
+    name      : Catherine Rovera-Gorlero
+    age       : ~
+    gender    : f
+    position  : 20
+    bio: |
+      Employée de banque.
+  -
+    candidate : *segura
+    community : ~
+    name      : Christian Radigales
+    age       : ~
+    gender    : m
+    position  : 21
+    bio: |
+      Designer.
+  -
+    candidate : *segura
+    community : ~
+    name      : Juliette Barale
+    age       : ~
+    gender    : f
+    position  : 22
+    bio: |
+      Assistante de direction.
+  -
+    candidate : *segura
+    community : ~
+    name      : Eric Bonfils
+    age       : ~
+    gender    : m
+    position  : 23
+    bio: |
+      Responsable commercial.
+  -
+    candidate : *segura
+    community : ~
+    name      : Andrée Navarro-Guillot
+    age       : ~
+    gender    : f
+    position  : 24
+    bio: |
+      Aristan fleuriste.
+  -
+    candidate : *segura
+    community : ~
+    name      : Jean-Pierre Pauselli
+    age       : ~
+    gender    : m
+    position  : 25
+    bio: |
+      Ingénieur tech. commercial.
+  -
+    candidate : *segura
+    community : ~
+    name      : Muriel Dury
+    age       : ~
+    gender    : f
+    position  : 26
+    bio: |
+      Responsable de marché.
+  -
+    candidate : *segura
+    community : ~
+    name      : Claude Cohen
+    age       : ~
+    gender    : m
+    position  : 27
+    bio: |
+      Cadre de distribution.
+      Retraité.
+  -
+    candidate : *segura
+    community : ~
+    name      : Karine Viale
+    age       : ~
+    gender    : f
+    position  : 28
+    bio: |
+      Assistante maternelle.
+  -
+    candidate : *segura
+    community : ~
+    name      : Michel Cvijanovic
+    age       : ~
+    gender    : m
+    position  : 29
+    bio: |
+      Commerçant retraité.
+  -
+    candidate : *segura
+    community : ~
+    name      : Astrid Ramella-Vicente
+    age       : ~
+    gender    : f
+    position  : 30
+    bio: |
+      Mère au foyer.
+  -
+    candidate : *segura
+    community : ~
+    name      : Eric Longin
+    age       : ~
+    gender    : m
+    position  : 31
+    bio: |
+      Directeur de magasin.
+  -
+    candidate : *segura
+    community : ~
+    name      : Salima Moussaoui
+    age       : ~
+    gender    : f
+    position  : 32
+    bio: |
+      Étudiante aide soignante;
+  -
+    candidate : *segura
+    community : ~
+    name      : Émile Gil
+    age       : ~
+    gender    : m
+    position  : 33
+    bio: |
+      Retraité fonction publique.
+  -
+    candidate : *segura
+    community : ~
+    name      : Chantal Giordanino
+    age       : ~
+    gender    : f
+    position  : 34
+    bio: |
+      Retraitée de la MSA.
+  -
+    candidate : *segura
+    community : ~
+    name      : André Bagolle
+    age       : ~
+    gender    : f
+    position  : 35
+    bio: |
+      Commerçant retraité.
+      
+  #
   # Françoise Benne
   #
   -
