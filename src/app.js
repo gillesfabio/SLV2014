@@ -552,6 +552,10 @@
     tagName: 'div',
     className: 'candidate-detail',
 
+    events: {
+      'click a.close': 'onCloseAlertBox'
+    },
+
     initialize: function(options) {
 
       this.options = _.extend({

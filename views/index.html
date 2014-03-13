@@ -41,7 +41,7 @@
           <img src="{{model.picture}}" class="circle" alt="{{model.name}}">
         </div>
         <div class="small-12 medium-10 large-10 columns">
-          <h2 class="candidate-name">{{model.name}} <small>({{model.party}})</small></h2>
+          <h1 class="candidate-name">{{model.name}} <small>({{model.party}})</small></h1>
           {{#if model.slogan}}<h3 class="candidate-slogan">{{model.slogan}}</h3>{{/if}}
           <ul class="no-bullet candidate-links">
             {{#if model.homepage}}<li><i class="fa fa-globe"></i> <a href="{{model.homepage}}">{{model.homepage}}</a></li>{{/if}}
@@ -49,7 +49,7 @@
             {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{model.facebook}}">{{model.facebook}}</a></li>{{/if}}
           </ul>
           {{#if showButton}}
-          <a href="<%= baseurl %>#/candidats/{{model.id}}" class="button"><i class="fa fa-list-ol"></i> Mon Programme</a>
+          <a href="<%= baseurl %>#/candidats/{{model.id}}" class="button radius"><i class="fa fa-list-ol"></i> Mon Programme</a>
           {{/if}}
         </div>
       </div>
@@ -57,7 +57,7 @@
 
     <script id="running-mate-list-template" type="text/x-handlebars-template">
       <h2>Mes Colistiers</h2>
-      <ul class="small-block-grid-1">
+      <ul class="small-block-grid-1 large-block-grid-2">
         {{#each runningMates}}
         <li class="running-mate {{#if community}}running-mate-community{{/if}}">
           <div class="running-mate-content">
@@ -83,26 +83,18 @@
 
     <script id="candidate-detail-template" type="text/x-handlebars-template">
       <div class="candidate-detail-card"></div>
-      <div class="candidate-detail-program-source panel callout">
-        <p>
-          Ce programme a été extrait manuellement, avec plusieurs relectures,
-          du <a href="{{candidate.programUrl}}">programme officiel</a>. Merci
-          de signaler toute erreur ou manquement à <a href="mailto:gilles@gillesfabio.com">Gilles</a>,
-          qui corrigera immédiatement.
-        </p>
-      </div>
       <div class="row">
-        <div class="small-12 large-8 columns">
+        <div class="small-12 large-7 columns">
           <div class="candidate-detail-program"></div>
         </div>
-        <div class="small-12 large-4 columns">
+        <div class="small-12 large-5 columns">
           <div class="candidate-detail-running-mates"></div>
         </div>
       </div>
     </script>
 
     <script id="theme-list-template" type="text/x-handlebars-template">
-      <h2>Thèmes</h2>
+      <h1>Thèmes</h1>
       <ul class="small-block-grid-1 medium-block-grid-3">
         {{#each this}}
         <li>
@@ -115,7 +107,7 @@
     </script>
 
     <script id="theme-detail-template" type="text/x-handlebars-template">
-      <h2>{{theme.name}}</h2>
+      <h1>{{theme.name}}</h1>
       {{#each programs}}
       <div class="row candidate-projects">
         <div class="small-12 large-3 columns text-center">
