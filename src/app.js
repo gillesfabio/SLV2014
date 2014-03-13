@@ -230,12 +230,12 @@
      * Returns models for the given candidate.
      *
      * @memberof App.collections.RunningMateCollection#
-     * @param {String} The candidate slug.
+     * @param {String} The candidate ID.
      * @returns {Array}
      */
-    findByCandidate: function(slug) {
+    findByCandidate: function(id) {
       var models = this.filter(function(model) {
-        return model.get('candidate').slug === slug;
+        return model.get('candidate').id === id;
       });
       return new App.collections.RunningMateCollection(models);
     }
@@ -259,15 +259,15 @@
     },
 
     /**
-     * Returns models which have `candidate.slug` equals to `slug` parameter.
+     * Returns models which have `candidate.id` equals to `id` parameter.
      *
      * @memberof App.collections.ProgramCollection#
-     * @param {String} slug The candidate's slug.
+     * @param {String} id The candidate's ID.
      * @returns {App.collection.ProgramCollection}
      */
-    findByCandidate: function(slug) {
+    findByCandidate: function(id) {
       return this.find(function(model) {
-        if (model.get('candidate').slug === slug) return model;
+        if (model.get('candidate')) return model.get('candidate').id === id;
       });
     },
 
@@ -275,14 +275,14 @@
      * Returns models which have the given theme in `projects` array.
      *
      * @memberof App.collections.ProgramCollection#
-     * @param {String} slug The theme slug.
+     * @param {String} id The theme ID.
      * @returns {Array}
      */
-    findByTheme: function(slug) {
+    findByTheme: function(id) {
       var models = [];
       this.each(function(model) {
         var projects = _.filter(model.get('projects'), function(project) {
-          return project.theme.slug === slug;
+          return project.theme.id === id;
         });
         if (projects.length > 0) {
           model.attributes.projects = projects;
@@ -297,11 +297,11 @@
      * grouped by candidate.
      *
      * @memberof App.collections.ProgramCollection#
-     * @param {String} slug The theme slug.
+     * @param {String} id The theme ID.
      * @returns {Object}
      */
-    findByThemeAndGroupByCandidate: function(slug) {
-      var models = this.findByTheme(slug);
+    findByThemeAndGroupByCandidate: function(id) {
+      var models = this.findByTheme(id);
       models = models.groupBy(function(m) { return m.get('candidate').name; });
       Object.keys(models).forEach(function(key) {
         models[key] = models[key][0].toJSON();
@@ -313,11 +313,12 @@
      * Returns candidate projects grouped by theme.
      *
      * @memberof App.collections.ProgramCollection#
-     * @param {String} slug The candidate slug.
+     * @param {String} id The candidate ID.
      * @return {Object}
      */
-    candidateProjects: function(slug) {
-      var model = this.findByCandidate(slug);
+    candidateProjects: function(id) {
+      var model = this.findByCandidate(id);
+      if (!model) return;
       var projects = model.get('projects');
       return _.groupBy(projects, function(obj) { return obj.theme.name; });
     }
@@ -380,13 +381,13 @@
     initialize: function(options) {
 
       this.options = _.extend({
-        slug         : null,
-        runningMates : new App.collections.RunningMateCollection()
+        modelId: null,
+        runningMates: new App.collections.RunningMateCollection()
       }, options);
 
-      this.slug         = this.options.slug;
+      this.modelId = this.options.modelId;
       this.runningMates = this.options.runningMates;
-      this.template     = Handlebars.compile(App.templates.RunningMateListTemplate);
+      this.template = Handlebars.compile(App.templates.RunningMateListTemplate);
 
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
@@ -398,7 +399,7 @@
      * @memberof App.views.RunningMateListView#
      */
     prepare: function() {
-      this.runningMates = this.collection.findByCandidate(this.slug);
+      this.runningMates = this.collection.findByCandidate(this.modelId);
       this.render();
     },
 
@@ -429,8 +430,8 @@
     className: 'candidate-program',
 
     initialize: function(options) {
-      this.options = _.extend({slug: null}, options);
-      this.slug = this.options.slug;
+      this.options = _.extend({modelId: null}, options);
+      this.modelId = this.options.modelId;
       this.template = Handlebars.compile(App.templates.CandidateProgramTemplate);
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
@@ -442,7 +443,7 @@
      * @memberof App.views.CandidateProgramView#
      */
     prepare: function() {
-      this.projects = this.collection.candidateProjects(this.slug);
+      this.projects = this.collection.candidateProjects(this.modelId);
       this.render();
     },
 
@@ -554,15 +555,15 @@
     initialize: function(options) {
 
       this.options = _.extend({
-        slug         : null,
-        programs     : new App.collections.ProgramCollection(),
-        runningMates : new App.collections.RunningMateCollection()
+        modelId: null,
+        programs: new App.collections.ProgramCollection(),
+        runningMates: new App.collections.RunningMateCollection()
       }, options);
 
-      this.slug         = this.options.slug;
-      this.programs     = this.options.programs;
+      this.modelId = this.options.modelId;
+      this.programs = this.options.programs;
       this.runningMates = this.options.runningMates;
-      this.template     = Handlebars.compile(App.templates.CandidateDetailTemplate);
+      this.template = Handlebars.compile(App.templates.CandidateDetailTemplate);
 
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
@@ -575,21 +576,21 @@
      */
     prepare: function() {
 
-      this.model = this.collection.findWhere({slug: this.slug});
+      this.model = this.collection.findWhere({id: this.modelId});
 
       this.cardView = new App.views.CandidateCardView({
-        model      : this.model,
-        showButton : false
+        model: this.model,
+        showButton: false
       });
 
       this.programView = new App.views.CandidateProgramView({
-        collection : this.programs,
-        slug       : this.slug
+        collection: this.programs,
+        modelId: this.modelId
       });
 
       this.runningMateListView = new App.views.RunningMateListView({
         collection : this.runningMates,
-        slug       : this.slug
+        modelId: this.modelId
       });
 
       this.render();
@@ -614,7 +615,7 @@
    * @class
    * @memberof App.views
    * @param {Object} options The view options.
-   * @param {String} options.slug The theme slug.
+   * @param {String} options.id The theme ID.
    * @param {App.collection.ThemeCollection} options.themes The collection instance.
    * @param {App.collection.ProgramCollection} options.programs The collection instance.
    */
@@ -625,8 +626,8 @@
     className: 'theme-detail',
 
     initialize: function(options) {
-      this.options = _.extend({slug: null, programs: null}, options);
-      this.slug = this.options.slug;
+      this.options = _.extend({modelId: null, programs: null}, options);
+      this.modelId = this.options.modelId;
       this.programs = this.options.programs;
       this.template = Handlebars.compile(App.templates.ThemeDetailTemplate);
       this.theme = null;
@@ -640,10 +641,10 @@
      * @memberof App.views.ThemeDetailView#
      */
     prepare: function() {
-      this.theme = this.collection.findWhere({slug: this.slug});
+      this.theme = this.collection.findWhere({id: this.modelId});
       if (!this.theme) return this.notFound();
       this.programs.fetch({success: function(collection) {
-        this.groupedPrograms = this.programs.findByThemeAndGroupByCandidate(this.slug);
+        this.groupedPrograms = this.programs.findByThemeAndGroupByCandidate(this.modelId);
         this.render();
       }.bind(this)});
     },
@@ -716,19 +717,19 @@
     /** @lends App.Router.prototype */{
 
     routes: {
-      ''                : 'homeController',
-      'candidats'       : 'homeController',
-      'candidats/:slug' : 'candidateDetailController',
-      'themes'          : 'themeListController',
-      'themes/:slug'    : 'themeDetailController',
-      'a-propos'        : 'aboutController'
+      ''              : 'homeController',
+      'candidats'     : 'homeController',
+      'candidats/:id' : 'candidateDetailController',
+      'themes'        : 'themeListController',
+      'themes/:id'    : 'themeDetailController',
+      'a-propos'      : 'aboutController'
     },
 
     initialize: function() {
-      this.themes       = new App.collections.ThemeCollection();
-      this.candidates   = new App.collections.CandidateCollection();
+      this.themes = new App.collections.ThemeCollection();
+      this.candidates = new App.collections.CandidateCollection();
       this.runningMates = new App.collections.RunningMateCollection();
-      this.programs     = new App.collections.ProgramCollection();
+      this.programs = new App.collections.ProgramCollection();
       this.content = $('#content');
     },
 
@@ -746,14 +747,14 @@
      * The Candidate Detail Controller.
      *
      * @memberof App.Router#
-     * @param {String} slug The candidate slug.
+     * @param {String} id The candidate ID.
      */
-    candidateDetailController: function(slug) {
+    candidateDetailController: function(id) {
       var view = new App.views.CandidateDetailView({
-        slug         : slug,
-        collection   : this.candidates,
-        programs     : this.programs,
-        runningMates : this.runningMates
+        modelId: id,
+        collection: this.candidates,
+        programs: this.programs,
+        runningMates: this.runningMates
       });
       this.content.html(view.el);
     },
@@ -762,13 +763,13 @@
      * Theme Detail Controller.
      *
      * @memberof App.Router#
-     * @param {String} slug The theme slug.
+     * @param {String} id The theme ID.
      */
-    themeDetailController: function(slug) {
+    themeDetailController: function(id) {
       var view = new App.views.ThemeDetailView({
-        collection : this.themes,
-        slug       : slug,
-        programs   : this.programs
+        collection: this.themes,
+        modelId: id,
+        programs: this.programs
       });
       this.content.html(view.el);
     },

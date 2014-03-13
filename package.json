@@ -18,6 +18,8 @@
     "temp-write": "~0.2.0",
     "yamljs": "0.x",
     "swig": "1.x",
-    "jsdoc": "git+https://github.com/jsdoc3/jsdoc.git"
+    "jsdoc": "git+https://github.com/jsdoc3/jsdoc.git",
+    "async": "~0.2.10",
+    "lodash": "~2.4.1"
   }
 }

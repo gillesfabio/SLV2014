@@ -41,7 +41,7 @@
           <img src="{{model.picture}}" class="circle" alt="{{model.name}}">
         </div>
         <div class="small-12 medium-10 large-10 columns">
-          <h2 class="candidate-name">{{model.name}} <small>({{model.party.acronym}})</small></h2>
+          <h2 class="candidate-name">{{model.name}} <small>({{model.party}})</small></h2>
           {{#if model.slogan}}<h3 class="candidate-slogan">{{model.slogan}}</h3>{{/if}}
           <ul class="no-bullet candidate-links">
             {{#if model.homepage}}<li><i class="fa fa-globe"></i> <a href="{{model.homepage}}">{{model.homepage}}</a></li>{{/if}}
@@ -49,7 +49,7 @@
             {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{model.facebook}}">{{model.facebook}}</a></li>{{/if}}
           </ul>
           {{#if showButton}}
-          <a href="<%= baseurl %>#/candidats/{{model.slug}}" class="button"><i class="fa fa-list-ol"></i> Mon Programme</a>
+          <a href="<%= baseurl %>#/candidats/{{model.id}}" class="button"><i class="fa fa-list-ol"></i> Mon Programme</a>
           {{/if}}
         </div>
       </div>
@@ -62,7 +62,6 @@
         <li class="running-mate {{#if community}}running-mate-community{{/if}}">
           <div class="running-mate-content">
             <h5>{{name}}</h5>
-            {{#if age }}<h6>{{ age }} ans</h6>{{/if}}
             {{{md2html bio}}}
           </div>
         </li>
@@ -108,7 +107,7 @@
         {{#each this}}
         <li>
           <span>
-            <i class="fa fa-{{icon}}"></i> <a href="<%= baseurl %>#/themes/{{slug}}">{{name}}</a>
+            <i class="fa fa-{{icon}}"></i> <a href="<%= baseurl %>#/themes/{{id}}">{{name}}</a>
           </span>
         </li>
         {{/each}}

@@ -1,14 +1,14 @@
 'use strict';
 
+var fs        = require('fs');
 var path      = require('path');
 var concat    = require('gulp-concat');
 var express   = require('express');
 var gulp      = require('gulp');
 var minifyCSS = require('gulp-minify-css');
 var swig      = require('swig');
-var YAML      = require('yamljs');
 var tempWrite = require('temp-write');
-var utils     = require('./utils');
+var generator = require('./generator');
 
 // -----------------------------------------------------------------------------
 // Constants
@@ -86,18 +86,22 @@ var buildTasks = [
   'build-index'
 ];
 
-gulp.task('build-json', function() {
-  var obj  = YAML.load(path.join(__dirname, 'data', 'data.yaml'));
-  var json = utils.formatJSON(obj);
-  var file = tempWrite.sync(json, 'data.json');
-  return gulp.src(file)
-    .pipe(gulp.dest(path.join(__dirname, 'data')));
+gulp.task('build-json', function(cb) {
+  generator.buildData(function(err, data) {
+    if (err) throw new Error(err);
+    var json = JSON.stringify(data, null, 2);
+    var src  = fs.createReadStream(tempWrite.sync(json, 'data.json'));
+    var dest = fs.createWriteStream(path.join(__dirname, 'data', 'data.json'));
+    src.pipe(dest);
+    src.on('end', function() {
+      return cb();
+    });
+  });
 });
 
 gulp.task('build-data', ['build-json'], function() {
   var file = path.join(__dirname, 'data', 'data.json');
-  return gulp.src(file)
-    .pipe(gulp.dest(BUILD_DIR));
+  gulp.src(file).pipe(gulp.dest(BUILD_DIR));
 });
 
 gulp.task('build-index', function() {
