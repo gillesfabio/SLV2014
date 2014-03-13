@@ -1,0 +1,250 @@
+-
+  name      : Françoise Bormida
+  position  : 2
+  community : true
+  gender    : f
+  bio: |
+    Conseillère Municipale.
+    Employée commerce de l'habillement.    
+-
+  name      : Antoine Marchese
+  position  : 3
+  community : true
+  gender    : m
+  bio: |
+    Ingénieur.
+-
+  name      : Suzanne Marlier
+  position  : 4
+  community : true
+  gender    : f
+  bio: |
+    Cadre bancaire.
+    Retraitée.
+-
+  name      : Joseph Grisoni
+  position  : 5
+  community : true
+  gender    : m
+  bio: |
+    Administrateur Organisme Social.
+-
+  name      : Stéphanie Braganti
+  position  : 6
+  community : true
+  gender    : f
+  bio: |
+    Avocate au Barreau de Nice.
+-
+  name      : Frédéric Candau
+  position  : 7
+  community : true
+  gender    : m
+  bio: |
+    Avocat au Barreau de Nice.
+-
+  name      : Catherine Torcat
+  position  : 8
+  community : true
+  gender    : f
+  bio: |
+    Employée de La Poste.
+    Response Syndicale.
+-
+  name      : Sylvain Rossi
+  position  : 9
+  community : false
+  gender    : m
+  bio: |
+    Éducateur Spécialisé.
+-
+  name      : Olivia Tanoh
+  position  : 10
+  community : false
+  gender    : f
+  bio: |
+    Agent Territorial.
+-
+  name      : Frédérick Heller
+  position  : 11
+  community : false
+  gender    : m
+  bio: |
+    Fonctionnaire de Police.
+    Retraité.
+-
+  name      : Céline Dalmasso
+  position  : 12
+  community : false
+  gender    : f
+  bio: |
+    Hôtesse Compagnie Aérienne.
+-
+  name      : Eric Ferrari
+  position  : 13
+  community : false
+  gender    : m
+  bio: |
+    Employé de banque.
+-
+  name      : Giannella Sessarego
+  position  : 14
+  community : false
+  gender    : f
+  bio: |
+    Psychologue du travail.
+-
+  name      : Rodolphe Personnaz
+  position  : 15
+  community : false
+  gender    : m
+  bio: |
+    Dessinateur Projeteur.
+-
+  name      : Danièle Dubois
+  position  : 16
+  community : false
+  gender    : f
+  bio: |
+    Cadre Informatique Caisse de Retraite.
+-
+  name      : Alain Giretto
+  position  : 17
+  community : false
+  gender    : m
+  bio: |
+    Technicien Agricole.
+    Retraité.
+-
+  name      : Nicole Revello
+  position  : 18
+  community : false
+  gender    : f
+  bio: |
+    Secrétaire Organisme Social.
+    Retraitée.
+-
+  name      : Emmanuel Bergeret
+  position  : 19
+  community : false
+  gender    : m
+  bio: |
+    Chef d'Entreprise.
+-
+  name      : Colette Duchet
+  position  : 20
+  community : false
+  gender    : f
+  bio: |
+    Agent Territorial.
+-
+  name      : Marcel Puget
+  position  : 21
+  community : false
+  gender    : m
+  bio: |
+    Artisan.
+    Retraité.
+-
+  name      : Francine Mendez
+  position  : 22
+  community : false
+  gender    : f
+  bio: |
+    Conseillère clientèle de La Poste.
+-
+  name      : Pascal Barres
+  position  : 23
+  community : false
+  gender    : m
+  bio: |
+    Maçon, technicien piscinier.
+-
+  name      : Roselyne Lefèvre
+  position  : 24
+  community : false
+  gender    : f
+  bio: |
+    Infirmière Centre Hospitalier.
+-
+  name      : Michel Torcat
+  position  : 25
+  community : false
+  gender    : m
+  bio: |
+    Pilote de production de La Poste.
+    Président de club sportif.
+-
+  name      : Madeleine Courrier
+  position  : 26
+  community : false
+  gender    : f
+  bio: |
+    Militante Écologiste.
+-
+  name      : Éric Carbone
+  position  : 27
+  community : false
+  gender    : m
+  bio: |
+    Infirmier.
+-
+  name      : Chantal Ballut
+  position  : 28
+  community : false
+  gender    : f
+  bio: |
+    Maître d'Hôtel.
+    Retraitée.
+-
+  name      : Michel Acacio
+  position  : 29
+  community : false
+  gender    : m
+  bio: |
+    Export Immobilier.
+-
+  name      : Chantal Ollivault
+  position  : 30
+  community : false
+  gender    : f
+  bio: |
+    Employée Secteur Commercial.
+    Secrétaire Comité d'Entreprise.
+-
+  name      : Pierre Todesco
+  position  : 31
+  community : false
+  gender    : m
+  bio: |
+    Retraité du Bâtiment.
+-
+  name      : Marie-Laure Bertrand
+  position  : 32
+  community : false
+  gender    : f
+  bio: |
+    Militante Écologiste.
+-
+  name      : Jean-Pierre Bordier
+  position  : 33
+  community : false
+  gender    : m
+  bio: |
+    Cadre retraité du Service des Eaux.
+-
+  name      : Françoise Huleux
+  position  : 34
+  community : false
+  gender    : f
+  bio: |
+    Administrateur de Biens.
+    Retraitée.
+-
+  name      : Jean-Pierre Braganti
+  position  : 35
+  community : false
+  gender    : m
+  bio: |
+    Conseiller Municipal.
+    Expert Judiciaire Honoraire.

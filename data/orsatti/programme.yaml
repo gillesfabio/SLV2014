@@ -1,0 +1,98 @@
+local:
+  - "Créer des comités de quartier afin d'associer les Laurentins aux prises de décisions."
+  - "Mettre en place des réunions thématiques pour l'aménagement de notre commune."
+  - "Consulter le tissu associatif sur tous les projets structurants."
+  - 'Mettre en place un numéro vert "Allo Monsieur le Maire" pour plus deproximité.'
+  - "Créer un conseil municipal des jeunes."
+
+education:
+  - "Créer une nouvelle crèche à Saint-Laurent-du-Var."
+  - "Augmenter le nombre d'agréments d'assistantes maternelles."
+  - "Développer les actions de la protection maternelle et infantile (prévention, éducation et santé)."
+  - "Offrir des transports scolaires gratuits pour les collèges et lycées."
+  - "Renforcer le soutien scolaire."
+  - "Affecter du personnel supplémentaire pour les bibliothèques et centres de documentation (BCD) et les doter de nouveaux ouvrages."
+  - "Faciliter l'accessibilité des groupes scolaires au numérique et à internet."
+  - "Renforcer le dialogue avec les parents d'élèves, les équipes pédagogiques, les éducateurs sportifs et culturels."
+  - "Développer une initiation à l'Anglais dès le primaire."
+  - "Favoriser l'implantation d'un lycée à Saint-Laurent-du-Var en collaboration avec la Région."
+
+transport:
+  - "Revoir totalement le plan de circulation et demander à la Métropole la création de deux nouvelles routes transversales. La première, reliera la Moyenne Corniche des Pugets au futur échangeur de la M6202 bis. La seconde, débutera au boulevard Jean Ossola, vers l'avenue Général de Gaulle pour rejoindre l'autoroute."
+  - "Ouvrir une ligne de tramway entre Nice et Cagnes-sur-Mer desservant Saint-Laurent-du-Var."
+  - "Engager rapidement les travaux nécessaires, Corniche Fanhestock, pour rouvrir et sécuriser la circulation dans les deux sens."
+  - "Créer des parkings publics gratuits au centre ville, à proximité de la gare, des groupes scolaires et des pôles d'activités commerciales."
+  - "Améliorer la fréquence et les trajets des transports en commun."
+  - "Créer des pistes cyclable sécurisées."
+  - "Obtenir de la Métropole l'entretien et l'aménagement des voies communales et la création de trottoirs sur les routes en dehors des centres villes afin de protéger les piétons."
+
+securite:
+  - "Obtenir l'ouverture d'un commissariat 24h/24 à Saint-Laurent-du-Var (et non d'une subdivision)."
+  - "Renforcer les effectifs des forces de police, afin de mettre en place une police de proximité dans les quartiers."
+  - "Créer une caserne de pompiers à Saint-Laurent-du-Var."
+  - "Instaurer un plan de prévention des risques naturels."
+  - "Coordonner le travail des associations dans le domaine de la prévention."
+  - "Créer une antenne de justice."
+  - "Créer un observatoire contre la délinquance."
+  - "Sécuriser les voies de circulation considérées comme dangereuses."
+
+solidarite:
+  - "Construire une Maison de Retraite Publique accessible financièrement aux personnes en perte d'autonomie avec la participation du Conseil Général."
+  - "Ouvrir une Maison Régionale de Santé, où travailleront en réseau des médecins, des pédiatres, des ophtalmologistes, des psychologues, et des auxiliaires médicaux : infirmières, kinésithérapeutes, podologues, orthophonistes, orthoptistes."
+  - "Améliorer les services d'aide à domicile, afin de maintenir les séniors dans leur appartement s'ils le souhaitent."
+  - "Créer une maison de services publics avec un guichet social unique (CPAM, CAF, CARSAT, caisses de retraites complémentaires, Pôle Emploi)."
+  - "Créer une Maison des Associations, lieu d'échanges et de culture, au sein de l'ancienne clinique Djibouti."
+  - "Créer un accueil approprié pour les personnes en grandes difficultés."
+  - "Créer une antenne locale pour lutter contre la toxicomanie."
+
+accessibilite:
+  - "Réserver des appartements situés en rez-de-chaussée dans toutes les nouvelles constructions et rénovation de logements sociaux."
+  - "Aménager des accès handicapés dans tous les services publics."
+  - "Faciliter l'accessibilité dans les transports en commun."
+  - "Favoriser la libre circulation des personnes handicapées et à mobilité réduite dans leur transport individuel en sécurisant et en faisant respecter les places de parking réservées."
+  - "Surbaisser les trottoirs pour les rendre plus accessibles."
+
+logement:
+  - "Utiliser les réserves foncières, pour construire des logements locatifs en petites unités accessibles à tous."
+  - "Établir un plan de rénovation des logements anciens destinés à la location."
+  - "Créer des logements d'urgence en secteur diffus, afin de tenir compte de la mixité sociale et favoriser l'insertion des personnes en grande difficulté."
+  - "Réhabiliter la partie Nord des HLM du Point du Jour et en associant espaces verts, infrastructures sportives et culturelles, commerces, lieux d'échanges et de soutien social, et reloger les autres résidents."
+  - "Obtenir des bailleurs sociaux l'entretien de l'habitat et l'amélioration du cadre de vie des résidents."
+  - "Créer un partenariat entre la Mairie et les constructeurs privés afin de favoriser l'accession à la propriété."
+
+jslc:
+  - "Créer une Maison des Jeunes, lieu de vie et d'épanouissement avec multimédias, activités ludiques, mise à disposition d'une antenne d'écoute, notamment pour la proposition de nouveaux projets."
+  - "Implanter un plateau culturel polyvalent intercommunal sur Saint-Laurent-du-Var comportant salle de spectacle, cinéma, ludothèque, médiathèque, bibliothèque, théâtre."
+  - "Aménager des salles de réunion pour les associations."
+  - "Renforcer la création d'évènements culturels et sportifs."
+  - "Rénover le stade Léon Bérenger et réaménager le complexe sportif des Iscles."
+  - "Créer un nouveau gymnase."
+  - "Créer une nouvelle piscine intercommunale, en limite de Saint-Laurent-du-Var et Cagnes-sur-Mer."
+
+tourisme:
+  - "Favoriser le développement de l'hôtellerie."
+  - "Rendre piétonne la rue Desjobert un samedi par mois pour des animations commerciales et culturelles."
+  - "Mettre en place une signalétique centralisée sur une table d'orientation au bord de mer."
+  - "Aménager nos plages pour les rendre plus agréables et plus attractives."
+  - "Mettre en place des initiatives de jumelages et d'échanges culturels internationaux dans une perspective de promotion touristiques."
+  - "Restaurer le Vieux Moulin des Pugets pour y créer un musée de l'histoire et de la culture Laurentine."
+
+environnement:
+  - "Supprimer la pollution de nos plages en demandant à la Métropole de créer une nouvelle station d'épuration pour traiter les eaux usées des communes en amont de Saint-Laurent-du-Var et éviter la saturation de celle proche de Cap 3000."
+  - "Créer un centre de recyclage des encombrants, sans aucune pollution, avec une collecte gratuite."
+  - "Dépolluer et nettoyer les berges du Var et protéger les nappes phréatiques en faisant respecter la réglementation."
+  - "Mettre en sécurité notre commune contre les inondations."
+  - "Créer des ouvrages anti-bruits le long de l'autoroute."
+  - "Aménager la couverture de l'autoroute entre l'avenue du Zoo et du boulevard Jean Ossola, en collaboration avec le groupe Vinci, pour créer des parkings gratuits et des édifices publics."
+  - "Refuser l'extension du port de plaisance de Saint-Laurent-du-Var afin de protéger les plages, les activités aquatiques et la réserve ornithologique « La Petite Camargue » et créer un port à sec enterré identique au projet de Beaulieu-sur-Mer financé par des fonds privés."
+  - "Favoriser la mise en place des énergies renouvelables pour les particuliers et les services publics."
+  - "Instaurer une régie municipale de l'eau."
+  - "Rouvrir le parcours de santé au sein de la forêt des Pugets."
+
+emploi:
+  - "Défendre l'artisanat et le commerce, et de favoriser son implantation au coeur de la ville et du vieux village."
+  - "Dynamiser les zones d'activités (zone industrielle, commerces du centre ville, de la gare et du port)."
+  - "Favoriser l'aide à la création d'entreprise."
+  - "Améliorer les actions d'insertion pour les personnes en situation professionnelle précaire."
+  - "Maintenir une agriculture de production locale."
+  - "Mettre en place au printemps et à l'automne des braderies et vide greniers."

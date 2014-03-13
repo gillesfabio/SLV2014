@@ -1,0 +1,280 @@
+-
+  name      : Patrice Jacquesson
+  position  : 2
+  community : true
+  gender    : m
+  bio: |
+    Gestionnaire de centre urbain. 
+    Maîtrise Collectivités territoriales.
+    DESS Management. 
+    Ex. Conseiller municipal (mandat 2001).
+-
+  name      : Brigitte Lizée-Juan
+  position  : 3
+  community : true
+  gender    : f
+  bio: |
+    Directeur dans un Établissement public de l'État (secteur économique).
+    DESS Ingénierie ressources humaines. 
+    Ex. 1er adjoint au Maire (mandat 2001).
+-
+  name      : Jean-Pascal Dey
+  position  : 4 
+  community : true
+  gender    : m
+  bio: |
+    Contractuel à l'inspection générale des services et audits d'une Mairie.
+    Lieutenant-Colonel (32 ans dans l'armée de terre).
+-
+  name      : Marie-France Corvest
+  position  : 5
+  community : false
+  gender    : f
+  bio: |
+    Députée suppléante de Lionnel Luca. 
+    Ex. Directrice administrative et des R.H. d'hôtels de luxe. 
+    Ex. adjointe au Maire (mandat 2001 et 2008).
+-
+  name      : Bernard Girardot
+  position  : 6
+  community : false
+  gender    : m
+  bio: |
+    Ex. principal de collège. 
+    Ex. professeur d'Éducation Physique.
+-
+  name      : Danielle Hebert
+  position  : 7
+  community : true
+  gender    : f
+  bio: |
+    Chargée de mission APF 06. 
+    Doctorat en Droit.
+    Diplôme d'Avocat.
+    Directeur de cabinet du Maire durant 9 ans.
+-
+  name      : Mickaël Hutteau
+  position  : 8
+  community : true
+  gender    : m
+  bio: |
+    Cadre bancaire chargé d'affaires entreprises. 
+    BTS Force de vente.
+-
+  name      : Geneviève Telmon
+  position  : 9
+  community : false
+  gender    : f
+  bio: |
+    Représentante départementale APF 06. 
+    Docteur en Droit. 
+    Administratice du CCAS.
+-
+  name      : Frédéric Arsène
+  position  : 10
+  community : false
+  gender    : m
+  bio: |
+    Consultant et formateur en sûreté-sécurité.
+    DESS Police - Sécurité et droits de la personne.
+-
+  name      : Élisabeth Adamantiadis
+  position  : 11
+  community : true
+  gender    : f
+  bio: |
+    Chargée de mission à la culture et à la lutte contre l'illetrisme à la Mairie de Nice.
+-
+  name      : Olivier Corso
+  position  : 12
+  community : true
+  gender    : m
+  bio: |
+    Directeur adjoint dans un centre de formation.
+    Coordinateur d'actions sur le développement durable.
+-
+  name      : Marie-Caroline Charbonnier-Montaudié
+  position  : 13
+  community : false
+  gender    : f
+  bio: |
+    Masseur-Kinésithérapeute D.E.
+    D.U. Sport et Santé.
+-
+  name      : Grégory Chiarotto
+  position  : 14
+  community : false
+  gender    : m
+  bio: |
+    Directeur de magasin grande distribution.
+    DUT Gestion des entreprises et des administrations.
+-
+  name      : Isabelle Brune
+  position  : 15
+  community : false
+  gender    : f
+  bio: |
+    Attachée commerciale bancaire.
+    Ex. secrétaire d'une association de parents d'élèves.
+-
+  name      : René Estève
+  position  : 16
+  community : false
+  gender    : m
+  bio: |
+    Ex. cadre de la banque et des assurances.
+    Élu municipal et communautaire à Strasbourg (1995).
+-
+  name      : Corinne Bagnato
+  position  : 17
+  community : false
+  gender    : f
+  bio: |
+    Assistante d'un syndic d'immeuble.
+    Présidente d'une association de parents d'élèves.
+-
+  name      : Éric Barbot
+  position  : 18
+  community : false
+  gender    : m
+  bio: |
+    Superviseur d'activité industrielle.
+    Militant de l'assocation Enfance Népal.
+-
+  name      : Geneviève Parisi
+  position  : 19
+  community : false
+  gender    : f
+  bio: |
+    Agent de maîtrise dans une société de peinture.
+    Diplômée en secrétariat.
+-
+  name      : Georges Tonali
+  position  : 20
+  community : false
+  gender    : m
+  bio: |
+    Artisan peintre durant 23 ans.
+    Ancien trésorier de l'AGASC et membre du C.D. de voile.
+-
+  name      : Laura Rolfo
+  position  : 21
+  community : false
+  gender    : f
+  bio: |
+    Étudiante.
+    Ceinture noire de Judo - médaillée aux champ. de France.
+-
+  name      : Frédéric Chatain
+  position  : 22
+  community : false
+  gender    : m
+  bio: |
+    Diplôme niv. IV Maintenance sytème automatique.
+    Responsable de chantier - société intégration domotique.
+-
+  name      : Marie-José Mabille
+  position  : 23
+  community : false
+  gender    : f
+  bio: |
+    Ex. professeur des écoles.
+    Bénévole en remise à niveau scolaire de patients hospitalisés.
+-
+  name      : André Ruiz
+  position  : 24
+  community : false
+  gender    : m
+  bio: |
+    Ex. Maître d'oeuvre mériteur.
+    Diplôme de dessinateur de l'école des Beaux Arts.
+-
+  name      : Évelyne Lautier
+  position  : 25
+  community : false
+  gender    : f
+  bio: |
+    Manager équipe de conseillers à Pôle Emploi.
+    Élue représentante du personnel depuis 25 ans.
+-
+  name      : Stéphane Bicchierini
+  position  : 26
+  community : false
+  gender    : m
+  bio: |
+    Analyste programmeur.
+    DESS Gestion information.
+    Trésorier national adjoint d'un syndicat professionel.
+-
+  name      : Nicole Tavaux
+  position  : 27
+  community : false
+  gender    : f
+  bio: |
+    Ex. cadre supérieur d'une compagnie aérienne.
+    Conseillère municipale en 2001 (Indre).
+-
+  name      : Stéphane Sanchez
+  position  : 28
+  community : false
+  gender    : m
+  bio: |
+    Directeur général délégué en Assurances.
+    Ex. membre de la Jeune Chambre Économique.
+-
+  name      : Louise Garnier
+  position  : 29
+  community : false
+  gender    : f
+  bio: |
+    Membre du C.A. "Institut Arnault Tzanck".
+    Directrice adjointe soins et hospitalisation à domicile.
+-
+  name      : Jean-Louis Rogès
+  position  : 30
+  community : false
+  gender    : m
+  bio: |
+    Directeur commercial dans l'automobile.
+    Membre de la Croix Rouge Monégasque.
+-
+  name      : Julia Bernardi
+  position  : 31
+  community : false
+  gender    : f
+  bio: |
+    Conseillère clientèle dans le prêt-à-porter.
+    Cavalière (dressage) de niveau national.
+-
+  name      : Alban Thibierge
+  position  : 32
+  community : false
+  gender    : m
+  bio: |
+    Directeur d'une agence immobilière.
+    École des créateurs et dirigeants d'entreprises de Paris.
+-
+  name      : Élisabeth Brunet
+  position  : 33
+  community : false
+  gender    : f
+  bio: |
+    Infirmière D.E.
+    Militante d'un organisme syndical pendant 15 ans.
+-
+  name      : Alain Falsini
+  position  : 34
+  community : false
+  gender    : m
+  bio: |
+    A gravi l'Aconcagua (6962m) malgré sa polio.
+    Ex. pâtissier.
+    Engagé dans des associations humanitaires.
+-
+  name      : Danièle Robin
+  position  : 35
+  community : false
+  gender    : f
+  bio: |
+    Ex. secrétaire générale faculté de droit de Nice.
+    Master de droit public.
