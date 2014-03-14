@@ -116,15 +116,25 @@ a:hover, a:focus {
   background : #f7f7f7 !important;
   border     : none;
 }
-.candidate-program-projects li {
+.candidate-program-projects > li {
   background    : #f5f5f5;
   padding       : 20px;
   margin-bottom : 5px;
 }
 
-.candidate-program-projects li p {
-  font-size     : 90%;
-  margin-bottom : 0;
+.candidate-program-projects li p,
+.candidate-program-projects li ul {
+  font-size     : 14px;
+  margin        : 0 0 10px 0;
+  line-height   : 22px;
+}
+
+.candidate-program-projects li ul {
+  margin: 10px 0 10px 20px !important;
+}
+
+.candidate-program-projects li ul li {
+  list-style-type: circle;
 }
 
 /* theme-list
