@@ -37,10 +37,10 @@
 
     <script id="candidate-card-template" type="text/x-handlebars-template">
       <div class="row">
-        <div class="small-12 medium-2 large-2 columns">
+        <div class="small-12 medium-12 medium-4 large-4 columns">
           <img src="{{model.picture}}" class="circle" alt="{{model.name}}">
         </div>
-        <div class="small-12 medium-10 large-10 columns">
+        <div class="small-12 medium-12 medium-8 large-8 columns">
           <h1 class="candidate-name">{{model.name}} <small>({{model.party}})</small></h1>
           {{#if model.slogan}}<h3 class="candidate-slogan">{{model.slogan}}</h3>{{/if}}
           <ul class="no-bullet candidate-links">
@@ -49,7 +49,11 @@
             {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{model.facebook}}">{{model.facebook}}</a></li>{{/if}}
           </ul>
           {{#if showButton}}
-          <a href="<%= baseurl %>#/candidats/{{model.id}}" class="button radius"><i class="fa fa-list-ol"></i> Mon Programme</a>
+          <p>
+            <a href="<%= baseurl %>#/candidats/{{model.id}}" class="button radius">
+            <i class="fa fa-list-ol"></i> Mon Programme
+            </a>
+          </p>
           {{/if}}
         </div>
       </div>
@@ -79,6 +83,11 @@
         {{/each}}
       </ol>
       {{/each}}
+    </script>
+
+    <script id="candidate-list-template" type="text/x-handlebars-template">
+      <h1>Les candidats</h1>
+      <ul class="small-block-grid-1 medium-block-grid-2 candidate-list-container"></ul>
     </script>
 
     <script id="candidate-detail-template" type="text/x-handlebars-template">

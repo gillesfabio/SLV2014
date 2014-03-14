@@ -80,6 +80,14 @@
   App.templates.CandidateProgramTemplate = $('#candidate-program-template').html();
 
   /**
+   * Candidate List Handlebars Template.
+   *
+   * @type {String}
+   * @memberof App.templates
+   */
+  App.templates.CandidateListTemplate = $('#candidate-list-template').html();
+
+  /**
    * Candidate Program Handlebars Template.
    *
    * @type {String}
@@ -477,6 +485,7 @@
 
     initialize: function(options) {
       this.options = options || {};
+      this.template = Handlebars.compile(App.templates.CandidateListTemplate);
       this.listenTo(this.collection, 'sync', this.render);
       this.collection.fetch();
     },
@@ -487,46 +496,13 @@
      * @memberof App.views.CandidateListView#
      */
     render: function() {
+      this.$el.empty();
+      this.$el.html(this.template());
       this.collection.each(function(model) {
         var showButton = model.get('programUrl') ? true : false;
-        var view = new App.views.CandidateCardView({model: model, showButton: showButton});
-        this.$el.append(view.el);
+        var view = new App.views.CandidateCardView({tagName: 'li', model: model, showButton: showButton});
+        this.$el.find('.candidate-list-container').append(view.el);
       }.bind(this));
-    }
-  });
-
-  /**
-   * Home View.
-   *
-   * Subviews:
-   *
-   * - {@link App.views.CandidateListView}
-   *
-   * @class
-   * @memberof App.views
-   * @param {Object} options View options.
-   * @param {App.collections.CandidateCollection} options.collection The collection instance.
-   */
-  App.views.HomeView = Backbone.View.extend(
-    /** @lends App.views.HomeView.prototype */{
-
-    id: 'home',
-    tagName: 'div',
-
-    initialize: function(options) {
-      this.options = _.extend({candidates: null}, options);
-      this.candidates = this.options.candidates;
-      this.candidateListView = new App.views.CandidateListView({collection: this.candidates});
-      this.render();
-    },
-
-    /**
-     * Renders view.
-     *
-     * @memberof App.views.HomeView#
-     */
-    render: function() {
-      this.$el.append(this.candidateListView.el);
     }
   });
 
@@ -721,8 +697,8 @@
     /** @lends App.Router.prototype */{
 
     routes: {
-      ''              : 'homeController',
-      'candidats'     : 'homeController',
+      ''              : 'candidateListController',
+      'candidats'     : 'candidateListController',
       'candidats/:id' : 'candidateDetailController',
       'themes'        : 'themeListController',
       'themes/:id'    : 'themeDetailController',
@@ -742,8 +718,8 @@
      *
      * @memberof App.Router#
      */
-    homeController: function() {
-      var view = new App.views.HomeView({candidates: this.candidates});
+    candidateListController: function() {
+      var view = new App.views.CandidateListView({collection: this.candidates});
       this.content.html(view.el);
     },
 
