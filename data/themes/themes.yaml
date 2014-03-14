@@ -36,7 +36,7 @@
   icon : suitcase
 - 
   id   : local
-  name : "Local / Proximité"
+  name : "Proximité"
   icon : location-arrow
 -
   id   : urbanisme
@@ -46,3 +46,15 @@
   id   : accessibilite
   name : "Accessibilité"
   icon : wheelchair
+- 
+  id   : fiscalite
+  name : "Gestion & Fiscalité"
+  icon : eur
+- 
+  id   : metropole
+  name : "Métropole"
+  icon : circle-o
+- 
+  id   : democratie
+  name : "Démocratie"
+  icon : volume-up
