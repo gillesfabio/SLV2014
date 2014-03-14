@@ -4,7 +4,7 @@
   icon : smile-o
 -
   id   : transport
-  name : "Transport & Déplacements"
+  name : "Transport & Circulation"
   icon : road
 -
   id   : securite 
@@ -57,4 +57,12 @@
 - 
   id   : democratie
   name : "Démocratie"
+  icon : volume-up
+- 
+  id   : seniors
+  name : "Seniors"
+  icon : volume-up
+- 
+  id   : numerique
+  name : "Numérique"
   icon : volume-up
