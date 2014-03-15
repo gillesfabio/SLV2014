@@ -82,8 +82,8 @@
     model : App.models.Program,
     url   : App.dataURL,
 
-    parse: function(response) {
-      return response.programs;
+    parse: function(res) {
+      return res.programs;
     },
 
     findByCandidate: function(id) {
@@ -151,29 +151,6 @@
     }
   });
 
-  App.views.RunningMateList = Backbone.View.extend({
-
-    tagName: 'div',
-    className: 'running-mate-list',
-
-    initialize: function(options) {
-      this.options = _.extend({
-        runningMates : new App.collections.RunningMate(),
-        candidate    : new App.models.Candidate()
-      }, options);
-      this.candidate    = this.options.candidate;
-      this.runningMates = this.options.runningMates;
-      this.template     = App.templates.runningMateList;
-      this.listenTo(this.runningMates, 'sync', this.render);
-      this.runningMates.fetch();
-    },
-
-    render: function() {
-      var runningMates = this.runningMates.findByCandidate(this.candidate.get('id'));
-      this.$el.html(this.template({runningMates: runningMates.toJSON()}));
-    }
-  });
-
   App.views.CandidateProgram = Backbone.View.extend({
 
     tagName   : 'div',
@@ -195,6 +172,29 @@
       this.$el.html(this.template({
         projects: this.programs.candidateProjects(this.candidate.get('id'))
       }));
+    }
+  });
+
+  App.views.RunningMateList = Backbone.View.extend({
+
+    tagName: 'div',
+    className: 'running-mate-list',
+
+    initialize: function(options) {
+      this.options = _.extend({
+        runningMates : new App.collections.RunningMate(),
+        candidate    : new App.models.Candidate()
+      }, options);
+      this.candidate    = this.options.candidate;
+      this.runningMates = this.options.runningMates;
+      this.template     = App.templates.runningMateList;
+      this.listenTo(this.runningMates, 'sync', this.render);
+      this.runningMates.fetch();
+    },
+
+    render: function() {
+      var runningMates = this.runningMates.findByCandidate(this.candidate.get('id'));
+      this.$el.html(this.template({runningMates: runningMates.toJSON()}));
     }
   });
 

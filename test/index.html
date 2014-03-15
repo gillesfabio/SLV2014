@@ -14,7 +14,7 @@
   <!-- Test dependencies -->
   <script src="/vendor/mocha/mocha.js"></script>
   <script src="/vendor/chai/chai.js"></script>
-  <script src="/vendor/sinon/lib/sinon.js"></script>
+  <script src="/vendor/sinonjs/sinon.js"></script>
   <script>
     chai.Assertion.includeStack = true;
     mocha.setup('bdd');
@@ -30,6 +30,7 @@
   <!-- Application tests -->
   <script src="/test/collections_test.js"></script>
   <script src="/test/views_test.js"></script>
+  <script src="/test/controllers_test.js"></script>
   <script>
     mocha.run();
  </script>

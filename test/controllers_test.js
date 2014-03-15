@@ -5,7 +5,7 @@
 
 var expect = chai.expect;
 
-describe('App.views', function() {
+describe('App.controllers', function() {
 
   var sandbox;
 
@@ -17,43 +17,31 @@ describe('App.views', function() {
     sandbox.restore();
   });
 
-  describe('App.views.CandidateCard', function() {
+  describe('App.controllers.candidateList', function() {
     it('should be true', function() {
       expect(true).to.be.true;
     });
   });
 
-  describe('App.views.CandidateProgram', function() {
+  describe('App.controllers.candidateDetail', function() {
     it('should be true', function() {
       expect(true).to.be.true;
     });
   });
 
-  describe('App.views.RunningMateList', function() {
+  describe('App.controllers.themeList', function() {
     it('should be true', function() {
       expect(true).to.be.true;
     });
   });
 
-  describe('App.views.CandidateList', function() {
+  describe('App.controllers.themeDetail', function() {
     it('should be true', function() {
       expect(true).to.be.true;
     });
   });
 
-  describe('App.views.CandidateDetail', function() {
-    it('should be true', function() {
-      expect(true).to.be.true;
-    });
-  });
-
-  describe('App.views.ThemeList', function() {
-    it('should be true', function() {
-      expect(true).to.be.true;
-    });
-  });
-
-  describe('App.views.ThemeDetail', function() {
+  describe('App.controllers.about', function() {
     it('should be true', function() {
       expect(true).to.be.true;
     });
