@@ -25,6 +25,7 @@
     "mocha": "1.x",
     "chai": "1.x",
     "sinon": "1.x",
-    "markdown": "0.x"
+    "markdown": "0.x",
+    "jspdf": "~0.9.0"
   }
 }
