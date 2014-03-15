@@ -143,10 +143,6 @@
       this.render();
     },
 
-    setDefaults: function() {
-
-    },
-
     render: function() {
       this.$el.html(this.template({
         candidate      : this.candidate.toJSON(),
