@@ -15,11 +15,11 @@
     "gulp-concat": "2.x",
     "gulp-minify-css": "0.x",
     "gulp-clean": "0.x",
-    "temp-write": "~0.2.0",
+    "gulp-compass": "1.x",
+    "temp-write": "0.x",
     "yamljs": "0.x",
     "swig": "1.x",
-    "jsdoc": "git+https://github.com/jsdoc3/jsdoc.git",
-    "async": "~0.2.10",
-    "lodash": "~2.4.1"
+    "async": "0.x",
+    "lodash": "2.x"
   }
 }
