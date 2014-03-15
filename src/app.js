@@ -51,29 +51,21 @@
   // ---------------------------------------------------------------------------
 
   App.collections.Theme = Backbone.Collection.extend({
-
-    model: App.models.Theme,
-    url: App.dataURL,
-
-    parse: function(res) {
-      return res.themes;
-    }
+    model : App.models.Theme,
+    url   : App.dataURL,
+    parse : function(res) { return res.themes; }
   });
 
   App.collections.Candidate = Backbone.Collection.extend({
-
-    model: App.models.Candidate,
-    url: App.dataURL,
-
-    parse: function(res) {
-      return res.candidates;
-    }
+    model : App.models.Candidate,
+    url   : App.dataURL,
+    parse : function(res) { return res.candidates; }
   });
 
   App.collections.RunningMate = Backbone.Collection.extend({
 
-    model: App.models.RunningMate,
-    url: App.dataURL,
+    model : App.models.RunningMate,
+    url   : App.dataURL,
 
     parse: function(res) {
       return res.runningMates;
@@ -87,8 +79,8 @@
 
   App.collections.Program = Backbone.Collection.extend({
 
-    model: App.models.Program,
-    url: App.dataURL,
+    model : App.models.Program,
+    url   : App.dataURL,
 
     parse: function(response) {
       return response.programs;
@@ -150,16 +142,20 @@
     className: 'candidate-card',
 
     initialize: function(options) {
-      this.options = _.extend({showDetailLink: false}, options);
-      this.showDetailLink = options.showDetailLink;
-      this.template = App.templates.candidateCard;
+      this.options = _.extend({
+        candidate      : new App.models.Candidate(),
+        showDetailLink : false
+      }, options);
+      this.candidate      = this.options.candidate;
+      this.showDetailLink = this.options.showDetailLink;
+      this.template       = App.templates.candidateCard;
       this.render();
     },
 
     render: function() {
       this.$el.html(this.template({
-        model: this.model.toJSON(),
-        showDetailLink: this.showDetailLink
+        candidate      : this.candidate.toJSON(),
+        showDetailLink : this.showDetailLink
       }));
     }
   });
@@ -171,69 +167,69 @@
 
     initialize: function(options) {
       this.options = _.extend({
-        modelId: null,
-        runningMates: new App.collections.RunningMate()
+        runningMates : App.collections.runningMates,
+        candidate    : new App.models.Candidate()
       }, options);
-      this.modelId      = this.options.modelId;
+      this.candidate    = this.options.candidate;
       this.runningMates = this.options.runningMates;
       this.template     = App.templates.runningMateList;
-      this.listenTo(this.collection, 'sync', this.prepare);
-      this.collection.fetch();
-    },
-
-    prepare: function() {
-      this.runningMates = this.collection.findByCandidate(this.modelId);
-      this.render();
+      this.listenTo(this.runningMates, 'sync', this.render);
+      this.runningMates.fetch();
     },
 
     render: function() {
-      this.$el.html(this.template({runningMates: this.runningMates.toJSON()}));
+      var runningMates = this.runningMates.findByCandidate(this.candidate.get('id'));
+      this.$el.html(this.template({runningMates: runningMates.toJSON()}));
     }
   });
 
   App.views.CandidateProgram = Backbone.View.extend({
 
-    tagName: 'div',
-    className: 'candidate-program',
+    tagName   : 'div',
+    className : 'candidate-program',
 
     initialize: function(options) {
-      this.options  = _.extend({modelId: null}, options);
-      this.modelId  = this.options.modelId;
-      this.template = App.templates.candidateProgram;
-      this.listenTo(this.collection, 'sync', this.prepare);
-      this.collection.fetch();
-    },
 
-    prepare: function() {
-      this.projects = this.collection.candidateProjects(this.modelId);
-      this.render();
+      this.options = _.extend({
+        programs  : App.collections.programs,
+        candidate : new App.models.Candidate()
+      }, options);
+
+      this.programs  = this.options.programs;
+      this.candidate = this.options.candidate;
+      this.template  = App.templates.candidateProgram;
+
+      this.listenTo(this.programs, 'sync', this.render);
+      this.programs.fetch();
     },
 
     render: function() {
-      this.$el.html(this.template({projects: this.projects}));
+      this.$el.html(this.template({
+        projects: this.programs.candidateProjects(this.candidate.get('id'))
+      }));
     }
   });
 
   App.views.CandidateList = Backbone.View.extend({
 
-    tagName: 'div',
-    className: 'candidate-list',
+    tagName   : 'div',
+    className : 'candidate-list',
 
     initialize: function(options) {
-      this.options = options || {};
-      this.template = App.templates.candidateList;
-      this.listenTo(this.collection, 'sync', this.render);
-      this.collection.fetch();
+      this.options    = _.extend({candidates: App.collections.candidates}, options);
+      this.candidates = this.options.candidates;
+      this.template   = App.templates.candidateList;
+      this.listenTo(this.candidates, 'sync', this.render);
+      this.candidates.fetch();
     },
 
     render: function() {
-      this.$el.empty();
       this.$el.html(this.template());
-      this.collection.each(function(model) {
+      this.candidates.each(function(candidate) {
         var view = new App.views.CandidateCard({
-          tagName: 'li',
-          model: model,
-          showDetailLink: model.get('programUrl') ? true : false
+          tagName        : 'li',
+          candidate      : candidate,
+          showDetailLink : candidate.get('programUrl') ? true : false
         });
         this.$el.find('.candidate-list-container').append(view.el);
       }.bind(this));
@@ -242,8 +238,8 @@
 
   App.views.CandidateDetail = Backbone.View.extend({
 
-    tagName: 'div',
-    className: 'candidate-detail',
+    tagName   : 'div',
+    className : 'candidate-detail',
 
     events: {
       'click a.makePDF': 'makePDF'
@@ -251,16 +247,17 @@
 
     initialize: function(options) {
       this.options = _.extend({
-        modelId: null,
-        programs: new App.collections.Program(),
-        runningMates: new App.collections.RunningMate()
+        candidate    : new App.models.Candidate(),
+        programs     : App.collections.programs,
+        runningMates : App.collections.runningMates
       }, options);
-      this.modelId      = this.options.modelId;
+
+      this.candidate    = this.options.candidate;
       this.programs     = this.options.programs;
       this.runningMates = this.options.runningMates;
       this.template     = App.templates.candidateDetail;
-      this.listenTo(this.collection, 'sync', this.prepare);
-      this.collection.fetch();
+      this.setSubviews();
+      this.render();
     },
 
     makePDF: function() {
@@ -277,72 +274,84 @@
       doc.save('programme.pdf');
     },
 
-    prepare: function() {
-      this.model               = this.collection.findWhere({id: this.modelId});
-      this.candidateCardView   = new App.views.CandidateCard({model: this.model, showDetailLink: false});
-      this.programView         = new App.views.CandidateProgram({collection: this.programs, modelId: this.modelId});
-      this.runningMateListView = new App.views.RunningMateList({collection : this.runningMates, modelId: this.modelId});
-      this.render();
+    setSubviews: function() {
+      this.candidateCardView = new App.views.CandidateCard({
+        candidate      : this.candidate,
+        showDetailLink : false
+      });
+      this.programView = new App.views.CandidateProgram({
+        programs  : this.programs,
+        candidate : this.candidate
+      });
+      this.runningMateListView = new App.views.RunningMateList({
+        runningMates : this.runningMates,
+        candidate    : this.candidate
+      });
     },
 
     render: function() {
-      this.$el.html(this.template({candidate: this.model.toJSON()}));
+      this.$el.html(this.template({candidate: this.candidate.toJSON()}));
       this.$el.find('.candidate-detail-running-mates').html(this.runningMateListView.el);
       this.$el.find('.candidate-detail-card').html(this.candidateCardView.el);
       this.$el.find('.candidate-detail-program').html(this.programView.el);
     }
   });
 
-  App.views.ThemeDetail = Backbone.View.extend({
+  App.views.ThemeList = Backbone.View.extend({
 
-    tagName: 'div',
-    className: 'theme-detail',
+    tagName   : 'div',
+    className : 'theme-list',
 
     initialize: function(options) {
-      this.options  = _.extend({modelId: null, programs: null}, options);
-      this.modelId  = this.options.modelId;
+      this.options  = _.extend({themes: App.collections.themes}, options);
+      this.themes   = this.options.themes;
+      this.template = App.templates.themeList;
+      this.listenTo(this.themes, 'sync', this.render);
+      this.themes.fetch();
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.themes.toJSON()));
+    }
+  });
+
+  App.views.ThemeDetail = Backbone.View.extend({
+
+    tagName   : 'div',
+    className : 'theme-detail',
+
+    initialize: function(options) {
+      this.options = _.extend({
+        theme    : new App.models.Theme(),
+        programs : App.collections.programs,
+      }, options);
+      this.theme    = this.options.theme;
       this.programs = this.options.programs;
       this.template = App.templates.themeDetail;
-      this.theme    = null;
-      this.listenTo(this.collection, 'sync', this.prepare);
-      this.collection.fetch();
-    },
-
-    prepare: function() {
-      this.theme = this.collection.findWhere({id: this.modelId});
-      if (!this.theme) return this.notFound();
-      this.programs.fetch({success: function(collection) {
-        this.groupedPrograms = this.programs.findByThemeAndGroupByCandidate(this.modelId);
-        this.render();
-      }.bind(this)});
-    },
-
-    notFound: function() {
-      this.$el.html("Désolé, ce thème n'existe pas.");
+      this.listenTo(this.programs, 'sync', this.render);
+      this.programs.fetch();
     },
 
     render: function() {
       this.$el.html(this.template({
         theme    : this.theme.toJSON(),
-        programs : this.groupedPrograms
+        programs : this.programs.findByThemeAndGroupByCandidate(this.theme.get('id'))
       }));
     }
   });
 
-  App.views.ThemeList = Backbone.View.extend({
+  App.views.NotFound = Backbone.View.extend({
 
-    tagName: 'div',
-    className: 'theme-list',
+    tagName   : 'div',
+    className : 'not-found',
 
     initialize: function(options) {
-      this.options  = options || {};
-      this.template = App.templates.themeList;
-      this.listenTo(this.collection, 'sync', this.render);
-      this.collection.fetch();
+      this.options = options || {};
+      this.message = this.options.message;
     },
 
     render: function() {
-      this.$el.html(this.template(this.collection.toJSON()));
+      this.$el.html(this.message);
     }
   });
 
@@ -351,32 +360,45 @@
   // ---------------------------------------------------------------------------
 
   App.controllers.candidateList = function(collection) {
-      var view = new App.views.CandidateList({collection: App.collections.candidates});
+      var view = new App.views.CandidateList();
       $('#content').html(view.el);
   };
 
   App.controllers.candidateDetail = function(id) {
-    var view = new App.views.CandidateDetail({
-      modelId      : id,
-      collection   : App.collections.candidates,
-      programs     : App.collections.programs,
-      runningMates : App.collections.runningMates
+    var $content = $('#content');
+    App.collections.candidates.fetch({
+      success: function(candidates) {
+        var view  = new App.views.CandidateDetail({
+          candidate    : candidates.findWhere({id: id}),
+          programs     : App.collections.programs,
+          runningMates : App.collections.runningMates
+        });
+        $content.html(view.el);
+      },
+      error: function(error) {
+        console.error(error);
+        $content.html("Désolé, une erreur est survenue.");
+      }
     });
-    $('#content').html(view.el);
   };
 
   App.controllers.themeList = function() {
-    var view = new App.views.ThemeList({collection: App.collections.themes});
+    var view = new App.views.ThemeList();
     $('#content').html(view.el);
   };
 
   App.controllers.themeDetail = function(id) {
-    var view = new App.views.ThemeDetail({
-      collection : App.collections.themes,
-      modelId    : id,
-      programs   : App.collections.programs
+    var $content = $('#content');
+    App.collections.themes.fetch({
+      success: function(themes) {
+        var view = new App.views.ThemeDetail({theme: themes.findWhere({id: id})});
+        $content.html(view.el);
+      },
+      error: function(error) {
+        console.error(error);
+        $content.html("Désolé, une erreur est survenue.");
+      }
     });
-    $('#content').html(view.el);
   };
 
   App.controllers.about = function() {

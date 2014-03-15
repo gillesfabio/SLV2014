@@ -38,19 +38,19 @@
     <script id="candidate-card-template" type="text/x-handlebars-template">
       <div class="row">
         <div class="small-12 large-4 columns">
-          <img src="{{model.picture}}" class="circle" alt="{{model.name}}">
+          <img src="{{candidate.picture}}" class="circle" alt="{{candidate.name}}">
         </div>
         <div class="small-12 large-8 columns">
-          <h1 class="candidate-name">{{model.name}} <small>({{model.party}})</small></h1>
-          {{#if model.slogan}}<h3 class="candidate-slogan">{{model.slogan}}</h3>{{/if}}
+          <h1 class="candidate-name">{{candidate.name}} <small>({{candidate.party}})</small></h1>
+          {{#if candidate.slogan}}<h3 class="candidate-slogan">{{candidate.slogan}}</h3>{{/if}}
           <ul class="no-bullet candidate-links">
-            {{#if model.homepage}}<li><i class="fa fa-globe"></i> <a href="{{model.homepage}}">{{model.homepage}}</a></li>{{/if}}
-            {{#if model.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{model.twitter}}">@{{model.twitter}}</a></li>{{/if}}
-            {{#if model.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{model.facebook}}">{{model.facebook}}</a></li>{{/if}}
+            {{#if candidate.homepage}}<li><i class="fa fa-globe"></i> <a href="{{candidate.homepage}}">{{candidate.homepage}}</a></li>{{/if}}
+            {{#if candidate.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{candidate.twitter}}">@{{candidate.twitter}}</a></li>{{/if}}
+            {{#if candidate.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{candidate.facebook}}">{{candidate.facebook}}</a></li>{{/if}}
           </ul>
           {{#if showDetailLink}}
           <p>
-            <a href="<%= baseurl %>#/candidats/{{model.id}}" class="button radius">
+            <a href="<%= baseurl %>#/candidats/{{candidate.id}}" class="button radius">
             <i class="fa fa-list-ol"></i> Mon Programme
             </a>
           </p>
