@@ -1,4 +1,4 @@
-(function($, _, Backbone, Handlebars, markdown) {
+(function($, _, Backbone, Handlebars, markdown, jsPDF) {
 
   /*jshint unused:false */
   'use strict';
@@ -7,117 +7,26 @@
   // Namespace
   // ---------------------------------------------------------------------------
 
-  /**
-   * Application Namespace.
-   *
-   * @namespace App
-   */
   var App = window.App = {
-
-    /**
-     * Data URL.
-     *
-     * @type {string}
-     * @memberof App
-     */
-    dataURL: window.APP_BASE_URL + 'data.json',
-
-    /**
-     * Application Templates.
-     *
-     * @namespace App.templates
-     */
-    templates: {},
-
-    /**
-     * Application models.
-     *
-     * @namespace App.models
-     */
-    models: {},
-
-    /**
-     * Application collections.
-     *
-     * @namespace App.collections
-     */
-    collections: {},
-
-    /**
-     * Application views.
-     *
-     * @namespace App.views
-     */
-    views: {}
+    dataURL     : window.APP_BASE_URL + 'data.json',
+    templates   : {},
+    models      : {},
+    collections : {},
+    views       : {}
   };
 
   // ---------------------------------------------------------------------------
   // Templates
   // ---------------------------------------------------------------------------
 
-  /**
-   * Candidate Card Handlebars Template.
-   *
-   * @type {String}
-   * @memberof App.templates
-   */
-  App.templates.CandidateCardTemplate = $('#candidate-card-template').html();
-
-  /**
-   * Running Mate List Handlebars Template.
-   *
-   * @type {String}
-   * @memberof App.templates
-   */
-  App.templates.RunningMateListTemplate = $('#running-mate-list-template').html();
-
-  /**
-   * Candidate Program Handlebars Template.
-   *
-   * @type {String}
-   * @memberof App.templates
-   */
-  App.templates.CandidateProgramTemplate = $('#candidate-program-template').html();
-
-  /**
-   * Candidate List Handlebars Template.
-   *
-   * @type {String}
-   * @memberof App.templates
-   */
-  App.templates.CandidateListTemplate = $('#candidate-list-template').html();
-
-  /**
-   * Candidate Program Handlebars Template.
-   *
-   * @type {String}
-   * @memberof App.templates
-   */
-  App.templates.CandidateDetailTemplate = $('#candidate-detail-template').html();
-
-  /**
-   * Theme Detail Handlebars Template.
-   *
-   * @type {String}
-   * @memberof App.templates
-   */
-  App.templates.ThemeDetailTemplate = $('#theme-detail-template').html();
-
-  /**
-   * Theme List Handlebars Template.
-   *
-   * @type {String}
-   * @memberof App.templates
-   */
-  App.templates.ThemeListTemplate = $('#theme-list-template').html();
-
-  /**
-   * About Handlebars Template.
-   *
-   * @type {String}
-   * @memberof App.templates
-   */
-  App.templates.AboutTemplate = $('#about-template').html();
+  App.templates.candidateCardTemplate    = Handlebars.compile($('#candidate-card-template').html());
+  App.templates.runningMateListTemplate  = Handlebars.compile($('#running-mate-list-template').html());
+  App.templates.candidateProgramTemplate = Handlebars.compile($('#candidate-program-template').html());
+  App.templates.candidateListTemplate    = Handlebars.compile($('#candidate-list-template').html());
+  App.templates.candidateDetailTemplate  = Handlebars.compile($('#candidate-detail-template').html());
+  App.templates.themeDetailTemplate      = Handlebars.compile($('#theme-detail-template').html());
+  App.templates.themeListTemplate        = Handlebars.compile($('#theme-list-template').html());
+  App.templates.aboutTemplate            = Handlebars.compile($('#about-template').html());
 
 
   //----------------------------------------------------------------------------
@@ -132,63 +41,16 @@
   // Models
   // ---------------------------------------------------------------------------
 
-  /**
-   * Theme Model.
-   *
-   * @class
-   * @memberof App.models
-   * @augments Backbone.Model
-   */
-  App.models.ThemeModel = Backbone.Model.extend(
-    /** @lends App.models.ThemeModel.prototype */{}
-  );
-
-  /**
-   * Candidate Model.
-   *
-   * @class
-   * @memberof App.models
-   * @augments Backbone.Model
-   */
-  App.models.CandidateModel = Backbone.Model.extend(
-    /** @lends App.models.CandidateModel.prototype */{}
-  );
-
-  /**
-   * Running Mate Model.
-   *
-   * @class
-   * @memberof App.models
-   * @augments Backbone.Model
-   */
-  App.models.RunningMateModel = Backbone.Model.extend(
-    /** @lends App.models.RunningMateModel.prototype */{}
-  );
-
-  /**
-   * Program Model.
-   *
-   * @class
-   * @memberof App.models
-   * @augments Backbone.Model
-   */
-  App.models.ProgramModel = Backbone.Model.extend(
-    /** @lends App.models.ProgramModel.prototype */{}
-  );
+  App.models.ThemeModel       = Backbone.Model.extend({});
+  App.models.CandidateModel   = Backbone.Model.extend({});
+  App.models.RunningMateModel = Backbone.Model.extend({});
+  App.models.ProgramModel     = Backbone.Model.extend({});
 
   // ---------------------------------------------------------------------------
   // Collections
   // ---------------------------------------------------------------------------
 
-  /**
-   * Theme Collection.
-   *
-   * @class
-   * @memberof App.collections
-   * @augments Backbone.Collection
-   */
-  App.collections.ThemeCollection = Backbone.Collection.extend(
-    /** @lends App.collections.ThemeCollection.prototype */ {
+  App.collections.ThemeCollection = Backbone.Collection.extend({
 
     model: App.models.ThemeModel,
     url: App.dataURL,
@@ -198,15 +60,7 @@
     }
   });
 
-  /**
-   * Candidate Collection.
-   *
-   * @class
-   * @memberof App.collections
-   * @augments Backbone.Collection
-   */
-  App.collections.CandidateCollection = Backbone.Collection.extend(
-    /** @lends App.collections.CandidateCollection.prototype */ {
+  App.collections.CandidateCollection = Backbone.Collection.extend({
 
     model: App.models.CandidateModel,
     url: App.dataURL,
@@ -216,15 +70,7 @@
     }
   });
 
-  /**
-   * Running Mate Collection.
-   *
-   * @class
-   * @memberof App.collections
-   * @augments Backbone.Collection
-   */
-  App.collections.RunningMateCollection = Backbone.Collection.extend(
-    /** @lends App.collections.RunningMateCollection.prototype */ {
+  App.collections.RunningMateCollection = Backbone.Collection.extend({
 
     model: App.models.RunningMateModel,
     url: App.dataURL,
@@ -233,30 +79,13 @@
       return res.runningMates;
     },
 
-    /**
-     * Returns models for the given candidate.
-     *
-     * @memberof App.collections.RunningMateCollection#
-     * @param {String} The candidate ID.
-     * @returns {Array}
-     */
     findByCandidate: function(id) {
-      var models = this.filter(function(model) {
-        return model.get('candidate').id === id;
-      });
+      var models = this.filter(function(model) { return model.get('candidate').id === id; });
       return new App.collections.RunningMateCollection(models);
     }
   });
 
-  /**
-   * Program Collection.
-   *
-   * @class
-   * @memberof App.collections
-   * @augments Backbone.Collection
-   */
-  App.collections.ProgramCollection = Backbone.Collection.extend(
-    /** @lends App.collections.ProgramCollection.prototype */ {
+  App.collections.ProgramCollection = Backbone.Collection.extend({
 
     model: App.models.ProgramModel,
     url: App.dataURL,
@@ -265,26 +94,12 @@
       return response.programs;
     },
 
-    /**
-     * Returns models which have `candidate.id` equals to `id` parameter.
-     *
-     * @memberof App.collections.ProgramCollection#
-     * @param {String} id The candidate's ID.
-     * @returns {App.collection.ProgramCollection}
-     */
     findByCandidate: function(id) {
       return this.find(function(model) {
         if (model.get('candidate')) return model.get('candidate').id === id;
       });
     },
 
-    /**
-     * Returns models which have the given theme in `projects` array.
-     *
-     * @memberof App.collections.ProgramCollection#
-     * @param {String} id The theme ID.
-     * @returns {Array}
-     */
     findByTheme: function(id) {
       var models = [];
       this.each(function(model) {
@@ -299,14 +114,6 @@
       return new App.collections.ProgramCollection(models);
     },
 
-    /**
-     * Returns models which have the given theme in `projects` array
-     * grouped by candidate.
-     *
-     * @memberof App.collections.ProgramCollection#
-     * @param {String} id The theme ID.
-     * @returns {Object}
-     */
     findByThemeAndGroupByCandidate: function(id) {
       var models = this.findByTheme(id);
       models = models.groupBy(function(m) { return m.get('candidate').name; });
@@ -316,13 +123,6 @@
       return models;
     },
 
-    /**
-     * Returns candidate projects grouped by theme.
-     *
-     * @memberof App.collections.ProgramCollection#
-     * @param {String} id The candidate ID.
-     * @return {Object}
-     */
     candidateProjects: function(id) {
       var model = this.findByCandidate(id);
       if (!model) return;
@@ -335,52 +135,27 @@
   // Views
   // ---------------------------------------------------------------------------
 
-  /**
-   * Candidate Card View.
-   *
-   * @class
-   * @memberof App.views
-   * @augments Backbone.View
-   * @param {Object} options The view options.
-   * @param {App.models.CandidateModel} options.model The model instance.
-   * @param {Boolean} options.showButton Show candidate page button (defaults to `false`).
-   */
-  App.views.CandidateCardView = Backbone.View.extend(
-    /** @lends App.views.CandidateCardView.prototype */ {
+  App.views.CandidateCardView = Backbone.View.extend({
 
     tagName   : 'div',
     className : 'candidate-card',
 
     initialize: function(options) {
-      this.options = _.extend({showButton: false}, options);
-      this.showButton = options.showButton;
-      this.template = Handlebars.compile(App.templates.CandidateCardTemplate);
+      this.options = _.extend({showDetailLink: false}, options);
+      this.showDetailLink = options.showDetailLink;
+      this.template = App.templates.candidateCardTemplate;
       this.render();
     },
 
-    /**
-     * Renders view.
-     *
-     * @memberof App.views.CandidateCardView#
-     */
     render: function() {
       this.$el.html(this.template({
         model: this.model.toJSON(),
-        showButton: this.showButton
+        showDetailLink: this.showDetailLink
       }));
     }
   });
 
-  /**
-   * Running Mate List View.
-   *
-   * @class
-   * @memberof App.views
-   * @param {Object} options The view options.
-   * @param {App.collections.RunningMateCollection} options.collection The collection instance.
-   */
-  App.views.RunningMateListView = Backbone.View.extend(
-    /** @lends App.views.RunningMateListView.prototype */ {
+  App.views.RunningMateListView = Backbone.View.extend({
 
     tagName: 'div',
     className: 'running-mate-list',
@@ -394,44 +169,23 @@
 
       this.modelId = this.options.modelId;
       this.runningMates = this.options.runningMates;
-      this.template = Handlebars.compile(App.templates.RunningMateListTemplate);
+      this.template = App.templates.runningMateListTemplate;
 
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
     },
 
-    /**
-     * Prepare template context.
-     *
-     * @memberof App.views.RunningMateListView#
-     */
     prepare: function() {
       this.runningMates = this.collection.findByCandidate(this.modelId);
       this.render();
     },
 
-    /**
-     * Renders view.
-     *
-     * @memberof App.views.RunningMateListView#
-     */
     render: function() {
       this.$el.html(this.template({runningMates: this.runningMates.toJSON()}));
     }
   });
 
-  /**
-   * Candidate Program View.
-   *
-   * @class
-   * @memberof App.views
-   * @augments Backbone.View
-   * @param {Object} options The view options.
-   * @param {String} options.slug The candidate's slug.
-   * @param {App.collection.ProgramCollection} options.collection The collection instance.
-   */
-  App.views.CandidateProgramView = Backbone.View.extend(
-    /** @lends App.views.CandidateProgramView.prototype */ {
+  App.views.CandidateProgramView = Backbone.View.extend({
 
     tagName: 'div',
     className: 'candidate-program',
@@ -439,96 +193,54 @@
     initialize: function(options) {
       this.options = _.extend({modelId: null}, options);
       this.modelId = this.options.modelId;
-      this.template = Handlebars.compile(App.templates.CandidateProgramTemplate);
+      this.template = App.templates.candidateProgramTemplate;
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
     },
 
-    /**
-     * Prepare template context.
-     *
-     * @memberof App.views.CandidateProgramView#
-     */
     prepare: function() {
       this.projects = this.collection.candidateProjects(this.modelId);
       this.render();
     },
 
-    /**
-     * Renders view.
-     *
-     * @memberof App.views.CandidateProgramView#
-     */
     render: function() {
       this.$el.html(this.template({projects: this.projects}));
     }
   });
 
-  /**
-   * Candidate List View.
-   *
-   * Subviews:
-   *
-   * - {@link App.views.CandidateCardView}
-   *
-   * @class
-   * @memberof App.views
-   * @param {Object} options The view options.
-   * @param {App.collections.CandidateCollection} options.collection The collection instance.
-   */
-  App.views.CandidateListView = Backbone.View.extend(
-    /** @lends App.views.CandidateListView.prototype */ {
+  App.views.CandidateListView = Backbone.View.extend({
 
     tagName: 'div',
     className: 'candidate-list',
 
     initialize: function(options) {
       this.options = options || {};
-      this.template = Handlebars.compile(App.templates.CandidateListTemplate);
+      this.template = App.templates.candidateListTemplate;
       this.listenTo(this.collection, 'sync', this.render);
       this.collection.fetch();
     },
 
-    /**
-     * Renders view.
-     *
-     * @memberof App.views.CandidateListView#
-     */
     render: function() {
       this.$el.empty();
       this.$el.html(this.template());
       this.collection.each(function(model) {
-        var showButton = model.get('programUrl') ? true : false;
-        var view = new App.views.CandidateCardView({tagName: 'li', model: model, showButton: showButton});
+        var view = new App.views.CandidateCardView({
+          tagName: 'li',
+          model: model,
+          showDetailLink: model.get('programUrl') ? true : false
+        });
         this.$el.find('.candidate-list-container').append(view.el);
       }.bind(this));
     }
   });
 
-  /**
-   * Candidate Detail View.
-   *
-   * Subviews:
-   *
-   * - {@link App.views.CandidateCardView}
-   * - {@link App.views.CandidateProgramView}
-   *
-   * @class
-   * @memberof App.views
-   * @param {Object} options The view options.
-   * @param {String} options.slug The candidate slug.
-   * @param {App.collections.CandidateCollection} options.collection The collection instance.
-   * @param {App.collections.ProgramCollection} options.programs The collection instance.
-   * @param {App.collections.RunningMateCollection} options.runningMates The collection instance.
-   *
-   */
   App.views.CandidateDetailView = Backbone.View.extend({
 
     tagName: 'div',
     className: 'candidate-detail',
 
     events: {
-      'click a.close': 'onCloseAlertBox'
+      'click a.makePDF': 'makePDF'
     },
 
     initialize: function(options) {
@@ -542,24 +254,33 @@
       this.modelId = this.options.modelId;
       this.programs = this.options.programs;
       this.runningMates = this.options.runningMates;
-      this.template = Handlebars.compile(App.templates.CandidateDetailTemplate);
+      this.template = App.templates.candidateDetailTemplate;
 
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
     },
 
-    /**
-     * Prepares template context.
-     *
-     * @memberof App.views.CandidateView#
-     */
+    makePDF: function() {
+      /*jshint newcap: false */
+      var doc = new jsPDF();
+      doc.text(20, 20, 'This PDF has a title');
+      doc.setProperties({
+        title    : 'TITLE',
+        subject  : 'SUBJECT',
+        author   : 'AUTHOR',
+        keywords : 'foo, bar, ok, hello, world',
+        creator  : 'Gilles Fabio <gilles@gillesfabio.com>'
+      });
+      doc.save('programme.pdf');
+    },
+
     prepare: function() {
 
       this.model = this.collection.findWhere({id: this.modelId});
 
       this.cardView = new App.views.CandidateCardView({
         model: this.model,
-        showButton: false
+        showDetailLink: false
       });
 
       this.programView = new App.views.CandidateProgramView({
@@ -575,11 +296,6 @@
       this.render();
     },
 
-    /**
-     * Renders view.
-     *
-     * @memberof App.views.CandidateView#
-     */
     render: function() {
       this.$el.html(this.template({candidate: this.model.toJSON()}));
       this.$el.find('.candidate-detail-running-mates').html(this.runningMateListView.el);
@@ -588,18 +304,7 @@
     }
   });
 
-  /**
-   * Theme Detail View.
-   *
-   * @class
-   * @memberof App.views
-   * @param {Object} options The view options.
-   * @param {String} options.id The theme ID.
-   * @param {App.collection.ThemeCollection} options.themes The collection instance.
-   * @param {App.collection.ProgramCollection} options.programs The collection instance.
-   */
-  App.views.ThemeDetailView = Backbone.View.extend(
-    /** @lends App.views.ThemeDetailView.prototype */{
+  App.views.ThemeDetailView = Backbone.View.extend({
 
     tagName: 'div',
     className: 'theme-detail',
@@ -608,17 +313,12 @@
       this.options = _.extend({modelId: null, programs: null}, options);
       this.modelId = this.options.modelId;
       this.programs = this.options.programs;
-      this.template = Handlebars.compile(App.templates.ThemeDetailTemplate);
+      this.template = App.templates.themeDetailTemplate;
       this.theme = null;
       this.listenTo(this.collection, 'sync', this.prepare);
       this.collection.fetch();
     },
 
-    /**
-     * Prepares template context.
-     *
-     * @memberof App.views.ThemeDetailView#
-     */
     prepare: function() {
       this.theme = this.collection.findWhere({id: this.modelId});
       if (!this.theme) return this.notFound();
@@ -628,20 +328,10 @@
       }.bind(this)});
     },
 
-    /**
-     * Informs user if theme does not exist.
-     *
-     * @memberof App.views.ThemeDetailView#
-     */
     notFound: function() {
       this.$el.html("Désolé, ce thème n'existe pas.");
     },
 
-    /**
-     * Renders view.
-     *
-     * @memberof App.views.ThemeDetailView#
-     */
     render: function() {
       this.$el.html(this.template({
         theme: this.theme.toJSON(),
@@ -650,32 +340,18 @@
     }
   });
 
-  /**
-   * Theme List View.
-   *
-   * @class
-   * @memberof App.views
-   * @param {Object} options The view options.
-   * @param {App.collections.ThemeCollection} options.collection The collection instance.
-   */
-  App.views.ThemeListView = Backbone.View.extend(
-    /** @lends App.views.ThemeListView.prototype */ {
+  App.views.ThemeListView = Backbone.View.extend({
 
     tagName: 'div',
     className: 'theme-list',
 
     initialize: function(options) {
       this.options = options || {};
-      this.template = Handlebars.compile(App.templates.ThemeListTemplate);
+      this.template = App.templates.themeListTemplate;
       this.listenTo(this.collection, 'sync', this.render);
       this.collection.fetch();
     },
 
-    /**
-     * Renders view.
-     *
-     * @memberof App.views.ThemeListView#
-     */
     render: function() {
       this.$el.html(this.template(this.collection.toJSON()));
     }
@@ -685,15 +361,7 @@
   // Router
   // ---------------------------------------------------------------------------
 
-  /**
-   * Router.
-   *
-   * @class
-   * @memberof App
-   * @augments Backbone.Router
-   */
-  App.Router = Backbone.Router.extend(
-    /** @lends App.Router.prototype */{
+  App.Router = Backbone.Router.extend({
 
     routes: {
       ''              : 'candidateListController',
@@ -712,22 +380,11 @@
       this.content = $('#content');
     },
 
-    /**
-     * The Home Controller.
-     *
-     * @memberof App.Router#
-     */
     candidateListController: function() {
       var view = new App.views.CandidateListView({collection: this.candidates});
       this.content.html(view.el);
     },
 
-    /**
-     * The Candidate Detail Controller.
-     *
-     * @memberof App.Router#
-     * @param {String} id The candidate ID.
-     */
     candidateDetailController: function(id) {
       var view = new App.views.CandidateDetailView({
         modelId: id,
@@ -738,12 +395,6 @@
       this.content.html(view.el);
     },
 
-    /**
-     * Theme Detail Controller.
-     *
-     * @memberof App.Router#
-     * @param {String} id The theme ID.
-     */
     themeDetailController: function(id) {
       var view = new App.views.ThemeDetailView({
         collection: this.themes,
@@ -753,21 +404,11 @@
       this.content.html(view.el);
     },
 
-    /**
-     * Theme List Controller.
-     *
-     * @memberof App.Router#
-     */
     themeListController: function() {
       var view = new App.views.ThemeListView({collection: this.themes});
       this.content.html(view.el);
     },
 
-    /**
-     * The About Controller.
-     *
-     * @memberof App.Router#
-     */
     aboutController: function() {
       this.content.html(Handlebars.compile(App.templates.AboutTemplate)());
     }
@@ -788,4 +429,4 @@
     Backbone.history.start({root: window.APP_BASE_URL});
   });
 
-})(jQuery, _, Backbone, Handlebars, markdown);
+})(jQuery, _, Backbone, Handlebars, markdown, jsPDF);
