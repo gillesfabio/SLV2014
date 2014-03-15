@@ -124,15 +124,6 @@
   });
 
   // ---------------------------------------------------------------------------
-  // Collection instances
-  // ---------------------------------------------------------------------------
-
-  App.collections.candidates   = new App.collections.Candidate();
-  App.collections.runningMates = new App.collections.RunningMate();
-  App.collections.programs     = new App.collections.Program();
-  App.collections.themes       = new App.collections.Theme();
-
-  // ---------------------------------------------------------------------------
   // Views
   // ---------------------------------------------------------------------------
 
@@ -152,6 +143,10 @@
       this.render();
     },
 
+    setDefaults: function() {
+
+    },
+
     render: function() {
       this.$el.html(this.template({
         candidate      : this.candidate.toJSON(),
@@ -167,7 +162,7 @@
 
     initialize: function(options) {
       this.options = _.extend({
-        runningMates : App.collections.runningMates,
+        runningMates : new App.collections.RunningMate(),
         candidate    : new App.models.Candidate()
       }, options);
       this.candidate    = this.options.candidate;
@@ -189,16 +184,13 @@
     className : 'candidate-program',
 
     initialize: function(options) {
-
       this.options = _.extend({
-        programs  : App.collections.programs,
+        programs  : new App.collections.Program(),
         candidate : new App.models.Candidate()
       }, options);
-
       this.programs  = this.options.programs;
       this.candidate = this.options.candidate;
       this.template  = App.templates.candidateProgram;
-
       this.listenTo(this.programs, 'sync', this.render);
       this.programs.fetch();
     },
@@ -216,7 +208,9 @@
     className : 'candidate-list',
 
     initialize: function(options) {
-      this.options    = _.extend({candidates: App.collections.candidates}, options);
+      this.options = _.extend({
+        candidates: new App.collections.Candidate()
+      }, options);
       this.candidates = this.options.candidates;
       this.template   = App.templates.candidateList;
       this.listenTo(this.candidates, 'sync', this.render);
@@ -248,8 +242,8 @@
     initialize: function(options) {
       this.options = _.extend({
         candidate    : new App.models.Candidate(),
-        programs     : App.collections.programs,
-        runningMates : App.collections.runningMates
+        programs     : new App.collections.Program(),
+        runningMates : new App.collections.RunningMate()
       }, options);
 
       this.candidate    = this.options.candidate;
@@ -303,7 +297,9 @@
     className : 'theme-list',
 
     initialize: function(options) {
-      this.options  = _.extend({themes: App.collections.themes}, options);
+      this.options = _.extend({
+        themes: new App.collections.Theme()
+      }, options);
       this.themes   = this.options.themes;
       this.template = App.templates.themeList;
       this.listenTo(this.themes, 'sync', this.render);
@@ -323,7 +319,7 @@
     initialize: function(options) {
       this.options = _.extend({
         theme    : new App.models.Theme(),
-        programs : App.collections.programs,
+        programs : new App.collections.Program()
       }, options);
       this.theme    = this.options.theme;
       this.programs = this.options.programs;
@@ -333,25 +329,12 @@
     },
 
     render: function() {
+      var themeID  = this.theme.get('id');
+      var programs = this.programs.findByThemeAndGroupByCandidate(themeID);
       this.$el.html(this.template({
         theme    : this.theme.toJSON(),
-        programs : this.programs.findByThemeAndGroupByCandidate(this.theme.get('id'))
+        programs : programs
       }));
-    }
-  });
-
-  App.views.NotFound = Backbone.View.extend({
-
-    tagName   : 'div',
-    className : 'not-found',
-
-    initialize: function(options) {
-      this.options = options || {};
-      this.message = this.options.message;
-    },
-
-    render: function() {
-      this.$el.html(this.message);
     }
   });
 
@@ -366,12 +349,13 @@
 
   App.controllers.candidateDetail = function(id) {
     var $content = $('#content');
-    App.collections.candidates.fetch({
+    var candidates = new App.collections.Candidate();
+    candidates.fetch({
       success: function(candidates) {
         var view  = new App.views.CandidateDetail({
           candidate    : candidates.findWhere({id: id}),
-          programs     : App.collections.programs,
-          runningMates : App.collections.runningMates
+          programs     : new App.collections.Program(),
+          runningMates : new App.collections.RunningMate()
         });
         $content.html(view.el);
       },
@@ -383,13 +367,14 @@
   };
 
   App.controllers.themeList = function() {
-    var view = new App.views.ThemeList();
+    var view = new App.views.ThemeList({themes: new App.collections.Theme()});
     $('#content').html(view.el);
   };
 
   App.controllers.themeDetail = function(id) {
     var $content = $('#content');
-    App.collections.themes.fetch({
+    var themes = new App.collections.Theme();
+    themes.fetch({
       success: function(themes) {
         var view = new App.views.ThemeDetail({theme: themes.findWhere({id: id})});
         $content.html(view.el);
