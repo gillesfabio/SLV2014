@@ -27,6 +27,7 @@ var SCRIPTS = [
   'vendor/underscore/underscore.js',
   'vendor/backbone/backbone.js',
   'vendor/handlebars/handlebars.min.js',
+  'vendor/jspdf/dist/jspdf.min.js',
   'vendor/markdown/lib/markdown.js',
   'src/app.js'
 ];
