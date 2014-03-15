@@ -132,6 +132,15 @@
   });
 
   // ---------------------------------------------------------------------------
+  // Collection instances
+  // ---------------------------------------------------------------------------
+
+  App.collections.candidates = new App.collections.CandidateCollection();
+  App.collections.runningMates = new App.collections.RunningMateCollection();
+  App.collections.programs = new App.collections.ProgramCollection();
+  App.collections.themes = new App.collections.ThemeCollection();
+
+  // ---------------------------------------------------------------------------
   // Views
   // ---------------------------------------------------------------------------
 
@@ -353,11 +362,47 @@
   });
 
   // ---------------------------------------------------------------------------
+  // Controllers
+  // ---------------------------------------------------------------------------
+
+  function candidateListController(collection) {
+      var view = new App.views.CandidateListView({collection: App.collections.candidates});
+      $('#content').html(view.el);
+  }
+
+  function candidateDetailController(id) {
+    var view = new App.views.CandidateDetailView({
+      modelId: id,
+      collection: App.collections.candidates,
+      programs: App.collections.programs,
+      runningMates: App.collections.runningMates
+    });
+    $('#content').html(view.el);
+  }
+
+  function themeListController() {
+    var view = new App.views.ThemeListView({collection: App.collections.themes});
+    $('#content').html(view.el);
+  }
+
+  function themeDetailController(id) {
+    var view = new App.views.ThemeDetailView({
+      collection: App.collections.themes,
+      modelId: id,
+      programs: App.collections.programs
+    });
+    $('#content').html(view.el);
+  }
+
+  function aboutController() {
+    $('#content').html(App.templates.aboutTemplate);
+  }
+
+  // ---------------------------------------------------------------------------
   // Router
   // ---------------------------------------------------------------------------
 
   App.Router = Backbone.Router.extend({
-
     routes: {
       ''              : 'candidateListController',
       'candidats'     : 'candidateListController',
@@ -367,46 +412,11 @@
       'a-propos'      : 'aboutController'
     },
 
-    initialize: function() {
-      this.themes = new App.collections.ThemeCollection();
-      this.candidates = new App.collections.CandidateCollection();
-      this.runningMates = new App.collections.RunningMateCollection();
-      this.programs = new App.collections.ProgramCollection();
-      this.content = $('#content');
-    },
-
-    candidateListController: function() {
-      var view = new App.views.CandidateListView({collection: this.candidates});
-      this.content.html(view.el);
-    },
-
-    candidateDetailController: function(id) {
-      var view = new App.views.CandidateDetailView({
-        modelId: id,
-        collection: this.candidates,
-        programs: this.programs,
-        runningMates: this.runningMates
-      });
-      this.content.html(view.el);
-    },
-
-    themeDetailController: function(id) {
-      var view = new App.views.ThemeDetailView({
-        collection: this.themes,
-        modelId: id,
-        programs: this.programs
-      });
-      this.content.html(view.el);
-    },
-
-    themeListController: function() {
-      var view = new App.views.ThemeListView({collection: this.themes});
-      this.content.html(view.el);
-    },
-
-    aboutController: function() {
-      this.content.html(Handlebars.compile(App.templates.AboutTemplate)());
-    }
+    candidateListController   : candidateListController,
+    candidateDetailController : candidateDetailController,
+    themeDetailController     : themeDetailController,
+    themeListController       : themeListController,
+    aboutController           : aboutController
   });
 
   // ---------------------------------------------------------------------------
