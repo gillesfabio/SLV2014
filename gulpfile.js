@@ -63,11 +63,6 @@ var context = {
 // Express Server (defaults)
 // -----------------------------------------------------------------------------
 
-var server = express();
-server.use(express.compress());
-server.use(express.json());
-server.use(express.urlencoded());
-server.set('view cache', false);
 
 // -----------------------------------------------------------------------------
 // Compilation Tasks
@@ -77,7 +72,7 @@ gulp.task('compile:data', function() {
   var data = generator.buildData();
   var json = JSON.stringify(data, null, 2);
   var file = tempWrite.sync(json, 'data.json');
-  gulp.src(file)
+  return gulp.src(file)
     .pipe(gulp.dest('build/data'));
 });
 
@@ -90,7 +85,7 @@ gulp.task('compile:index', function() {
 });
 
 gulp.task('compile:stylesheets', function() {
-  gulp.src('./src/*.scss')
+  return gulp.src('./src/*.scss')
     .pipe(compass({
       project     : __dirname,
       css         : 'build/css',
@@ -110,18 +105,18 @@ gulp.task('compile', [
 // Build "public" directory
 // -----------------------------------------------------------------------------
 
-gulp.task('public:data', ['compile:data'], function() {
-  gulp.src('build/data/data.json')
+gulp.task('public:data', function() {
+  return gulp.src('build/data/data.json')
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('public:index', ['compile:index'], function() {
-  gulp.src('build/html/index.html')
+gulp.task('public:index', function() {
+  return gulp.src('build/html/index.html')
     .pipe(gulp.dest('public'));
 });
 
 gulp.task('public:fonts', function() {
-  gulp.src(FONTS)
+  return gulp.src(FONTS)
     .pipe(gulp.dest('public/fonts'));
 });
 
@@ -134,8 +129,8 @@ gulp.task('public:javascripts', function() {
     .pipe(gulp.dest('public/js'));
 });
 
-gulp.task('public:stylesheets', ['compile:stylesheets'], function() {
-  gulp.src(STYLESHEETS)
+gulp.task('public:stylesheets', function() {
+  return gulp.src(STYLESHEETS)
     .pipe(concat('styles.css'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('public/css'));
@@ -163,50 +158,57 @@ gulp.task('clean:public', function() {
     .pipe(clean({force: true}));
 });
 
-gulp.task('clean', [
-  'clean:build',
-  'clean:public'
-]);
+gulp.task('clean', ['clean:build', 'clean:public']);
 
 // -----------------------------------------------------------------------------
 // Watch
 // -----------------------------------------------------------------------------
 
 gulp.task('watch', function() {
-  gulp.watch(['src/**', 'data/**', 'views/**'], ['compile']);
+  gulp.watch(['src/**', 'data/**', 'views/**', 'test/**'], ['compile']);
+});
+
+gulp.task('watch:production', function() {
+  gulp.watch(['src/**', 'data/**', 'views/**'], ['compile', 'public']);
 });
 
 // -----------------------------------------------------------------------------
 // Servers
 // -----------------------------------------------------------------------------
 
-gulp.task('server:development', function() {
-  context.env = 'development';
-  server.engine('html', customSwig.renderFile);
-  server.set('view engine', 'html');
-  server.set('views', path.join(__dirname, 'views'));
-  server.use(express.static(__dirname));
-  server.use(express.static(path.join(__dirname, 'build', 'data')));
-  server.get('*', function(req, res) { res.render('index', context); });
-  server.listen(SERVER_PORT);
+function serve(env) {
+  env = env || 'development';
+  var server = express();
+  server.use(express.compress());
+  server.use(express.json());
+  server.use(express.urlencoded());
+  server.set('view cache', false);
+  switch(env) {
+    case 'development':
+      context.env = 'development';
+      server.engine('html', customSwig.renderFile);
+      server.set('view engine', 'html');
+      server.set('views', path.join(__dirname, 'views'));
+      server.use(express.static(__dirname));
+      server.use(express.static(path.join(__dirname, 'build', 'data')));
+      server.get('*', function(req, res) { res.render('index', context); });
+      server.listen(SERVER_PORT);
+    break;
+    case 'test':
+      context.env = 'test';
+      server.use(express.static(__dirname));
+      server.use(express.static(path.join(__dirname, 'build', 'data')));
+      server.use(express.static(path.join(__dirname, 'test')));
+      server.listen(SERVER_PORT);
+    break;
+    case 'production':
+      context.env = 'production';
+      server.use(express.static(path.join(__dirname, 'public')));
+      server.listen(SERVER_PORT);
+    break;
+  }
   console.log('Express server listen on port ' + SERVER_PORT + '...');
-});
-
-gulp.task('server:test', function() {
-  context.env = 'development';
-  server.use(express.static(__dirname));
-  server.use(express.static(path.join(__dirname, 'build')));
-  server.get('*', function(req, res) { res.sendfile('test/index.html'); });
-  server.listen(SERVER_PORT);
-  console.log('Express server listen on port ' + SERVER_PORT + '...');
-});
-
-gulp.task('server:production', function() {
-  server.use(express.static(path.join(__dirname, 'public')));
-  //server.get('*', function(req, res) { res.sendfile(path.join(__dirname, 'public', 'index.html')); });
-  console.log('Express server listen on port ' + SERVER_PORT + '...');
-  server.listen(SERVER_PORT);
-});
+}
 
 // -----------------------------------------------------------------------------
 // Top Level Tasks
@@ -218,25 +220,32 @@ gulp.task('build', [
 ]);
 
 gulp.task('generate', [
-  'clean:build',
-  'clean:public',
+  'clean',
+  'compile',
   'public'
 ]);
 
 gulp.task('serve', [
+  'clean',
   'compile',
-  'server:development',
   'watch'
-]);
+], function() {
+  serve('development');
+});
 
 gulp.task('serve:test', [
-  'compile:data',
-  'server:test'
-]);
+  'clean',
+  'compile',
+  'watch'
+], function() {
+  serve('test');
+});
 
 gulp.task('serve:production', [
-  'clean:build',
-  'clean:public',
+  'clean',
+  'compile',
   'public',
-  'server:production'
-]);
+  'watch:production'
+], function() {
+  serve('production');
+});
