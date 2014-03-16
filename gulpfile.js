@@ -154,7 +154,10 @@ gulp.task('clean:public', function() {
     .pipe(clean({force: true}));
 });
 
-gulp.task('clean', ['clean:build', 'clean:public']);
+gulp.task('clean', [
+  'clean:build',
+  'clean:public'
+]);
 
 // -----------------------------------------------------------------------------
 // Watch
@@ -164,16 +167,12 @@ gulp.task('watch', function() {
   gulp.watch(['src/**', 'data/**', 'views/**', 'test/**'], ['compile']);
 });
 
-gulp.task('watch:production', function() {
-  gulp.watch(['src/**', 'data/**', 'views/**'], ['compile', 'public']);
-});
-
 // -----------------------------------------------------------------------------
 // Servers
 // -----------------------------------------------------------------------------
 
 function serve(env) {
-  env = env || 'development';
+  env = env || 'development';
   var server = express();
   server.use(express.compress());
   server.use(express.json());
@@ -210,8 +209,16 @@ function serve(env) {
 // Top Level Tasks
 // -----------------------------------------------------------------------------
 
-gulp.task('build', ['clean:build', 'compile']);
-gulp.task('generate', ['clean', 'compile', 'public']);
+gulp.task('build', [
+  'clean:build',
+  'compile'
+]);
+
+gulp.task('generate', [
+  'clean',
+  'compile',
+  'public'
+]);
 
 gulp.task('serve', ['clean', 'compile', 'watch'], function() {
   serve('development');
