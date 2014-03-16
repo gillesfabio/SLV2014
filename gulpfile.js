@@ -1,13 +1,13 @@
 'use strict';
 
 var path      = require('path');
-var concat    = require('gulp-concat');
-var express   = require('express');
 var gulp      = require('gulp');
+var concat    = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
 var compass   = require('gulp-compass');
 var clean     = require('gulp-clean');
 var uglify    = require('gulp-uglify');
+var express   = require('express');
 var swig      = require('swig');
 var tempWrite = require('temp-write');
 var generator = require('./generator');

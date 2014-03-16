@@ -20,7 +20,6 @@
     "temp-write": "0.x",
     "yamljs": "0.x",
     "swig": "1.x",
-    "async": "0.x",
     "lodash": "2.x"
   }
 }
