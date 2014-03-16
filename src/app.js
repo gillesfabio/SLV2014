@@ -1,4 +1,4 @@
-(function($, _, Backbone, Handlebars, markdown, jsPDF) {
+(function($, _, Backbone, Handlebars, markdown) {
 
   /*jshint unused:false */
   'use strict';
@@ -231,10 +231,6 @@
     tagName   : 'div',
     className : 'candidate-detail',
 
-    events: {
-      'click a.makePDF': 'makePDF'
-    },
-
     initialize: function(options) {
       this.options = _.extend({
         candidate    : new App.models.Candidate(),
@@ -248,20 +244,6 @@
       this.template     = App.templates.candidateDetail;
       this.setSubviews();
       this.render();
-    },
-
-    makePDF: function() {
-      /*jshint newcap: false */
-      var doc = new jsPDF();
-      doc.text(20, 20, 'This PDF has a title');
-      doc.setProperties({
-        title    : 'TITLE',
-        subject  : 'SUBJECT',
-        author   : 'AUTHOR',
-        keywords : 'foo, bar, ok, hello, world',
-        creator  : 'Gilles Fabio <gilles@gillesfabio.com>'
-      });
-      doc.save('programme.pdf');
     },
 
     setSubviews: function() {
@@ -416,4 +398,4 @@
     Backbone.history.start({root: window.APP_BASE_URL});
   });
 
-})(jQuery, _, Backbone, Handlebars, markdown, jsPDF);
+})(jQuery, _, Backbone, Handlebars, markdown);
