@@ -16,15 +16,9 @@ var generator = require('./generator');
 // Configuration
 // -----------------------------------------------------------------------------
 
-var BASE_URL           = process.env.BASE_URL ? process.env.BASE_URL : '/';
-var SERVER_PORT        = 3000;
-var BUILD_DIR          = path.join(__dirname, 'build');
-var PUBLIC_DIR         = path.join(__dirname, 'public');
-var VIEWS_DIR          = path.join(__dirname, 'views');
-var JAVASCRIPTS_CONCAT = 'scripts.js';
-var STYLESHEETS_CONCAT = 'styles.css';
-var MODERNIZR          = 'vendor/foundation/js/vendor/modernizr.js';
-
+var BASE_URL    = process.env.BASE_URL ? process.env.BASE_URL : '/';
+var SERVER_PORT = 3000;
+var MODERNIZR   = 'vendor/foundation/js/vendor/modernizr.js';
 var JAVASCRIPTS = [
   'vendor/jquery/dist/jquery.min.js',
   'vendor/foundation/js/foundation.min.js',
@@ -35,12 +29,10 @@ var JAVASCRIPTS = [
   'vendor/markdown/lib/markdown.js',
   'src/app.js'
 ];
-
 var STYLESHEETS = [
   'vendor/font-awesome/css/font-awesome.min.css',
-  'build/compass/app.css'
+  'build/css/app.css'
 ];
-
 var FONTS = [
   'vendor/font-awesome/fonts/**'
 ];
@@ -86,40 +78,32 @@ gulp.task('compile:data', function() {
   var json = JSON.stringify(data, null, 2);
   var file = tempWrite.sync(json, 'data.json');
   gulp.src(file)
-    .pipe(gulp.dest(BUILD_DIR));
+    .pipe(gulp.dest('build/data'));
 });
 
 gulp.task('compile:index', function() {
-  var compiled = customSwig.compileFile(path.join(VIEWS_DIR, 'index.html'));
+  var compiled = customSwig.compileFile(path.join(__dirname, 'views', 'index.html'));
   var tpl = compiled(context);
   var file = tempWrite.sync(tpl, 'index.html');
   return gulp.src(file)
-    .pipe(gulp.dest(BUILD_DIR));
+    .pipe(gulp.dest('build/html'));
 });
 
 gulp.task('compile:stylesheets', function() {
   gulp.src('./src/*.scss')
     .pipe(compass({
       project     : __dirname,
-      css         : 'build/compass',
+      css         : 'build/css',
       sass        : 'src',
       image       : 'src/images',
       import_path : ['vendor/foundation/scss']
     }));
 });
 
-gulp.task('compile:javascripts', function() {
-  gulp.src(MODERNIZR)
-    .pipe(gulp.dest(path.join(BUILD_DIR, 'js')));
-  gulp.src(JAVASCRIPTS)
-    .pipe(gulp.dest(path.join(BUILD_DIR, 'js')));
-});
-
 gulp.task('compile', [
   'compile:data',
   'compile:index',
-  'compile:stylesheets',
-  'compile:javascripts'
+  'compile:stylesheets'
 ]);
 
 // -----------------------------------------------------------------------------
@@ -127,34 +111,34 @@ gulp.task('compile', [
 // -----------------------------------------------------------------------------
 
 gulp.task('public:data', ['compile:data'], function() {
-  gulp.src(path.join(BUILD_DIR, 'data.json'))
-    .pipe(gulp.dest(PUBLIC_DIR));
+  gulp.src('build/data/data.json')
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('public:index', ['compile:index'], function() {
-  gulp.src(path.join(BUILD_DIR, 'index.html'))
-    .pipe(gulp.dest(PUBLIC_DIR));
+  gulp.src('build/html/index.html')
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('public:fonts', function() {
   gulp.src(FONTS)
-    .pipe(gulp.dest(path.join(PUBLIC_DIR, 'fonts')));
+    .pipe(gulp.dest('public/fonts'));
 });
 
 gulp.task('public:javascripts', function() {
   gulp.src(MODERNIZR)
-    .pipe(gulp.dest(path.join(PUBLIC_DIR, 'js')));
-  gulp.src(path.join(BUILD_DIR, 'js', '**'))
-    .pipe(concat(JAVASCRIPTS_CONCAT))
+    .pipe(gulp.dest('public/js'));
+  gulp.src(JAVASCRIPTS)
+    .pipe(concat('scripts.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(path.join(PUBLIC_DIR, 'js')));
+    .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('public:stylesheets', ['compile:stylesheets'], function() {
   gulp.src(STYLESHEETS)
-    .pipe(concat(STYLESHEETS_CONCAT))
+    .pipe(concat('styles.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest(path.join(PUBLIC_DIR, 'css')));
+    .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('public', [
@@ -170,12 +154,12 @@ gulp.task('public', [
 // -----------------------------------------------------------------------------
 
 gulp.task('clean:build', function() {
-  return gulp.src(BUILD_DIR)
+  return gulp.src('build')
     .pipe(clean({force: true}));
 });
 
 gulp.task('clean:public', function() {
-  return gulp.src(PUBLIC_DIR)
+  return gulp.src('public')
     .pipe(clean({force: true}));
 });
 
@@ -202,7 +186,7 @@ gulp.task('server:development', function() {
   server.set('view engine', 'html');
   server.set('views', path.join(__dirname, 'views'));
   server.use(express.static(__dirname));
-  server.use(express.static(BUILD_DIR));
+  server.use(express.static(path.join(__dirname, 'build', 'data')));
   server.get('*', function(req, res) { res.render('index', context); });
   server.listen(SERVER_PORT);
   console.log('Express server listen on port ' + SERVER_PORT + '...');
@@ -210,17 +194,16 @@ gulp.task('server:development', function() {
 
 gulp.task('server:test', function() {
   context.env = 'development';
-  var json = require(path.join(BUILD_DIR, 'data.json'));
   server.use(express.static(__dirname));
-  server.get('/data.json', function(req, res) { res.send(json); });
+  server.use(express.static(path.join(__dirname, 'build')));
   server.get('*', function(req, res) { res.sendfile('test/index.html'); });
   server.listen(SERVER_PORT);
   console.log('Express server listen on port ' + SERVER_PORT + '...');
 });
 
 gulp.task('server:production', function() {
-  server.use(express.static(PUBLIC_DIR));
-  server.get('*', function(req, res) { res.sendfile(path.join(PUBLIC_DIR, 'index.html')); });
+  server.use(express.static(path.join(__dirname, 'public')));
+  //server.get('*', function(req, res) { res.sendfile(path.join(__dirname, 'public', 'index.html')); });
   console.log('Express server listen on port ' + SERVER_PORT + '...');
   server.listen(SERVER_PORT);
 });
@@ -241,8 +224,7 @@ gulp.task('generate', [
 ]);
 
 gulp.task('serve', [
-  'compile:data',
-  'compile:stylesheets',
+  'compile',
   'server:development',
   'watch'
 ]);
@@ -253,6 +235,7 @@ gulp.task('serve:test', [
 ]);
 
 gulp.task('serve:production', [
+  'clean:build',
   'clean:public',
   'public',
   'server:production'

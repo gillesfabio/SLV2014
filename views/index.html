@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saint-Laurent-du-Var Municipales 2014</title>
     <% if env == 'development' %>
-      <% for style in styles %>
-      <link rel="stylesheet" href="<%= baseurl %><%= style %>"><% endfor %>
-      <script src="<%= baseurl %><%= modernizr %>"></script>
+    <% for style in styles %>
+    <link rel="stylesheet" href="<%= baseurl %><%= style %>"><% endfor %>
+    <script src="<%= baseurl %><%= modernizr %>"></script>
     <% else %>
-      <link rel="stylesheet" href="<%= baseurl %>css/styles.css">
-      <script src="<%= baseurl %>js/modernizr.js"></script>
+    <link rel="stylesheet" href="<%= baseurl %>css/styles.css">
+    <script src="<%= baseurl %>js/modernizr.js"></script>
     <% endif %>
   </head>
   <body>
@@ -34,7 +34,6 @@
     </div>
     <div id="content" class="row">
     </div>
-
     <script id="candidate-card-template" type="text/x-handlebars-template">
       <div class="row">
         <div class="small-12 large-4 columns">
@@ -58,7 +57,6 @@
         </div>
       </div>
     </script>
-
     <script id="running-mate-list-template" type="text/x-handlebars-template">
       <h2>Mes Colistiers</h2>
       <ul class="small-block-grid-1 large-block-grid-2">
@@ -72,7 +70,6 @@
         {{/each}}
       </ul>
     </script>
-
     <script id="candidate-program-template" type="text/x-handlebars-template">
       <h2>Mon programme</h2>
       {{#each projects}}
@@ -84,12 +81,10 @@
       </ol>
       {{/each}}
     </script>
-
     <script id="candidate-list-template" type="text/x-handlebars-template">
       <h1>Les candidats</h1>
       <ul class="small-block-grid-1 medium-block-grid-2 candidate-list-container"></ul>
     </script>
-
     <script id="candidate-detail-template" type="text/x-handlebars-template">
       <div class="row">
         <div class="small-12 large-6 columns">
@@ -105,7 +100,6 @@
         </div>
       </div>
     </script>
-
     <script id="theme-list-template" type="text/x-handlebars-template">
       <h1>Thèmes</h1>
       <ul class="small-block-grid-1 medium-block-grid-3">
@@ -118,7 +112,6 @@
         {{/each}}
       </ul>
     </script>
-
     <script id="theme-detail-template" type="text/x-handlebars-template">
       <h1>{{theme.name}}</h1>
       {{#each programs}}
@@ -137,7 +130,6 @@
       </div>
       {{/each}}
     </script>
-
     <script id="about-template" type="text/x-handlebars-template">
       <h1>À propos</h1>
       <p>
@@ -184,15 +176,13 @@
         n'hésitez surtout pas à <a href="mailto:gilles@gillesfabio.com">me contacter</a>.
       </p>
     </script>
-
     <script>window.APP_BASE_URL="<%= baseurl %>";</script>
     <% if env == 'development' %>
-      <% for script in scripts %>
-      <script src="<%= baseurl %><%= script %>"></script>
-      <% endfor %>
+    <% for script in scripts %>
+    <script src="<%= baseurl %><%= script %>"></script>
+    <% endfor %>
     <% else %>
-      <script src="<%= baseurl %>js/scripts.js"></script>
+    <script src="<%= baseurl %>js/scripts.js"></script>
     <% endif %>
-
   </body>
 </html>
