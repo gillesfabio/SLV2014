@@ -65,7 +65,7 @@
         {{#each runningMates}}
         <li class="running-mate {{#if community}}running-mate-community{{/if}}">
           <div class="running-mate-content">
-            <h5>{{name}}</h5>
+            <h5><span class="running-mate-position">{{position}}.</span> {{name}}</h5>
             {{#if bio}}{{{md2html bio}}}{{/if}}
           </div>
         </li>
