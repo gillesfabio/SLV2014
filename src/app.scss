@@ -1,275 +1,338 @@
+@import "foundation/_functions";
+
+// -----------------------------------------------------------------------------
+// Application constants
+// -----------------------------------------------------------------------------
+$slvm-color-dark1: #3A539B;
+$slvm-color-dark2: #4B77BE;
+$slvm-color-dark2-hover: #1F3A93;
+$slvm-color-light-border: #ECECEC;
+$slvm-candidate-slogan-color: #909090;
+
+// -----------------------------------------------------------------------------
+// Foundation Settings Overrides
+// -----------------------------------------------------------------------------
+$topbar-bg: $slvm-color-dark1;
+$topbar-height: 50px;
+$topbar-link-color: #fff;
+$topbar-link-color-hover: #fff;
+$topbar-link-color-active: #fff;
+$topbar-link-color-active-hover: #fff;
+$topbar-link-weight: normal;
+$topbar-link-font-size: rem-calc(14);
+$topbar-link-bg-hover: $slvm-color-dark2-hover;
+$topbar-link-bg-active: $slvm-color-dark2;
+$topbar-link-bg-active-hover: $slvm-color-dark2-hover;
+$topbar-dropdown-bg: $slvm-color-dark1;
+$topbar-dropdown-link-bg: #fff;
+$anchor-font-color: $slvm-color-dark1;
+$anchor-font-color-hover: $slvm-color-dark2;
+
+// -----------------------------------------------------------------------------
+// Load Foundation
+// -----------------------------------------------------------------------------
+@import "foundation/_settings";
+@import "foundation";
+
+// -----------------------------------------------------------------------------
+// General
+// -----------------------------------------------------------------------------
 html {
   -webkit-font-smoothing: antialiased;
 }
 
-#content {
-  padding-top: 20px;
-}
-
 h1 {
   text-transform : uppercase;
-  font-size      : 28px;
+  font-size      : rem-calc(28);
   font-weight    : 200;
-  border-bottom  : 1px solid #ececec;
-  margin-bottom  : 20px;
-  color          : #3A539B;
+  border-bottom  : 1px solid $slvm-color-light-border;
+  margin-bottom  : rem-calc(20);
+  color          : $slvm-color-dark1;
+  text-align     : center;
 }
 
 i {
-  color: #3A539B;
+  color: $slvm-color-dark1;
 }
 
-.top-bar, .contain-to-grid {
-  background: #3A539B;
-}
-
+// -----------------------------------------------------------------------------
+// Top Bar
+// -----------------------------------------------------------------------------
 .top-bar {
+
   text-transform: uppercase;
+
+  .name h1 a {
+    font-size: rem-calc(16);
+  }
 }
 
-.top-bar .name h1 {
-  font-size: 20px;
-  font-weight: bold !important;
-}
-
-.top-bar-section {
-  background: #4B77BE !important;
-}
-
-.top-bar-section a {
-  background: #4B77BE !important;
-  font-weight: bold !important;
+.top-bar.expanded .toggle-topbar a {
+  color: #fff;
 }
 
 .top-bar-section ul li:hover > a {
-  background: #1F3A93 !important;
+  background: $slvm-color-dark2-hover !important;
 }
 
+// -----------------------------------------------------------------------------
+// Content
+// -----------------------------------------------------------------------------
+#content {
+  padding: rem-calc(20);
+}
+
+// -----------------------------------------------------------------------------
+// Buttons
+// -----------------------------------------------------------------------------
 .button {
-  background: #3A539B;
+  background: $slvm-color-dark1;
+  i {
+    color: #ececec;
+  }
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
-  background: #4B77BE
+  background: $slvm-color-dark2;
 }
 
-.button i {
-  color: #ececec;
-}
-
-a {
-  color: #3A539B;
-  font-weight: bold;
-}
-
-a:hover, a:focus {
-  color: #4B77BE
-}
-
-/* candidate-card
------------------------------------------------------------------------------ */
+// -----------------------------------------------------------------------------
+// candidate-card
+// -----------------------------------------------------------------------------
 .candidate-card {
-  padding: 20px 0 20px 0;
+
+  text-align: left;
+  padding: rem-calc(20 0 20 0);
+
+  :last-child {
+    border-bottom: none;
+  }
+
+  h1 {
+    color          : #555;
+    padding        : 0;
+    margin-bottom  : 0;
+    font-size      : rem-calc(24);
+    text-transform : uppercase;
+    font-weight    : 200;
+    border-bottom  : none;
+    text-align     : left;
+  }
+
+  .candidate-links {
+    font-size: rem-calc(14);
+    margin-bottom: rem-calc(10);
+  }
+
+  .candidate-slogan {
+    font-size      : rem-calc(16);
+    color          : $slvm-candidate-slogan-color;
+    letter-spacing : rem-calc(-1);
+  }
 }
 
-.candidate-card h1 {
-  border-bottom  : none;
-  padding        : 0;
-  margin-bottom  : 0;
-  font-size      : 24px;
-  text-transform : uppercase;
-  font-weight    : 200;
-  border-bottom  : none;
+// -----------------------------------------------------------------------------
+// candidate-detail
+// -----------------------------------------------------------------------------
+.candidate-detail {
+
+  h2 {
+    font-size      : rem-calc(30);
+    text-transform : uppercase;
+    font-weight    : 200;
+    letter-spacing : -1px;
+    margin-bottom  : rem-cal(20);
+    color          : #3A539B;
+    border-bottom  : 1px solid #3A539B;
+  }
+
+  h3 {
+    font-size      : rem-calc(18);
+    text-transform : uppercase;
+    color          : #555;
+    margin         : rem-calc(20 0 20 0);
+  }
+
+  h3 a {
+    color: #555;
+  }
 }
 
-.candidate-card:last-child {
-  border-bottom: none;
+// -----------------------------------------------------------------------------
+// candidate-program
+// -----------------------------------------------------------------------------
+.candidate-program-projects {
+
+  p, ul {
+    font-size  : rem-calc(14);
+    margin     : rem-calc(10 0 10 0);
+  }
+
+  > li {
+    background    : #f9f9f9;
+    border        : 1px solid #ececec;
+    padding       : rem-calc(20);
+    margin-bottom : rem-calc(10);
+  }
+
+  li ul li {
+    list-style-type: square;
+  }
 }
 
-.candidate-links {
-  font-size: 90%;
-  margin-bottom: 10px;
+// -----------------------------------------------------------------------------
+// theme-list
+// -----------------------------------------------------------------------------
+.theme-list {
+
+  li {
+
+    span {
+      background  : #f5f5f5;
+      height      : rem-calc(120);
+      text-align  : center;
+      padding     : rem-calc(20 0 0 0);
+      display     : block;
+    }
+
+    a {
+      padding        : rem-calc(10);
+      display        : inline-block;
+      vertical-align : middle;
+      line-height    : normal;
+      font-weight    : 400;
+      text-transform : uppercase;
+    }
+
+    i {
+      color     : #3A539B;
+      font-size : rem-calc(30);
+      display   : block;
+    }
+  }
 }
 
-.candidate-slogan {
-  font-size: 16px;
-  color: #909090;
-  letter-spacing: -1px;
+// -----------------------------------------------------------------------------
+// theme-detail
+// -----------------------------------------------------------------------------
+.theme-detail {
+
+  h2 {
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: rem-calc(20);
+    padding: rem-calc(10);
+    border-bottom: 1px solid #ececec;
+  }
+
+  h4 {
+    font-size: rem-calc(16);
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .candidate-projects {
+    border-bottom: 1px solid #ececec;
+    margin: rem-calc(20 0 20 0);
+  }
 }
 
-/* candidate-detail
------------------------------------------------------------------------------ */
-.candidate-detail h2 {
-  font-size      : 30px;
-  text-transform : uppercase;
-  font-weight    : 400;
-  letter-spacing : -1px;
-  margin-bottom  : 20px;
-  color          : #3A539B;
-  border-bottom  : 1px solid #3A539B;
-}
-
-
-/* candidate-program
------------------------------------------------------------------------------ */
-.candidate-program .panel {
-  background : #f7f7f7 !important;
-  border     : none;
-}
-.candidate-program-projects > li {
-  background    : #f5f5f5;
-  padding       : 20px;
-  margin-bottom : 5px;
-}
-
-.candidate-program-projects li p,
-.candidate-program-projects li ul {
-  font-size     : 14px;
-  margin        : 0 0 10px 0;
-  line-height   : 22px;
-}
-
-.candidate-program-projects li ul {
-  margin: 10px 0 10px 20px !important;
-}
-
-.candidate-program-projects li ul li {
-  list-style-type: circle;
-}
-
-/* theme-list
------------------------------------------------------------------------------ */
-.theme-list li span {
-  background  : #f5f5f5;
-  height      : 120px;
-  text-align  : center;
-  padding     : 20px 0 0 0;
-  display     : block;
-}
-
-.theme-list i {
-  color: #3A539B;
-  font-size: 30px;
-  display: block;
-}
-
-.theme-list li a {
-  padding        : 10px;
-  display        : inline-block;
-  vertical-align : middle;
-  line-height    : normal;
-  font-weight    : 400;
-  text-transform : uppercase;
-}
-
-/*
------------------------------------------------------------------------------ */
-.theme-detail h2 {
-  font-weight: 200;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-bottom: 1px solid #ececec;
-}
-
-.theme-detail h4 {
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 200;
-}
-
-.theme-detail .candidate-projects {
-  border-bottom: 1px solid #ececec;
-  margin: 20px 0 20px 0;
-}
-
-/* running-mate
------------------------------------------------------------------------------ */
-.running-mate-content p {
-  font-size: 90%;
-}
-
-.running-mate-content {
-  border: 1px solid #ececec;
-  padding: 0;
-}
-
+// -----------------------------------------------------------------------------
+// running-mate
+// -----------------------------------------------------------------------------
 .running-mate {
+
   padding: 0;
   margin: 0;
+
+  h5 {
+    font-size      : rem-calc(16);
+    background     : #f9f9f9;
+    padding        : rem-calc(10);
+    margin         : 0;
+    font-weight    : 400;
+    letter-spacing : -1px;
+  }
+
+  h5 .running-mate-position {
+    color: #909090;
+  }
+
+  p {
+    font-size: 80%;
+    padding: rem-calc(10);
+    color: #555;
+  }
+
+  .running-mate-content {
+    border: 1px solid #ececec;
+    padding: 0;
+  }
 }
 
-.running-mate h5 {
-  font-size: 16px;
-  background: #ececec;
-  padding: 10px;
-  margin: 0;
-  font-weight: 400;
-  letter-spacing: -1px;
-}
-
-.running-mate p {
-  font-size: 80%;
-  font-weight: bold;
-  padding: 10px;
-  color: #444;
-}
-
-.running-mate h5 .running-mate-position {
-  color: #909090;
-
-}
-
-/* Utilities
------------------------------------------------------------------------------ */
-.circle {
-  line-height   : 0;
-  display       : inline-block;
-  margin        : 5px;
-  border        : 2px solid rgba(255,255,255,0.4);
-  border-radius : 50%;
-  transition    : linear 0.25s;
-  height        : 120px;
-  width         : 120px;
-}
-
-.circle img {
-  border-radius: 50%;
-}
-
-.circle:hover {
-  transition         : ease-out 0.2s;
-  border             : 2px solid rgba(255,255,255,0.8);
-  -webkit-transition : ease-out 0.2s;
-}
-
+// -----------------------------------------------------------------------------
+// Utilities
+// -----------------------------------------------------------------------------
 a.circle {
   color: transparent;
 }
 
-/* Media Queries
------------------------------------------------------------------------------ */
-@media only screen and (max-width: 40em) {
+.circle {
+  line-height   : 0;
+  display       : inline-block;
+  margin        : rem-calc(5);
+  border        : 2px solid rgba(255,255,255,0.4);
+  border-radius : 50%;
+  transition    : linear 0.25s;
+  height        : rem-calc(120);
+  width         : rem-calc(120);
+  :hover {
+    transition         : ease-out 0.2s;
+    border             : 2px solid rgba(255,255,255,0.8);
+    -webkit-transition : ease-out 0.2s;
+  }
+  img {
+    border-radius: 50%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Media Queries
+// -----------------------------------------------------------------------------
+@media #{$small-only} {
 
   #content {
-    padding: 20px;
+    h1 { text-align: center; }
   }
 
-  .candidate-list .candidate-card {
+  .top-bar .name h1 {
+    font-size: rem-calc(10) !important;
+  }
+
+  .top-bar-section a {
     text-align: center;
+    border-top: 1px solid #4B77BE;
   }
 
-  .candidate-card .candidate-slogan {
-    font-size: 90%;
+  .candidate-card {
+
+    text-align: center;
+
+    .candidate-slogan {
+      font-size: 90%;
+    }
   }
 
-  .candidate-program-projects li {
-    padding: 10px;
-    font-size: 80%;
+  .candidate-detail {
+    h2, h3, h4, h5, h6 { text-align: center; }
+    h2 { font-size: rem-calc(20); }
+    h3 { font-size: rem-calc(18); }
   }
 
-  .candidate-detail-program-source p {
-    font-size: 90%;
+  .running-mate {
+    p {
+      text-align: center;
+    }
   }
 }

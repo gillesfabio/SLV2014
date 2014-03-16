@@ -10,6 +10,7 @@ var compass   = require('gulp-compass');
 var clean     = require('gulp-clean');
 var swig      = require('swig');
 var tempWrite = require('temp-write');
+var _         = require('lodash');
 var generator = require('./generator');
 
 // -----------------------------------------------------------------------------
@@ -37,8 +38,8 @@ var JAVASCRIPTS = [
 ];
 
 var STYLESHEETS = [
-  'vendor/foundation/css/normalize.css',
-  'vendor/foundation/css/foundation.css',
+  //'vendor/foundation/css/normalize.css',
+  //'vendor/foundation/css/foundation.css',
   'vendor/font-awesome/css/font-awesome.min.css',
   'build/compass/app.css'
 ];
@@ -108,10 +109,11 @@ gulp.task('compile:index', function() {
 gulp.task('compile:stylesheets', function() {
   return gulp.src('./src/*.scss')
     .pipe(compass({
-      project : __dirname,
-      css   : 'build/compass',
-      sass  : 'src',
-      image : 'src/images'
+      project     : __dirname,
+      css         : 'build/compass',
+      sass        : 'src',
+      image       : 'src/images',
+      import_path : ['vendor/foundation/scss']
     }))
     .pipe(minifyCSS())
     .pipe(gulp.dest(path.join(BUILD_DIR, 'css')));
