@@ -38,8 +38,6 @@ var JAVASCRIPTS = [
 ];
 
 var STYLESHEETS = [
-  //'vendor/foundation/css/normalize.css',
-  //'vendor/foundation/css/foundation.css',
   'vendor/font-awesome/css/font-awesome.min.css',
   'build/compass/app.css'
 ];
