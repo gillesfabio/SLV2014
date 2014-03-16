@@ -1,50 +1,42 @@
-BASEDIR=$(CURDIR)
-BUILDDIR=$(BASEDIR)/build
+BASE_DIR=$(CURDIR)
+BUILD_DIR=$(BASE_DIR)/build
+PUBLIC_DIR=$(BASE_DIR)/public
 NODE_LOCAL_BIN=./node_modules/.bin
 
-.PHONY: venv
 venv:
 	virtualenv -p python2.7 `pwd`/.venv
 	. .venv/bin/activate && pip install -r requirements.pip
 
-.PHONY: install
 install: venv
 	@bower install
 	@npm install
 
-.PHONY: clean
 clean:
-	@rm -rf .venv node_modules build vendor
+	@rm -rf .venv node_modules vendor build public
 
-.PHONY: bclean
-bclean:
-	@rm -rf build
+clean-build:
+	@gulp clean
 
-.PHONY: build
-build: bclean
+build:
 	@gulp build
 
-.PHONY: build-github
-build-github: bclean
-	BASE_URL=/SLVM2014/ gulp build
+generate:
+	@gulp generate
 
-.PHONY: runserver
-runserver: build
-	@gulp runserver
+generate-github:
+	BASE_URL=/SLVM2014/ gulp generate
 
-.PHONY: runserver-dev
-runserver-dev:
-	@gulp runserver-dev
-
-.PHONY: runserver-test
-runserver-test:
-	@gulp runserver-test
-
-.PHONY: docs
-docs:
-	@$(NODE_LOCAL_BIN)/jsdoc -c .jsdocrc README.md
-
-.PHONY: publish
-publish: build-github
-	ghp-import $(BUILDDIR)
+publish: generate-github
+	ghp-import $(PUBLIC_DIR)
 	git push origin gh-pages
+
+serve:
+	@gulp serve
+
+serve-prod:
+	@gulp serve:production
+
+serve-test:
+	@gulp serve:test
+
+.PHONY: venv install clean clean-build build generate generate-github publish serve serve-prod serve-test
