@@ -1,6 +1,5 @@
 'use strict';
 
-var fs        = require('fs');
 var path      = require('path');
 var concat    = require('gulp-concat');
 var express   = require('express');
@@ -8,6 +7,7 @@ var gulp      = require('gulp');
 var minifyCSS = require('gulp-minify-css');
 var compass   = require('gulp-compass');
 var clean     = require('gulp-clean');
+var uglify    = require('gulp-uglify');
 var swig      = require('swig');
 var tempWrite = require('temp-write');
 var generator = require('./generator');
@@ -81,25 +81,19 @@ server.set('view cache', false);
 // Compilation Tasks
 // -----------------------------------------------------------------------------
 
-gulp.task('compile:data', function(cb) {
-  generator.buildData(function(err, data) {
-    if (err) throw new Error(err);
-    var json = JSON.stringify(data, null, 2);
-    if (!fs.existsSync(BUILD_DIR)) fs.mkdirSync(BUILD_DIR);
-    var src  = fs.createReadStream(tempWrite.sync(json, 'data.json'));
-    var dest = fs.createWriteStream(path.join(BUILD_DIR, 'data.json'));
-    src.pipe(dest);
-    src.on('end', function() {
-      return cb();
-    });
-  });
+gulp.task('compile:data', function() {
+  var data = generator.buildData();
+  var json = JSON.stringify(data, null, 2);
+  var file = tempWrite.sync(json, 'data.json');
+  gulp.src(file)
+    .pipe(gulp.dest(BUILD_DIR));
 });
 
 gulp.task('compile:index', function() {
   var compiled = customSwig.compileFile(path.join(VIEWS_DIR, 'index.html'));
   var tpl = compiled(context);
   var file = tempWrite.sync(tpl, 'index.html');
-  gulp.src(file)
+  return gulp.src(file)
     .pipe(gulp.dest(BUILD_DIR));
 });
 
@@ -111,19 +105,13 @@ gulp.task('compile:stylesheets', function() {
       sass        : 'src',
       image       : 'src/images',
       import_path : ['vendor/foundation/scss']
-    }))
-    .pipe(minifyCSS())
-    .pipe(gulp.dest(path.join(BUILD_DIR, 'css')));
+    }));
 });
 
-gulp.task('compile:javascripts:modernizr', function() {
+gulp.task('compile:javascripts', function() {
   gulp.src(MODERNIZR)
     .pipe(gulp.dest(path.join(BUILD_DIR, 'js')));
-});
-
-gulp.task('compile:javascripts', ['compile:javascripts:modernizr'], function() {
   gulp.src(JAVASCRIPTS)
-    .pipe(concat(JAVASCRIPTS_CONCAT))
     .pipe(gulp.dest(path.join(BUILD_DIR, 'js')));
 });
 
@@ -153,21 +141,19 @@ gulp.task('public:fonts', function() {
     .pipe(gulp.dest(path.join(PUBLIC_DIR, 'fonts')));
 });
 
-gulp.task('public:javascripts:modernizr', function() {
+gulp.task('public:javascripts', function() {
   gulp.src(MODERNIZR)
     .pipe(gulp.dest(path.join(PUBLIC_DIR, 'js')));
-});
-
-gulp.task('public:javascripts', ['public:javascripts:modernizr'], function() {
-  gulp.src(JAVASCRIPTS)
+  gulp.src(path.join(BUILD_DIR, 'js', '**'))
     .pipe(concat(JAVASCRIPTS_CONCAT))
+    .pipe(uglify())
     .pipe(gulp.dest(path.join(PUBLIC_DIR, 'js')));
 });
 
-gulp.task('public:stylesheets', ['compile:javascripts'], function() {
+gulp.task('public:stylesheets', ['compile:stylesheets'], function() {
   gulp.src(STYLESHEETS)
-    .pipe(minifyCSS())
     .pipe(concat(STYLESHEETS_CONCAT))
+    .pipe(minifyCSS())
     .pipe(gulp.dest(path.join(PUBLIC_DIR, 'css')));
 });
 
@@ -212,12 +198,11 @@ gulp.task('watch', function() {
 
 gulp.task('server:development', function() {
   context.env = 'development';
-  var json = require(path.join(BUILD_DIR, 'data.json'));
   server.engine('html', customSwig.renderFile);
   server.set('view engine', 'html');
   server.set('views', path.join(__dirname, 'views'));
   server.use(express.static(__dirname));
-  server.get('/data.json', function(req, res) { res.send(json); });
+  server.use(express.static(BUILD_DIR));
   server.get('*', function(req, res) { res.render('index', context); });
   server.listen(SERVER_PORT);
   console.log('Express server listen on port ' + SERVER_PORT + '...');

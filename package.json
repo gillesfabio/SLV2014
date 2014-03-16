@@ -16,6 +16,7 @@
     "gulp-minify-css": "0.x",
     "gulp-clean": "0.x",
     "gulp-compass": "1.x",
+    "gulp-uglify": "0.x",
     "temp-write": "0.x",
     "yamljs": "0.x",
     "swig": "1.x",

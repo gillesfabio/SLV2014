@@ -2,10 +2,16 @@
 
 var fs    = require('fs');
 var path  = require('path');
-var util  = require('util');
-var async = require('async');
 var _     = require('lodash');
 var YAML  = require('yamljs');
+
+var rawData = {};
+var data = {
+  themes       : [],
+  candidates   : [],
+  runningMates : [],
+  programs     : []
+};
 
 function getFilename(file) {
   return file.substr(0, file.lastIndexOf('.'));
@@ -16,15 +22,14 @@ function getExtension(file) {
   return ext[ext.length - 1];
 }
 
-function formatCandidates(data, rawData, callback) {
+function formatCandidates() {
   Object.keys(rawData).forEach(function(key) {
     var candidate = rawData[key];
     data.candidates.push(candidate.profil);
   });
-  callback(null, data, rawData);
 }
 
-function formatRunningMates(data, rawData, callback) {
+function formatRunningMates() {
   Object.keys(rawData).forEach(function(key) {
     var candidate = rawData[key];
     if (candidate.colistiers) {
@@ -34,10 +39,9 @@ function formatRunningMates(data, rawData, callback) {
       });
     }
   });
-  callback(null, data, rawData);
 }
 
-function formatPrograms(data, rawData, callback) {
+function formatPrograms() {
   Object.keys(rawData).forEach(function(key) {
     var candidate = rawData[key];
     if (candidate.programme) {
@@ -56,11 +60,10 @@ function formatPrograms(data, rawData, callback) {
       data.programs.push(program);
     }
   });
-  callback(null, data);
 }
 
-function buildCandidates(basedir, data, callback) {
-  var rawData = {};
+function buildCandidates() {
+  var basedir = path.join(__dirname, 'data', 'candidates');
   fs.readdirSync(basedir).forEach(function(dir) {
     var stat = fs.statSync(path.join(basedir, dir));
     if (stat.isDirectory()) {
@@ -72,41 +75,20 @@ function buildCandidates(basedir, data, callback) {
       });
     }
   });
-  callback(null, data, rawData);
 }
 
-function buildThemes(basedir, data, callback) {
-  var file = path.join(basedir, 'themes.yaml');
+function buildThemes() {
+  var file = path.join(__dirname, 'data', 'themes', 'themes.yaml');
   if (fs.existsSync(file)) data.themes = YAML.load(file);
-  callback(null, data);
 }
 
-function initData(callback) {
-  callback(null, {
-    themes       : [],
-    candidates   : [],
-    runningMates : [],
-    programs     : []
-  });
-}
-
-function buildData(callback) {
-  var basedir       = path.join(__dirname, 'data');
-  var candidatesDir = path.join(basedir, 'candidates');
-  var themesDir     = path.join(basedir, 'themes');
-  [candidatesDir, themesDir].forEach(function(dir) {
-    if (!fs.existsSync(dir)) throw new Error(util.format("%s does not exist.", dir));
-  });
-  async.waterfall([
-    initData,
-    buildThemes.bind(null, themesDir),
-    buildCandidates.bind(null, candidatesDir),
-    formatCandidates,
-    formatRunningMates,
-    formatPrograms,
-  ], function(err, result) {
-    return callback(err, result);
-  });
+function buildData() {
+  buildThemes();
+  buildCandidates();
+  formatCandidates();
+  formatRunningMates();
+  formatPrograms();
+  return data;
 }
 
 module.exports.buildData = buildData;
