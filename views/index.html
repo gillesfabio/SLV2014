@@ -36,13 +36,14 @@
     </div>
     <script id="candidate-card-template" type="text/x-handlebars-template">
       <div class="row">
-        <div class="small-12 large-4 columns">
+        <div class="small-12 columns">
           <img src="{{candidate.picture}}" class="circle" alt="{{candidate.name}}">
         </div>
-        <div class="small-12 large-8 columns">
-          <h1 class="candidate-name">{{candidate.name}} <small>({{candidate.party}})</small></h1>
-          {{#if candidate.slogan}}<h3 class="candidate-slogan">{{candidate.slogan}}</h3>{{/if}}
-          <ul class="no-bullet candidate-links">
+        <div class="small-12 columns">
+          <h1>{{candidate.name}}</h1>
+          <h2>{{candidate.slogan}}</h2>
+          <h3>{{candidate.party}}</h3>
+          <ul class="no-bullet">
             {{#if candidate.homepage}}<li><i class="fa fa-globe"></i> <a href="{{candidate.homepage}}">{{candidate.homepage}}</a></li>{{/if}}
             {{#if candidate.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{candidate.twitter}}">@{{candidate.twitter}}</a></li>{{/if}}
             {{#if candidate.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{candidate.facebook}}">{{candidate.facebook}}</a></li>{{/if}}
@@ -87,9 +88,7 @@
     </script>
     <script id="candidate-detail-template" type="text/x-handlebars-template">
       <div class="row">
-        <div class="small-12 large-6 columns">
-          <div class="candidate-detail-card"></div>
-        </div>
+        <div class="candidate-detail-card"></div>
       </div>
       <div class="row">
         <div class="small-12 large-7 columns">

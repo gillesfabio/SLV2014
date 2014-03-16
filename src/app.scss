@@ -102,7 +102,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 .candidate-card {
 
-  text-align: left;
+  text-align: center;
   padding: rem-calc(20 0 20 0);
 
   :last-child {
@@ -117,18 +117,27 @@ button:hover, button:focus, .button:hover, .button:focus {
     text-transform : uppercase;
     font-weight    : 200;
     border-bottom  : none;
-    text-align     : left;
   }
 
-  .candidate-links {
-    font-size: rem-calc(14);
-    margin-bottom: rem-calc(10);
-  }
-
-  .candidate-slogan {
-    font-size      : rem-calc(16);
+  h2 {
+    font-size      : rem-calc(18);
     color          : $slvm-candidate-slogan-color;
     letter-spacing : rem-calc(-1);
+    padding        : 0;
+    margin         : rem-calc(5 0 5 0);
+  }
+
+  h3 {
+    font-size      : rem-calc(18);
+    color          : #555;
+    letter-spacing : rem-calc(-1);
+    padding        : 0;
+    margin         : rem-calc(5 0 5 0);
+  }
+
+  ul {
+    font-size: rem-calc(14);
+    margin-bottom: rem-calc(10);
   }
 }
 
@@ -137,25 +146,28 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 .candidate-detail {
 
-  h2 {
-    font-size      : rem-calc(30);
-    text-transform : uppercase;
-    font-weight    : 200;
-    letter-spacing : -1px;
-    margin-bottom  : rem-cal(20);
-    color          : #3A539B;
-    border-bottom  : 1px solid #3A539B;
+  .candidate-detail-program {
+    h3 {
+      font-size      : rem-calc(18);
+      text-transform : uppercase;
+      color          : #555;
+      margin         : rem-calc(20 0 20 0);
+    }
+    h3 a {
+      color: #555;
+    }
   }
 
-  h3 {
-    font-size      : rem-calc(18);
-    text-transform : uppercase;
-    color          : #555;
-    margin         : rem-calc(20 0 20 0);
-  }
-
-  h3 a {
-    color: #555;
+  .candidate-detail-program, .candidate-detail-running-mates {
+    h2 {
+      font-size      : rem-calc(30);
+      text-transform : uppercase;
+      font-weight    : 200;
+      letter-spacing : -1px;
+      margin-bottom  : rem-calc(20);
+      color          : #3A539B;
+      border-bottom  : 1px solid #3A539B;
+    }
   }
 }
 
