@@ -60,11 +60,6 @@ var context = {
 };
 
 // -----------------------------------------------------------------------------
-// Express Server (defaults)
-// -----------------------------------------------------------------------------
-
-
-// -----------------------------------------------------------------------------
 // Compilation Tasks
 // -----------------------------------------------------------------------------
 
@@ -207,45 +202,24 @@ function serve(env) {
       server.listen(SERVER_PORT);
     break;
   }
-  console.log('Express server listen on port ' + SERVER_PORT + '...');
+  console.log('Express server listening to on port ' + SERVER_PORT + '...');
 }
 
 // -----------------------------------------------------------------------------
 // Top Level Tasks
 // -----------------------------------------------------------------------------
 
-gulp.task('build', [
-  'clean:build',
-  'compile'
-]);
+gulp.task('build', ['clean:build', 'compile']);
+gulp.task('generate', ['clean', 'compile', 'public']);
 
-gulp.task('generate', [
-  'clean',
-  'compile',
-  'public'
-]);
-
-gulp.task('serve', [
-  'clean',
-  'compile',
-  'watch'
-], function() {
+gulp.task('serve', ['clean', 'compile', 'watch'], function() {
   serve('development');
 });
 
-gulp.task('serve:test', [
-  'clean',
-  'compile',
-  'watch'
-], function() {
+gulp.task('serve:test', ['clean', 'compile', 'watch'], function() {
   serve('test');
 });
 
-gulp.task('serve:production', [
-  'clean',
-  'compile',
-  'public',
-  'watch:production'
-], function() {
+gulp.task('serve:production', ['clean', 'compile', 'public'], function() {
   serve('production');
 });
