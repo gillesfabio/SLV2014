@@ -10,7 +10,7 @@ var uglify    = require('gulp-uglify');
 var express   = require('express');
 var swig      = require('swig');
 var tempWrite = require('temp-write');
-var generator = require('./generator');
+var Generator = require('./generator');
 
 // -----------------------------------------------------------------------------
 // Configuration
@@ -64,7 +64,8 @@ var context = {
 // -----------------------------------------------------------------------------
 
 gulp.task('compile:data', function() {
-  var data = generator.buildData();
+  var generator = new Generator();
+  var data = generator.build();
   var json = JSON.stringify(data, null, 2);
   var file = tempWrite.sync(json, 'data.json');
   return gulp.src(file)

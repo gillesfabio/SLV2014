@@ -5,90 +5,92 @@ var path  = require('path');
 var _     = require('lodash');
 var YAML  = require('yamljs');
 
-var rawData = {};
-var data = {
-  themes       : [],
-  candidates   : [],
-  runningMates : [],
-  programs     : []
+var Generator = module.exports = function Generator() {
+  this.data = {
+    themes       : [],
+    candidates   : [],
+    runningMates : [],
+    programs     : []
+  };
+  this.rawData = {};
 };
 
-function getFilename(file) {
+Generator.getFilename = function getFilename(file) {
   return file.substr(0, file.lastIndexOf('.'));
-}
+};
 
-function getExtension(file) {
+Generator.getExtension = function getExtension(file) {
   var ext = path.extname(file || '').split('.');
   return ext[ext.length - 1];
-}
+};
 
-function formatCandidates() {
-  Object.keys(rawData).forEach(function(key) {
-    var candidate = rawData[key];
-    data.candidates.push(candidate.profil);
-  });
-}
+Generator.prototype.formatCandidates = function formatCandidates() {
+  Object.keys(this.rawData).forEach(function(key) {
+    var candidate = this.rawData[key];
+    this.data.candidates.push(candidate.profil);
+  }.bind(this));
+};
 
-function formatRunningMates() {
-  Object.keys(rawData).forEach(function(key) {
-    var candidate = rawData[key];
+Generator.prototype.formatRunningMates = function formatRunningMates() {
+  Object.keys(this.rawData).forEach(function(key) {
+    var candidate = this.rawData[key];
     if (candidate.colistiers) {
       candidate.colistiers.forEach(function(colistier) {
         colistier.candidate = candidate.profil;
-        data.runningMates.push(colistier);
-      });
+        this.data.runningMates.push(colistier);
+      }.bind(this));
     }
-  });
-}
+  }.bind(this));
+};
 
-function formatPrograms() {
-  Object.keys(rawData).forEach(function(key) {
-    var candidate = rawData[key];
+Generator.prototype.formatPrograms = function formatPrograms() {
+  Object.keys(this.rawData).forEach(function(key) {
+    var candidate = this.rawData[key];
     if (candidate.programme) {
       var program = {};
       program.candidate = candidate.profil;
       program.projects = [];
       Object.keys(candidate.programme).forEach(function(key) {
-        var theme = _.find(data.themes, function(obj) { return obj.id === key; });
+        var theme = _.find(this.data.themes, function(obj) { return obj.id === key; });
         candidate.programme[key].forEach(function(rawProject) {
           var project = {};
           project.theme = theme;
           project.description = rawProject;
           program.projects.push(project);
         });
-      });
-      data.programs.push(program);
+      }.bind(this));
+      this.data.programs.push(program);
     }
-  });
-}
+  }.bind(this));
+};
 
-function buildCandidates() {
+Generator.prototype.buildCandidates = function buildCandidates() {
   var basedir = path.join(__dirname, 'data', 'candidates');
   fs.readdirSync(basedir).forEach(function(dir) {
     var stat = fs.statSync(path.join(basedir, dir));
     if (stat.isDirectory()) {
-      rawData[dir] = {};
+      this.rawData[dir] = {};
       fs.readdirSync(path.join(basedir, dir)).forEach(function(file) {
-        var ext = getExtension(file);
-        var name = getFilename(file);
-        if (ext === 'yaml') rawData[dir][name] = YAML.load(path.join(basedir, dir, file));
-      });
+        var ext = Generator.getExtension(file);
+        var name = Generator.getFilename(file);
+        if (ext === 'yaml') {
+          this.rawData[dir][name] = YAML.load(path.join(basedir, dir, file));
+        }
+      }.bind(this));
     }
-  });
-}
+  }.bind(this));
+};
 
-function buildThemes() {
+Generator.prototype.buildThemes = function buildThemes() {
   var file = path.join(__dirname, 'data', 'themes', 'themes.yaml');
-  if (fs.existsSync(file)) data.themes = YAML.load(file);
-}
+  if (fs.existsSync(file)) this.data.themes = YAML.load(file);
+};
 
-function buildData() {
-  buildThemes();
-  buildCandidates();
-  formatCandidates();
-  formatRunningMates();
-  formatPrograms();
-  return data;
-}
-
-module.exports.buildData = buildData;
+Generator.prototype.build = function build() {
+  this.buildThemes();
+  this.buildCandidates();
+  this.formatCandidates();
+  this.formatRunningMates();
+  this.formatPrograms();
+  return this.data;
+};
