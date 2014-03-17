@@ -34,6 +34,42 @@
     </div>
     <div id="content" class="row">
     </div>
+    <script id="home-template" type="text/x-handlebars-template">
+      <h1>Digo Li Qué Vengon !</h1>
+      <p>
+        <em>Ce site vous permet d'accéder rapidement aux résultats, ainsi qu'aux
+        profils et programmes des différents candidats aux élections municipales 2014
+        de Saint-Laurent-du-Var. Les programmes sont dépourvus d'artifices infographiques
+        pour une lisibilité maximale. La rubrique « Thème » permet de comparer les
+        programmes par thématique (emploi, urbanisme, petite enfance, etc).</em>
+      </p>
+      <div class="results">
+        <div class="results-header">
+          <h5>1er tour <small>(23 mars 2014)</small></h5>
+          <div class="countdown-tour1"></div>
+        </div>
+        <div class="results-content">
+          <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
+          {{#each candidates}}
+          <li>
+            <img src="<% if env == 'development' %>/data/candidates/{{lastname id}}/photo.jpg<% else %>{{picture}}<% endif %>" class="circle" alt="{{name}}">
+            <h5>{{name}}</h5>
+            <h6>{{#if scoreTour1 }}{{scoreTour1}}{{else}}0{{/if}} %</h6>
+          </li>
+          {{/each}}
+          <ul>
+        </div>
+      </div>
+      <div class="results">
+        <div class="results-header">
+          <h5>2ème tour <small>(30 mars 2014)</small></h5>
+          <div class="countdown-tour2"></div>
+        </div>
+        <div class="results-content">
+          <p class="suspens">Qui sera le futur maire de la plus belle ville du monde ?</p>
+        </div>
+      </div>
+    </script>
     <script id="candidate-card-template" type="text/x-handlebars-template">
       <div class="row">
         <div class="small-12 columns">

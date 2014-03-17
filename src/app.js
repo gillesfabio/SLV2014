@@ -1,4 +1,4 @@
-(function($, _, Backbone, Handlebars, markdown) {
+(function($, _, Backbone, Handlebars, markdown, countdown) {
 
   /*jshint unused:false */
   'use strict';
@@ -20,6 +20,8 @@
   // Templates
   // ---------------------------------------------------------------------------
 
+  App.templates.home             = Handlebars.compile($('#home-template').html());
+  App.templates.about            = Handlebars.compile($('#about-template').html());
   App.templates.candidateCard    = Handlebars.compile($('#candidate-card-template').html());
   App.templates.runningMateList  = Handlebars.compile($('#running-mate-list-template').html());
   App.templates.candidateProgram = Handlebars.compile($('#candidate-program-template').html());
@@ -27,7 +29,6 @@
   App.templates.candidateDetail  = Handlebars.compile($('#candidate-detail-template').html());
   App.templates.themeDetail      = Handlebars.compile($('#theme-detail-template').html());
   App.templates.themeList        = Handlebars.compile($('#theme-list-template').html());
-  App.templates.about            = Handlebars.compile($('#about-template').html());
 
   //----------------------------------------------------------------------------
   // Template Helpers
@@ -320,13 +321,76 @@
     }
   });
 
+  App.views.Home = Backbone.View.extend({
+
+    tagName: 'div',
+    id: 'home',
+
+    initialize: function(options) {
+      this.options    = _.extend({candidates: new App.collections.Candidate()}, options);
+      this.candidates = this.options.candidates;
+      this.template   = App.templates.home;
+      this.tsTour1    = null;
+      this.tsTour2    = null;
+      this.voteDates = {
+        tour1: new Date(2014, 2, 23),
+        tour2: new Date(2014, 2, 30)
+      };
+      this.clearTimers();
+      this.listenTo(this.candidates, 'sync', this.render);
+      this.candidates.fetch();
+    },
+
+    clearTimers: function() {
+      window.clearInterval(this.tsTour1);
+      window.clearInterval(this.tsTour2);
+    },
+
+    renderTimers: function() {
+      this.tsTour1 = countdown(this.voteDates.tour1, function(ts) {
+        this.renderCountDown(ts, 'tour1');
+      }.bind(this));
+      this.tsTour2 = countdown(this.voteDates.tour2, function(ts) {
+        this.renderCountDown(ts, 'tour2');
+      }.bind(this));
+    },
+
+    renderCountDown: function(ts, tour) {
+      var output = [];
+      var units = {
+        'days'    : 'jour',
+        'hours'   : 'heure',
+        'minutes' : 'minute',
+        'seconds' : 'second'
+      };
+      Object.keys(units).forEach(function(key) {
+        var word = units[key];
+        if (ts[key]) {
+          word = (ts[key] > 1) ? word + 's' : word;
+          output.push(_.str.sprintf('%d %s', ts[key], word));
+        }
+      }.bind(this));
+      this.$el.find(_.str.sprintf('.countdown-%s', tour)).html(output.join(', '));
+    },
+
+    render: function() {
+      this.$el.html(this.template({candidates: this.candidates.toJSON()}));
+      this.renderTimers();
+    }
+  });
+
   // ---------------------------------------------------------------------------
   // Controllers
   // ---------------------------------------------------------------------------
 
+  App.controllers.home = function() {
+    var view = new App.views.Home();
+    $('#content').html(view.el);
+  };
+
   App.controllers.candidateList = function(collection) {
-      var view = new App.views.CandidateList();
-      $('#content').html(view.el);
+    var view = new App.views.CandidateList();
+    $('#content').html(view.el);
   };
 
   App.controllers.candidateDetail = function(id) {
@@ -378,7 +442,7 @@
 
   App.Router = Backbone.Router.extend({
     routes: {
-      ''              : App.controllers.candidateList,
+      ''              : App.controllers.home,
       'candidats'     : App.controllers.candidateList,
       'candidats/:id' : App.controllers.candidateDetail,
       'themes'        : App.controllers.themeList,
@@ -402,4 +466,4 @@
     Backbone.history.start({root: window.APP_BASE_URL});
   });
 
-})(jQuery, _, Backbone, Handlebars, markdown);
+})(jQuery, _, Backbone, Handlebars, markdown, countdown);

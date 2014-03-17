@@ -23,10 +23,11 @@ var JAVASCRIPTS = [
   'vendor/jquery/dist/jquery.min.js',
   'vendor/foundation/js/foundation.min.js',
   'vendor/underscore/underscore.js',
+  'vendor/underscore.string/dist/underscore.string.min.js',
   'vendor/backbone/backbone.js',
   'vendor/handlebars/handlebars.min.js',
-  'vendor/jspdf/dist/jspdf.min.js',
   'vendor/markdown/lib/markdown.js',
+  'vendor/countdownjs/countdown.min.js',
   'src/app.js'
 ];
 var STYLESHEETS = [
@@ -220,7 +221,7 @@ gulp.task('generate', [
   'public'
 ]);
 
-gulp.task('serve', ['clean', 'compile', 'watch'], function() {
+gulp.task('serve', ['compile', 'watch'], function() {
   serve('development');
 });
 

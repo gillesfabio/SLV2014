@@ -285,6 +285,50 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 // -----------------------------------------------------------------------------
+// Home
+// -----------------------------------------------------------------------------
+.results {
+  border: 1px solid #ececec;
+  margin-bottom: rem-calc(20);
+}
+
+.results-header {
+  background: #ececec;
+  padding: rem-calc(20);
+  text-align: center;
+  font-size: rem-calc(18);
+  font-weight: 200;
+}
+
+.results-content {
+
+  padding: rem-calc(20);
+
+  .suspens {
+    text-align : center;
+    font-size  : rem-calc(20);
+    color      : #909090;
+  }
+
+  li {
+
+    text-align: center;
+
+    h5 {
+      font-size: rem-calc(13);
+      font-weight: normal;
+    }
+
+    h6 {
+      font-size: rem-calc(13);
+      font-weight: normal;
+      color: #909090;
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
 // Utilities
 // -----------------------------------------------------------------------------
 a.circle {

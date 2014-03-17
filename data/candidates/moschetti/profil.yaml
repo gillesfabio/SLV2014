@@ -7,3 +7,6 @@ facebook   : moschetti.marc
 picture    : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/moschetti/photo.jpg
 programUrl : http://www.marcmoschetti.fr/mon-programme/
 party      : SE
+elected    : false
+scoreTour1 : null
+scoreTour2 : null

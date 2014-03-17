@@ -7,3 +7,6 @@ facebook   : ~
 picture    : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/benne/photo.jpg
 programUrl : https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf
 party      : DVD
+elected    : false
+scoreTour1 : null
+scoreTour2 : null
