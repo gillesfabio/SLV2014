@@ -184,8 +184,8 @@ function serve(env) {
       server.engine('html', customSwig.renderFile);
       server.set('view engine', 'html');
       server.set('views', path.join(__dirname, 'views'));
-      server.use(express.static(__dirname));
       server.use(express.static(path.join(__dirname, 'build', 'data')));
+      server.use(express.static(__dirname));
       server.get('*', function(req, res) { res.render('index', context); });
       server.listen(SERVER_PORT);
     break;

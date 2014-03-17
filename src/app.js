@@ -37,6 +37,10 @@
     return new Handlebars.SafeString(markdown.toHTML(md));
   });
 
+  Handlebars.registerHelper('lastname', function(id) {
+    return id.split('-')[1];
+  });
+
   // ---------------------------------------------------------------------------
   // Models
   // ---------------------------------------------------------------------------

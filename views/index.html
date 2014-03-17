@@ -37,7 +37,7 @@
     <script id="candidate-card-template" type="text/x-handlebars-template">
       <div class="row">
         <div class="small-12 columns">
-          <img src="{{candidate.picture}}" class="circle" alt="{{candidate.name}}">
+          <img src="<% if env == 'development' %>/data/candidates/{{lastname candidate.id}}/photo.jpg<% else %>{{candidate.picture}}<% endif %>" class="circle" alt="{{candidate.name}}">
         </div>
         <div class="small-12 columns">
           <h1>{{candidate.name}}</h1>
