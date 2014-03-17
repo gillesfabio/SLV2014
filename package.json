@@ -17,10 +17,10 @@
     "gulp-clean": "0.x",
     "gulp-compass": "1.x",
     "gulp-uglify": "0.x",
+    "gulp-rename": "1.x",
     "temp-write": "0.x",
     "yamljs": "0.x",
     "swig": "1.x",
-    "lodash": "2.x",
-    "gulp-rename": "~1.2.0"
+    "lodash": "2.x"
   }
 }

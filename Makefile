@@ -27,7 +27,7 @@ generate-github:
 	BASE_URL=/SLVM2014/ gulp generate
 
 publish: generate-github
-	ghp-import $(PUBLIC_DIR)
+	. .venv/bin/activate && ghp-import $(PUBLIC_DIR)
 	git push origin gh-pages
 
 serve:

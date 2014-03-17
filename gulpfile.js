@@ -113,12 +113,12 @@ gulp.task('compile', [
 // Build "public" directory
 // -----------------------------------------------------------------------------
 
-gulp.task('public:data', function() {
+gulp.task('public:data', ['compile:data'], function() {
   return gulp.src('build/data/*.json')
     .pipe(gulp.dest('public/data'));
 });
 
-gulp.task('public:index', function() {
+gulp.task('public:index', ['compile:index'], function() {
   return gulp.src('build/html/index.html')
     .pipe(gulp.dest('public'));
 });
@@ -128,7 +128,7 @@ gulp.task('public:fonts', function() {
     .pipe(gulp.dest('public/fonts'));
 });
 
-gulp.task('public:images', function() {
+gulp.task('public:images', ['compile:images'], function() {
   return gulp.src('./build/images/**/*.jpg')
     .pipe(gulp.dest('./public/images'));
 });
@@ -142,7 +142,7 @@ gulp.task('public:javascripts', function() {
     .pipe(gulp.dest('public/js'));
 });
 
-gulp.task('public:stylesheets', function() {
+gulp.task('public:stylesheets', ['compile:stylesheets'], function() {
   return gulp.src(STYLESHEETS)
     .pipe(concat('styles.css'))
     .pipe(minifyCSS())
@@ -234,18 +234,24 @@ gulp.task('build', [
 
 gulp.task('generate', [
   'clean',
-  'compile',
   'public'
 ]);
 
-gulp.task('serve', ['compile', 'watch'], function() {
+gulp.task('serve', [
+  'compile',
+  'watch'
+], function() {
   serve('development');
 });
 
-gulp.task('serve:test', ['clean', 'compile', 'watch'], function() {
+gulp.task('serve:test', [
+  'clean',
+  'compile',
+  'watch'
+], function() {
   serve('test');
 });
 
-gulp.task('serve:production', ['clean', 'compile', 'public'], function() {
+gulp.task('serve:production', ['clean', 'public'], function() {
   serve('production');
 });
