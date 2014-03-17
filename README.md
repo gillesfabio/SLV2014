@@ -15,9 +15,14 @@ L'application statique est propulsée par les technologies suivantes :
 * [Handlebars](http://handlebarsjs.com)
 * [Foundation](foundation.zurb.com)
 
-[Node](http://nodejs.org), [gulp](http://gulpjs.org), [Swig](http://paularmstrong.github.io/swig/)
-et [yaml.js](https://github.com/jeremyfa/yaml.js) sont utilisés pour la
-conversion des données au format JSON et la génération du site statique.
+Pour la conversion des données au format JSON et la génération du site statique :
+
+* [Node](http://nodejs.org)
+* [gulp](http://gulpjs.org)
+* [Swig](http://paularmstrong.github.io/swig/)
+* [yaml.js](https://github.com/jeremyfa/yaml.js)
+
+Le serveur local est propulsé par [Express](http://expressj.com).
 
 ## Installation
 
