@@ -52,7 +52,9 @@
           <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
           {{#each candidates}}
           <li>
-            <img src="<% if env == 'development' %>/data/candidates/{{lastname id}}/photo.jpg<% else %>{{picture}}<% endif %>" class="circle" alt="{{name}}">
+            <a href="<%= baseurl %>#/candidats/{{id}}">
+              <img src="<% if env == 'development' %>/data/candidates/{{lastname id}}/photo.jpg<% else %>{{picture}}<% endif %>" class="circle" alt="{{name}}">
+            </a>
             <h5>{{name}}</h5>
             <h6>{{#if scoreTour1 }}{{scoreTour1}}{{else}}0{{/if}} %</h6>
           </li>
