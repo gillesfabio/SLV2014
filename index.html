@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saint-Laurent-du-Var Municipales 2014</title>
     
-      <link rel="stylesheet" href="/SLVM2014/css/styles.css">
-      <script src="/SLVM2014/js/modernizr.js"></script>
+    <link rel="stylesheet" href="/SLVM2014/css/styles.css">
+    <script src="/SLVM2014/js/modernizr.js"></script>
     
   </head>
   <body>
@@ -15,56 +15,178 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="/SLVM2014/">SLV Municipales 2014</a></h1>
+            <h1><a href="/SLVM2014/">SLVM 2014</a></h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
         </ul>
         <section class="top-bar-section">
           <ul class="right">
-            <li><a href="#">À propos</a></li>
+            <li><a href="/SLVM2014/#/candidats">Candidats</a></li>
+            <li><a href="/SLVM2014/#/themes">Thèmes</a></li>
+            <li><a href="/SLVM2014/#/a-propos">À propos</a></li>
           </ul>
         </section>
       </nav>
     </div>
     <div id="content" class="row">
     </div>
-    <script id="home" type="text/x-handlebars-template">
-      {{#each candidates}}
-      <div class="row candidate panel">
-        <div class="small-12 medium-2 large-2 columns"><img src="{{picture}}" class="circle" alt="{{name}}"></div>
-        <div class="small-12 medium-10 large-10 columns">
-          <h4>{{name}} <small>{{party.acronym}} ({{party.name}})</small></h4>
+    <script id="home-template" type="text/x-handlebars-template">
+      <h1>Digo Li Qué Vengon !</h1>
+      <p>
+        <em>Ce site vous permet d'accéder rapidement aux résultats, ainsi qu'aux
+        profils et programmes des différents candidats aux élections municipales 2014
+        de Saint-Laurent-du-Var. Les programmes sont dépourvus d'artifices infographiques
+        pour une lisibilité maximale. La rubrique « Thème » permet de comparer les
+        programmes par thématique (emploi, urbanisme, petite enfance, etc).</em>
+      </p>
+      <div class="results">
+        <div class="results-header">
+          <h5>1er tour <small>(23 mars 2014)</small></h5>
+          <div class="countdown-tour1"></div>
+        </div>
+        <div class="results-content">
+          <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
+          {{#each candidates}}
+          <li>
+            <a href="/SLVM2014/#/candidats/{{id}}">
+              <img src="/SLVM2014/images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
+            </a>
+            <h5>{{name}}</h5>
+            <h6>{{#if scoreTour1 }}{{scoreTour1}}{{else}}0{{/if}} %</h6>
+          </li>
+          {{/each}}
+          <ul>
+        </div>
+      </div>
+      <div class="results">
+        <div class="results-header">
+          <h5>2ème tour <small>(30 mars 2014)</small></h5>
+          <div class="countdown-tour2"></div>
+        </div>
+        <div class="results-content">
+          <p class="suspens">Qui sera le futur maire de la plus belle ville du monde ?</p>
+        </div>
+      </div>
+    </script>
+    <script id="candidate-card-template" type="text/x-handlebars-template">
+      <div class="row">
+        <div class="small-12 columns">
+          <img src="/SLVM2014/images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
+        </div>
+        <div class="small-12 columns">
+          <h1>{{candidate.name}}</h1>
+          <h2>{{candidate.slogan}}</h2>
+          <h3>{{candidate.party}}</h3>
           <ul class="no-bullet">
-            {{#if homepage}}<li><i class="fa fa-globe"></i> <a href="{{homepage}}">{{homepage}}</a></li>{{/if}}
-            {{#if twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{twitter}}">@{{twitter}}</a></li>{{/if}}
-            {{#if facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{facebook}}</a></li>{{/if}}
+            {{#if candidate.homepage}}<li><i class="fa fa-globe"></i> <a href="{{candidate.homepage}}">{{candidate.homepage}}</a></li>{{/if}}
+            {{#if candidate.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{candidate.twitter}}">@{{candidate.twitter}}</a></li>{{/if}}
+            {{#if candidate.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{candidate.facebook}}">{{candidate.facebook}}</a></li>{{/if}}
           </ul>
-          <a href="/SLVM2014/#/candidate/{{slug}}" class="button"><i class="fa fa-list-ol"></i> Voir le programme</a>
+          {{#if showDetailLink}}
+          <p>
+            <a href="/SLVM2014/#/candidats/{{candidate.id}}" class="button radius">
+            <i class="fa fa-list-ol"></i> Mon Programme
+            </a>
+          </p>
+          {{/if}}
+        </div>
+      </div>
+    </script>
+    <script id="running-mate-list-template" type="text/x-handlebars-template">
+      <h2>Mes Colistiers</h2>
+      <ul class="small-block-grid-1 large-block-grid-2">
+        {{#each runningMates}}
+        <li class="running-mate {{#if community}}running-mate-community{{/if}}">
+          <div class="running-mate-content">
+            <h5><span class="running-mate-position">{{position}}.</span> {{name}}</h5>
+            {{#if bio}}{{{md2html bio}}}{{/if}}
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </script>
+    <script id="candidate-program-template" type="text/x-handlebars-template">
+      <h2>Mon programme</h2>
+      {{#each projects}}
+      <h3 class="theme-title"><a href="/SLVM2014/#/themes/{{this.0.theme.slug}}">{{@key}}</a></h3>
+      <ul class="no-bullet candidate-program-projects">
+        {{#each this}}
+        <li>{{{md2html description}}}</li>
+        {{/each}}
+      </ol>
+      {{/each}}
+    </script>
+    <script id="candidate-list-template" type="text/x-handlebars-template">
+      <h1>Les candidats</h1>
+      <ul class="small-block-grid-1 medium-block-grid-2 candidate-list-container"></ul>
+    </script>
+    <script id="candidate-detail-template" type="text/x-handlebars-template">
+      <div class="row">
+        <div class="candidate-detail-card"></div>
+      </div>
+      <div class="row">
+        <div class="small-12 large-7 columns">
+          <div class="candidate-detail-program"></div>
+        </div>
+        <div class="small-12 large-5 columns">
+          <div class="candidate-detail-running-mates"></div>
+        </div>
+      </div>
+    </script>
+    <script id="theme-list-template" type="text/x-handlebars-template">
+      <h1>Thèmes</h1>
+      <ul class="small-block-grid-1 medium-block-grid-3">
+        {{#each this}}
+        <li>
+          <span>
+            <i class="fa fa-{{icon}}"></i> <a href="/SLVM2014/#/themes/{{id}}">{{name}}</a>
+          </span>
+        </li>
+        {{/each}}
+      </ul>
+    </script>
+    <script id="theme-detail-template" type="text/x-handlebars-template">
+      <h1>{{theme.name}}</h1>
+      {{#each programs}}
+      <div class="row candidate-projects">
+        <div class="small-12 large-3 columns text-center">
+          <img src="/SLVM2014/images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
+          <h4>{{@key}}</h4>
+        </div>
+        <div class="small-12 large-9 columns">
+          <ul class="no-bullet candidate-program-projects">
+            {{#each this.projects}}
+            <li>{{{md2html description}}}</li>
+            {{/each}}
+          </ul>
         </div>
       </div>
       {{/each}}
     </script>
-    <script id="candidate" type="text/x-handlebars-template">
-      <div class="row panel">
-        <div class="small-12 medium-2 large-2 columns"><img src="{{picture}}" class="circle" alt="{{name}}"></div>
-        <div class="small-12 medium-10 large-10 columns">
-          <h2>{{name}}</h2>
-          <h4 class="subheader">{{party.acronym}} ({{party.name}})</h4>
-          <ul class="no-bullet">
-            {{#if homepage}}<li><i class="fa fa-globe"></i> <a href="{{homepage}}">{{homepage}}</a></li>{{/if}}
-            {{#if twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{twitter}}">@{{twitter}}</a></li>{{/if}}
-            {{#if facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{facebook}}">{{facebook}}</a></li>{{/if}}
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 columns">
-        </div>
-      </div>
+    <script id="about-template" type="text/x-handlebars-template">
+      <h1>À propos</h1>
+      <p>
+        Je suis <a href="http://gillesfabio.com">Gilles Fabio</a>,
+        Laurentin depuis trente-deux ans, non-militant politique
+        et développeur de profession.
+      </p>
+      <p>
+        Réalisé sur mon temps libre, ce site n'est rattaché à aucun parti politique,
+        n'est sponsorisé par aucune entité et ne génère pas de revenus. Il ne stocke
+        aucune données, excepté votre IP (utilisée par <a href="http://www.google.com/analytics/">Google Analytics</a>
+        pour avoir un retour sur sa fréquentation).
+        Son code est librement disponible sur <a href="http://github.com/gillesfabio/SLVM2014">GitHub</a>,
+        sous <a href="http://opensource.org/licenses/MIT">licence MIT</a>.
+      </p>
+      <p>
+        Si vous rencontrez des bugs ou si vous remarquez des erreurs (fautes
+        de français, erreurs dans les profils et programmes des candidats, etc),
+        n'hésitez surtout pas à <a href="mailto:gilles@gillesfabio.com">me contacter</a>.
+      </p>
     </script>
     <script>window.APP_BASE_URL="/SLVM2014/";</script>
     
-      <script src="/SLVM2014/js/scripts.js"></script>
+    <script src="/SLVM2014/js/scripts.js"></script>
     
   </body>
 </html>
