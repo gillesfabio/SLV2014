@@ -30,7 +30,8 @@ le serveur local est propulsé par [Express](http://expressj.com).
 
 ## Installation
 
-*Vous devez disposer d'un environnement de développement [Node.js](http://nodejs.org)
+*Vous devez disposer d'un environnement de développement [Node.js](http://nodejs.org),
+ainsi que du logiciel de gestion de versions décentralisé [Git](http://git-scm.com/)
 sur votre ordinateur pour pouvoir installer et utiliser cette application.*
 
 Cloner le dépôt et lancer la commande `make install` :
