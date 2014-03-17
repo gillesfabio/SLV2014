@@ -26,7 +26,7 @@ La génération du site statique est propulsée par :
 * [yaml.js](https://github.com/jeremyfa/yaml.js)
 
 Les icônes proviennent du projet [Font Awesome](http://fontawesome.io/) et
-le serveur local est propulsé par [Express](http://expressj.com).
+le serveur local est propulsé par [Express](http://expressjs.com).
 
 ## Installation
 
