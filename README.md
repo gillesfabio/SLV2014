@@ -14,7 +14,7 @@ L'application statique est propulsée par :
 
 * [Backbone](http://backbonejs.org)
 * [Handlebars](http://handlebarsjs.com)
-* [Foundation](foundation.zurb.com)
+* [Foundation](http://foundation.zurb.com)
 * [markdown-js](https://github.com/evilstreak/markdown-js)
 * [countdown.js](https://bitbucket.org/mckamey/countdown.js)
 
