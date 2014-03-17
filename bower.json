@@ -18,6 +18,7 @@
   "dependencies": {
     "jquery": "2.x",
     "underscore": "1.x",
+    "underscore.string": "2.x",
     "backbone": "1.x",
     "handlebars": "1.x",
     "foundation": "zurb/bower-foundation#~5.1.1",
@@ -26,7 +27,6 @@
     "chai": "1.x",
     "sinonjs": "1.x",
     "markdown": "https://github.com/evilstreak/markdown-js/archive/v0.5.0.zip",
-    "countdownjs": "https://bitbucket.org/mckamey/countdown.js/get/tip.zip",
-    "underscore.string": "~2.3.3"
+    "countdownjs": "https://bitbucket.org/mckamey/countdown.js/get/tip.zip"
   }
 }
