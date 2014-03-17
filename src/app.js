@@ -8,7 +8,7 @@
   // ---------------------------------------------------------------------------
 
   var App = window.App = {
-    dataURL     : window.APP_BASE_URL + 'data.json',
+    dataURL     : window.APP_BASE_URL + 'data/data.json',
     templates   : {},
     models      : {},
     collections : {},
@@ -39,7 +39,7 @@
   });
 
   Handlebars.registerHelper('lastname', function(id) {
-    return id.split('-')[1];
+    if (id) return id.split('-')[1];
   });
 
   // ---------------------------------------------------------------------------

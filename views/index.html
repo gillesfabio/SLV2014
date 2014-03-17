@@ -19,7 +19,7 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="<%= baseurl %>">Municipales 2014</a></h1>
+            <h1><a href="<%= baseurl %>">SLVM 2014</a></h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
         </ul>
@@ -53,7 +53,7 @@
           {{#each candidates}}
           <li>
             <a href="<%= baseurl %>#/candidats/{{id}}">
-              <img src="<% if env == 'development' %>/data/candidates/{{lastname id}}/photo.jpg<% else %>{{picture}}<% endif %>" class="circle" alt="{{name}}">
+              <img src="<%= baseurl %>images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
             </a>
             <h5>{{name}}</h5>
             <h6>{{#if scoreTour1 }}{{scoreTour1}}{{else}}0{{/if}} %</h6>
@@ -75,7 +75,7 @@
     <script id="candidate-card-template" type="text/x-handlebars-template">
       <div class="row">
         <div class="small-12 columns">
-          <img src="<% if env == 'development' %>/data/candidates/{{lastname candidate.id}}/photo.jpg<% else %>{{candidate.picture}}<% endif %>" class="circle" alt="{{candidate.name}}">
+          <img src="<%= baseurl %>images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
         </div>
         <div class="small-12 columns">
           <h1>{{candidate.name}}</h1>
@@ -154,7 +154,7 @@
       {{#each programs}}
       <div class="row candidate-projects">
         <div class="small-12 large-3 columns text-center">
-          <img src="<% if env == 'development' %>/data/candidates/{{lastname candidate.id}}/photo.jpg<% else %>{{candidate.picture}}<% endif %>" class="circle" alt="{{candidate.name}}">
+          <img src="<%= baseurl %>images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
           <h4>{{@key}}</h4>
         </div>
         <div class="small-12 large-9 columns">

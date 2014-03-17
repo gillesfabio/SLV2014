@@ -7,6 +7,7 @@ var minifyCSS = require('gulp-minify-css');
 var compass   = require('gulp-compass');
 var clean     = require('gulp-clean');
 var uglify    = require('gulp-uglify');
+var rename    = require('gulp-rename');
 var express   = require('express');
 var swig      = require('swig');
 var tempWrite = require('temp-write');
@@ -92,10 +93,20 @@ gulp.task('compile:stylesheets', function() {
     }));
 });
 
+gulp.task('compile:images', function() {
+  return gulp.src('./data/candidates/**/*.jpg')
+    .pipe(rename(function(path) {
+      path.basename = path.dirname;
+      path.dirname = '';
+    }))
+    .pipe(gulp.dest('./build/images'));
+});
+
 gulp.task('compile', [
   'compile:data',
   'compile:index',
-  'compile:stylesheets'
+  'compile:stylesheets',
+  'compile:images'
 ]);
 
 // -----------------------------------------------------------------------------
@@ -103,8 +114,8 @@ gulp.task('compile', [
 // -----------------------------------------------------------------------------
 
 gulp.task('public:data', function() {
-  return gulp.src('build/data/data.json')
-    .pipe(gulp.dest('public'));
+  return gulp.src('build/data/*.json')
+    .pipe(gulp.dest('public/data'));
 });
 
 gulp.task('public:index', function() {
@@ -115,6 +126,11 @@ gulp.task('public:index', function() {
 gulp.task('public:fonts', function() {
   return gulp.src(FONTS)
     .pipe(gulp.dest('public/fonts'));
+});
+
+gulp.task('public:images', function() {
+  return gulp.src('./build/images/**/*.jpg')
+    .pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('public:javascripts', function() {
@@ -137,6 +153,7 @@ gulp.task('public', [
   'public:data',
   'public:index',
   'public:fonts',
+  'public:images',
   'public:javascripts',
   'public:stylesheets'
 ]);
@@ -185,7 +202,7 @@ function serve(env) {
       server.engine('html', customSwig.renderFile);
       server.set('view engine', 'html');
       server.set('views', path.join(__dirname, 'views'));
-      server.use(express.static(path.join(__dirname, 'build', 'data')));
+      server.use(express.static(path.join(__dirname, 'build')));
       server.use(express.static(__dirname));
       server.get('*', function(req, res) { res.render('index', context); });
       server.listen(SERVER_PORT);
@@ -193,7 +210,7 @@ function serve(env) {
     case 'test':
       context.env = 'test';
       server.use(express.static(__dirname));
-      server.use(express.static(path.join(__dirname, 'build', 'data')));
+      server.use(express.static(path.join(__dirname, 'build')));
       server.use(express.static(path.join(__dirname, 'test')));
       server.listen(SERVER_PORT);
     break;
