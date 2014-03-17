@@ -30,7 +30,7 @@ La génération du site statique est propulsée par :
 Les icônes proviennent du projet [Font Awesome](http://fontawesome.io/) et
 le serveur local est propulsé par [Express](http://expressjs.com).
 
-## Installation
+### Installation
 
 *Vous devez disposer d'un environnement de développement [Node.js](http://nodejs.org),
 ainsi que du logiciel de gestion de versions décentralisé [Git](http://git-scm.com/)
@@ -52,7 +52,7 @@ make serve
 
 Aller à l'adresse : http://localhost:3000.
 
-## Makefile : tâches disponibles
+### Makefile : tâches disponibles
 
 * `make venv` : crée un environnement virtuel pour les utilitaires Python
 * `make install` : installe les dépendances du projet
