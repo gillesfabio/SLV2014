@@ -15,6 +15,8 @@ L'application statique est propulsée par :
 * [Backbone](http://backbonejs.org)
 * [Handlebars](http://handlebarsjs.com)
 * [Foundation](http://foundation.zurb.com)
+* [SASS](http://sass-lang.com/)
+* [Compass](http://compass-style.org/)
 * [markdown-js](https://github.com/evilstreak/markdown-js)
 * [countdown.js](https://bitbucket.org/mckamey/countdown.js)
 
@@ -49,3 +51,17 @@ make serve
 ```
 
 Aller à l'adresse : http://localhost:3000.
+
+## Makefile : tâches disponibles
+
+* `make venv` : crée un environnement virtuel pour les utilitaires Python
+* `make install` : installe les dépendances du projet
+* `make clean` : supprime tous les dossiers non-versionnés (type `vendor`)
+* `make clean-buid` : supprime les dossiers `build` et `public`
+* `make build` : compile les fichiers nécessitant une compilation dans le dossier `build`
+* `make generate` : génère le site statique dans le dossier `public`
+* `make generate-github` : génère le site statique pour GitHub Pages
+* `make publish` : publie le site statique sur GitHub Pages
+* `make serve` : lance le serveur en mode développement
+* `make serve-prod` : lance le serveur en mode production
+* `make serve-test` : lance le serveur en mode test
