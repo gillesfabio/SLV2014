@@ -4,7 +4,7 @@ Code source de l'application accessible à l'adresse : http://gillesfabio.github
 
 Cette application permet d'accéder rapidement aux résultats, ainsi qu'aux profils
 et programmes des différents candidats aux élections municipales 2014
-de Saint-Laurent-du-Var (Alpes-Maritimes, France).
+de [Saint-Laurent-du-Var](https://goo.gl/maps/dk7RO) (Alpes-Maritimes, France).
 
 Les données sont formatées au format [YAML](http://www.yaml.org/) et accessibles
 dans le dossier `data`. Ces données ont été récupérées depuis les programmes
