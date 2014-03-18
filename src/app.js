@@ -62,9 +62,31 @@
   });
 
   App.collections.Candidate = Backbone.Collection.extend({
+
     model : App.models.Candidate,
     url   : App.dataURL,
-    parse : function(res) { return res.candidates; }
+
+    parse : function(res) {
+      return res.candidates;
+    },
+
+    hasRound2: function() {
+      return this.filter(function(model) {
+        if (model.get('scoreRound1')) return model.get('scoreRound1') > 50;
+      }).length > 0;
+    },
+
+    round2: function() {
+      if (!this.hasRound2()) return;
+      var prop = 'scoreRound2';
+      var models = this.chain().filter(function(model) {
+        return model.get(prop);
+      }).sortBy(function(model) {
+        return model.get(prop);
+      }).value().reverse();
+      if (models.length >= 2) models = models.slice(0, 2);
+      return new this.constructor(models);
+    }
   });
 
   App.collections.RunningMate = Backbone.Collection.extend({
@@ -77,8 +99,10 @@
     },
 
     findByCandidate: function(id) {
-      var models = this.filter(function(model) { return model.get('candidate').id === id; });
-      return new App.collections.RunningMate(models);
+      var models = this.filter(function(model) {
+        return model.get('candidate').id === id;
+      });
+      return new this.constructor(models);
     }
   });
 
@@ -108,7 +132,7 @@
           models.push(model);
         }
       });
-      return new App.collections.Program(models);
+      return new this.constructor(models);
     },
 
     findByThemeAndGroupByCandidate: function(id) {
@@ -374,8 +398,16 @@
     },
 
     render: function() {
+      var elected, candidatesRound2;
+      elected = this.candidates.findWhere({elected: true});
+      elected = elected ? elected.toJSON() : null;
+      candidatesRound2 = this.candidates.round2();
+      candidatesRound2 = candidatesRound2 ? candidatesRound2.toJSON : null;
       this.$el.html(this.template({
-        candidates: this.candidates.toJSON()
+        elected          : elected,
+        candidatesRound1 : this.candidates.toJSON(),
+        hasRound2        : this.candidates.hasRound2(),
+        candidatesRound2 : candidatesRound2
       }));
       this.renderTimers();
     }

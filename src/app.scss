@@ -291,6 +291,38 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 // Home
 // -----------------------------------------------------------------------------
+.elected {
+
+  background    : #4B77BE;
+  margin-bottom : rem-calc(20);
+
+  h2, h3 {
+    color          : #fff;
+    text-transform : uppercase;
+  }
+
+  h2 {
+    font-size   : rem-calc(28);
+    font-weight : normal;
+  }
+
+  h3 {
+    font-size   : rem-calc(18);
+    font-weight : normal;
+  }
+
+  .elected-header {
+    background : #3A539B;
+    padding    : rem-calc(20);
+    text-align : center;
+  }
+
+  .elected-content {
+    padding    : rem-calc(20);
+    text-align : center;
+  }
+}
+
 .results {
   border: 1px solid #ececec;
   margin-bottom: rem-calc(20);
@@ -307,12 +339,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 .results-content {
 
   padding: rem-calc(20);
-
-  .suspens {
-    text-align : center;
-    font-size  : rem-calc(20);
-    color      : #909090;
-  }
 
   li {
 
