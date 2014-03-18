@@ -23,6 +23,7 @@
           <ul class="right">
             <li><a href="/SLV2014/#/candidats">Candidats</a></li>
             <li><a href="/SLV2014/#/themes">Thèmes</a></li>
+            <li><a href="/SLV2014/#/bureaux">Bureaux de vote</a></li>
             <li><a href="/SLV2014/#/a-propos">À propos</a></li>
           </ul>
         </section>
@@ -184,6 +185,19 @@
       </div>
       {{/each}}
     </script>
+    <script id="polling-place-list-template" type="text/x-handlebars-template">
+      <h1>Bureaux de vote</h1>
+      <ul class="small-block-grid-1 medium-block-grid-3">
+        {{#each pollingPlaces}}
+        <li>
+          <div class="polling-place">
+            <h2>{{number}} <small>Horaires : {{opening}}</small></h2>
+            <p>{{{formatAddress address}}}</p>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </script>
     <script id="about-template" type="text/x-handlebars-template">
       <h1>À propos</h1>
       <p>
@@ -208,5 +222,15 @@
     
     <script src="/SLV2014/js/scripts.js"></script>
     
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-49116312-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>

@@ -86,6 +86,113 @@
       "icon": "laptop"
     }
   ],
+  "pollingPlaces": [
+    {
+      "number": "1",
+      "address": "Mairie — Hall d'entrée\n222 esplanade du Levant\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "2",
+      "address": "Conservatoire de Musique\n177 avenue Général Leclerc\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "3",
+      "address": "Gymnase Municipal\n418 esplanade du levant\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "4",
+      "address": "École Maternelle Djibouti (Salle de Jeux)\n21 rue J. B Bermond\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "5",
+      "address": "École Maternelle Djibouti (Salle de Classe 4)\n21 rue J. B Bermond\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "6",
+      "address": "École Maternelle Pasteur (Réfectoire Primaire)\n91 allée Pasteur\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "7",
+      "address": "École Maternelle Pasteur (Réfectoire Polyvalente)\n91 allée Pasteur\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "8",
+      "address": "École Primaire René Cassin (Hall d'Entrée)\n107 avenue Pierre Ziller\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "9",
+      "address": "École Maternelle René Cassin (Salle de Jeux)\n179 avenue Pierre Ziller\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "10",
+      "address": "École Maternelle René Cassin (CLM)\n62 avenue Pierre Ziller\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "11",
+      "address": "École Maternelle Louis Ravet (Réfectoire Maternelle)\n249 avenue Louis Ravet\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "12",
+      "address": "École Maternelle Louis Ravet (Réfectoire Primaire)\n249 avenue Louis Ravet\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "13",
+      "address": "École Maternelle Louis Ravet (Salle Polyvalente)\n342 avenue Paul Cézanne\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "14",
+      "address": "École Maternelle Michelis 1 (Salle de Classe)\n148 rue Pierre Lambert\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "15",
+      "address": "École Maternelle des Bigaradiers (Salle de Jeux)\n177 corniche Fahnestock\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "16",
+      "address": "Foyer des Anciens\n435 avenue du 11 Novembre\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "17",
+      "address": "École Primaire Castillon II (Salle de Tatami)\n89 allée des Ecureuils\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "18",
+      "address": "École Primaire Castillon II (Dortoir Maternelle)\n187 allée des Ecureuils\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "19",
+      "address": "École Primaire Castillon I (Salle de Jeux)\n192 allée des Ecureuils\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "20",
+      "address": "École Sainte-Pétronille\n1837 route de la Baronne\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    },
+    {
+      "number": "21",
+      "address": "École Maternelle de Montaleigne\n70 chemin de la Tour Carrée\n06700 Saint-Laurent-du-Var\n",
+      "opening": "8h-20h"
+    }
+  ],
   "candidates": [
     {
       "id": "francoise-benne",
