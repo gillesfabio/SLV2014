@@ -1,12 +1,12 @@
-id         : lionel-prados
-name       : Lionel Prados
-slogan     : Saint-Laurent-du-Var Bleu Marine
-homepage   : http://www.fnmunicipales.fr/saint-laurent/
-twitter    : ~
-facebook   : lionel.prados
-picture    : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/prados/photo.jpg
-programUrl : http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html
-party      : FN
-elected    : false
-scoreTour1 : null
-scoreTour2 : null
+id          : lionel-prados
+name        : Lionel Prados
+slogan      : Saint-Laurent-du-Var Bleu Marine
+homepage    : http://www.fnmunicipales.fr/saint-laurent/
+twitter     : ~
+facebook    : lionel.prados
+picture     : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/prados/photo.jpg
+programUrl  : http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html
+party       : FN
+elected     : false
+scoreRound1 : null
+scoreRound2 : null

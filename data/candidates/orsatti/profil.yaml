@@ -1,12 +1,12 @@
-id         : marc-orsatti
-name       : Marc Orsatti
-slogan     : Mieux vivre ensemble à Saint-Laurent du Var
-homepage   : http://marc.orsatti.over-blog.com/
-twitter    : MarcOrsatti
-facebook   : marc.orsatti
-picture    : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/orsatti/photo.jpg
-programUrl : http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html
-party      : PS
-elected    : false
-scoreTour1 : null
-scoreTour2 : null
+id          : marc-orsatti
+name        : Marc Orsatti
+slogan      : Mieux vivre ensemble à Saint-Laurent du Var
+homepage    : http://marc.orsatti.over-blog.com/
+twitter     : MarcOrsatti
+facebook    : marc.orsatti
+picture     : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/orsatti/photo.jpg
+programUrl  : http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html
+party       : PS
+elected     : false
+scoreRound1 : null
+scoreRound2 : null

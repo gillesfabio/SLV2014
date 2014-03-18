@@ -1,12 +1,12 @@
-id         : henri-revel
-name       : Henri Revel
-slogan     : Saint-Laurent pour tous
-homepage   : http://www.henrirevel.fr/
-twitter    : ~
-facebook   : henri.revel.7
-picture    : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/revel/photo.jpg
-programUrl : ~
-party      : UMP
-elected    : false
-scoreTour1 : null
-scoreTour2 : null
+id          : henri-revel
+name        : Henri Revel
+slogan      : Saint-Laurent pour tous
+homepage    : http://www.henrirevel.fr/
+twitter     : ~
+facebook    : henri.revel.7
+picture     : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/revel/photo.jpg
+programUrl  : ~
+party       : UMP
+elected     : false
+scoreRound1 : null
+scoreRound2 : null

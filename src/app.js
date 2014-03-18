@@ -327,14 +327,14 @@
     id: 'home',
 
     initialize: function(options) {
-      this.options    = _.extend({candidates: new App.collections.Candidate()}, options);
+      this.options = _.extend({candidates: new App.collections.Candidate()}, options);
       this.candidates = this.options.candidates;
-      this.template   = App.templates.home;
-      this.tsTour1    = null;
-      this.tsTour2    = null;
-      this.voteDates = {
-        tour1: new Date(2014, 2, 23),
-        tour2: new Date(2014, 2, 30)
+      this.template = App.templates.home;
+      this.tsRound1 = null;
+      this.tsRound2 = null;
+      this.dates = {
+        round1: new Date(2014, 2, 23),
+        round2: new Date(2014, 2, 30)
       };
       this.clearTimers();
       this.listenTo(this.candidates, 'sync', this.render);
@@ -342,20 +342,20 @@
     },
 
     clearTimers: function() {
-      window.clearInterval(this.tsTour1);
-      window.clearInterval(this.tsTour2);
+      window.clearInterval(this.tsRound1);
+      window.clearInterval(this.tsRound2);
     },
 
     renderTimers: function() {
-      this.tsTour1 = countdown(this.voteDates.tour1, function(ts) {
-        this.renderCountDown(ts, 'tour1');
+      this.tsRound1 = countdown(this.dates.round1, function(ts) {
+        this.renderCountDown(ts, 'round1');
       }.bind(this));
-      this.tsTour2 = countdown(this.voteDates.tour2, function(ts) {
-        this.renderCountDown(ts, 'tour2');
+      this.tsRound2 = countdown(this.dates.round2, function(ts) {
+        this.renderCountDown(ts, 'round2');
       }.bind(this));
     },
 
-    renderCountDown: function(ts, tour) {
+    renderCountDown: function(ts, round) {
       var output = [];
       var units = {
         'days'    : 'jour',
@@ -370,11 +370,13 @@
           output.push(_.str.sprintf('%d %s', ts[key], word));
         }
       }.bind(this));
-      this.$el.find(_.str.sprintf('.countdown-%s', tour)).html(output.join(', '));
+      this.$el.find(_.str.sprintf('.countdown-%s', round)).html(output.join(', '));
     },
 
     render: function() {
-      this.$el.html(this.template({candidates: this.candidates.toJSON()}));
+      this.$el.html(this.template({
+        candidates: this.candidates.toJSON()
+      }));
       this.renderTimers();
     }
   });

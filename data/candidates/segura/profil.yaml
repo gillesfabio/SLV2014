@@ -1,12 +1,12 @@
-id         : joseph-segura
-name       : Joseph Segura
-slogan     : Agir pour l'avenir de Saint-Laurent-du-Var
-homepage   : http://www.josephsegura.fr/
-twitter    : JSegura2014
-facebook   : 2014segura
-picture    : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/segura/photo.jpg
-programUrl : http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3
-party      : DVD
-elected    : false
-scoreTour1 : null
-scoreTour2 : null
+id          : joseph-segura
+name        : Joseph Segura
+slogan      : Agir pour l'avenir de Saint-Laurent-du-Var
+homepage    : http://www.josephsegura.fr/
+twitter     : JSegura2014
+facebook    : 2014segura
+picture     : https://raw.github.com/gillesfabio/SLVM2014/master/data/candidates/segura/photo.jpg
+programUrl  : http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3
+party       : DVD
+elected     : false
+scoreRound1 : null
+scoreRound2 : null
