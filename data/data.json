@@ -98,8 +98,8 @@
       "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
       "party": "DVD",
       "elected": false,
-      "scoreTour1": null,
-      "scoreTour2": null
+      "scoreRound1": null,
+      "scoreRound2": null
     },
     {
       "id": "marc-moschetti",
@@ -112,8 +112,8 @@
       "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
       "party": "SE",
       "elected": false,
-      "scoreTour1": null,
-      "scoreTour2": null
+      "scoreRound1": null,
+      "scoreRound2": null
     },
     {
       "id": "marc-orsatti",
@@ -126,8 +126,8 @@
       "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
       "party": "PS",
       "elected": false,
-      "scoreTour1": null,
-      "scoreTour2": null
+      "scoreRound1": null,
+      "scoreRound2": null
     },
     {
       "id": "lionel-prados",
@@ -140,8 +140,8 @@
       "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
       "party": "FN",
       "elected": false,
-      "scoreTour1": null,
-      "scoreTour2": null
+      "scoreRound1": null,
+      "scoreRound2": null
     },
     {
       "id": "henri-revel",
@@ -154,8 +154,8 @@
       "programUrl": null,
       "party": "UMP",
       "elected": false,
-      "scoreTour1": null,
-      "scoreTour2": null
+      "scoreRound1": null,
+      "scoreRound2": null
     },
     {
       "id": "joseph-segura",
@@ -168,8 +168,8 @@
       "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
       "party": "DVD",
       "elected": false,
-      "scoreTour1": null,
-      "scoreTour2": null
+      "scoreRound1": null,
+      "scoreRound2": null
     }
   ],
   "runningMates": [
@@ -190,8 +190,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -211,8 +211,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -232,8 +232,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -253,8 +253,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -274,8 +274,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -295,8 +295,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -316,8 +316,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -337,8 +337,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -358,8 +358,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -379,8 +379,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -400,8 +400,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -421,8 +421,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -442,8 +442,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -463,8 +463,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -484,8 +484,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -505,8 +505,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -526,8 +526,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -547,8 +547,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -568,8 +568,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -589,8 +589,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -610,8 +610,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -631,8 +631,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -652,8 +652,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -673,8 +673,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -694,8 +694,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -715,8 +715,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -736,8 +736,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -757,8 +757,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -778,8 +778,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -799,8 +799,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -820,8 +820,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -841,8 +841,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -862,8 +862,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -883,8 +883,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -904,8 +904,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -925,8 +925,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -946,8 +946,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -967,8 +967,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -988,8 +988,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1009,8 +1009,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1030,8 +1030,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1051,8 +1051,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1072,8 +1072,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1093,8 +1093,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1114,8 +1114,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1135,8 +1135,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1156,8 +1156,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1177,8 +1177,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1198,8 +1198,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1219,8 +1219,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1240,8 +1240,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1261,8 +1261,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1282,8 +1282,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1303,8 +1303,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1324,8 +1324,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1345,8 +1345,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1366,8 +1366,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1387,8 +1387,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1408,8 +1408,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1429,8 +1429,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1450,8 +1450,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1471,8 +1471,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1492,8 +1492,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1513,8 +1513,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1534,8 +1534,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1555,8 +1555,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1576,8 +1576,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1597,8 +1597,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1618,8 +1618,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1639,8 +1639,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1660,8 +1660,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1681,8 +1681,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1702,8 +1702,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1723,8 +1723,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1744,8 +1744,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1765,8 +1765,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1786,8 +1786,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1807,8 +1807,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1828,8 +1828,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1849,8 +1849,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1870,8 +1870,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1891,8 +1891,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1912,8 +1912,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1933,8 +1933,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1954,8 +1954,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1975,8 +1975,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -1996,8 +1996,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2017,8 +2017,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2038,8 +2038,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2059,8 +2059,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2080,8 +2080,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2101,8 +2101,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2122,8 +2122,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2143,8 +2143,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2164,8 +2164,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2185,8 +2185,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2206,8 +2206,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2227,8 +2227,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2248,8 +2248,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2269,8 +2269,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2290,8 +2290,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2311,8 +2311,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2332,8 +2332,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2353,8 +2353,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2374,8 +2374,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2395,8 +2395,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2416,8 +2416,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2437,8 +2437,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2458,8 +2458,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2479,8 +2479,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2500,8 +2500,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2521,8 +2521,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2542,8 +2542,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2563,8 +2563,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2584,8 +2584,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2605,8 +2605,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2626,8 +2626,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2647,8 +2647,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2668,8 +2668,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2689,8 +2689,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2710,8 +2710,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2731,8 +2731,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2752,8 +2752,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2773,8 +2773,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2794,8 +2794,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2815,8 +2815,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2836,8 +2836,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2857,8 +2857,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2878,8 +2878,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2899,8 +2899,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2920,8 +2920,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2941,8 +2941,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2962,8 +2962,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -2983,8 +2983,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3004,8 +3004,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3025,8 +3025,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3046,8 +3046,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3067,8 +3067,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3088,8 +3088,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3109,8 +3109,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3130,8 +3130,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3151,8 +3151,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3172,8 +3172,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3193,8 +3193,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3214,8 +3214,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3235,8 +3235,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3256,8 +3256,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3277,8 +3277,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3298,8 +3298,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3319,8 +3319,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3340,8 +3340,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3361,8 +3361,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3382,8 +3382,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3403,8 +3403,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3424,8 +3424,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3445,8 +3445,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3466,8 +3466,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3487,8 +3487,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3508,8 +3508,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3529,8 +3529,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3550,8 +3550,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3571,8 +3571,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3592,8 +3592,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3613,8 +3613,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3634,8 +3634,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3655,8 +3655,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3676,8 +3676,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3697,8 +3697,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3718,8 +3718,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     },
     {
@@ -3739,8 +3739,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       }
     }
   ],
@@ -3757,8 +3757,8 @@
         "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       },
       "projects": [
         {
@@ -4087,8 +4087,8 @@
         "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
         "party": "SE",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       },
       "projects": [
         {
@@ -4793,8 +4793,8 @@
         "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
         "party": "PS",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       },
       "projects": [
         {
@@ -5427,8 +5427,8 @@
         "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
         "party": "FN",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       },
       "projects": [
         {
@@ -5909,8 +5909,8 @@
         "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
         "party": "DVD",
         "elected": false,
-        "scoreTour1": null,
-        "scoreTour2": null
+        "scoreRound1": null,
+        "scoreRound2": null
       },
       "projects": [
         {
