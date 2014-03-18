@@ -191,8 +191,9 @@
         {{#each pollingPlaces}}
         <li>
           <div class="polling-place">
-            <h2>{{number}} <small>Horaires : {{opening}}</small></h2>
+            <h2>{{number}} <small>— Horaires : {{opening}}</small></h2>
             <p>{{{formatAddress address}}}</p>
+            <p><a href="{{gmapsLink gmapSearch}}" class="button tiny" target="_blank">Voir sur Google Maps</a></p>
           </div>
         </li>
         {{/each}}
