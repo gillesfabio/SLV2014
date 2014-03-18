@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLV2014.fr</title>
     
-    <link rel="stylesheet" href="/SLV2014/css/styles.css">
-    <script src="/SLV2014/js/modernizr.js"></script>
+    <link rel="stylesheet" href="http://slv2014.fr/css/styles.css">
+    <script src="http://slv2014.fr/js/modernizr.js"></script>
     
   </head>
   <body>
@@ -15,16 +15,16 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="/SLV2014/">SLV2014.fr</a></h1>
+            <h1><a href="http://slv2014.fr/">SLV2014.fr</a></h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
         </ul>
         <section class="top-bar-section">
           <ul class="right">
-            <li><a href="/SLV2014/#/candidats">Candidats</a></li>
-            <li><a href="/SLV2014/#/themes">Thèmes</a></li>
-            <li><a href="/SLV2014/#/bureaux">Bureaux de vote</a></li>
-            <li><a href="/SLV2014/#/a-propos">À propos</a></li>
+            <li><a href="http://slv2014.fr/#/candidats">Candidats</a></li>
+            <li><a href="http://slv2014.fr/#/themes">Thèmes</a></li>
+            <li><a href="http://slv2014.fr/#/bureaux">Bureaux de vote</a></li>
+            <li><a href="http://slv2014.fr/#/a-propos">À propos</a></li>
           </ul>
         </section>
       </nav>
@@ -38,8 +38,8 @@
           <h2>Maire élu</h2>
         </div>
         <div class="elected-content">
-          <a href="/SLV2014/#/candidats/{{elected.id}}">
-            <img src="/SLV2014/images/{{lastname elected.id}}.jpg" class="circle" alt="{{name}}">
+          <a href="http://slv2014.fr/#/candidats/{{elected.id}}">
+            <img src="http://slv2014.fr/images/{{lastname elected.id}}.jpg" class="circle" alt="{{name}}">
           </a>
           <h3>{{elected.name}}</h3>
         </div>
@@ -54,8 +54,8 @@
           <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
           {{#each candidatesRound1}}
           <li>
-            <a href="/SLV2014/#/candidats/{{id}}">
-              <img src="/SLV2014/images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
+            <a href="http://slv2014.fr/#/candidats/{{id}}">
+              <img src="http://slv2014.fr/images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
             </a>
             <h5>{{name}}</h5>
             {{#if scoreRound1 }}<h6>{{scoreRound1}}%</h6>{{/if}}
@@ -76,8 +76,8 @@
               <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
               {{#each candidatesRound2}}
               <li>
-                <a href="/SLV2014/#/candidats/{{id}}">
-                  <img src="/SLV2014/images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
+                <a href="http://slv2014.fr/#/candidats/{{id}}">
+                  <img src="http://slv2014.fr/images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
                 </a>
                 <h5>{{name}}</h5>
                 {{#if scoreRound2 }}<h6>{{scoreRound2}}%</h6>{{/if}}
@@ -93,7 +93,7 @@
     <script id="candidate-card-template" type="text/x-handlebars-template">
       <div class="row">
         <div class="small-12 columns">
-          <img src="/SLV2014/images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
+          <img src="http://slv2014.fr/images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
         </div>
         <div class="small-12 columns">
           <h1>{{candidate.name}}</h1>
@@ -106,7 +106,7 @@
           </ul>
           {{#if showDetailLink}}
           <p>
-            <a href="/SLV2014/#/candidats/{{candidate.id}}" class="button radius">
+            <a href="http://slv2014.fr/#/candidats/{{candidate.id}}" class="button radius">
             <i class="fa fa-list-ol"></i> Mon Programme
             </a>
           </p>
@@ -130,7 +130,7 @@
     <script id="candidate-program-template" type="text/x-handlebars-template">
       <h2>Mon programme</h2>
       {{#each projects}}
-      <h3 class="theme-title"><a href="/SLV2014/#/themes/{{this.0.theme.slug}}">{{@key}}</a></h3>
+      <h3 class="theme-title"><a href="http://slv2014.fr/#/themes/{{this.0.theme.slug}}">{{@key}}</a></h3>
       <ul class="no-bullet candidate-program-projects">
         {{#each this}}
         <li>{{{md2html description}}}</li>
@@ -161,7 +161,7 @@
         {{#each this}}
         <li>
           <span>
-            <i class="fa fa-{{icon}}"></i> <a href="/SLV2014/#/themes/{{id}}">{{name}}</a>
+            <i class="fa fa-{{icon}}"></i> <a href="http://slv2014.fr/#/themes/{{id}}">{{name}}</a>
           </span>
         </li>
         {{/each}}
@@ -172,7 +172,7 @@
       {{#each programs}}
       <div class="row candidate-projects">
         <div class="small-12 large-3 columns text-center">
-          <img src="/SLV2014/images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
+          <img src="http://slv2014.fr/images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
           <h4>{{@key}}</h4>
         </div>
         <div class="small-12 large-9 columns">
@@ -219,9 +219,9 @@
         n'hésitez surtout pas à <a href="mailto:gilles@gillesfabio.com">me contacter</a>.
       </p>
     </script>
-    <script>window.APP_BASE_URL="/SLV2014/";</script>
+    <script>window.APP_BASE_URL="http://slv2014.fr/";</script>
     
-    <script src="/SLV2014/js/scripts.js"></script>
+    <script src="http://slv2014.fr/js/scripts.js"></script>
     
     <script type="text/javascript">
       var _gaq = _gaq || [];
