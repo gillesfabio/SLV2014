@@ -63,6 +63,10 @@ i {
 
   text-transform: uppercase;
 
+  h1 {
+    text-align: left;
+  }
+
   .name h1 a {
     font-size: rem-calc(16);
   }
