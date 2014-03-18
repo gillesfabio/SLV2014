@@ -24,7 +24,7 @@ generate:
 	@gulp generate
 
 generate-github:
-	BASE_URL=/SLV2014/ gulp generate
+	BASE_URL=http://slv2014.fr/ gulp generate
 
 publish: generate-github
 	. .venv/bin/activate && ghp-import $(PUBLIC_DIR)
