@@ -462,6 +462,9 @@
   // ---------------------------------------------------------------------------
 
   $(function() {
+    $('.top-bar ul.right li').click(function() {
+      $('.top-bar').removeClass('expanded');
+    });
     var router = new App.Router();
     Backbone.history.start({root: window.APP_BASE_URL});
   });
