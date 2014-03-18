@@ -8,28 +8,27 @@
   // ---------------------------------------------------------------------------
 
   var App = window.App = {
-    dataURL     : window.APP_BASE_URL + 'data/data.json',
-    templates   : {},
-    models      : {},
-    collections : {},
-    views       : {},
-    controllers : {}
+    dataURL: window.APP_BASE_URL + 'data/data.json',
+    templates: {},
+    models: {},
+    collections: {},
+    views: {},
+    controllers: {}
   };
 
   // ---------------------------------------------------------------------------
   // Templates
   // ---------------------------------------------------------------------------
 
-  App.templates.home             = Handlebars.compile($('#home-template').html());
-  App.templates.about            = Handlebars.compile($('#about-template').html());
-  App.templates.candidateCard    = Handlebars.compile($('#candidate-card-template').html());
-  App.templates.runningMateList  = Handlebars.compile($('#running-mate-list-template').html());
+  App.templates.home = Handlebars.compile($('#home-template').html());
+  App.templates.about = Handlebars.compile($('#about-template').html());
+  App.templates.candidateCard = Handlebars.compile($('#candidate-card-template').html());
+  App.templates.runningMateList = Handlebars.compile($('#running-mate-list-template').html());
   App.templates.candidateProgram = Handlebars.compile($('#candidate-program-template').html());
-  App.templates.candidateList    = Handlebars.compile($('#candidate-list-template').html());
-  App.templates.candidateDetail  = Handlebars.compile($('#candidate-detail-template').html());
-  App.templates.themeDetail      = Handlebars.compile($('#theme-detail-template').html());
-  App.templates.themeList        = Handlebars.compile($('#theme-list-template').html());
-  App.templates.themeList        = Handlebars.compile($('#theme-list-template').html());
+  App.templates.candidateList = Handlebars.compile($('#candidate-list-template').html());
+  App.templates.candidateDetail = Handlebars.compile($('#candidate-detail-template').html());
+  App.templates.themeDetail = Handlebars.compile($('#theme-detail-template').html());
+  App.templates.themeList = Handlebars.compile($('#theme-list-template').html());
   App.templates.pollingPlaceList = Handlebars.compile($('#polling-place-list-template').html());
 
   //----------------------------------------------------------------------------
@@ -62,34 +61,34 @@
   // Models
   // ---------------------------------------------------------------------------
 
-  App.models.Theme        = Backbone.Model.extend({});
+  App.models.Theme = Backbone.Model.extend({});
   App.models.PollingPlace = Backbone.Model.extend({});
-  App.models.Candidate    = Backbone.Model.extend({});
-  App.models.RunningMate  = Backbone.Model.extend({});
-  App.models.Program      = Backbone.Model.extend({});
+  App.models.Candidate = Backbone.Model.extend({});
+  App.models.RunningMate = Backbone.Model.extend({});
+  App.models.Program = Backbone.Model.extend({});
 
   // ---------------------------------------------------------------------------
   // Collections
   // ---------------------------------------------------------------------------
 
   App.collections.Theme = Backbone.Collection.extend({
-    model : App.models.Theme,
-    url   : App.dataURL,
-    parse : function(res) { return res.themes; }
+    model: App.models.Theme,
+    url: App.dataURL,
+    parse: function(res) { return res.themes; }
   });
 
   App.collections.PollingPlace = Backbone.Collection.extend({
-    model : App.models.PollingPlace,
-    url   : App.dataURL,
-    parse : function(res) { return res.pollingPlaces; }
+    model: App.models.PollingPlace,
+    url: App.dataURL,
+    parse: function(res) { return res.pollingPlaces; }
   });
 
   App.collections.Candidate = Backbone.Collection.extend({
 
-    model : App.models.Candidate,
-    url   : App.dataURL,
+    model: App.models.Candidate,
+    url: App.dataURL,
 
-    parse : function(res) {
+    parse: function(res) {
       return res.candidates;
     },
 
@@ -114,8 +113,8 @@
 
   App.collections.RunningMate = Backbone.Collection.extend({
 
-    model : App.models.RunningMate,
-    url   : App.dataURL,
+    model: App.models.RunningMate,
+    url: App.dataURL,
 
     parse: function(res) {
       return res.runningMates;
@@ -131,8 +130,8 @@
 
   App.collections.Program = Backbone.Collection.extend({
 
-    model : App.models.Program,
-    url   : App.dataURL,
+    model: App.models.Program,
+    url: App.dataURL,
 
     parse: function(res) {
       return res.programs;
@@ -186,36 +185,36 @@
 
     initialize: function(options) {
       this.options = _.extend({
-        candidate      : new App.models.Candidate(),
-        showDetailLink : false
+        candidate: new App.models.Candidate(),
+        showDetailLink: false
       }, options);
-      this.candidate      = this.options.candidate;
+      this.candidate = this.options.candidate;
       this.showDetailLink = this.options.showDetailLink;
-      this.template       = App.templates.candidateCard;
+      this.template = App.templates.candidateCard;
       this.render();
     },
 
     render: function() {
       this.$el.html(this.template({
-        candidate      : this.candidate.toJSON(),
-        showDetailLink : this.showDetailLink
+        candidate: this.candidate.toJSON(),
+        showDetailLink: this.showDetailLink
       }));
     }
   });
 
   App.views.CandidateProgram = Backbone.View.extend({
 
-    tagName   : 'div',
-    className : 'candidate-program',
+    tagName: 'div',
+    className: 'candidate-program',
 
     initialize: function(options) {
       this.options = _.extend({
-        programs  : new App.collections.Program(),
-        candidate : new App.models.Candidate()
+        programs: new App.collections.Program(),
+        candidate: new App.models.Candidate()
       }, options);
-      this.programs  = this.options.programs;
+      this.programs = this.options.programs;
       this.candidate = this.options.candidate;
-      this.template  = App.templates.candidateProgram;
+      this.template = App.templates.candidateProgram;
       this.listenTo(this.programs, 'sync', this.render);
       this.programs.fetch();
     },
@@ -234,12 +233,12 @@
 
     initialize: function(options) {
       this.options = _.extend({
-        runningMates : new App.collections.RunningMate(),
-        candidate    : new App.models.Candidate()
+        runningMates: new App.collections.RunningMate(),
+        candidate: new App.models.Candidate()
       }, options);
-      this.candidate    = this.options.candidate;
+      this.candidate = this.options.candidate;
       this.runningMates = this.options.runningMates;
-      this.template     = App.templates.runningMateList;
+      this.template = App.templates.runningMateList;
       this.listenTo(this.runningMates, 'sync', this.render);
       this.runningMates.fetch();
     },
@@ -260,18 +259,19 @@
         candidates: new App.collections.Candidate()
       }, options);
       this.candidates = this.options.candidates;
-      this.template   = App.templates.candidateList;
+      this.template = App.templates.candidateList;
       this.listenTo(this.candidates, 'sync', this.render);
       this.candidates.fetch();
     },
 
     render: function() {
       this.$el.html(this.template());
+      this.candidates = new App.collections.Candidate(this.candidates.shuffle());
       this.candidates.each(function(candidate) {
         var view = new App.views.CandidateCard({
-          tagName        : 'li',
-          candidate      : candidate,
-          showDetailLink : candidate.get('programUrl') ? true : false
+          tagName: 'li',
+          candidate: candidate,
+          showDetailLink: candidate.get('programUrl') ? true : false
         });
         this.$el.find('.candidate-list-container').append(view.el);
       }.bind(this));
@@ -285,31 +285,31 @@
 
     initialize: function(options) {
       this.options = _.extend({
-        candidate    : new App.models.Candidate(),
-        programs     : new App.collections.Program(),
-        runningMates : new App.collections.RunningMate()
+        candidate: new App.models.Candidate(),
+        programs: new App.collections.Program(),
+        runningMates: new App.collections.RunningMate()
       }, options);
 
-      this.candidate    = this.options.candidate;
-      this.programs     = this.options.programs;
+      this.candidate = this.options.candidate;
+      this.programs = this.options.programs;
       this.runningMates = this.options.runningMates;
-      this.template     = App.templates.candidateDetail;
+      this.template = App.templates.candidateDetail;
       this.setSubviews();
       this.render();
     },
 
     setSubviews: function() {
       this.candidateCardView = new App.views.CandidateCard({
-        candidate      : this.candidate,
-        showDetailLink : false
+        candidate: this.candidate,
+        showDetailLink: false
       });
       this.programView = new App.views.CandidateProgram({
-        programs  : this.programs,
-        candidate : this.candidate
+        programs: this.programs,
+        candidate: this.candidate
       });
       this.runningMateListView = new App.views.RunningMateList({
-        runningMates : this.runningMates,
-        candidate    : this.candidate
+        runningMates: this.runningMates,
+        candidate: this.candidate
       });
     },
 
@@ -330,7 +330,7 @@
       this.options = _.extend({
         themes: new App.collections.Theme()
       }, options);
-      this.themes   = this.options.themes;
+      this.themes = this.options.themes;
       this.template = App.templates.themeList;
       this.listenTo(this.themes, 'sync', this.render);
       this.themes.fetch();
@@ -348,10 +348,10 @@
 
     initialize: function(options) {
       this.options = _.extend({
-        theme    : new App.models.Theme(),
-        programs : new App.collections.Program()
+        theme: new App.models.Theme(),
+        programs: new App.collections.Program()
       }, options);
-      this.theme    = this.options.theme;
+      this.theme = this.options.theme;
       this.programs = this.options.programs;
       this.template = App.templates.themeDetail;
       this.listenTo(this.programs, 'sync', this.render);
@@ -359,11 +359,10 @@
     },
 
     render: function() {
-      var themeID  = this.theme.get('id');
-      var programs = this.programs.findByThemeAndGroupByCandidate(themeID);
+      var programs = this.programs.findByThemeAndGroupByCandidate(this.theme.get('id'));
       this.$el.html(this.template({
-        theme    : this.theme.toJSON(),
-        programs : programs
+        theme: this.theme.toJSON(),
+        programs: programs
       }));
     }
   });
@@ -424,12 +423,12 @@
       elected = this.candidates.findWhere({elected: true});
       elected = elected ? elected.toJSON() : null;
       candidatesRound2 = this.candidates.round2();
-      candidatesRound2 = candidatesRound2 ? candidatesRound2.toJSON : null;
+      candidatesRound2 = candidatesRound2 ? candidatesRound2.toJSON() : null;
       this.$el.html(this.template({
-        elected          : elected,
-        candidatesRound1 : this.candidates.toJSON(),
-        hasRound2        : this.candidates.hasRound2(),
-        candidatesRound2 : candidatesRound2
+        elected: elected,
+        candidatesRound1: new App.collections.Candidate(this.candidates.shuffle()).toJSON(),
+        hasRound2: this.candidates.hasRound2(),
+        candidatesRound2: candidatesRound2
       }));
       this.renderTimers();
     }
@@ -477,9 +476,9 @@
     candidates.fetch({
       success: function(candidates) {
         var view  = new App.views.CandidateDetail({
-          candidate    : candidates.findWhere({id: id}),
-          programs     : new App.collections.Program(),
-          runningMates : new App.collections.RunningMate()
+          candidate: candidates.findWhere({id: id}),
+          programs: new App.collections.Program(),
+          runningMates: new App.collections.RunningMate()
         });
         $content.html(view.el);
       },
@@ -527,13 +526,13 @@
 
   App.Router = Backbone.Router.extend({
     routes: {
-      ''              : App.controllers.home,
-      'candidats'     : App.controllers.candidateList,
+      '': App.controllers.home,
+      'candidats': App.controllers.candidateList,
       'candidats/:id' : App.controllers.candidateDetail,
-      'themes'        : App.controllers.themeList,
-      'themes/:id'    : App.controllers.themeDetail,
-      'bureaux'       : App.controllers.pollingPlaceList,
-      'a-propos'      : App.controllers.about
+      'themes': App.controllers.themeList,
+      'themes/:id': App.controllers.themeDetail,
+      'bureaux': App.controllers.pollingPlaceList,
+      'a-propos': App.controllers.about
     }
   });
 
