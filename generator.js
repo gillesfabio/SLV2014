@@ -96,6 +96,7 @@ Generator.prototype.buildPollingPlaces = function buildPollingPlaces() {
     obj.number = key;
     obj.address = raw.address;
     obj.opening = raw.opening;
+    obj.gmapSearch = raw.gmapSearch;
     this.data.pollingPlaces.push(obj);
   }.bind(this));
 };
