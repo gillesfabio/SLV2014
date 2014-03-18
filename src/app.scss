@@ -3,16 +3,16 @@
 // -----------------------------------------------------------------------------
 // Application constants
 // -----------------------------------------------------------------------------
-$slvm-color-dark1: #3A539B;
-$slvm-color-dark2: #4B77BE;
-$slvm-color-dark2-hover: #1F3A93;
-$slvm-color-light-border: #ECECEC;
-$slvm-candidate-slogan-color: #909090;
+$slv-color-dark1: #3A539B;
+$slv-color-dark2: #4B77BE;
+$slv-color-dark2-hover: #1F3A93;
+$slv-color-light-border: #ECECEC;
+$slv-candidate-slogan-color: #909090;
 
 // -----------------------------------------------------------------------------
 // Foundation Settings Overrides
 // -----------------------------------------------------------------------------
-$topbar-bg: $slvm-color-dark1;
+$topbar-bg: $slv-color-dark1;
 $topbar-height: 50px;
 $topbar-link-color: #fff;
 $topbar-link-color-hover: #fff;
@@ -20,13 +20,13 @@ $topbar-link-color-active: #fff;
 $topbar-link-color-active-hover: #fff;
 $topbar-link-weight: normal;
 $topbar-link-font-size: rem-calc(14);
-$topbar-link-bg-hover: $slvm-color-dark2-hover;
-$topbar-link-bg-active: $slvm-color-dark2;
-$topbar-link-bg-active-hover: $slvm-color-dark2-hover;
-$topbar-dropdown-bg: $slvm-color-dark1;
+$topbar-link-bg-hover: $slv-color-dark2-hover;
+$topbar-link-bg-active: $slv-color-dark2;
+$topbar-link-bg-active-hover: $slv-color-dark2-hover;
+$topbar-dropdown-bg: $slv-color-dark1;
 $topbar-dropdown-link-bg: #fff;
-$anchor-font-color: $slvm-color-dark1;
-$anchor-font-color-hover: $slvm-color-dark2;
+$anchor-font-color: $slv-color-dark1;
+$anchor-font-color-hover: $slv-color-dark2;
 
 // -----------------------------------------------------------------------------
 // Load Foundation
@@ -46,14 +46,14 @@ h1 {
   text-transform : uppercase;
   font-size      : rem-calc(28);
   font-weight    : 200;
-  border-bottom  : 1px solid $slvm-color-light-border;
+  border-bottom  : 1px solid $slv-color-light-border;
   margin-bottom  : rem-calc(20);
-  color          : $slvm-color-dark1;
+  color          : $slv-color-dark1;
   text-align     : center;
 }
 
 i {
-  color: $slvm-color-dark1;
+  color: $slv-color-dark1;
 }
 
 // -----------------------------------------------------------------------------
@@ -77,7 +77,7 @@ i {
 }
 
 .top-bar-section ul li:hover > a {
-  background: $slvm-color-dark2-hover !important;
+  background: $slv-color-dark2-hover !important;
 }
 
 // -----------------------------------------------------------------------------
@@ -91,14 +91,14 @@ i {
 // Buttons
 // -----------------------------------------------------------------------------
 .button {
-  background: $slvm-color-dark1;
+  background: $slv-color-dark1;
   i {
     color: #ececec;
   }
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
-  background: $slvm-color-dark2;
+  background: $slv-color-dark2;
 }
 
 // -----------------------------------------------------------------------------
@@ -125,7 +125,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
   h2 {
     font-size      : rem-calc(18);
-    color          : $slvm-candidate-slogan-color;
+    color          : $slv-candidate-slogan-color;
     letter-spacing : rem-calc(-1);
     padding        : 0;
     margin         : rem-calc(5 0 5 0);

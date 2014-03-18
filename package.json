@@ -1,13 +1,13 @@
 {
-  "name": "SLVM2014",
+  "name": "SLV2014",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/gillesfabio/SLVM2014.git"
+    "url": "git://github.com/gillesfabio/SLV2014.git"
   },
   "author": "Gilles Fabio <gilles@gillesfabio.com",
   "license": "MIT",
-  "homepage": "https://github.com/gillesfabio/SLVM2014",
+  "homepage": "https://github.com/gillesfabio/SLV2014",
   "private": true,
   "dependencies": {
     "express": "3.x",

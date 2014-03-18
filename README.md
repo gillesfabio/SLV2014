@@ -1,6 +1,6 @@
-# SLV Municipales 2014
+# SLV2014.fr
 
-Code source de l'application accessible à l'adresse : http://gillesfabio.github.io/SLVM2014.
+Code source de l'application [SLV2014.fr](http://slv2014.fr).
 
 Cette application permet d'accéder rapidement aux résultats, ainsi qu'aux profils
 et programmes des différents candidats aux élections municipales 2014
@@ -39,8 +39,8 @@ sur votre ordinateur pour pouvoir installer et utiliser cette application.*
 Cloner le dépôt et lancer la commande `make install` :
 
 ```
-git clone https://github.com/gillesfabio/SLVM2014.git
-cd SLVM2014
+git clone https://github.com/gillesfabio/SLV2014.git
+cd SLV2014
 make install
 ```
 
