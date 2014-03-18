@@ -57,12 +57,12 @@
 - 
   id   : democratie
   name : "Démocratie"
-  icon : volume-up
+  icon : comments-o
 - 
   id   : seniors
   name : "Seniors"
-  icon : volume-up
+  icon : male
 - 
   id   : numerique
   name : "Numérique"
-  icon : volume-up
+  icon : laptop
