@@ -93,6 +93,11 @@ gulp.task('compile:stylesheets', function() {
     }));
 });
 
+gulp.task('compile:favicon', function() {
+  return gulp.src('./src/favicon.ico')
+    .pipe(gulp.dest('./build/images'));
+});
+
 gulp.task('compile:images', function() {
   return gulp.src('./data/candidates/**/*.jpg')
     .pipe(rename(function(path) {
@@ -106,6 +111,7 @@ gulp.task('compile', [
   'compile:data',
   'compile:index',
   'compile:stylesheets',
+  'compile:favicon',
   'compile:images'
 ]);
 
@@ -130,6 +136,11 @@ gulp.task('public:fonts', function() {
 
 gulp.task('public:images', ['compile:images'], function() {
   return gulp.src('./build/images/**/*.jpg')
+    .pipe(gulp.dest('./public/images'));
+});
+
+gulp.task('public:favicon', ['compile:favicon'], function() {
+  return gulp.src('./build/images/favicon.ico')
     .pipe(gulp.dest('./public/images'));
 });
 
@@ -160,6 +171,7 @@ gulp.task('public', [
   'public:index',
   'public:fonts',
   'public:images',
+  'public:favicon',
   'public:javascripts',
   'public:stylesheets',
   'public:cname'
