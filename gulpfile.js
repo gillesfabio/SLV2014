@@ -149,13 +149,20 @@ gulp.task('public:stylesheets', ['compile:stylesheets'], function() {
     .pipe(gulp.dest('public/css'));
 });
 
+gulp.task('public:cname', function() {
+  var file = tempWrite.sync('slv2014.fr', 'CNAME');
+  return gulp.src(file)
+    .pipe(gulp.dest('public'));
+});
+
 gulp.task('public', [
   'public:data',
   'public:index',
   'public:fonts',
   'public:images',
   'public:javascripts',
-  'public:stylesheets'
+  'public:stylesheets',
+  'public:cname'
 ]);
 
 // -----------------------------------------------------------------------------
