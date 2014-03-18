@@ -357,6 +357,30 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 }
 
+// -----------------------------------------------------------------------------
+// Polling Places
+// -----------------------------------------------------------------------------
+.polling-place-list {
+
+  .polling-place {
+
+    border: 1px solid #ececec;
+
+    h2 {
+      font-size      : rem-calc(16);
+      background     : #f9f9f9;
+      padding        : rem-calc(10);
+      margin         : 0;
+      font-weight    : bold;
+      letter-spacing : -1px;
+    }
+
+    p {
+      font-size: rem-calc(13);
+      padding: 10px;
+    }
+  }
+}
 
 // -----------------------------------------------------------------------------
 // Utilities

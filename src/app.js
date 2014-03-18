@@ -29,6 +29,8 @@
   App.templates.candidateDetail  = Handlebars.compile($('#candidate-detail-template').html());
   App.templates.themeDetail      = Handlebars.compile($('#theme-detail-template').html());
   App.templates.themeList        = Handlebars.compile($('#theme-list-template').html());
+  App.templates.themeList        = Handlebars.compile($('#theme-list-template').html());
+  App.templates.pollingPlaceList = Handlebars.compile($('#polling-place-list-template').html());
 
   //----------------------------------------------------------------------------
   // Template Helpers
@@ -36,6 +38,11 @@
 
   Handlebars.registerHelper('md2html', function(md) {
     return new Handlebars.SafeString(markdown.toHTML(md));
+  });
+
+  Handlebars.registerHelper('formatAddress', function(address) {
+    address = address.replace(/\n/g, '<br>');
+    return new Handlebars.SafeString(address);
   });
 
   Handlebars.registerHelper('lastname', function(id) {
@@ -46,10 +53,11 @@
   // Models
   // ---------------------------------------------------------------------------
 
-  App.models.Theme       = Backbone.Model.extend({});
-  App.models.Candidate   = Backbone.Model.extend({});
-  App.models.RunningMate = Backbone.Model.extend({});
-  App.models.Program     = Backbone.Model.extend({});
+  App.models.Theme        = Backbone.Model.extend({});
+  App.models.PollingPlace = Backbone.Model.extend({});
+  App.models.Candidate    = Backbone.Model.extend({});
+  App.models.RunningMate  = Backbone.Model.extend({});
+  App.models.Program      = Backbone.Model.extend({});
 
   // ---------------------------------------------------------------------------
   // Collections
@@ -59,6 +67,12 @@
     model : App.models.Theme,
     url   : App.dataURL,
     parse : function(res) { return res.themes; }
+  });
+
+  App.collections.PollingPlace = Backbone.Collection.extend({
+    model : App.models.PollingPlace,
+    url   : App.dataURL,
+    parse : function(res) { return res.pollingPlaces; }
   });
 
   App.collections.Candidate = Backbone.Collection.extend({
@@ -412,6 +426,28 @@
     }
   });
 
+  App.views.PollingPlaceList = Backbone.View.extend({
+
+    tagName   : 'div',
+    className : 'polling-place-list',
+
+    initialize: function(options) {
+      this.options = _.extend({
+        pollingPlaces: new App.collections.PollingPlace()
+      }, options);
+      this.pollingPlaces = this.options.pollingPlaces;
+      this.template = App.templates.pollingPlaceList;
+      this.listenTo(this.pollingPlaces, 'sync', this.render);
+      this.pollingPlaces.fetch();
+    },
+
+    render: function() {
+      this.$el.html(this.template({
+        pollingPlaces: this.pollingPlaces.toJSON()
+      }));
+    }
+  });
+
   // ---------------------------------------------------------------------------
   // Controllers
   // ---------------------------------------------------------------------------
@@ -465,6 +501,13 @@
     });
   };
 
+  App.controllers.pollingPlaceList = function() {
+    var view = new App.views.PollingPlaceList({
+      pollingPlaces: new App.collections.PollingPlace()
+    });
+    $('#content').html(view.el);
+  };
+
   App.controllers.about = function() {
     $('#content').html(App.templates.about);
   };
@@ -480,6 +523,7 @@
       'candidats/:id' : App.controllers.candidateDetail,
       'themes'        : App.controllers.themeList,
       'themes/:id'    : App.controllers.themeDetail,
+      'bureaux'       : App.controllers.pollingPlaceList,
       'a-propos'      : App.controllers.about
     }
   });
