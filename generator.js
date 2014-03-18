@@ -7,10 +7,11 @@ var YAML  = require('yamljs');
 
 var Generator = module.exports = function Generator() {
   this.data = {
-    themes       : [],
-    candidates   : [],
-    runningMates : [],
-    programs     : []
+    themes        : [],
+    pollingPlaces : [],
+    candidates    : [],
+    runningMates  : [],
+    programs      : []
   };
   this.rawData = {};
 };
@@ -82,12 +83,26 @@ Generator.prototype.buildCandidates = function buildCandidates() {
 };
 
 Generator.prototype.buildThemes = function buildThemes() {
-  var file = path.join(__dirname, 'data', 'themes', 'themes.yaml');
+  var file = path.join(__dirname, 'data', 'themes.yaml');
   if (fs.existsSync(file)) this.data.themes = YAML.load(file);
+};
+
+Generator.prototype.buildPollingPlaces = function buildPollingPlaces() {
+  var file = path.join(__dirname, 'data', 'polling-places.yaml');
+  var yaml = YAML.load(file);
+  Object.keys(yaml).forEach(function(key) {
+    var obj = {};
+    var raw = yaml[key];
+    obj.number = key;
+    obj.address = raw.address;
+    obj.opening = raw.opening;
+    this.data.pollingPlaces.push(obj);
+  }.bind(this));
 };
 
 Generator.prototype.build = function build() {
   this.buildThemes();
+  this.buildPollingPlaces();
   this.buildCandidates();
   this.formatCandidates();
   this.formatRunningMates();
