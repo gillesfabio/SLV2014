@@ -159,6 +159,7 @@
 
     findByThemeAndGroupByCandidate: function(id) {
       var models = this.findByTheme(id);
+      models = new this.constructor(models.shuffle());
       models = models.groupBy(function(m) { return m.get('candidate').name; });
       Object.keys(models).forEach(function(key) {
         models[key] = models[key][0].toJSON();
