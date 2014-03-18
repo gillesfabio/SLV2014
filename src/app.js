@@ -384,8 +384,7 @@
       var units = {
         'days'    : 'jour',
         'hours'   : 'heure',
-        'minutes' : 'minute',
-        'seconds' : 'second'
+        'minutes' : 'minute'
       };
       Object.keys(units).forEach(function(key) {
         var word = units[key];
