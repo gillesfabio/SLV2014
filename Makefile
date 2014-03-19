@@ -20,17 +20,17 @@ clean-build:
 build:
 	@gulp build
 
-generate:
+generate: clean-build
 	@gulp generate
 
-generate-github:
+generate-github: clean-build
 	BASE_URL=http://slv2014.fr/ gulp generate
 
 publish: generate-github
 	. .venv/bin/activate && ghp-import $(PUBLIC_DIR)
 	git push origin gh-pages
 
-serve:
+serve: clean-build
 	@gulp serve
 
 serve-prod:
