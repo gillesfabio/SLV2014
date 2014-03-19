@@ -196,7 +196,7 @@
     },
 
     render: function() {
-      this.showDetailLink = this.candidate.get('programUrl') ? true : false;
+      this.showDetailLink =
       this.$el.html(this.template({
         candidate: this.candidate.toJSON(),
         showDetailLink: this.showDetailLink
@@ -273,7 +273,8 @@
       this.candidates.each(function(candidate) {
         var view = new App.views.CandidateCard({
           tagName: 'li',
-          candidate: candidate
+          candidate: candidate,
+          showDetailLink: candidate.get('programUrl') ? true : false
         });
         this.$el.find('.candidate-list-container').append(view.el);
       }.bind(this));
@@ -301,7 +302,10 @@
     },
 
     setSubviews: function() {
-      this.candidateCardView = new App.views.CandidateCard({candidate: this.candidate});
+      this.candidateCardView = new App.views.CandidateCard({
+        candidate: this.candidate,
+        showDetailLink: false
+      });
       this.programView = new App.views.CandidateProgram({
         programs: this.programs,
         candidate: this.candidate
