@@ -60,9 +60,9 @@
           <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
           {{#each candidatesRound1}}
           <li>
-            <a href="<%= baseurl %>#/candidats/{{id}}">
+            {{#if programUrl}}<a href="<%= baseurl %>#/candidats/{{id}}">{{/if}}
               <img src="<%= baseurl %>images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
-            </a>
+            {{#if programUrl}}</a>{{/if}}
             <h5>{{name}}</h5>
             {{#if scoreRound1 }}<h6>{{scoreRound1}}%</h6>{{/if}}
           </li>
@@ -82,9 +82,9 @@
               <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
               {{#each candidatesRound2}}
               <li>
-                <a href="<%= baseurl %>#/candidats/{{id}}">
+                {{#if programUrl}}<a href="<%= baseurl %>#/candidats/{{id}}">{{/if}}
                   <img src="<%= baseurl %>images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
-                </a>
+                {{#if programUrl}}</a>{{/if}}
                 <h5>{{name}}</h5>
                 {{#if scoreRound2 }}<h6>{{scoreRound2}}%</h6>{{/if}}
               </li>
@@ -116,6 +116,8 @@
             <i class="fa fa-list-ol"></i> Mon Programme
             </a>
           </p>
+          {{else}}
+          <p class="unavailable-program">Programme non-disponible</p>
           {{/if}}
         </div>
       </div>

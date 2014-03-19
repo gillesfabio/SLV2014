@@ -143,6 +143,13 @@ button:hover, button:focus, .button:hover, .button:focus {
     font-size: rem-calc(14);
     margin-bottom: rem-calc(10);
   }
+
+  .unavailable-program {
+    text-transform : uppercase;
+    font-size      : rem-calc(15);
+    font-weight    : bold;
+    color          : #909090;
+  }
 }
 
 // -----------------------------------------------------------------------------
