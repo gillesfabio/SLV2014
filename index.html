@@ -34,6 +34,15 @@
     <div id="content" class="row">
     </div>
     <script id="home-template" type="text/x-handlebars-template">
+      <div class="welcome">
+        <p>
+          <strong>Bienvenue sur SLV2014.fr&nbsp;!</strong> Ce site vous permet
+          de <a href="http://slv2014.fr/#/themes">comparer les programmes</a> (par thème)
+          et de suivre les résultats des <a href="http://slv2014.fr/#/candidats">candidats</a>
+          aux élections municipales de <a href="http://saintlaurentduvar.fr">Saint-Laurent-du-Var</a>.
+          Vous pouvez également consulter <a href="http://slv2014.fr/#/bureaux">la liste des bureaux de vote</a>.
+        </p>
+      </div>
       {{#if elected}}
       <div class="elected">
         <div class="elected-header">
@@ -130,7 +139,7 @@
       </ul>
     </script>
     <script id="candidate-program-template" type="text/x-handlebars-template">
-      <h2>Mon programme {{#if candidate.programUrl}}<small>(<a href="{{candidate.programUrl}}">source</a>){{/if}}</h2>
+      <h2>Mon programme</h2>
       {{#each projects}}
       <h3 class="theme-title"><a href="http://slv2014.fr/#/themes/{{this.0.theme.slug}}">{{@key}}</a></h3>
       <ul class="no-bullet candidate-program-projects">
@@ -205,14 +214,23 @@
       <h1>À propos</h1>
       <p>
         Je suis <a href="http://gillesfabio.com">Gilles Fabio</a>,
-        Laurentin depuis trente-deux ans, développeur, non-militant politique.
+        Laurentin depuis trente-deux ans, <a href="http://fr.wikipedia.org/wiki/D%C3%A9veloppeur">développeur</a>,
+        non-militant politique. J'ai décidé de créer ce site pour simplifier la
+        lecture et la comparaison des programmes des différents candidats aux
+        élections municipales de ma ville, Saint-Laurent-du-Var (France, Alpes-Maritimes).
       </p>
       <p>
         Réalisé sur mon temps libre, ce site n'est rattaché à aucun parti politique,
         n'est sponsorisé par aucune entité et ne génère pas de revenus. Il ne stocke
         aucune données, excepté votre IP (utilisée par <a href="http://www.google.com/analytics/">Google Analytics</a>
         pour avoir un retour sur sa fréquentation).
+        Grâcieusement hébergé par <a href="http://github.com">GitHub</a>, son code
+        source sera bientôt disponible (un lien sera placé sur cette page).
       </p>
+      <p>
+        Les données des candidats (profils, programmes et listes de colistiers)
+        sont extraites des sites et programmes officiels. La liste des bureaux de vote provient du
+        <a href="http://www.alpes-maritimes.gouv.fr/">site de la préfécture des Alpes-Maritimes</a>.
       <p>
         Si vous rencontrez des bugs ou si vous remarquez des erreurs (fautes
         de français, erreurs dans les profils et programmes des candidats, etc),
