@@ -9,6 +9,12 @@ $slv-color-dark2-hover: #1F3A93;
 $slv-color-light-border: #ECECEC;
 $slv-candidate-slogan-color: #909090;
 
+$color-porcelain: #ECF0F1;
+$color-iron: #DADFE1;
+$color-chambray: #3A539B;
+$color-white: #ffffff;
+$color-steel-blue: #4B77BE;
+
 // -----------------------------------------------------------------------------
 // Foundation Settings Overrides
 // -----------------------------------------------------------------------------
@@ -87,11 +93,25 @@ i {
   padding: rem-calc(20 10 20 10);
 }
 
+.welcome {
+
+  background    : $color-porcelain;
+  padding       : rem-calc(20);
+  margin-bottom : rem-calc(20);
+  border        : 1px solid $color-iron;
+
+  p {
+    font-size : rem-calc(16);
+    margin    : 0;
+  }
+}
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
 .button {
+
   background: $slv-color-dark1;
+
   i {
     color: #ececec;
   }
@@ -107,7 +127,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 .candidate-card {
 
   text-align: center;
-  padding: rem-calc(20 0 20 0);
+  padding: rem-calc(20);
 
   :last-child {
     border-bottom: none;
@@ -158,26 +178,31 @@ button:hover, button:focus, .button:hover, .button:focus {
 .candidate-detail {
 
   .candidate-detail-program {
+
     h3 {
       font-size      : rem-calc(18);
       text-transform : uppercase;
-      color          : #555;
+      color          : $color-steel-blue;
       margin         : rem-calc(20 0 20 0);
     }
+
     h3 a {
-      color: #555;
+      color: $color-steel-blue;
     }
   }
 
   .candidate-detail-program, .candidate-detail-running-mates {
     h2 {
-      font-size      : rem-calc(30);
+      font-size      : rem-calc(25);
+      font-weight    : 400;
       text-transform : uppercase;
-      font-weight    : 200;
-      letter-spacing : -1px;
       margin-bottom  : rem-calc(20);
-      color          : #3A539B;
-      border-bottom  : 1px solid #3A539B;
+      padding        : rem-calc(0 0 10 0);
+      color          : $color-chambray;
+      border-bottom  : 1px solid $color-iron;
+    }
+    h2 small, h2 small a {
+      color : $color-chambray;
     }
   }
 }
@@ -188,14 +213,14 @@ button:hover, button:focus, .button:hover, .button:focus {
 .candidate-program-projects {
 
   p, ul {
-    font-size  : rem-calc(14);
+    font-size  : rem-calc(15);
     margin     : rem-calc(10 0 10 0);
   }
 
   > li {
-    background    : #f9f9f9;
-    border        : 1px solid #ececec;
-    padding       : rem-calc(20);
+    background    : $color-porcelain;
+    border        : 1px solid $color-iron;
+    padding       : rem-calc(10);
     margin-bottom : rem-calc(10);
   }
 
@@ -212,7 +237,8 @@ button:hover, button:focus, .button:hover, .button:focus {
   li {
 
     span {
-      background  : #f5f5f5;
+      background  : $color-porcelain;
+      border      : 1px solid $color-iron;
       height      : rem-calc(120);
       text-align  : center;
       padding     : rem-calc(20 0 0 0);
@@ -242,23 +268,23 @@ button:hover, button:focus, .button:hover, .button:focus {
 .theme-detail {
 
   h2 {
-    font-weight: 200;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: rem-calc(20);
-    padding: rem-calc(10);
-    border-bottom: 1px solid #ececec;
+    font-weight    : 200;
+    text-transform : uppercase;
+    text-align     : center;
+    margin-bottom  : rem-calc(20);
+    padding        : rem-calc(10);
+    border-bottom  : 1px solid $color-iron;
   }
 
   h4 {
-    font-size: rem-calc(16);
-    text-transform: uppercase;
-    font-weight: 200;
+    font-size      : rem-calc(16);
+    text-transform : uppercase;
+    font-weight    : 200;
   }
 
   .candidate-projects {
-    border-bottom: 1px solid #ececec;
-    margin: rem-calc(20 0 20 0);
+    border-bottom : 1px solid $color-iron;
+    margin        : rem-calc(20 0 20 0);
   }
 }
 
@@ -272,7 +298,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
   h5 {
     font-size      : rem-calc(16);
-    background     : #f9f9f9;
+    background     : $color-porcelain;
     padding        : rem-calc(10);
     margin         : 0;
     font-weight    : 400;
@@ -284,14 +310,14 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 
   p {
-    font-size: 80%;
-    padding: rem-calc(10);
-    color: #555;
+    font-size : 80%;
+    padding   : rem-calc(10);
+    color     : #555;
   }
 
   .running-mate-content {
-    border: 1px solid #ececec;
-    padding: 0;
+    border  : 1px solid $color-iron;
+    padding : 0;
   }
 }
 
@@ -331,16 +357,16 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .results {
-  border: 1px solid #ececec;
-  margin-bottom: rem-calc(20);
+  border        : 1px solid $color-iron;
+  margin-bottom : rem-calc(20);
 }
 
 .results-header {
-  background: #ececec;
-  padding: rem-calc(20);
-  text-align: center;
-  font-size: rem-calc(18);
-  font-weight: 200;
+  background  : $color-porcelain;
+  padding     : rem-calc(20);
+  text-align  : center;
+  font-size   : rem-calc(18);
+  font-weight : 200;
 }
 
 .results-content {
@@ -352,14 +378,14 @@ button:hover, button:focus, .button:hover, .button:focus {
     text-align: center;
 
     h5 {
-      font-size: rem-calc(13);
-      font-weight: normal;
+      font-size   : rem-calc(13);
+      font-weight : normal;
     }
 
     h6 {
-      font-size: rem-calc(13);
-      font-weight: normal;
-      color: #909090;
+      font-size   : rem-calc(13);
+      font-weight : normal;
+      color       : #909090;
     }
   }
 }
@@ -371,32 +397,32 @@ button:hover, button:focus, .button:hover, .button:focus {
 
   .polling-place {
 
-    border: 1px solid #ececec;
+    border: 1px solid $color-iron;
 
     h2 {
       text-align     : center;
       font-size      : rem-calc(16);
-      background     : #f9f9f9;
+      background     : $color-porcelain;
       padding        : rem-calc(10);
       margin         : 0;
       font-weight    : bold;
     }
 
     h2 small {
-      font-size: rem-calc(14);
-      font-weight: normal;
+      font-size   : rem-calc(14);
+      font-weight : normal;
     }
 
     p {
-      font-size: rem-calc(13);
-      padding: 10px;
-      text-align: center;
+      font-size  : rem-calc(13);
+      padding    : rem-calc(10);
+      text-align : center;
     }
 
     p + p {
-      margin: 0;
-      padding: 0;
-      text-align: center;
+      margin     : 0;
+      padding    : 0;
+      text-align : center;
     }
   }
 }
@@ -436,6 +462,12 @@ a.circle {
     h1 { text-align: center; }
   }
 
+  .welcome {
+    p {
+      font-size: rem-calc(14);
+    }
+  }
+
   .top-bar .name h1 {
     font-size: rem-calc(10) !important;
   }
@@ -445,12 +477,18 @@ a.circle {
     border-top: 1px solid #4B77BE;
   }
 
+  .candidate-detail-program {
+    h2 {
+      font-size: rem-calc(20) !important;
+    }
+  }
+
   .candidate-card {
 
     text-align: center;
 
-    .candidate-slogan {
-      font-size: 90%;
+    h2 {
+      font-size: rem-calc(14) !important;
     }
   }
 
