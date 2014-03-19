@@ -222,6 +222,7 @@
 
     render: function() {
       this.$el.html(this.template({
+        candidate: this.candidate.toJSON(),
         projects: this.programs.candidateProjects(this.candidate.get('id'))
       }));
     }

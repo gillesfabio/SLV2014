@@ -134,7 +134,7 @@
       </ul>
     </script>
     <script id="candidate-program-template" type="text/x-handlebars-template">
-      <h2>Mon programme</h2>
+      <h2>Mon programme {{#if candidate.programUrl}}<small>(<a href="{{candidate.programUrl}}">source</a>){{/if}}</h2>
       {{#each projects}}
       <h3 class="theme-title"><a href="<%= baseurl %>#/themes/{{this.0.theme.slug}}">{{@key}}</a></h3>
       <ul class="no-bullet candidate-program-projects">
