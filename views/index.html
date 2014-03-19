@@ -112,8 +112,8 @@
         </div>
         <div class="small-12 columns">
           <h1>{{candidate.name}}</h1>
-          <h2>{{candidate.slogan}}</h2>
-          <h3>{{candidate.party}}</h3>
+          <h2>{{candidate.slogan}} ({{candidate.party}})</h2>
+          <h3>Tapez <span class="vote-number">{{candidate.voteNumber}}</span></h3>
           <ul class="no-bullet">
             {{#if candidate.homepage}}<li><i class="fa fa-globe"></i> <a href="{{candidate.homepage}}" target="_blank">{{candidate.homepage}}</a></li>{{/if}}
             {{#if candidate.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{candidate.twitter}}" target="_blank">@{{candidate.twitter}}</a></li>{{/if}}
