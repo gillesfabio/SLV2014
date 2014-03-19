@@ -4,8 +4,9 @@ slogan      : Saint-Laurent pour tous
 homepage    : http://www.henrirevel.fr/
 twitter     : ~
 facebook    : henri.revel.7
-programUrl  : ~
+programUrl  : http://www.henrirevel.fr/
 party       : UMP
+voteNumber  : 5
 elected     : false
-scoreRound1 : null
-scoreRound2 : null
+scoreRound1 : ~
+scoreRound2 : ~
