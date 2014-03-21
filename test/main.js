@@ -113,8 +113,10 @@ requirejs(['mocha', 'chai'], function(mocha, chai) {
 
   'use strict';
 
-  chai.Assertion.includeStack = true;
+  chai.config.includeStack = true;
   mocha.setup('bdd');
+
+  window.APP_BASE_URL = '/';
 
   require([
 

@@ -10,8 +10,8 @@ define([
 
   return Backbone.Collection.extend({
 
-    model: ThemeModel,
-    url: config.dataUrl,
+    model : ThemeModel,
+    url   : config.dataUrl,
 
     parse: function(res) {
       return res.themes;

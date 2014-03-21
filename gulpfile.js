@@ -304,7 +304,7 @@ gulp.task('serve', [
 gulp.task('serve:test', [
   'clean',
   'compile',
-  'watch'
+  //'watch'
 ], function() {
   serve('test');
 });

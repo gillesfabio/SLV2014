@@ -10,21 +10,21 @@ define([
 
   return Backbone.Collection.extend({
 
-    model: CandidateModel,
-    url: config.dataUrl,
+    model : CandidateModel,
+    url   : config.dataUrl,
 
     parse: function(res) {
       return res.candidates;
     },
 
     hasRound2: function() {
-      return this.filter(function(model) {
+      return !this.some(function(model) {
         if (model.get('scoreRound1')) return model.get('scoreRound1') > 50;
-      }).length > 0;
+      });
     },
 
     round2: function() {
-      if (!this.hasRound2()) return;
+      if (!this.hasRound2()) return new this.constructor();
       var prop = 'scoreRound2';
       var models = this.chain().filter(function(model) {
         return model.get(prop);
@@ -33,6 +33,15 @@ define([
       }).value().reverse();
       if (models.length >= 2) models = models.slice(0, 2);
       return new this.constructor(models);
+    },
+
+    elected: function() {
+      if (!this.hasRound2()) return this.max(function(model) {
+        return model.get('scoreRound1');
+      });
+      if (this.hasRound2()) return this.max(function(model) {
+        return model.get('scoreRound2');
+      });
     }
   });
 });
