@@ -1,14 +1,24 @@
 define([
 
+  'jquery',
   'backbone',
   'underscore',
   'handlebars',
   'App.collections.Candidate',
   'countdown',
-  'text!templates/home.hbs',
+  'App.config',
+  'text!src/templates/home.hbs',
   'underscore.string'
 
-], function(Backbone, _, Handlebars, CandidateCollection, countdown, template) {
+], function(
+  $,
+  Backbone,
+  _,
+  Handlebars,
+  CandidateCollection,
+  countdown,
+  config,
+  template) {
 
   'use strict';
 
@@ -78,6 +88,7 @@ define([
       candidatesRound2 = candidatesRound2 ? candidatesRound2.toJSON() : null;
 
       this.$el.html(this.template({
+        config           : config,
         elected          : elected,
         candidatesRound1 : new CandidateCollection(this.candidates.shuffle()).toJSON(),
         hasRound2        : this.candidates.hasRound2(),

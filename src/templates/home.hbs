@@ -1,10 +1,10 @@
 <div class="welcome">
   <p>
     <strong>Bienvenue sur SLV2014.fr&nbsp;!</strong> Ce site vous permet
-    de <a href="<%= baseurl %>#/themes">comparer les programmes</a> (par thème)
-    et de suivre les résultats des <a href="<%= baseurl %>#/candidats">candidats</a>
+    de <a href="{{config.baseUrl}}#/themes">comparer les programmes</a> (par thème)
+    et de suivre les résultats des <a href="{{config.baseUrl}}#/candidats">candidats</a>
     aux élections municipales de <a href="http://saintlaurentduvar.fr">Saint-Laurent-du-Var</a>.
-    Vous pouvez également consulter <a href="<%= baseurl %>#/bureaux">la liste des bureaux de vote</a>.
+    Vous pouvez également consulter <a href="{{config.baseUrl}}#/bureaux">la liste des bureaux de vote</a>.
   </p>
 </div>
 {{#if elected}}
@@ -13,8 +13,8 @@
     <h2>Maire élu</h2>
   </div>
   <div class="elected-content">
-    <a href="<%= baseurl %>#/candidats/{{elected.id}}">
-      <img src="<%= baseurl %>images/{{lastname elected.id}}.jpg" class="circle" alt="{{name}}">
+    <a href="{{config.baseUrl}}#/candidats/{{elected.id}}">
+      <img src="{{config.baseUrl}}images/{{lastname elected.id}}.jpg" class="circle" alt="{{name}}">
     </a>
     <h3>{{elected.name}}</h3>
   </div>
@@ -29,8 +29,8 @@
     <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
     {{#each candidatesRound1}}
     <li>
-      {{#if programUrl}}<a href="<%= baseurl %>#/candidats/{{id}}">{{/if}}
-        <img src="<%= baseurl %>images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
+      {{#if programUrl}}<a href="{{config.baseUrl}}#/candidats/{{id}}">{{/if}}
+        <img src="{{config.baseUrl}}images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
       {{#if programUrl}}</a>{{/if}}
       <h5>{{name}}</h5>
       {{#if scoreRound1 }}<h6>{{scoreRound1}}%</h6>{{/if}}
@@ -51,8 +51,8 @@
         <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
         {{#each candidatesRound2}}
         <li>
-          {{#if programUrl}}<a href="<%= baseurl %>#/candidats/{{id}}">{{/if}}
-            <img src="<%= baseurl %>images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
+          {{#if programUrl}}<a href="{{config.baseUrl}}#/candidats/{{id}}">{{/if}}
+            <img src="{{config.baseUrl}}images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
           {{#if programUrl}}</a>{{/if}}
           <h5>{{name}}</h5>
           {{#if scoreRound2 }}<h6>{{scoreRound2}}%</h6>{{/if}}

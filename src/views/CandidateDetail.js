@@ -9,7 +9,8 @@ define([
   'App.views.CandidateCard',
   'App.views.CandidateProgram',
   'App.views.RunningMateList',
-  'text!templates/candidate-detail.hbs'
+  'App.config',
+  'text!src/templates/candidate-detail.hbs'
 
 ], function(
   Backbone,
@@ -21,6 +22,7 @@ define([
   CandidateCardView,
   CandidateProgramView,
   RunningMateListView,
+  config,
   template) {
 
   'use strict';
@@ -65,7 +67,10 @@ define([
     },
 
     render: function() {
-      this.$el.html(this.template({candidate: this.candidate.toJSON()}));
+      this.$el.html(this.template({
+        config    : config,
+        candidate : this.candidate.toJSON()
+      }));
       this.$el.find('.candidate-detail-running-mates').html(this.runningMateListView.el);
       this.$el.find('.candidate-detail-card').html(this.candidateCardView.el);
       this.$el.find('.candidate-detail-program').html(this.programView.el);

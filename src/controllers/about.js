@@ -2,7 +2,7 @@ define([
 
   'jquery',
   'handlebars',
-  'text!templates/about.hbs'
+  'text!src/templates/about.hbs'
 
 ], function($, Handlebars, template) {
 

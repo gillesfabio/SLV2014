@@ -4,9 +4,10 @@ define([
   'underscore',
   'handlebars',
   'App.collections.Theme',
-  'text!templates/theme-list.hbs'
+  'App.config',
+  'text!src/templates/theme-list.hbs'
 
-], function(Backbone, _, Handlebars, ThemeCollection, template) {
+], function(Backbone, _, Handlebars, ThemeCollection, config, template) {
 
   'use strict';
 
@@ -28,7 +29,10 @@ define([
     },
 
     render: function() {
-      this.$el.html(this.template(this.themes.toJSON()));
+      this.$el.html(this.template({
+        config : config,
+        themes : this.themes.toJSON()
+      }));
     }
   });
 });

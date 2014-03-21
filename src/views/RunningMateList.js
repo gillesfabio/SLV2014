@@ -5,9 +5,17 @@ define([
   'handlebars',
   'App.collections.RunningMate',
   'App.models.Candidate',
-  'text!templates/running-mate-list.hbs'
+  'App.config',
+  'text!src/templates/running-mate-list.hbs'
 
-], function(Backbone, _, Handlebars, RunningMateCollection, CandidateModel, template) {
+], function(
+  Backbone,
+  _,
+  Handlebars,
+  RunningMateCollection,
+  CandidateModel,
+  config,
+  template) {
 
   'use strict';
 
@@ -32,7 +40,10 @@ define([
 
     render: function() {
       var runningMates = this.runningMates.findByCandidate(this.candidate.get('id'));
-      this.$el.html(this.template({runningMates: runningMates.toJSON()}));
+      this.$el.html(this.template({
+        config       : config,
+        runningMates : runningMates.toJSON()
+      }));
     }
   });
 });

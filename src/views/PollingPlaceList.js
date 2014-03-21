@@ -4,9 +4,10 @@ define([
   'underscore',
   'handlebars',
   'App.collections.PollingPlace',
-  'text!templates/polling-place-list.hbs'
+  'App.config',
+  'text!src/templates/polling-place-list.hbs'
 
-], function(Backbone, _, Handlebars, PollingPlaceCollection, template) {
+], function(Backbone, _, Handlebars, PollingPlaceCollection, config, template) {
 
   'use strict';
 
@@ -29,7 +30,8 @@ define([
 
     render: function() {
       this.$el.html(this.template({
-        pollingPlaces: this.pollingPlaces.toJSON()
+        config        : config,
+        pollingPlaces : this.pollingPlaces.toJSON()
       }));
     }
   });

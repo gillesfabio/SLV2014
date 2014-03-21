@@ -4,11 +4,11 @@ define([
   'App.views.PollingPlaceList',
   'App.collections.PollingPlace'
 
-], function($, PollingPlaceView, PollingPlaceCollection) {
+], function($, PollingPlaceListView, PollingPlaceCollection) {
 
   'use strict';
 
-  var controller =function() {
+  var controller = function() {
     var view = new PollingPlaceListView({
       pollingPlaces: new PollingPlaceCollection()
     });

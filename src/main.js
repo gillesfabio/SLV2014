@@ -3,6 +3,7 @@ requirejs.config({
   paths: {
     // Vendor
     'text'              : 'vendor/requirejs-text/text',
+    'domReady'          : 'vendor/requirejs-domready/domReady',
     'jquery'            : 'vendor/jquery/dist/jquery',
     'backbone'          : 'vendor/backbone/backbone',
     'underscore'        : 'vendor/underscore/underscore',
@@ -93,6 +94,7 @@ requirejs.config({
 
 requirejs([
 
+  'domReady',
   'jquery',
   'backbone',
   'App.Router',
@@ -101,17 +103,17 @@ requirejs([
   'handlebars',
   'App.helpers'
 
-], function($, Backbone, Router) {
+], function(domReady, $, Backbone, Router) {
 
   'use strict';
 
-  $(document).foundation();
-
-  $(function() {
+  domReady(function() {
+    $(document).foundation();
     $('.top-bar ul.right li').click(function() {
       $('.top-bar').removeClass('expanded');
     });
     var router = new Router();
     Backbone.history.start({root: window.APP_BASE_URL});
   });
+
 });

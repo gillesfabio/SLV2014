@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-12 columns">
-    <img src="<%= baseurl %>images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
+    <img src="{{config.baseUrl}}images/{{lastname candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
   </div>
   <div class="small-12 columns">
     <h1>{{candidate.name}}</h1>
@@ -13,7 +13,7 @@
     </ul>
     {{#if showDetailLink}}
     <p>
-      <a href="<%= baseurl %>#/candidats/{{candidate.id}}" class="button radius">
+      <a href="{{config.baseUrl}}#/candidats/{{candidate.id}}" class="button radius">
       <i class="fa fa-list-ol"></i> Mon Programme
       </a>
     </p>

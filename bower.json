@@ -29,6 +29,7 @@
     "markdown": "https://github.com/evilstreak/markdown-js/archive/v0.5.0.zip",
     "countdownjs": "https://bitbucket.org/mckamey/countdown.js/get/tip.zip",
     "requirejs": "~2.1.11",
-    "requirejs-text": "~2.0.10"
+    "requirejs-text": "~2.0.10",
+    "requirejs-domready": "~2.0.1"
   }
 }

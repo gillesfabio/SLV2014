@@ -5,9 +5,17 @@ define([
   'handlebars',
   'App.models.Theme',
   'App.collections.Program',
-  'text!templates/theme-detail.hbs'
+  'App.config',
+  'text!src/templates/theme-detail.hbs'
 
-], function(Backbone, _, Handlebars, ThemeModel, ProgramCollection, template) {
+], function(
+  Backbone,
+  _,
+  Handlebars,
+  ThemeModel,
+  ProgramCollection,
+  config,
+  template) {
 
   'use strict';
 
@@ -33,6 +41,7 @@ define([
     render: function() {
       var programs = this.programs.findByThemeAndGroupByCandidate(this.theme.get('id'));
       this.$el.html(this.template({
+        config   : config,
         theme    : this.theme.toJSON(),
         programs : programs
       }));

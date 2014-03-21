@@ -1,9 +1,9 @@
 <h1>Thèmes</h1>
 <ul class="small-block-grid-1 medium-block-grid-3">
-  {{#each this}}
+  {{#each themes}}
   <li>
     <span>
-      <i class="fa fa-{{icon}}"></i> <a href="<%= baseurl %>#/themes/{{id}}">{{name}}</a>
+      <i class="fa fa-{{icon}}"></i> <a href="{{../config.baseUrl}}#/themes/{{id}}">{{name}}</a>
     </span>
   </li>
   {{/each}}

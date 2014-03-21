@@ -4,9 +4,10 @@ define([
   'underscore',
   'handlebars',
   'App.models.Candidate',
-  'text!templates/candidate-card.hbs'
+  'App.config',
+  'text!src/templates/candidate-card.hbs'
 
-], function(Backbone, _, Handlebars, CandidateModel, template) {
+], function(Backbone, _, Handlebars, CandidateModel, config, template) {
 
   'use strict';
 
@@ -30,6 +31,7 @@ define([
 
     render: function() {
       this.$el.html(this.template({
+        config         : config,
         candidate      : this.candidate.toJSON(),
         showDetailLink : this.showDetailLink
       }));

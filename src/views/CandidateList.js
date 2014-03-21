@@ -5,9 +5,17 @@ define([
   'handlebars',
   'App.collections.Candidate',
   'App.views.CandidateCard',
-  'text!templates/candidate-list.hbs'
+  'App.config',
+  'text!src/templates/candidate-list.hbs'
 
-], function(Backbone, _, Handlebars, CandidateCollection, CandidateCardView, template) {
+], function(
+  Backbone,
+  _,
+  Handlebars,
+  CandidateCollection,
+  CandidateCardView,
+  config,
+  template) {
 
   'use strict';
 
@@ -29,7 +37,7 @@ define([
     },
 
     render: function() {
-      this.$el.html(this.template());
+      this.$el.html(this.template({config: config}));
       this.candidates = new CandidateCollection(this.candidates.shuffle());
       this.candidates.each(function(candidate) {
         var view = new CandidateCardView({
