@@ -21,6 +21,7 @@
     "temp-write": "0.x",
     "yamljs": "0.x",
     "swig": "1.x",
-    "lodash": "2.x"
+    "lodash": "2.x",
+    "requirejs": "2.x"
   }
 }
