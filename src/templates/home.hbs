@@ -1,0 +1,66 @@
+<div class="welcome">
+  <p>
+    <strong>Bienvenue sur SLV2014.fr&nbsp;!</strong> Ce site vous permet
+    de <a href="<%= baseurl %>#/themes">comparer les programmes</a> (par thème)
+    et de suivre les résultats des <a href="<%= baseurl %>#/candidats">candidats</a>
+    aux élections municipales de <a href="http://saintlaurentduvar.fr">Saint-Laurent-du-Var</a>.
+    Vous pouvez également consulter <a href="<%= baseurl %>#/bureaux">la liste des bureaux de vote</a>.
+  </p>
+</div>
+{{#if elected}}
+<div class="elected">
+  <div class="elected-header">
+    <h2>Maire élu</h2>
+  </div>
+  <div class="elected-content">
+    <a href="<%= baseurl %>#/candidats/{{elected.id}}">
+      <img src="<%= baseurl %>images/{{lastname elected.id}}.jpg" class="circle" alt="{{name}}">
+    </a>
+    <h3>{{elected.name}}</h3>
+  </div>
+</div>
+{{/if}}
+<div class="results">
+  <div class="results-header">
+    <h5>1er tour <small>(23 mars 2014)</small></h5>
+    <div class="countdown-round1"></div>
+  </div>
+  <div class="results-content">
+    <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
+    {{#each candidatesRound1}}
+    <li>
+      {{#if programUrl}}<a href="<%= baseurl %>#/candidats/{{id}}">{{/if}}
+        <img src="<%= baseurl %>images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
+      {{#if programUrl}}</a>{{/if}}
+      <h5>{{name}}</h5>
+      {{#if scoreRound1 }}<h6>{{scoreRound1}}%</h6>{{/if}}
+    </li>
+    {{/each}}
+    <ul>
+  </div>
+</div>
+{{#if hasRound2}}
+<div class="results">
+  <div class="results-header">
+    <h5>2ème tour <small>(30 mars 2014)</small></h5>
+    <div class="countdown-round2"></div>
+  </div>
+  <div class="results-content">
+    <div class="row">
+      <div class="small-6 small-centered columns">
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+        {{#each candidatesRound2}}
+        <li>
+          {{#if programUrl}}<a href="<%= baseurl %>#/candidats/{{id}}">{{/if}}
+            <img src="<%= baseurl %>images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
+          {{#if programUrl}}</a>{{/if}}
+          <h5>{{name}}</h5>
+          {{#if scoreRound2 }}<h6>{{scoreRound2}}%</h6>{{/if}}
+        </li>
+        {{/each}}
+        <ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}

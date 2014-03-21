@@ -1,0 +1,12 @@
+<h1>Bureaux de vote</h1>
+<ul class="small-block-grid-1 medium-block-grid-3">
+  {{#each pollingPlaces}}
+  <li>
+    <div class="polling-place">
+      <h2>{{number}} <small>— Horaires : {{opening}}</small></h2>
+      <p>{{{formatAddress address}}}</p>
+      <p><a href="{{gmapsLink gmapSearch}}" class="button tiny" target="_blank">Voir sur Google Maps</a></p>
+    </div>
+  </li>
+  {{/each}}
+</ul>

@@ -17,24 +17,18 @@ var Generator = require('./generator');
 // Configuration
 // -----------------------------------------------------------------------------
 
-var BASE_URL    = process.env.BASE_URL ? process.env.BASE_URL : '/';
+var BASE_URL = process.env.BASE_URL ? process.env.BASE_URL : '/';
 var SERVER_PORT = 3000;
-var MODERNIZR   = 'vendor/foundation/js/vendor/modernizr.js';
-var JAVASCRIPTS = [
-  'vendor/jquery/dist/jquery.min.js',
-  'vendor/foundation/js/foundation.min.js',
-  'vendor/underscore/underscore.js',
-  'vendor/underscore.string/dist/underscore.string.min.js',
-  'vendor/backbone/backbone.js',
-  'vendor/handlebars/handlebars.min.js',
-  'vendor/markdown/lib/markdown.js',
-  'vendor/countdownjs/countdown.min.js',
-  'src/app.js'
-];
+
 var STYLESHEETS = [
   'vendor/font-awesome/css/font-awesome.min.css',
-  'build/css/app.css'
+  'src/stylesheets/css/main.css'
 ];
+
+var STYLESHEETS_COMPILED = [
+  'css/styles.css'
+];
+
 var FONTS = [
   'vendor/font-awesome/fonts/**'
 ];
@@ -52,13 +46,14 @@ var customSwig = new swig.Swig({
   cmtControls: ['<#', '#>']
 });
 
-// Template context
+// -----------------------------------------------------------------------------
+// Context
+// -----------------------------------------------------------------------------
+
 var context = {
-  env       : 'production',
-  modernizr : MODERNIZR,
-  scripts   : JAVASCRIPTS,
-  styles    : STYLESHEETS,
-  baseurl   : BASE_URL
+  env         : 'production',
+  baseurl     : BASE_URL,
+  stylesheets : STYLESHEETS
 };
 
 // -----------------------------------------------------------------------------
@@ -75,6 +70,7 @@ gulp.task('compile:data', function() {
 });
 
 gulp.task('compile:index', function() {
+  context.env = 'production';
   var compiled = customSwig.compileFile(path.join(__dirname, 'views', 'index.html'));
   var tpl = compiled(context);
   var file = tempWrite.sync(tpl, 'index.html');
@@ -83,11 +79,11 @@ gulp.task('compile:index', function() {
 });
 
 gulp.task('compile:stylesheets', function() {
-  return gulp.src('./src/*.scss')
+  return gulp.src('./src/stylesheets/sass/*.scss')
     .pipe(compass({
       project     : __dirname,
-      css         : 'build/css',
-      sass        : 'src',
+      css         : 'src/stylesheets/css',
+      sass        : 'src/stylesheets/sass',
       image       : 'src/images',
       import_path : ['vendor/foundation/scss']
     }));
@@ -145,12 +141,6 @@ gulp.task('public:favicon', ['compile:favicon'], function() {
 });
 
 gulp.task('public:javascripts', function() {
-  gulp.src(MODERNIZR)
-    .pipe(gulp.dest('public/js'));
-  gulp.src(JAVASCRIPTS)
-    .pipe(concat('scripts.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('public:stylesheets', ['compile:stylesheets'], function() {
@@ -201,7 +191,14 @@ gulp.task('clean', [
 // -----------------------------------------------------------------------------
 
 gulp.task('watch', function() {
-  gulp.watch(['src/**', 'data/**', 'views/**', 'test/**'], ['compile']);
+  gulp.watch([
+    'src/**/*.js',
+    'src/**/*.sass',
+    'src/**/*.hbs',
+    'data/**',
+    'views/**',
+    'test/**'
+  ], ['compile']);
 });
 
 // -----------------------------------------------------------------------------

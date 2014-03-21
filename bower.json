@@ -27,6 +27,8 @@
     "chai": "1.x",
     "sinonjs": "1.x",
     "markdown": "https://github.com/evilstreak/markdown-js/archive/v0.5.0.zip",
-    "countdownjs": "https://bitbucket.org/mckamey/countdown.js/get/tip.zip"
+    "countdownjs": "https://bitbucket.org/mckamey/countdown.js/get/tip.zip",
+    "requirejs": "~2.1.11",
+    "requirejs-text": "~2.0.10"
   }
 }
