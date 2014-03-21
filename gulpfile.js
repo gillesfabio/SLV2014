@@ -260,9 +260,14 @@ function serve(env) {
     break;
     case 'test':
       context.env = 'test';
-      server.use(express.static(__dirname));
+      server.engine('html', customSwig.renderFile);
+      server.set('view engine', 'html');
+      server.set('views', path.join(__dirname, 'views'));
       server.use(express.static(path.join(__dirname, 'build')));
+      server.use(express.static(path.join(__dirname, 'src')));
       server.use(express.static(path.join(__dirname, 'test')));
+      server.use(express.static(__dirname));
+      server.get('*', function(req, res) { res.render('index_test', context); });
       server.listen(SERVER_PORT);
     break;
     case 'production':

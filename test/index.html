@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <title>SLV2014 Test Suite</title>
   <link rel="stylesheet" media="all" href="/vendor/mocha/mocha.css">
+  <script src="/vendor/requirejs/require.js"></script>
+  <script>
+    require.config({paths: {'main': "test/main"}});
+    require(['main']);
+  </script>
 </head>
 <body>
   <div id="mocha">
@@ -11,28 +16,5 @@
   </div>
   <div id="messages"></div>
   <div id="fixtures"></div>
-  <!-- Test dependencies -->
-  <script src="/vendor/mocha/mocha.js"></script>
-  <script src="/vendor/chai/chai.js"></script>
-  <script src="/vendor/sinonjs/sinon.js"></script>
-  <script>
-    chai.Assertion.includeStack = true;
-    mocha.setup('bdd');
-  </script>
-  <!-- External dependencies -->
-  <script src="/vendor/jquery/dist/jquery.js"></script>
-  <script src="/vendor/underscore/underscore.js"></script>
-  <script src="/vendor/handlebars/handlebars.js"></script>
-  <script src="/vendor/backbone/backbone.js"></script>
-  <script src="/vendor/foundation/js/foundation.js"></script>
-  <!-- Application modules -->
-  <script src="/src/app.js"></script>
-  <!-- Application tests -->
-  <script src="/test/collections_test.js"></script>
-  <script src="/test/views_test.js"></script>
-  <script src="/test/controllers_test.js"></script>
-  <script>
-    mocha.run();
- </script>
 </body>
 </html>

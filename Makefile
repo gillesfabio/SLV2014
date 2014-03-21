@@ -36,7 +36,7 @@ serve: clean-build
 serve-prod: clean-build
 	@gulp serve:production
 
-serve-test:
+serve-test: clean-build
 	@gulp serve:test
 
 .PHONY: venv install clean clean-build build generate generate-github publish serve serve-prod serve-test

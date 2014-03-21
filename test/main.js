@@ -16,6 +16,11 @@ requirejs.config({
     'modernizr'         : 'vendor/modernizr/modernizr',
     'foundation'        : 'vendor/foundation/js/foundation.min',
 
+    // Vendor test
+    'mocha' : 'vendor/mocha/mocha',
+    'chai'  : 'vendor/chai/chai',
+    'sinon' : 'vendor/sinonjs/sinon',
+
     // App models
     'App.models.Candidate'         : 'src/models/Candidate',
     'App.models.PollingPlace'      : 'src/models/PollingPlace',
@@ -50,10 +55,15 @@ requirejs.config({
     'App.controllers.themeDetail'      : 'src/controllers/themeDetail',
     'App.controllers.themeList'        : 'src/controllers/themeList',
 
-    // App
+    // App misc
     'App.config'  : 'src/config',
     'App.helpers' : 'src/helpers',
-    'App.Router'  : 'src/router'
+    'App.Router'  : 'src/router',
+
+    // Tests
+    'App.test.collections' : 'test/collections',
+    'App.test.controllers' : 'test/controllers',
+    'App.test.views'       : 'test/views'
   },
 
   shim: {
@@ -86,32 +96,36 @@ requirejs.config({
     'foundation': {
       deps    : ['jquery', 'modernizr'],
       exports : 'Foundation'
+    },
+    'mocha': {
+      exports: 'mocha'
+    },
+    'chai': {
+      exports: 'chai'
+    },
+    'sinon': {
+      exports: 'sinon'
     }
   }
 });
 
-requirejs([
-
-  'domReady',
-  'jquery',
-  'backbone',
-  'App.Router',
-  'modernizr',
-  'foundation',
-  'handlebars',
-  'App.helpers'
-
-], function(domReady, $, Backbone, Router) {
+requirejs(['mocha', 'chai'], function(mocha, chai) {
 
   'use strict';
 
-  domReady(function() {
-    $(document).foundation();
-    $('.top-bar ul.right li').click(function() {
-      $('.top-bar').removeClass('expanded');
-    });
-    var router = new Router();
-    Backbone.history.start({root: window.APP_BASE_URL});
+  chai.Assertion.includeStack = true;
+  mocha.setup('bdd');
+
+  require([
+
+    'App.test.collections',
+    'App.test.controllers',
+    'App.test.views'
+
+  ], function() {
+
+    mocha.run();
+
   });
 
 });
