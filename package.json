@@ -23,6 +23,6 @@
     "swig": "1.x",
     "lodash": "2.x",
     "requirejs": "2.x",
-    "gulp-requirejs": "0.1.x"
+    "gulp-requirejs": "git://github.com/RobinThrift/gulp-requirejs.git#6fb08d427dda7463a07b25be3fc931f58e660b54"
   }
 }

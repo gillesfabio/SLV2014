@@ -33,7 +33,7 @@ publish: generate-github
 serve: clean-build
 	@gulp serve
 
-serve-prod:
+serve-prod: clean-build
 	@gulp serve:production
 
 serve-test:

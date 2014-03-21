@@ -8,6 +8,7 @@ var compass   = require('gulp-compass');
 var clean     = require('gulp-clean');
 var uglify    = require('gulp-uglify');
 var rename    = require('gulp-rename');
+var rjs       = require('gulp-requirejs');
 var express   = require('express');
 var swig      = require('swig');
 var tempWrite = require('temp-write');
@@ -25,6 +26,7 @@ var STYLESHEETS = [
   'src/stylesheets/css/main.css'
 ];
 
+// From build directory
 var STYLESHEETS_COMPILED = [
   'css/styles.css'
 ];
@@ -32,6 +34,18 @@ var STYLESHEETS_COMPILED = [
 var FONTS = [
   'vendor/font-awesome/fonts/**'
 ];
+
+// -----------------------------------------------------------------------------
+// Template context
+// -----------------------------------------------------------------------------
+
+var context = {
+  env         : 'development',
+  baseurl     : BASE_URL,
+  stylesheets : STYLESHEETS,
+  rjs         : BASE_URL + 'vendor/requirejs/require.js',
+  rjsmain     : BASE_URL + 'src/main'
+};
 
 // -----------------------------------------------------------------------------
 // Templates
@@ -47,33 +61,27 @@ var customSwig = new swig.Swig({
 });
 
 // -----------------------------------------------------------------------------
-// Context
-// -----------------------------------------------------------------------------
-
-var context = {
-  env         : 'production',
-  baseurl     : BASE_URL,
-  stylesheets : STYLESHEETS
-};
-
-// -----------------------------------------------------------------------------
 // Compilation Tasks
 // -----------------------------------------------------------------------------
 
 gulp.task('compile:data', function() {
   var generator = new Generator();
-  var data = generator.build();
-  var json = JSON.stringify(data, null, 2);
-  var file = tempWrite.sync(json, 'data.json');
+  var data      = generator.build();
+  var json      = JSON.stringify(data, null, 2);
+  var file      = tempWrite.sync(json, 'data.json');
   return gulp.src(file)
     .pipe(gulp.dest('build/data'));
 });
 
 gulp.task('compile:index', function() {
-  context.env = 'production';
-  var compiled = customSwig.compileFile(path.join(__dirname, 'views', 'index.html'));
-  var tpl = compiled(context);
-  var file = tempWrite.sync(tpl, 'index.html');
+  var cxt         = Object.create(context);
+  cxt.env         = 'production';
+  cxt.stylesheets = STYLESHEETS_COMPILED;
+  cxt.rjs         = BASE_URL + 'js/require.js';
+  cxt.rjsmain     = BASE_URL + 'js/main-built';
+  var compiled    = customSwig.compileFile(path.join(__dirname, 'views', 'index.html'));
+  var tpl         = compiled(cxt);
+  var file        = tempWrite.sync(tpl, 'index.html');
   return gulp.src(file)
     .pipe(gulp.dest('build/html'));
 });
@@ -87,6 +95,17 @@ gulp.task('compile:stylesheets', function() {
       image       : 'src/images',
       import_path : ['vendor/foundation/scss']
     }));
+});
+
+gulp.task('compile:javascripts', function() {
+  return rjs({
+    baseUrl        : __dirname,
+    out            : 'main-built.js',
+    name           : 'src/main',
+    mainConfigFile : 'src/main.js'
+  })
+  .pipe(uglify())
+  .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('compile:favicon', function() {
@@ -107,6 +126,7 @@ gulp.task('compile', [
   'compile:data',
   'compile:index',
   'compile:stylesheets',
+  'compile:javascripts',
   'compile:favicon',
   'compile:images'
 ]);
@@ -140,7 +160,18 @@ gulp.task('public:favicon', ['compile:favicon'], function() {
     .pipe(gulp.dest('./public/images'));
 });
 
-gulp.task('public:javascripts', function() {
+gulp.task('public:requirejs', function() {
+  return gulp.src('./vendor/requirejs/require.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/js/'));
+});
+
+gulp.task('public:javascripts', [
+  'public:requirejs',
+  'compile:javascripts'
+], function() {
+  return gulp.src('./build/js/*.js')
+    .pipe(gulp.dest('./public/js/'));
 });
 
 gulp.task('public:stylesheets', ['compile:stylesheets'], function() {
@@ -196,7 +227,7 @@ gulp.task('watch', function() {
     'src/**/*.sass',
     'src/**/*.hbs',
     'data/**',
-    'views/**',
+    'views/*.html',
     'test/**'
   ], ['compile']);
 });
@@ -206,12 +237,15 @@ gulp.task('watch', function() {
 // -----------------------------------------------------------------------------
 
 function serve(env) {
+
   env = env || 'development';
+
   var server = express();
   server.use(express.compress());
   server.use(express.json());
   server.use(express.urlencoded());
   server.set('view cache', false);
+
   switch(env) {
     case 'development':
       context.env = 'development';
@@ -219,6 +253,7 @@ function serve(env) {
       server.set('view engine', 'html');
       server.set('views', path.join(__dirname, 'views'));
       server.use(express.static(path.join(__dirname, 'build')));
+      server.use(express.static(path.join(__dirname, 'src')));
       server.use(express.static(__dirname));
       server.get('*', function(req, res) { res.render('index', context); });
       server.listen(SERVER_PORT);
@@ -236,6 +271,7 @@ function serve(env) {
       server.listen(SERVER_PORT);
     break;
   }
+
   console.log('Express server listening to on port ' + SERVER_PORT + '...');
 }
 
