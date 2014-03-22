@@ -109,7 +109,7 @@ gulp.task('compile:javascripts', function() {
 });
 
 gulp.task('compile:favicon', function() {
-  return gulp.src('./src/favicon.ico')
+  return gulp.src('./src/images/favicon.ico')
     .pipe(gulp.dest('./build/images'));
 });
 
