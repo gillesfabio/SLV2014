@@ -79,10 +79,10 @@ define([
     getTemplateContext: function() {
       return {
         config           : config,
-        elected          : this.candidates.elected().toJSON(),
+        elected          : this.candidates.elected() ? this.candidates.elected().toJSON() : null,
         candidatesRound1 : new CandidateCollection(this.candidates.shuffle()).toJSON(),
         hasRound2        : this.candidates.hasRound2(),
-        candidatesRound2 : this.candidates.round2().toJSON()
+        candidatesRound2 : this.candidates.round2() ? this.candidates.round2().toJSON() : null
       };
     },
 

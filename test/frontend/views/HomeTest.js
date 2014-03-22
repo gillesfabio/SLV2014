@@ -53,7 +53,7 @@ define([
           expect(context.elected).to.deep.equal({scoreRound1: 51});
           expect(context.candidatesRound1).to.have.length(3);
           expect(context.hasRound2).to.be.false;
-          expect(context.candidatesRound2).to.be.empty;
+          expect(context.candidatesRound2).to.not.be.ok;
         });
         it('should not set the elected candidate if there is no elected one (and other variables should be consistent)', function() {
           var models = [
@@ -64,10 +64,10 @@ define([
           var candidates = new CandidateCollection(models);
           var view       = new View({candidates: candidates});
           var context    = view.getTemplateContext();
-          expect(context.elected).to.be.empty;
+          expect(context.elected).to.not.be.ok;
           expect(context.candidatesRound1).to.have.length(3);
           expect(context.hasRound2).to.be.true;
-          expect(context.candidatesRound2).to.be.empty;
+          expect(context.candidatesRound2).to.have.length(2);
         });
         it('should set the elected candidate when round 2 is done (and other variables should be consistent)', function() {
           var models = [
@@ -82,6 +82,20 @@ define([
           expect(context.candidatesRound1).to.have.length(3);
           expect(context.hasRound2).to.be.true;
           expect(context.candidatesRound2).to.have.length(2);
+        });
+        it('should set hasRound2 to false if round1 is not done', function() {
+          var models = [
+            {scoreRound1: null},
+            {scoreRound1: null},
+            {scoreRound1: 5}
+          ];
+          var candidates = new CandidateCollection(models);
+          var view       = new View({candidates: candidates});
+          var context    = view.getTemplateContext();
+          expect(context.elected).to.not.be.ok;
+          expect(context.candidatesRound1).to.have.length(3);
+          expect(context.hasRound2).to.be.false;
+          expect(context.candidatesRound2).to.not.be.ok;
         });
       });
     });

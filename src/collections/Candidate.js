@@ -18,26 +18,52 @@ define([
       return res.candidates;
     },
 
-    hasRound2: function() {
-      return !this.some(function(model) {
-        if (model.get('scoreRound1')) return model.get('scoreRound1') > 50;
+    isRound1Done: function() {
+      var models = this.filter(function(model) {
+        var score = model.get('scoreRound1');
+        if (score && _.isNumber(score)) return true;
+      });
+      return (this.size() === models.length);
+    },
+
+    isRound2Done: function() {
+      if (this.isRound1Done() && this.noRound2()) return true;
+      var models = this.filter(function(model) {
+        var score = model.get('scoreRound2');
+        if (score && _.isNumber(score)) return true;
+      });
+      return (models.length >= 2);
+    },
+
+    noRound2: function() {
+      if (!this.isRound1Done()) return true;
+      return this.some(function(model) {
+        var score = model.get('scoreRound1');
+        if (score && _.isNumber(score) && score > 50) return true;
       });
     },
 
+    hasRound2: function() {
+      return !this.noRound2();
+    },
+
     round2: function() {
-      if (!this.hasRound2()) return new this.constructor();
-      var prop = 'scoreRound2';
+      if (!this.hasRound2()) return;
       var models = this.chain().filter(function(model) {
-        return model.get(prop);
+        var score = model.get('scoreRound1');
+        if (score && _.isNumber(score)) return true;
       }).sortBy(function(model) {
-        return model.get(prop);
+        return model.get('scoreRound1');
       }).value().reverse();
-      if (models.length >= 2) models = models.slice(0, 2);
-      return new this.constructor(models);
+      if (models.length >= 2) {
+        models = models.slice(0, 2);
+        return new this.constructor(models);
+      }
     },
 
     elected: function() {
-      var model = new CandidateModel();
+      if (!this.isRound1Done()) return;
+      var model;
       var max;
       if (!this.hasRound2()) {
         max = this.max(function(model) {

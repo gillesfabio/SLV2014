@@ -15,6 +15,57 @@ define([
 
     describe('App.collections.Candidate', function() {
 
+      describe('#isRound1Done', function() {
+        it('should return false if round1 is not done', function() {
+          var models = [
+            {scoreRound1: null},
+            {scoreRound1: null},
+            {scoreRound1: 6}
+          ];
+          var col = new CandidateCollection(models);
+          expect(col.isRound1Done()).to.be.false;
+        });
+        it('should return true if round1 is done', function() {
+          var models = [
+            {scoreRound1: 20},
+            {scoreRound1: 20},
+            {scoreRound1: 6}
+          ];
+          var col = new CandidateCollection(models);
+          expect(col.isRound1Done()).to.be.true;
+        });
+      });
+
+      describe('#isRound2Done', function() {
+        it('should return true if round1 is done and a candidate has been elected with the absolute majority', function() {
+          var models = [
+            {scoreRound1: 50.1, scoreRound2: null},
+            {scoreRound1: 12, scoreRound2: null},
+            {scoreRound1: 6, scoreRound2: null}
+          ];
+          var col = new CandidateCollection(models);
+          expect(col.isRound2Done()).to.be.true;
+        });
+        it('should return true if at least two candidates have a score', function() {
+          var models = [
+            {scoreRound1: 20, scoreRound2: 45},
+            {scoreRound1: 20, scoreRound2: 20},
+            {scoreRound1: 6, scoreRound2: null}
+          ];
+          var col = new CandidateCollection(models);
+          expect(col.isRound2Done()).to.be.true;
+        });
+        it('should return false if round1 is not done', function() {
+          var models = [
+            {scoreRound1: null, scoreRound2: null},
+            {scoreRound1: 20, scoreRound2: null},
+            {scoreRound1: 6, scoreRound2: null}
+          ];
+          var col = new CandidateCollection(models);
+          expect(col.isRound2Done()).to.be.false;
+        });
+      });
+
       describe('#hasRound2', function() {
         it('should return false if a candidate has 51% of votes', function() {
           var models = [
@@ -54,28 +105,27 @@ define([
         });
       });
       describe('#round2', function() {
-        it('should return an empty collection if there is no round 2', function() {
+        it('should return falsy if there is no round 2', function() {
           var models = [
             {scoreRound1: 51},
             {scoreRound1: 25},
             {scoreRound1: 24}
           ];
           var col = new CandidateCollection(models);
-          expect(col.round2()).to.be.an.instanceof(CandidateCollection);
-          expect(col.round2().size()).to.equal(0);
+          expect(col.round2()).to.not.be.ok;
         });
         it('should return only two models and the two max scores if there is a round 2', function() {
           var models = [
-            {scoreRound1: 25, scoreRound2: 45},
-            {scoreRound1: 25, scoreRound2: 40},
-            {scoreRound1: 25, scoreRound2: 5}
+            {scoreRound1: 48, scoreRound2: null},
+            {scoreRound1: 33, scoreRound2: null},
+            {scoreRound1: 25, scoreRound2: null}
           ];
           var col = new CandidateCollection(models);
           models = col.round2();
           expect(models).to.be.an.instanceof(CandidateCollection);
           expect(models.size()).to.equal(2);
-          expect(models.models[0].get('scoreRound2')).to.equal(45);
-          expect(models.models[1].get('scoreRound2')).to.equal(40);
+          expect(models.models[0].get('scoreRound1')).to.equal(48);
+          expect(models.models[1].get('scoreRound1')).to.equal(33);
         });
       });
 
