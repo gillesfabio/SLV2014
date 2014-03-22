@@ -263,6 +263,7 @@ function serve(env) {
       server.engine('html', customSwig.renderFile);
       server.set('view engine', 'html');
       server.set('views', path.join(__dirname, 'views'));
+      server.use(express.static(path.join(__dirname, 'test')));
       server.use(express.static(path.join(__dirname, 'build')));
       server.use(express.static(path.join(__dirname, 'src')));
       server.use(express.static(path.join(__dirname, 'test', 'frontend')));
@@ -303,7 +304,7 @@ gulp.task('serve', [
 gulp.task('serve:test', [
   'clean',
   'compile',
-  //'watch'
+  'watch'
 ], function() {
   serve('test');
 });

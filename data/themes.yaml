@@ -7,7 +7,7 @@
   name : "Transport & Circulation"
   icon : road
 -
-  id   : securite 
+  id   : securite
   name : "Sécurité & Prévention"
   icon : fire-extinguisher
 -
@@ -34,7 +34,7 @@
   id   : emploi
   name : "Emploi & Développement économique"
   icon : suitcase
-- 
+-
   id   : local
   name : "Proximité"
   icon : location-arrow
@@ -42,27 +42,27 @@
   id   : urbanisme
   name : "Urbanisme"
   icon : building-o
-- 
+-
   id   : accessibilite
   name : "Accessibilité"
   icon : wheelchair
-- 
+-
   id   : fiscalite
   name : "Gestion & Fiscalité"
   icon : eur
-- 
+-
   id   : metropole
   name : "Métropole"
   icon : circle-o
-- 
+-
   id   : democratie
   name : "Démocratie"
   icon : comments-o
-- 
+-
   id   : seniors
   name : "Seniors"
   icon : male
-- 
+-
   id   : numerique
   name : "Numérique"
   icon : laptop
