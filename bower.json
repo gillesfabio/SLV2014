@@ -29,7 +29,6 @@
     "mocha": "1.x",
     "chai": "1.x",
     "sinonjs": "1.x",
-    "markdown": "https://github.com/evilstreak/markdown-js/archive/v0.5.0.zip",
-    "countdownjs": "https://bitbucket.org/mckamey/countdown.js/get/tip.zip"
+    "markdown": "https://github.com/evilstreak/markdown-js/archive/v0.5.0.zip"
   }
 }
