@@ -64,3 +64,8 @@ Aller à l'adresse : http://localhost:3000.
 * `make serve` : lance le serveur en mode développement
 * `make serve-prod` : lance le serveur en mode production
 * `make serve-test` : lance le serveur en mode test
+
+### Licence
+
+* Le code de l'application est sous [licence MIT](http://fr.wikipedia.org/wiki/Licence_MIT).
+* Les données du dossier `data` (images et textes) appartiennent à leurs auteurs respectifs.
