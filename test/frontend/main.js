@@ -60,10 +60,21 @@ requirejs.config({
     'App.helpers' : 'src/helpers',
     'App.Router'  : 'src/router',
 
-    // Tests
+    // Tests: collections
     'App.collections.CandidateTest'   : 'test/frontend/collections/CandidateTest',
     'App.collections.ProgramTest'     : 'test/frontend/collections/ProgramTest',
-    'App.collections.RunningMateTest' : 'test/frontend/collections/RunningMateTest'
+    'App.collections.RunningMateTest' : 'test/frontend/collections/RunningMateTest',
+
+    // Tests: views
+    'App.views.CandidateCardTest'    : 'test/frontend/views/CandidateCardTest',
+    'App.views.CandidateDetailTest'  : 'test/frontend/views/CandidateDetailTest',
+    'App.views.CandidateListTest'    : 'test/frontend/views/CandidateListTest',
+    'App.views.CandidateProgramTest' : 'test/frontend/views/CandidateProgramTest',
+    'App.views.HomeTest'             : 'test/frontend/views/HomeTest',
+    'App.views.PollingPlaceListTest' : 'test/frontend/views/PollingPlaceListTest',
+    'App.views.RunningMateListTest'  : 'test/frontend/views/RunningMateListTest',
+    'App.views.ThemeDetailTest'      : 'test/frontend/views/ThemeDetailTest',
+    'App.views.ThemeListTest'        : 'test/frontend/views/ThemeListTest'
   },
 
   shim: {
