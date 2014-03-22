@@ -28,11 +28,15 @@ define([
       this.themes.fetch();
     },
 
-    render: function() {
-      this.$el.html(this.template({
+    getTemplateContext: function() {
+      return {
         config : config,
         themes : this.themes.toJSON()
-      }));
+      };
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.getTemplateContext()));
     }
   });
 });

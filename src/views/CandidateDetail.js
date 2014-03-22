@@ -49,31 +49,32 @@ define([
     },
 
     setSubviews: function() {
-
       this.candidateCardView = new CandidateCardView({
         candidate      : this.candidate,
         showDetailLink : false
       });
-
-      this.programView = new CandidateProgramView({
+      this.candidateProgramView = new CandidateProgramView({
         programs  : this.programs,
         candidate : this.candidate
       });
-
       this.runningMateListView = new RunningMateListView({
         runningMates : this.runningMates,
         candidate    : this.candidate
       });
     },
 
-    render: function() {
-      this.$el.html(this.template({
+    getTemplateContext: function() {
+      return {
         config    : config,
         candidate : this.candidate.toJSON()
-      }));
+      };
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.getTemplateContext()));
       this.$el.find('.candidate-detail-running-mates').html(this.runningMateListView.el);
       this.$el.find('.candidate-detail-card').html(this.candidateCardView.el);
-      this.$el.find('.candidate-detail-program').html(this.programView.el);
+      this.$el.find('.candidate-detail-program').html(this.candidateProgramView.el);
     }
   });
 });

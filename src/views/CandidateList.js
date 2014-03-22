@@ -36,8 +36,14 @@ define([
       this.candidates.fetch();
     },
 
+    getTemplateContext: function() {
+      return {
+        config: config
+      };
+    },
+
     render: function() {
-      this.$el.html(this.template({config: config}));
+      this.$el.html(this.template(this.getTemplateContext()));
       this.candidates = new CandidateCollection(this.candidates.shuffle());
       this.candidates.each(function(candidate) {
         var view = new CandidateCardView({

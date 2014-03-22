@@ -38,12 +38,16 @@ define([
       this.programs.fetch();
     },
 
-    render: function() {
-      this.$el.html(this.template({
+    getTemplateContext: function() {
+      return {
         config    : config,
         candidate : this.candidate.toJSON(),
         projects  : this.programs.candidateProjects(this.candidate.get('id'))
-      }));
+      };
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.getTemplateContext()));
     }
   });
 });

@@ -133,7 +133,16 @@ requirejs(['mocha', 'chai'], function(mocha, chai) {
 
     'App.collections.CandidateTest',
     'App.collections.ProgramTest',
-    'App.collections.RunningMateTest'
+    'App.collections.RunningMateTest',
+    'App.views.CandidateCardTest',
+    'App.views.CandidateDetailTest',
+    'App.views.CandidateListTest',
+    'App.views.CandidateProgramTest',
+    'App.views.HomeTest',
+    'App.views.PollingPlaceListTest',
+    'App.views.RunningMateListTest',
+    'App.views.ThemeDetailTest',
+    'App.views.ThemeListTest'
 
   ], function() {
 

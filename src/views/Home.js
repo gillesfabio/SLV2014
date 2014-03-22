@@ -65,11 +65,7 @@ define([
 
     renderCountDown: function(ts, round) {
       var output = [];
-      var units = {
-        'days'    : 'jour',
-        'hours'   : 'heure',
-        'minutes' : 'minute'
-      };
+      var units = {'days': 'jour', 'hours': 'heure', 'minutes': 'minute'};
       Object.keys(units).forEach(function(key) {
         var word = units[key];
         if (ts[key]) {
@@ -80,21 +76,18 @@ define([
       this.$el.find(_.str.sprintf('.countdown-%s', round)).html(output.join(', '));
     },
 
-    render: function() {
-      var elected, candidatesRound2;
-      elected          = this.candidates.findWhere({elected: true});
-      elected          = elected ? elected.toJSON() : null;
-      candidatesRound2 = this.candidates.round2();
-      candidatesRound2 = candidatesRound2 ? candidatesRound2.toJSON() : null;
-
-      this.$el.html(this.template({
+    getTemplateContext: function() {
+      return {
         config           : config,
-        elected          : elected,
+        elected          : this.candidates.elected().toJSON(),
         candidatesRound1 : new CandidateCollection(this.candidates.shuffle()).toJSON(),
         hasRound2        : this.candidates.hasRound2(),
-        candidatesRound2 : candidatesRound2
-      }));
+        candidatesRound2 : this.candidates.round2().toJSON()
+      };
+    },
 
+    render: function() {
+      this.$el.html(this.template(this.getTemplateContext()));
       this.renderTimers();
     }
   });

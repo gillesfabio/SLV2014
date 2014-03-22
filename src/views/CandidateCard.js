@@ -29,12 +29,16 @@ define([
       this.render();
     },
 
-    render: function() {
-      this.$el.html(this.template({
+    getTemplateContext: function() {
+      return {
         config         : config,
         candidate      : this.candidate.toJSON(),
         showDetailLink : this.showDetailLink
-      }));
+      };
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.getTemplateContext()));
     }
   });
 });

@@ -28,7 +28,6 @@ define([
               done();
             }
           });
-          expect(true).to.be.true;
         });
         it('should return undefined if candidate does not exist', function(done) {
           var col = new ProgramCollection();

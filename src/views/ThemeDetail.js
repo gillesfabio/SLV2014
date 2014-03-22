@@ -38,13 +38,17 @@ define([
       this.programs.fetch();
     },
 
-    render: function() {
+    getTemplateContext: function() {
       var programs = this.programs.findByThemeAndGroupByCandidate(this.theme.get('id'));
-      this.$el.html(this.template({
+      return {
         config   : config,
         theme    : this.theme.toJSON(),
         programs : programs
-      }));
+      };
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.getTemplateContext()));
     }
   });
 });

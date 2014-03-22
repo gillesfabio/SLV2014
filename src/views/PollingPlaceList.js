@@ -28,11 +28,15 @@ define([
       this.pollingPlaces.fetch();
     },
 
-    render: function() {
-      this.$el.html(this.template({
+    getTemplateContext: function() {
+      return {
         config        : config,
         pollingPlaces : this.pollingPlaces.toJSON()
-      }));
+      };
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.getTemplateContext()));
     }
   });
 });

@@ -14,7 +14,7 @@
   </div>
   <div class="elected-content">
     <a href="{{config.baseUrl}}#/candidats/{{elected.id}}">
-      <img src="{{config.baseUrl}}images/{{lastname elected.id}}.jpg" class="circle" alt="{{name}}">
+      {{#if elected.id}}<img src="{{config.baseUrl}}images/{{lastname elected.id}}.jpg" class="circle" alt="{{name}}">{{/if}}
     </a>
     <h3>{{elected.name}}</h3>
   </div>

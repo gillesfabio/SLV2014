@@ -1,10 +1,11 @@
 define([
 
+  'underscore',
   'App.config',
   'App.models.Candidate',
   'backbone'
 
-], function(config, CandidateModel, Backbone) {
+], function(_, config, CandidateModel, Backbone) {
 
   'use strict';
 
@@ -36,12 +37,19 @@ define([
     },
 
     elected: function() {
-      if (!this.hasRound2()) return this.max(function(model) {
-        return model.get('scoreRound1');
-      });
-      if (this.hasRound2()) return this.max(function(model) {
-        return model.get('scoreRound2');
-      });
+      var model = new CandidateModel();
+      var max;
+      if (!this.hasRound2()) {
+        max = this.max(function(model) {
+          if (model.get('scoreRound1')) return model.get('scoreRound1');
+        });
+      } else {
+        max = this.max(function(model) {
+          if (model.get('scoreRound2')) return model.get('scoreRound2');
+        });
+      }
+      if (max !== -Infinity) model = max;
+      return model;
     }
   });
 });

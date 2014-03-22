@@ -38,12 +38,16 @@ define([
       this.runningMates.fetch();
     },
 
-    render: function() {
+    getTemplateContext: function() {
       var runningMates = this.runningMates.findByCandidate(this.candidate.get('id'));
-      this.$el.html(this.template({
+      return {
         config       : config,
         runningMates : runningMates.toJSON()
-      }));
+      };
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.getTemplateContext()));
     }
   });
 });
