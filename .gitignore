@@ -20,6 +20,5 @@ build
 docs
 doc
 
-data.json
 .sass-cache
 public
