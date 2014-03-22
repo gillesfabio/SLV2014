@@ -61,9 +61,9 @@ requirejs.config({
     'App.Router'  : 'src/router',
 
     // Tests
-    'App.test.collections' : 'test/collections',
-    'App.test.controllers' : 'test/controllers',
-    'App.test.views'       : 'test/views'
+    'App.test.collections' : 'test/frontend/collections',
+    'App.test.controllers' : 'test/frontend/controllers',
+    'App.test.views'       : 'test/frontend/views'
   },
 
   shim: {
