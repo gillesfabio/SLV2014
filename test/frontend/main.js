@@ -61,9 +61,9 @@ requirejs.config({
     'App.Router'  : 'src/router',
 
     // Tests
-    'App.test.collections' : 'test/frontend/collections',
-    'App.test.controllers' : 'test/frontend/controllers',
-    'App.test.views'       : 'test/frontend/views'
+    'App.collections.CandidateTest'   : 'test/frontend/collections/CandidateTest',
+    'App.collections.ProgramTest'     : 'test/frontend/collections/ProgramTest',
+    'App.collections.RunningMateTest' : 'test/frontend/collections/RunningMateTest'
   },
 
   shim: {
@@ -120,9 +120,9 @@ requirejs(['mocha', 'chai'], function(mocha, chai) {
 
   require([
 
-    'App.test.collections',
-    'App.test.controllers',
-    'App.test.views'
+    'App.collections.CandidateTest',
+    'App.collections.ProgramTest',
+    'App.collections.RunningMateTest'
 
   ], function() {
 
