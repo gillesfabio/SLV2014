@@ -2,7 +2,7 @@
 
 Code source de l'application [SLV2014.fr](http://slv2014.fr).
 
-Cette application permet d'accéder rapidement aux résultats, ainsi qu'aux profils
+SLV2014.fr permet d'accéder aux résultats, ainsi qu'aux profils
 et programmes des différents candidats aux élections municipales 2014
 de [Saint-Laurent-du-Var](https://goo.gl/maps/dk7RO) (Alpes-Maritimes, France).
 
@@ -18,7 +18,6 @@ L'application statique est propulsée par :
 * [SASS](http://sass-lang.com/)
 * [Compass](http://compass-style.org/)
 * [markdown-js](https://github.com/evilstreak/markdown-js)
-* [countdown.js](https://bitbucket.org/mckamey/countdown.js)
 
 La génération du site statique est propulsée par :
 
