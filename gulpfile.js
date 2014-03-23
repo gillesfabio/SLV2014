@@ -219,7 +219,7 @@ gulp.task('clean', [
 gulp.task('watch', function() {
   gulp.watch([
     'src/**/*.js',
-    'src/**/*.sass',
+    'src/stylesheets/sass/*.scss',
     'src/**/*.hbs',
     'data/**',
     'views/*.html',
