@@ -19,8 +19,6 @@ define([
         it('should properly set defaults', function() {
           var view = new View();
           expect(view.candidates).to.be.an.instanceof(CandidateCollection);
-          expect(view).to.have.ownProperty('tsRound1', 'tsRound2', 'dates');
-          expect(view.dates).to.have.ownProperty('round1', 'round2');
         });
       });
 
@@ -67,7 +65,7 @@ define([
           expect(context.elected).to.not.be.ok;
           expect(context.candidatesRound1).to.have.length(3);
           expect(context.hasRound2).to.be.true;
-          expect(context.candidatesRound2).to.have.length(2);
+          expect(context.candidatesRound2).to.have.length(3);
         });
         it('should set the elected candidate when round 2 is done (and other variables should be consistent)', function() {
           var models = [
@@ -81,7 +79,7 @@ define([
           expect(context.elected).to.deep.equal({scoreRound1: 28, scoreRound2: 60});
           expect(context.candidatesRound1).to.have.length(3);
           expect(context.hasRound2).to.be.true;
-          expect(context.candidatesRound2).to.have.length(2);
+          expect(context.candidatesRound2).to.have.length(3);
         });
         it('should set hasRound2 to false if round1 is not done', function() {
           var models = [

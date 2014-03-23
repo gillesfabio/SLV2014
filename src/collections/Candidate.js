@@ -47,18 +47,22 @@ define([
       return !this.noRound2();
     },
 
+    round1: function(options) {
+      options = options || {shuffle: false};
+      var models = this.sortBy(function(model) { return model.get('scoreRound1'); }).reverse();
+      if (options.shuffle) return new this.constructor(models).shuffle();
+      return new this.constructor(models);
+    },
+
     round2: function() {
       if (!this.hasRound2()) return;
       var models = this.chain().filter(function(model) {
         var score = model.get('scoreRound1');
-        if (score && _.isNumber(score)) return true;
+        if (score && _.isNumber(score) && score >= 10) return true;
       }).sortBy(function(model) {
         return model.get('scoreRound1');
       }).value().reverse();
-      if (models.length >= 2) {
-        models = models.slice(0, 2);
-        return new this.constructor(models);
-      }
+      return new this.constructor(models);
     },
 
     elected: function() {
