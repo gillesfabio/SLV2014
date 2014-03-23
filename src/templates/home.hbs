@@ -32,7 +32,7 @@
         <img src="{{config.baseUrl}}images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
       {{#if programUrl}}</a>{{/if}}
       <h5>{{name}}</h5>
-      {{#if scoreRound1 }}<h6>{{scoreRound1}}%</h6>{{/if}}
+      {{#if scoreRound1 }}<h6>{{toFixed scoreRound1 2}}%</h6>{{/if}}
     </li>
     {{/each}}
     <ul>
@@ -53,7 +53,7 @@
             <img src="{{config.baseUrl}}images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
           {{#if programUrl}}</a>{{/if}}
           <h5>{{name}}</h5>
-          {{#if scoreRound2 }}<h6>{{scoreRound2}}%</h6>{{/if}}
+          {{#if scoreRound2 }}<h6>{{toFixed scoreRound2 2}}%</h6>{{/if}}
         </li>
         {{/each}}
         <ul>

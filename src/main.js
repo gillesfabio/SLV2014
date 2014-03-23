@@ -15,6 +15,7 @@ requirejs.config({
     'countdown'         : 'vendor/countdownjs/countdown',
     'modernizr'         : 'vendor/modernizr/modernizr',
     'foundation'        : 'vendor/foundation/js/foundation.min',
+    'swag'              : 'vendor/swag/lib/swag',
 
     // App models
     'App.models.Candidate'         : 'src/models/Candidate',
@@ -86,6 +87,10 @@ requirejs.config({
     'foundation': {
       deps    : ['jquery', 'modernizr'],
       exports : 'Foundation'
+    },
+    'swag': {
+      deps    : ['handlebars'],
+      exports : 'Swag'
     }
   }
 });
@@ -95,15 +100,18 @@ requirejs([
   'domReady',
   'jquery',
   'backbone',
+  'handlebars',
+  'swag',
   'App.Router',
   'modernizr',
   'foundation',
-  'handlebars',
   'App.helpers'
 
-], function(domReady, $, Backbone, Router) {
+], function(domReady, $, Backbone, Handlebars, Swag, Router) {
 
   'use strict';
+
+  Swag.registerHelpers(Handlebars);
 
   domReady(function() {
     $(document).foundation();
