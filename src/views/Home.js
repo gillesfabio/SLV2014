@@ -41,7 +41,7 @@ define([
       return {
         config           : config,
         elected          : this.candidates.elected() ? this.candidates.elected().toJSON() : null,
-        candidatesRound1 : new CandidateCollection(this.candidates.shuffle()).toJSON(),
+        candidatesRound1 : this.candidates.round1() ? this.candidates.round1().toJSON() : null,
         hasRound2        : false, //this.candidates.hasRound2(),
         candidatesRound2 : this.candidates.round2() ? this.candidates.round2().toJSON() : null
       };
