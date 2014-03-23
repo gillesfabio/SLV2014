@@ -9,20 +9,20 @@
   "license": "MIT",
   "homepage": "https://github.com/gillesfabio/SLV2014",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "express": "3.x",
-    "gulp": "3.x",
-    "gulp-concat": "2.x",
-    "gulp-minify-css": "0.x",
-    "gulp-clean": "0.x",
-    "gulp-compass": "1.x",
-    "gulp-uglify": "0.x",
-    "gulp-rename": "1.x",
-    "temp-write": "0.x",
-    "yamljs": "0.x",
+    "requirejs": "2.x",
     "swig": "1.x",
     "lodash": "2.x",
-    "requirejs": "2.x",
+    "yamljs": "0.1.x",
+    "temp-write": "0.2.x",
+    "gulp": "3.x",
+    "gulp-concat": "2.x",
+    "gulp-minify-css": "0.3.x",
+    "gulp-clean": "0.2.x",
+    "gulp-uglify": "0.2.x",
+    "gulp-rename": "1.x",
+    "gulp-sass": "0.7.x",
     "gulp-requirejs": "git://github.com/RobinThrift/gulp-requirejs.git#6fb08d427dda7463a07b25be3fc931f58e660b54"
   }
 }
