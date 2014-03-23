@@ -399,9 +399,9 @@ button:hover, button:focus, .button:hover, .button:focus {
     }
 
     h6 {
-      font-size   : rem-calc(13);
+      font-size   : rem-calc(16);
       font-weight : normal;
-      color       : #909090;
+      color       : $color-chambray;
     }
   }
 }
