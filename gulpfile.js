@@ -4,7 +4,7 @@ var path      = require('path');
 var gulp      = require('gulp');
 var concat    = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
-var compass   = require('gulp-compass');
+var sass      = require('gulp-sass');
 var clean     = require('gulp-clean');
 var uglify    = require('gulp-uglify');
 var rename    = require('gulp-rename');
@@ -88,13 +88,8 @@ gulp.task('compile:index', function() {
 
 gulp.task('compile:stylesheets', function() {
   return gulp.src('./src/stylesheets/sass/*.scss')
-    .pipe(compass({
-      project     : __dirname,
-      css         : 'src/stylesheets/css',
-      sass        : 'src/stylesheets/sass',
-      image       : 'src/images',
-      import_path : ['vendor/foundation/scss']
-    }));
+    .pipe(sass({includePaths: ['./vendor/foundation/scss']}))
+    .pipe(gulp.dest('./src/stylesheets/css'));
 });
 
 gulp.task('compile:javascripts', function() {
