@@ -5,7 +5,7 @@ define(function() {
   return {
     baseUrl      : window.APP_BASE_URL,
     dataUrl      : window.APP_BASE_URL + 'data/data.json',
-    enableRound2 : false
+    enableRound2 : true
   };
 
 });

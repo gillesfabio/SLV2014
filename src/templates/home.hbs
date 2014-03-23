@@ -22,7 +22,7 @@
 {{/if}}
 <div class="results">
   <div class="results-header">
-    <h5>1er tour <small>(23 mars 2014)</small></h5>
+    <h5>1er tour</h5>
   </div>
   <div class="results-content">
     <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
@@ -41,12 +41,12 @@
 {{#and hasRound2 config.enableRound2}}
 <div class="results">
   <div class="results-header">
-    <h5>2ème tour <small>(30 mars 2014)</small></h5>
+    <h5>2ème tour (non-définitif)</h5>
   </div>
   <div class="results-content">
     <div class="row">
-      <div class="small-6 small-centered columns">
-        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+      <div class="small-centered columns">
+        <ul class="small-block-grid-1 medium-block-grid-5 large-block-grid-5">
         {{#each candidatesRound2}}
         <li>
           {{#if programUrl}}<a href="{{config.baseUrl}}#/candidats/{{id}}">{{/if}}
