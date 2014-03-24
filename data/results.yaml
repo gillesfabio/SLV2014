@@ -1,0 +1,42 @@
+round1:
+  stats:
+    population: 29942
+    registered:
+      percentage: 74.72
+      number: 22374
+    abstention:
+      percentage: 38.66
+      number: 8649
+    voters:
+      percentage: 61.34
+      number: 13725
+  nota:
+    score: 3.40
+    votes: 467
+  candidates:
+    -
+      candidate: francoise-benne
+      percentage: 10.44
+      number: 1384
+    -
+      candidate: marc-orsatti
+      percentage: 10.03
+      number: 1330
+    -
+      candidate: marc-moschetti
+      percentage: 8.40
+      number: 1114
+    -
+      candidate: joseph-segura
+      percentage: 23.39
+      number: 3101
+    -
+      candidate: lione-prados
+      percentage: 17.08
+      number: 2264
+    -
+      candidate: henri-revel
+      percentage: 30.66
+      number: 4065
+
+round2: ~
