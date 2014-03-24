@@ -15,6 +15,7 @@ requirejs.config({
     'countdown'         : 'vendor/countdownjs/countdown',
     'modernizr'         : 'vendor/modernizr/modernizr',
     'foundation'        : 'vendor/foundation/js/foundation.min',
+    'swag'              : 'vendor/swag/lib/swag',
 
     // Vendor test
     'mocha' : 'vendor/mocha/mocha',
@@ -22,14 +23,16 @@ requirejs.config({
     'sinon' : 'vendor/sinonjs/sinon',
 
     // App models
-    'App.models.Candidate'         : 'src/models/Candidate',
-    'App.models.PollingPlace'      : 'src/models/PollingPlace',
-    'App.models.Program'           : 'src/models/Program',
-    'App.models.RunningMate'       : 'src/models/RunningMate',
-    'App.models.Theme'             : 'src/models/Theme',
+    'App.models.Candidate'    : 'src/models/Candidate',
+    'App.models.Result'       : 'src/models/Result',
+    'App.models.PollingPlace' : 'src/models/PollingPlace',
+    'App.models.Program'      : 'src/models/Program',
+    'App.models.RunningMate'  : 'src/models/RunningMate',
+    'App.models.Theme'        : 'src/models/Theme',
 
     // App collections
     'App.collections.Candidate'    : 'src/collections/Candidate',
+    'App.collections.Result'       : 'src/collections/Result',
     'App.collections.PollingPlace' : 'src/collections/PollingPlace',
     'App.collections.Program'      : 'src/collections/Program',
     'App.collections.RunningMate'  : 'src/collections/RunningMate',
@@ -41,6 +44,8 @@ requirejs.config({
     'App.views.CandidateList'    : 'src/views/CandidateList',
     'App.views.CandidateProgram' : 'src/views/CandidateProgram',
     'App.views.Home'             : 'src/views/Home',
+    'App.views.ResultList'       : 'src/views/ResultList',
+    'App.views.Elected'          : 'src/views/Elected',
     'App.views.PollingPlaceList' : 'src/views/PollingPlaceList',
     'App.views.RunningMateList'  : 'src/views/RunningMateList',
     'App.views.ThemeDetail'      : 'src/views/ThemeDetail',
@@ -61,7 +66,7 @@ requirejs.config({
     'App.Router'  : 'src/router',
 
     // Tests: collections
-    'App.collections.CandidateTest'   : 'test/frontend/collections/CandidateTest',
+    'App.collections.ResultTest'      : 'test/frontend/collections/ResultTest',
     'App.collections.ProgramTest'     : 'test/frontend/collections/ProgramTest',
     'App.collections.RunningMateTest' : 'test/frontend/collections/RunningMateTest',
 
@@ -71,6 +76,8 @@ requirejs.config({
     'App.views.CandidateListTest'    : 'test/frontend/views/CandidateListTest',
     'App.views.CandidateProgramTest' : 'test/frontend/views/CandidateProgramTest',
     'App.views.HomeTest'             : 'test/frontend/views/HomeTest',
+    'App.views.ResultListTest'       : 'test/frontend/views/ResultListTest',
+    'App.views.ElectedTest'          : 'test/frontend/views/ElectedTest',
     'App.views.PollingPlaceListTest' : 'test/frontend/views/PollingPlaceListTest',
     'App.views.RunningMateListTest'  : 'test/frontend/views/RunningMateListTest',
     'App.views.ThemeDetailTest'      : 'test/frontend/views/ThemeDetailTest',
@@ -116,13 +123,36 @@ requirejs.config({
     },
     'sinon': {
       exports: 'sinon'
+    },
+    'swag': {
+      deps    : ['handlebars'],
+      exports : 'Swag'
     }
   }
 });
 
-requirejs(['mocha', 'chai'], function(mocha, chai) {
+requirejs([
+
+  'mocha',
+  'chai',
+  'handlebars',
+  'swag',
+  'text!src/templates/_candidate-result.hbs'
+
+], function(
+  mocha,
+  chai,
+  Handlebars,
+  Swag,
+  candidateResultTemplate) {
 
   'use strict';
+
+  // Handlebars extensions
+  Swag.registerHelpers(Handlebars);
+
+  // Handlebars partials
+  Handlebars.registerPartial('candidateResult', candidateResultTemplate);
 
   chai.config.includeStack = true;
   mocha.setup('bdd');
@@ -131,14 +161,17 @@ requirejs(['mocha', 'chai'], function(mocha, chai) {
 
   require([
 
-    'App.collections.CandidateTest',
+    'App.collections.ResultTest',
     'App.collections.ProgramTest',
     'App.collections.RunningMateTest',
+
     'App.views.CandidateCardTest',
     'App.views.CandidateDetailTest',
     'App.views.CandidateListTest',
     'App.views.CandidateProgramTest',
     'App.views.HomeTest',
+    'App.views.ResultListTest',
+    'App.views.ElectedTest',
     'App.views.PollingPlaceListTest',
     'App.views.RunningMateListTest',
     'App.views.ThemeDetailTest',

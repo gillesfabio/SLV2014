@@ -7,58 +7,6 @@
     Vous pouvez également consulter <a href="{{config.baseUrl}}#/bureaux">la liste des bureaux de vote</a>.
   </p>
 </div>
-{{#if elected}}
-<div class="elected">
-  <div class="elected-header">
-    <h2>Maire élu</h2>
-  </div>
-  <div class="elected-content">
-    <a href="{{config.baseUrl}}#/candidats/{{elected.id}}">
-      {{#if elected.id}}<img src="{{config.baseUrl}}images/{{lastname elected.id}}.jpg" class="circle" alt="{{name}}">{{/if}}
-    </a>
-    <h3>{{elected.name}}</h3>
-  </div>
-</div>
-{{/if}}
-<div class="results">
-  <div class="results-header">
-    <h5>1er tour</h5>
-  </div>
-  <div class="results-content">
-    <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-6">
-    {{#each candidatesRound1}}
-    <li>
-      {{#if programUrl}}<a href="{{config.baseUrl}}#/candidats/{{id}}">{{/if}}
-        <img src="{{config.baseUrl}}images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
-      {{#if programUrl}}</a>{{/if}}
-      <h5>{{name}}</h5>
-      {{#if scoreRound1 }}<h6>{{toFixed scoreRound1 2}}%</h6>{{/if}}
-    </li>
-    {{/each}}
-    <ul>
-  </div>
-</div>
-{{#and hasRound2 config.enableRound2}}
-<div class="results">
-  <div class="results-header">
-    <h5>2ème tour (non-définitif)</h5>
-  </div>
-  <div class="results-content">
-    <div class="row">
-      <div class="small-centered columns">
-        <ul class="small-block-grid-1 medium-block-grid-5 large-block-grid-5">
-        {{#each candidatesRound2}}
-        <li>
-          {{#if programUrl}}<a href="{{config.baseUrl}}#/candidats/{{id}}">{{/if}}
-            <img src="{{config.baseUrl}}images/{{lastname id}}.jpg" class="circle" alt="{{name}}">
-          {{#if programUrl}}</a>{{/if}}
-          <h5>{{name}}</h5>
-          {{#if scoreRound2 }}<h6>{{toFixed scoreRound2 2}}%</h6>{{/if}}
-        </li>
-        {{/each}}
-        <ul>
-      </div>
-    </div>
-  </div>
-</div>
-{{/and}}
+<div class="home-results-elected"></div>
+<div class="home-results-round1"></div>
+<div class="home-results-round2"></div>

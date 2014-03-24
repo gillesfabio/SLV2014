@@ -1,0 +1,11 @@
+{{#if elected}}
+<div class="elected-header">
+  <h2>Élu</h2>
+</div>
+<div class="elected-content">
+  <a href="{{config.baseUrl}}#/candidats/{{elected.candidate.id}}">
+    {{#if elected.candidate.id}}<img src="{{config.baseUrl}}images/{{lastname elected.candidate.id}}.jpg" class="circle" alt="{{elected.candidate.name}}">{{/if}}
+  </a>
+  <h3>{{elected.name}}</h3>
+</div>
+{{/if}}

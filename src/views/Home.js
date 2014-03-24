@@ -4,17 +4,18 @@ define([
   'backbone',
   'underscore',
   'handlebars',
-  'App.collections.Candidate',
+  'App.views.ResultList',
+  'App.views.Elected',
   'App.config',
-  'text!src/templates/home.hbs',
-  'underscore.string'
+  'text!src/templates/home.hbs'
 
 ], function(
   $,
   Backbone,
   _,
   Handlebars,
-  CandidateCollection,
+  ResultListView,
+  ElectedView,
   config,
   template) {
 
@@ -26,29 +27,29 @@ define([
     id      : 'home',
 
     initialize: function(options) {
-      this.options = _.extend({
-        candidates: new CandidateCollection()
-      }, options);
+      this.options = _.extend({}, options);
+      this.template = Handlebars.compile(template);
+      this.setSubviews();
+      this.render();
+    },
 
-      this.candidates = this.options.candidates;
-      this.template   = Handlebars.compile(template);
-
-      this.listenTo(this.candidates, 'sync', this.render);
-      this.candidates.fetch();
+    setSubviews: function() {
+      this.round1View  = new ResultListView({round: 1});
+      this.round2View  = new ResultListView({round: 2});
+      this.electedView = new ElectedView();
     },
 
     getTemplateContext: function() {
       return {
-        config           : config,
-        elected          : this.candidates.elected() ? this.candidates.elected().toJSON() : null,
-        candidatesRound1 : this.candidates.round1() ? this.candidates.round1().toJSON() : null,
-        hasRound2        : this.candidates.hasRound2(),
-        candidatesRound2 : this.candidates.round2() ? this.candidates.round2().toJSON() : null
+        config: config
       };
     },
 
     render: function() {
       this.$el.html(this.template(this.getTemplateContext()));
+      this.$el.find('.home-results-elected').html(this.electedView.el);
+      this.$el.find('.home-results-round1').html(this.round1View.el);
+      this.$el.find('.home-results-round2').html(this.round2View.el);
     }
   });
 });

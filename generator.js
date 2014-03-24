@@ -25,14 +25,14 @@ Generator.getExtension = function getExtension(file) {
   return ext[ext.length - 1];
 };
 
-Generator.prototype.formatCandidates = function formatCandidates() {
+Generator.prototype.formatCandidates = function() {
   Object.keys(this.rawData).forEach(function(key) {
     var candidate = this.rawData[key];
     this.data.candidates.push(candidate.profil);
   }.bind(this));
 };
 
-Generator.prototype.formatRunningMates = function formatRunningMates() {
+Generator.prototype.formatRunningMates = function() {
   Object.keys(this.rawData).forEach(function(key) {
     var candidate = this.rawData[key];
     if (candidate.colistiers) {
@@ -44,7 +44,7 @@ Generator.prototype.formatRunningMates = function formatRunningMates() {
   }.bind(this));
 };
 
-Generator.prototype.formatPrograms = function formatPrograms() {
+Generator.prototype.formatPrograms = function() {
   Object.keys(this.rawData).forEach(function(key) {
     var candidate = this.rawData[key];
     if (candidate.programme) {
@@ -65,7 +65,7 @@ Generator.prototype.formatPrograms = function formatPrograms() {
   }.bind(this));
 };
 
-Generator.prototype.buildCandidates = function buildCandidates() {
+Generator.prototype.candidates = function() {
   var basedir = path.join(__dirname, 'data', 'candidates');
   fs.readdirSync(basedir).forEach(function(dir) {
     var stat = fs.statSync(path.join(basedir, dir));
@@ -82,12 +82,28 @@ Generator.prototype.buildCandidates = function buildCandidates() {
   }.bind(this));
 };
 
-Generator.prototype.buildThemes = function buildThemes() {
+Generator.prototype.themes = function() {
   var file = path.join(__dirname, 'data', 'themes.yaml');
   if (fs.existsSync(file)) this.data.themes = YAML.load(file);
 };
 
-Generator.prototype.buildPollingPlaces = function buildPollingPlaces() {
+Generator.prototype.results = function() {
+  var file = path.join(__dirname, 'data', 'results.yaml');
+  var items = YAML.load(file);
+  this.data.results = [];
+  items.forEach(function(raw) {
+    var obj = _.clone(raw);
+    obj.candidates = [];
+    raw.candidates.forEach(function(candidate) {
+      var o = _.clone(candidate);
+      o.candidate = _.find(this.data.candidates, {id: candidate.candidate});
+      obj.candidates.push(o);
+    }.bind(this));
+    this.data.results.push(obj);
+  }.bind(this));
+};
+
+Generator.prototype.pollingPlaces = function() {
   var file = path.join(__dirname, 'data', 'polling-places.yaml');
   var yaml = YAML.load(file);
   Object.keys(yaml).forEach(function(key) {
@@ -101,12 +117,17 @@ Generator.prototype.buildPollingPlaces = function buildPollingPlaces() {
   }.bind(this));
 };
 
-Generator.prototype.build = function build() {
-  this.buildThemes();
-  this.buildPollingPlaces();
-  this.buildCandidates();
+Generator.prototype.build = function() {
+
+  this.themes();
+  this.pollingPlaces();
+  this.candidates();
+
   this.formatCandidates();
   this.formatRunningMates();
   this.formatPrograms();
+
+  this.results();
+
   return this.data;
 };

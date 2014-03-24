@@ -1,0 +1,14 @@
+<div class="results">
+  <div class="results-header">
+    <h5>{{#is results.round 1}}1er{{else}}2ème{{/is}} tour</h5>
+  </div>
+  <div class="results-content">
+    <div class="row">
+      <div class="small-centered columns">
+        <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-{{length results.candidates}}">
+        {{#each results.candidates}}<li>{{> candidateResult}}</li>{{/each}}
+        <ul>
+      </div>
+    </div>
+  </div>
+</div>
