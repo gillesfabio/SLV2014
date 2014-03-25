@@ -39,4 +39,7 @@ serve-prod: clean-build
 serve-test: clean-build
 	@gulp serve:test
 
-.PHONY: venv install clean clean-build build generate generate-github publish serve serve-prod serve-test
+scrap:
+	@casperjs scraper.js
+
+.PHONY: venv install clean clean-build build generate generate-github publish serve serve-prod serve-test scrap
