@@ -6,6 +6,7 @@
   <a href="{{config.baseUrl}}#/candidats/{{elected.candidate.id}}">
     {{#if elected.candidate.id}}<img src="{{config.baseUrl}}images/{{lastname elected.candidate.id}}.jpg" class="circle" alt="{{elected.candidate.name}}">{{/if}}
   </a>
-  <h3>{{elected.name}}</h3>
+  <h3>{{elected.candidate.name}}</h3>
+  <h4>{{toFixed elected.percentage 2}} %</h4>
 </div>
 {{/if}}

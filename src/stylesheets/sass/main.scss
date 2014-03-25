@@ -360,6 +360,12 @@ button:hover, button:focus, .button:hover, .button:focus {
     font-weight : normal;
   }
 
+  h4 {
+    font-size   : rem-calc(15);
+    color       : $color-white;
+    font-weight : normal;
+  }
+
   .elected-header {
     background : #3A539B;
     padding    : rem-calc(20);
