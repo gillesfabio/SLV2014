@@ -11,6 +11,9 @@
     voters:
       percentage: 61.34
       count: 13725
+    expressed:
+      percentage: 59.26
+      count: 13258
     nota:
       percentage: 3.40
       count: 467
@@ -42,7 +45,7 @@
 -
   round: 2
   stats:
-    population: 29942
+    population: ~
     registered:
       percentage: ~
       count: ~

@@ -412,6 +412,45 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 }
 
+.results-stats {
+
+  .results-stat {
+
+    background: $color-porcelain;
+    border: 1px solid $color-iron;
+    text-align: center;
+
+    h5 {
+      background: $color-iron;
+      font-size: rem-calc(16);
+      font-weight: normal;
+      padding: rem-calc(5);
+      margin: 0;
+    }
+
+    p {
+      font-size: rem-calc(15);
+      color: $color-chambray;
+      padding: rem-calc(10);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: rem-calc(10);
+    }
+
+    .results-percentage {
+      font-size: rem-calc(18);
+      color: $color-chambray;
+    }
+
+    .results-count, p small {
+      color: #909090;
+      font-size: rem-calc(13);
+    }
+  }
+}
 // -----------------------------------------------------------------------------
 // Polling Places
 // -----------------------------------------------------------------------------
