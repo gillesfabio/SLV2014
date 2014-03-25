@@ -3,9 +3,15 @@ define(function() {
   'use strict';
 
   return {
-    baseUrl      : window.APP_BASE_URL,
-    dataUrl      : window.APP_BASE_URL + 'data/data.json',
-    enableRound2 : true
+    baseUrl: window.APP_BASE_URL,
+    dataUrl: window.APP_BASE_URL + 'data/data.json', // backward compatibility
+    data: {
+      themes     : window.APP_BASE_URL + 'data/themes.json',
+      offices    : window.APP_BASE_URL + 'data/offices.json',
+      candidates : window.APP_BASE_URL + 'data/candidates.json',
+      programs   : window.APP_BASE_URL + 'data/programs.json',
+      lists      : window.APP_BASE_URL + 'data/lists.json',
+      results    : window.APP_BASE_URL + 'data/results.json'
+    }
   };
-
 });
