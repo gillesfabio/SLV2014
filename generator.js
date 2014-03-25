@@ -14,7 +14,8 @@ var Generator = module.exports = function Generator() {
     offices    : [],
     candidates : [],
     programs   : [],
-    lists      : []
+    lists      : [],
+    results    : [],
   };
   this.rawData = {};
 };
@@ -106,7 +107,21 @@ Generator.prototype.buildResults = function() {
     [2, data.r2.results]
   ];
   rounds.forEach(function(round) {
-    var results = round[1];
+    var results    = round[1];
+    var obj        = {};
+    obj.round      = round[0];
+    obj.candidates = [];
+    Object.keys(results).forEach(function(id) {
+      var raw              = results[id];
+      var candidate        = {};
+      candidate.candidate  = _.find(this.data.candidates, function(obj) { return obj.id === id; });
+      candidate.count      = raw.votes;
+      candidate.percentage = raw.expressedPct;
+      candidate.cmCount    = raw.cmCount;
+      candidate.ccCount    = raw.ccCount;
+      obj.candidates.push(candidate);
+    }.bind(this));
+    this.data.results.push(obj);
   }.bind(this));
 };
 
