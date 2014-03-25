@@ -514,6 +514,35 @@ a.circle {
   }
 }
 
+.dashbox {
+
+  background: $color-porcelain;
+  border: 1px solid $color-iron;
+  text-align: center;
+
+  h5 {
+    background: $color-iron;
+    font-size: rem-calc(16);
+    font-weight: normal;
+    padding: rem-calc(10);
+    margin: 0;
+  }
+
+  dl {
+    padding: rem-calc(20 0 0 0);
+  }
+
+  dt {
+    font-size: rem-calc(20);
+    color: $color-chambray;
+  }
+
+  dd {
+    color: #909090;
+    font-size: rem-calc(13);
+  }
+}
+
 // -----------------------------------------------------------------------------
 // Media Queries
 // -----------------------------------------------------------------------------
