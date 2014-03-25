@@ -80,6 +80,30 @@ define([
           var candidates = getCandidateIDs(m);
           expect(candidates).to.deep.equal(['martin', 'steve', 'john']);
         });
+        it('should sort candidates by R1 results if R2 is not done yet without all R1 candidates', function() {
+          var col = new Collection([
+            {
+              round: 1,
+              candidates: [
+                {candidate: {id: 'john'}, percentage: 21, count: 11},
+                {candidate: {id: 'martin'}, percentage: 8, count: 11},
+                {candidate: {id: 'mark'}, percentage: 29, count: 24},
+                {candidate: {id: 'steve'}, percentage: 30, count: 24}
+
+              ]
+            },
+            {
+              round: 2,
+              candidates: [
+                {candidate: {id: 'john'}, percentage: 34, count: 20},
+                {candidate: {id: 'martin'}, percentage: 39, count: 11}
+              ]
+            }
+          ]);
+          var m = col.findByRound(2).sortCandidatesByResult();
+          var candidates = getCandidateIDs(m);
+          expect(candidates).to.deep.equal(['martin', 'john']);
+        });
       });
     });
   });

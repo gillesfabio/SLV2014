@@ -22,6 +22,7 @@ define(['backbone'], function(Backbone) {
             if (o.candidate.id === c.candidate.id) return true;
           });
         });
+        candidates = _.filter(candidates, function(c) { if (c) return true; });
         this.set('candidates', candidates);
         return this;
       }
