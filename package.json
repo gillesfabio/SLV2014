@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "casperjs": "~1.1.0-beta3",
-    "phantomjs": "~1.9.7-1"
+    "phantomjs": "~1.9.7-1",
+    "fs-extra": "~0.8.1"
   }
 }

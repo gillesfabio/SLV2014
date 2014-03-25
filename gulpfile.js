@@ -66,11 +66,7 @@ var customSwig = new swig.Swig({
 
 gulp.task('compile:data', function() {
   var generator = new Generator();
-  var data      = generator.build();
-  var json      = JSON.stringify(data, null, 2);
-  var file      = tempWrite.sync(json, 'data.json');
-  return gulp.src(file)
-    .pipe(gulp.dest('build/data'));
+  generator.build();
 });
 
 gulp.task('compile:index', function() {

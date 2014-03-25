@@ -1,11 +1,14 @@
 'use strict';
 
-var fs    = require('fs');
-var path  = require('path');
-var _     = require('lodash');
-var YAML  = require('yamljs');
+var fs   = require('fs');
+var path = require('path');
+var util = require('util');
+var _    = require('lodash');
+var YAML = require('yamljs');
+var fse  = require('fs-extra');
 
-var DATA_DIR = path.join(__dirname, 'data-refactor');
+var BUILD_DIR    = path.join(__dirname, 'build', 'data');
+var DATA_DIR     = path.join(__dirname, 'data-refactor');
 var SCRAPER_JSON = path.join(__dirname, 'scrap-data.json');
 
 var Generator = module.exports = function Generator() {
@@ -15,7 +18,7 @@ var Generator = module.exports = function Generator() {
     candidates : [],
     programs   : [],
     lists      : [],
-    results    : [],
+    results    : []
   };
   this.rawData = {};
 };
@@ -125,14 +128,21 @@ Generator.prototype.buildResults = function() {
   }.bind(this));
 };
 
-Generator.prototype.build = function() {
+Generator.prototype.createFiles = function() {
+  var entities = Object.keys(this.data);
+  entities.forEach(function(entity) {
+    if (!fs.existsSync(BUILD_DIR)) fse.mkdirsSync(BUILD_DIR);
+    var file = path.join(BUILD_DIR, util.format('%s.json', entity));
+    fs.writeFileSync(file, JSON.stringify(this.data[entity], undefined, 2));
+  }.bind(this));
+};
 
+Generator.prototype.build = function() {
   this.buildThemes();
   this.buildOffices();
   this.buildCandidates();
   this.buildPrograms();
   this.buildLists();
   this.buildResults();
-
-  return this.data;
+  this.createFiles();
 };
