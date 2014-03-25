@@ -19,11 +19,7 @@ define([
     },
 
     findByRound: function(round) {
-      var model = this.findWhere({round: round});
-      if (!model) return;
-      model = model.toJSON();
-      model.candidates = _.sortBy(model.candidates, function(c) { return c.percentage; }).reverse();
-      return new ResultModel(model);
+      return this.findWhere({round: round});
     },
 
     isRound1Done: function() {

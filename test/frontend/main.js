@@ -70,6 +70,9 @@ requirejs.config({
     'App.collections.ProgramTest'     : 'test/frontend/collections/ProgramTest',
     'App.collections.RunningMateTest' : 'test/frontend/collections/RunningMateTest',
 
+    // Tests: models
+    'App.models.ResultTest': 'test/frontend/models/ResultTest',
+
     // Tests: views
     'App.views.CandidateCardTest'    : 'test/frontend/views/CandidateCardTest',
     'App.views.CandidateDetailTest'  : 'test/frontend/views/CandidateDetailTest',
@@ -164,6 +167,8 @@ requirejs([
     'App.collections.ResultTest',
     'App.collections.ProgramTest',
     'App.collections.RunningMateTest',
+
+    'App.models.ResultTest',
 
     'App.views.CandidateCardTest',
     'App.views.CandidateDetailTest',

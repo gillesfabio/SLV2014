@@ -31,6 +31,14 @@ define([
           ]);
           expect(col.findByRound(8)).to.be.undefined;
         });
+        it('should return undefined if round does not exist', function() {
+          var col = new Collection([
+            {round: 1},
+            {round: 2},
+            {round: 3}
+          ]);
+          expect(col.findByRound(8)).to.be.undefined;
+        });
       });
 
       describe('#isRoundDone', function() {

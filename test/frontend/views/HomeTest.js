@@ -1,10 +1,9 @@
 define([
 
   'chai',
-  'App.views.Home',
-  'App.collections.Result'
+  'App.views.Home'
 
-], function(chai, View, ResultCollection) {
+], function(chai, View) {
 
   /* jshint expr:true */
 
@@ -14,13 +13,6 @@ define([
 
   describe('App.views', function() {
     describe('App.views.HomeTest', function() {
-
-      describe('#initialize', function() {
-        it('should properly set defaults', function() {
-          var view = new View();
-          expect(view.results).to.be.an.instanceof(ResultCollection);
-        });
-      });
 
       describe('#getTemplateContext', function() {
         it('should return a proper context', function() {

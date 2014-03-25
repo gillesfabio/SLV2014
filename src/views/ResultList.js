@@ -40,6 +40,7 @@ define([
 
     getTemplateContext: function() {
       var results = this.results.findByRound(this.round);
+      if (results) results.sortCandidatesByResult();
       return {
         config  : config,
         results : results ? results.toJSON() : null
