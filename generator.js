@@ -107,8 +107,6 @@ Generator.prototype.buildResults = function() {
   ];
   rounds.forEach(function(round) {
     var results = round[1];
-    Object.keys(lists).forEach(function(id) {
-
   }.bind(this));
 };
 

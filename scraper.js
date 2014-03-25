@@ -84,6 +84,21 @@ casper.run(function() {
   this.exit();
 });
 
+function getCandidateID(name) {
+  for (var i = 0; i < CANDIDATES_IDS.length; i++) {
+    var candidate = CANDIDATES_IDS[i];
+    var re = new RegExp(name, 'gi');
+    var matches = re.exec(candidate[1]);
+    if (matches && matches.length > 0) return candidate[0];
+  }
+}
+
+function isCandidate(name) {
+  var candidate = getCandidateID(name);
+  if (candidate) return true;
+  return false;
+}
+
 function formatLists() {
   var lists = rawData.r1.lists;
   Object.keys(lists).forEach(function(key) {
@@ -95,6 +110,8 @@ function formatLists() {
       var rawName  = raw[0];
       var name     = rawName.split(' - ')[1];
       var position = rawName.split(' - ')[0];
+      name = name.split(' ').slice(1).join(' '); // Remove civility
+      if (isCandidate(name)) continue;
       list.push({
         name     : name,
         position : parseInt(position, 10),
@@ -111,15 +128,9 @@ function formatResults() {
   for (var i = 0; i < results.length; i += chunck) {
     var raw  = results.slice(i, i+chunck);
     var name = raw[0];
-    for (var ii = 0; ii < CANDIDATES_IDS.length; ii++) {
-      var candidate = CANDIDATES_IDS[ii];
-      var re        = new RegExp(candidate[1], 'gi');
-      var matches   = re.exec(name);
-      if (matches && matches.length > 0) {
-        name = candidate[0];
-        break;
-      }
-    }
+    var parts = name.split(' ');
+    name = parts.slice(1, parts.length - 1).join(' ');
+    name = getCandidateID(name);
     var result = {
       votes         : raw[1],
       registeredPct : raw[2],
