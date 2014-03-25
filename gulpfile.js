@@ -105,11 +105,7 @@ gulp.task('compile:favicon', function() {
 });
 
 gulp.task('compile:images', function() {
-  return gulp.src('./data/candidates/**/*.jpg')
-    .pipe(rename(function(path) {
-      path.basename = path.dirname;
-      path.dirname = '';
-    }))
+  return gulp.src('./data/pictures/*.jpg')
     .pipe(gulp.dest('./build/images'));
 });
 
@@ -142,7 +138,7 @@ gulp.task('public:fonts', function() {
 });
 
 gulp.task('public:images', ['compile:images'], function() {
-  return gulp.src('./build/images/**/*.jpg')
+  return gulp.src('./build/images/*.jpg')
     .pipe(gulp.dest('./public/images'));
 });
 

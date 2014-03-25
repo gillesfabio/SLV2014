@@ -8,7 +8,7 @@ var YAML = require('yamljs');
 var fse  = require('fs-extra');
 
 var BUILD_DIR    = path.join(__dirname, 'build', 'data');
-var DATA_DIR     = path.join(__dirname, 'data-refactor');
+var DATA_DIR     = path.join(__dirname, 'data');
 var SCRAPER_JSON = path.join(__dirname, 'scrap-data.json');
 
 var Generator = module.exports = function Generator() {
@@ -20,16 +20,6 @@ var Generator = module.exports = function Generator() {
     lists      : [],
     results    : []
   };
-  this.rawData = {};
-};
-
-Generator.getFilename = function getFilename(file) {
-  return file.substr(0, file.lastIndexOf('.'));
-};
-
-Generator.getExtension = function getExtension(file) {
-  var ext = path.extname(file || '').split('.');
-  return ext[ext.length - 1];
 };
 
 Generator.prototype.buildThemes = function() {
