@@ -11,7 +11,7 @@ define([
   return Backbone.Collection.extend({
 
     model : PollingPlaceModel,
-    url   : config.dataUrl,
+    url   : config.data.offices,
 
     parse: function(res) {
       return res.pollingPlaces;

@@ -11,7 +11,7 @@ define([
   return Backbone.Collection.extend({
 
     model : ThemeModel,
-    url   : config.dataUrl,
+    url   : config.data.themes,
 
     parse: function(res) {
       return res.themes;

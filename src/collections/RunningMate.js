@@ -11,7 +11,7 @@ define([
   return Backbone.Collection.extend({
 
     model : RunningMateModel,
-    url   : config.dataUrl,
+    url   : config.data.lists,
 
     parse: function(res) {
       return res.runningMates;

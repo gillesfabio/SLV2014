@@ -12,7 +12,7 @@ define([
   return Backbone.Collection.extend({
 
     model : CandidateModel,
-    url   : config.dataUrl,
+    url   : config.data.candidates,
 
     parse: function(res) {
       return res.candidates;

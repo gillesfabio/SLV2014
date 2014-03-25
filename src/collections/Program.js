@@ -11,7 +11,7 @@ define([
   return Backbone.Collection.extend({
 
     model : ProgramModel,
-    url   : config.dataUrl,
+    url   : config.data.programs,
 
     parse: function(res) {
       return res.programs;
