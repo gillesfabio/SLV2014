@@ -1,0 +1,10 @@
+<h2>Mes Colistiers</h2>
+<ul class="small-block-grid-1 large-block-grid-2">
+  {{#each lists}}
+  <li class="list {{#if cc}}list-cc{{/if}}">
+    <div class="list-content">
+      <h5><span class="list-position">{{position}}.</span> {{name}}</h5>
+    </div>
+  </li>
+  {{/each}}
+</ul>
