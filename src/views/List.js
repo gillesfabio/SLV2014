@@ -12,7 +12,7 @@ define([
   Backbone,
   _,
   Handlebars,
-  RunningMateCollection,
+  ListCollection,
   CandidateModel,
   config,
   template) {
