@@ -24,12 +24,12 @@ define([
 
       describe('#getTemplateContext', function() {
         it('should return a proper context', function() {
-          var view = new View();
+          var view    = new View();
           var context = view.getTemplateContext();
           expect(context).to.have.keys(['config', 'themes']);
         });
         it('should set the mandatory config.baseUrl variable in context', function() {
-          var view = new View();
+          var view    = new View();
           var context = view.getTemplateContext();
           expect(context.config).to.contain.keys('baseUrl');
         });
@@ -37,7 +37,7 @@ define([
           var col = new ThemeCollection();
           col.fetch({
             success: function() {
-              var view = new View({themes: col});
+              var view    = new View({themes: col});
               var context = view.getTemplateContext();
               expect(context.themes).to.deep.equal(col.toJSON());
               done();

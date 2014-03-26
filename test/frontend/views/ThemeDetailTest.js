@@ -27,12 +27,12 @@ define([
 
       describe('#getTemplateContext', function() {
         it('should return a proper context', function() {
-          var view = new View();
+          var view    = new View();
           var context = view.getTemplateContext();
           expect(context).to.have.keys(['config', 'theme', 'programs']);
         });
         it('should set the mandatory config.baseUrl variable in context', function() {
-          var view = new View();
+          var view    = new View();
           var context = view.getTemplateContext();
           expect(context.config).to.contain.keys('baseUrl');
         });
@@ -40,8 +40,8 @@ define([
           var col = new ThemeCollection();
           col.fetch({
             success: function() {
-              var theme = col.findWhere({id: 'solidarite'});
-              var view = new View({theme: theme});
+              var theme   = col.findWhere({id: 'solidarite'});
+              var view    = new View({theme: theme});
               var context = view.getTemplateContext();
               expect(context.theme).to.deep.equal(theme.toJSON());
               done();
@@ -49,7 +49,7 @@ define([
           });
         });
         it('should set programs in context', function(done) {
-          var col = new ThemeCollection();
+          var col      = new ThemeCollection();
           var programs = new ProgramCollection();
           col.fetch({
             success: function() {
