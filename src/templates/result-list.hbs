@@ -26,28 +26,6 @@
         </div>
       </li>
       {{/if}}
-      {{#if results.stats.abstentions.percentage}}
-      <li>
-        <div class="results-stat">
-          <h5>Abstention</h5>
-          <ul>
-            <li class="results-percentage">{{toFixed results.stats.abstentions.percentage 2}} %</li>
-            <li class="results-count">{{digitGrouping results.stats.abstentions.count ' '}} votes</li>
-          </ul>
-        </div>
-      </li>
-      {{/if}}
-      {{#if results.stats.voters.percentage}}
-      <li>
-        <div class="results-stat">
-          <h5>Votants</h5>
-          <ul>
-            <li class="results-percentage">{{toFixed results.stats.voters.percentage 2}} %</li>
-            <li class="results-count">{{digitGrouping results.stats.voters.count ' '}} votes</li>
-          </ul>
-        </div>
-      </li>
-      {{/if}}
       {{#if results.stats.expressed.percentage}}
       <li>
         <div class="results-stat">
@@ -55,6 +33,17 @@
           <ul>
             <li class="results-percentage">{{toFixed results.stats.expressed.percentage 2}} %</li>
             <li class="results-count">{{digitGrouping results.stats.expressed.count ' '}} votes</li>
+          </ul>
+        </div>
+      </li>
+      {{/if}}
+      {{#if results.stats.abstentions.percentage}}
+      <li>
+        <div class="results-stat">
+          <h5>Abstention</h5>
+          <ul>
+            <li class="results-percentage">{{toFixed results.stats.abstentions.percentage 2}} %</li>
+            <li class="results-count">{{digitGrouping results.stats.abstentions.count ' '}} votes</li>
           </ul>
         </div>
       </li>
