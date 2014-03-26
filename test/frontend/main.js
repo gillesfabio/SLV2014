@@ -23,20 +23,20 @@ requirejs.config({
     'sinon' : 'vendor/sinonjs/sinon',
 
     // App models
-    'App.models.Candidate'    : 'src/models/Candidate',
-    'App.models.Result'       : 'src/models/Result',
-    'App.models.PollingPlace' : 'src/models/PollingPlace',
-    'App.models.Program'      : 'src/models/Program',
-    'App.models.RunningMate'  : 'src/models/RunningMate',
-    'App.models.Theme'        : 'src/models/Theme',
+    'App.models.Candidate' : 'src/models/Candidate',
+    'App.models.Result'    : 'src/models/Result',
+    'App.models.Office'    : 'src/models/Office',
+    'App.models.Program'   : 'src/models/Program',
+    'App.models.List'      : 'src/models/List',
+    'App.models.Theme'     : 'src/models/Theme',
 
     // App collections
-    'App.collections.Candidate'    : 'src/collections/Candidate',
-    'App.collections.Result'       : 'src/collections/Result',
-    'App.collections.PollingPlace' : 'src/collections/PollingPlace',
-    'App.collections.Program'      : 'src/collections/Program',
-    'App.collections.RunningMate'  : 'src/collections/RunningMate',
-    'App.collections.Theme'        : 'src/collections/Theme',
+    'App.collections.Candidate' : 'src/collections/Candidate',
+    'App.collections.Result'    : 'src/collections/Result',
+    'App.collections.Office'    : 'src/collections/Office',
+    'App.collections.Program'   : 'src/collections/Program',
+    'App.collections.List'      : 'src/collections/List',
+    'App.collections.Theme'     : 'src/collections/Theme',
 
     // App views
     'App.views.CandidateCard'    : 'src/views/CandidateCard',
@@ -46,19 +46,19 @@ requirejs.config({
     'App.views.Home'             : 'src/views/Home',
     'App.views.ResultList'       : 'src/views/ResultList',
     'App.views.Elected'          : 'src/views/Elected',
-    'App.views.PollingPlaceList' : 'src/views/PollingPlaceList',
-    'App.views.RunningMateList'  : 'src/views/RunningMateList',
+    'App.views.OfficeList'       : 'src/views/OfficeList',
+    'App.views.List'             : 'src/views/List',
     'App.views.ThemeDetail'      : 'src/views/ThemeDetail',
     'App.views.ThemeList'        : 'src/views/ThemeList',
 
     // App controllers
-    'App.controllers.about'            : 'src/controllers/about',
-    'App.controllers.candidateDetail'  : 'src/controllers/candidateDetail',
-    'App.controllers.candidateList'    : 'src/controllers/candidateList',
-    'App.controllers.home'             : 'src/controllers/home',
-    'App.controllers.pollingPlaceList' : 'src/controllers/pollingPlaceList',
-    'App.controllers.themeDetail'      : 'src/controllers/themeDetail',
-    'App.controllers.themeList'        : 'src/controllers/themeList',
+    'App.controllers.about'           : 'src/controllers/about',
+    'App.controllers.candidateDetail' : 'src/controllers/candidateDetail',
+    'App.controllers.candidateList'   : 'src/controllers/candidateList',
+    'App.controllers.home'            : 'src/controllers/home',
+    'App.controllers.officeList'      : 'src/controllers/officeList',
+    'App.controllers.themeDetail'     : 'src/controllers/themeDetail',
+    'App.controllers.themeList'       : 'src/controllers/themeList',
 
     // App misc
     'App.config'  : 'src/config',
@@ -66,9 +66,9 @@ requirejs.config({
     'App.Router'  : 'src/router',
 
     // Tests: collections
-    'App.collections.ResultTest'      : 'test/frontend/collections/ResultTest',
-    'App.collections.ProgramTest'     : 'test/frontend/collections/ProgramTest',
-    'App.collections.RunningMateTest' : 'test/frontend/collections/RunningMateTest',
+    'App.collections.ResultTest'  : 'test/frontend/collections/ResultTest',
+    'App.collections.ProgramTest' : 'test/frontend/collections/ProgramTest',
+    'App.collections.ListTest'    : 'test/frontend/collections/ListTest',
 
     // Tests: models
     'App.models.ResultTest': 'test/frontend/models/ResultTest',
@@ -81,8 +81,8 @@ requirejs.config({
     'App.views.HomeTest'             : 'test/frontend/views/HomeTest',
     'App.views.ResultListTest'       : 'test/frontend/views/ResultListTest',
     'App.views.ElectedTest'          : 'test/frontend/views/ElectedTest',
-    'App.views.PollingPlaceListTest' : 'test/frontend/views/PollingPlaceListTest',
-    'App.views.RunningMateListTest'  : 'test/frontend/views/RunningMateListTest',
+    'App.views.OfficeListTest'       : 'test/frontend/views/OfficeListTest',
+    'App.views.ListTest'             : 'test/frontend/views/ListTest',
     'App.views.ThemeDetailTest'      : 'test/frontend/views/ThemeDetailTest',
     'App.views.ThemeListTest'        : 'test/frontend/views/ThemeListTest'
   },
@@ -166,7 +166,7 @@ requirejs([
 
     'App.collections.ResultTest',
     'App.collections.ProgramTest',
-    'App.collections.RunningMateTest',
+    'App.collections.ListTest',
 
     'App.models.ResultTest',
 
@@ -177,8 +177,8 @@ requirejs([
     'App.views.HomeTest',
     'App.views.ResultListTest',
     'App.views.ElectedTest',
-    'App.views.PollingPlaceListTest',
-    'App.views.RunningMateListTest',
+    'App.views.OfficeListTest',
+    'App.views.ListTest',
     'App.views.ThemeDetailTest',
     'App.views.ThemeListTest'
 
