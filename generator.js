@@ -103,19 +103,22 @@ Generator.prototype.buildResults = function() {
     var results    = round[1];
     var obj        = {};
     obj.round      = round[0];
+    obj.stats      = results.stats;
     obj.candidates = [];
-    Object.keys(results).forEach(function(id) {
-      var raw              = results[id];
-      var candidate        = {};
-      candidate.candidate  = _.find(this.data.candidates, function(obj) { return obj.id === id; });
-      candidate.count      = parseInt(raw.votes, 10);
-      candidate.percentage = parseFloat(raw.expressedPct.replace(',', '.'));
-      candidate.cmCount    = parseInt(raw.cmCount, 10);
-      candidate.ccCount    = parseInt(raw.ccCount, 10);
-      obj.candidates.push(candidate);
-    }.bind(this));
+    if (results.candidates) {
+      Object.keys(results.candidates).forEach(function(id) {
+        var raw              = results.candidates[id];
+        var candidate        = {};
+        candidate.candidate  = _.find(this.data.candidates, function(obj) { return obj.id === id; });
+        candidate.count      = raw.count;
+        candidate.percentage = raw.percentage;
+        candidate.cmSeats    = raw.cmSeats;
+        candidate.ccSeats    = raw.ccSeats;
+        obj.candidates.push(candidate);
+      }, this);
+    }
     this.data.results.push(obj);
-  }.bind(this));
+  }, this);
 };
 
 Generator.prototype.overrideResults = function() {
