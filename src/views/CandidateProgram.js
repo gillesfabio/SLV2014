@@ -25,6 +25,7 @@ define([
     className : 'candidate-program',
 
     initialize: function(options) {
+
       this.options = _.extend({
         programs  : new ProgramCollection(),
         candidate : new CandidateModel()

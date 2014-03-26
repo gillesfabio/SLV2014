@@ -17,6 +17,7 @@ define([
     className: 'candidate-card',
 
     initialize: function(options) {
+
       this.options = _.extend({
         candidate      : new CandidateModel(),
         showDetailLink : false

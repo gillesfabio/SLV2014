@@ -1,46 +1,38 @@
 define([
 
-  'jquery',
   'backbone',
   'underscore',
   'handlebars',
-  'App.collections.Result',
+  'App.collections.Office',
   'App.config',
-  'text!src/templates/elected.hbs'
+  'text!src/templates/office-list.hbs'
 
-], function(
-  $,
-  Backbone,
-  _,
-  Handlebars,
-  ResultCollection,
-  config,
-  template) {
+], function(Backbone, _, Handlebars, OfficeCollection, config, template) {
 
   'use strict';
 
   return Backbone.View.extend({
 
     tagName   : 'div',
-    className : 'elected',
+    className : 'office-list',
 
     initialize: function(options) {
 
       this.options = _.extend({
-        results : new ResultCollection()
+        offices: new OfficeCollection()
       }, options);
 
-      this.results = this.options.results;
+      this.offices  = this.options.offices;
       this.template = Handlebars.compile(template);
 
-      this.listenTo(this.results, 'sync', this.render);
-      this.results.fetch();
+      this.listenTo(this.offices, 'sync', this.render);
+      this.offices.fetch();
     },
 
     getTemplateContext: function() {
       return {
-        config     : config,
-        elected    : this.results.getElected()
+        config  : config,
+        offices : this.offices.toJSON()
       };
     },
 
