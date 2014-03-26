@@ -1,21 +1,18 @@
 define([
 
   'underscore',
+  'backbone',
   'App.config',
-  'App.models.Candidate',
-  'backbone'
+  'App.models.Candidate'
 
-], function(_, config, CandidateModel, Backbone) {
+], function(_, Backbone, config, CandidateModel) {
 
   'use strict';
 
   return Backbone.Collection.extend({
 
     model : CandidateModel,
-    url   : config.data.candidates,
+    url   : config.data.candidates
 
-    parse: function(res) {
-      return res.candidates;
-    }
   });
 });
