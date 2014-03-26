@@ -1,21 +1,17 @@
 define([
 
+  'backbone',
   'App.config',
-  'App.models.RunningMate',
-  'backbone'
+  'App.models.List'
 
-], function(config, RunningMateModel, Backbone) {
+], function(Backbone, config, ListModel) {
 
   'use strict';
 
   return Backbone.Collection.extend({
 
-    model : RunningMateModel,
+    model : ListModel,
     url   : config.data.lists,
-
-    parse: function(res) {
-      return res.runningMates;
-    },
 
     findByCandidate: function(id) {
       var models = this.filter(function(model) {
