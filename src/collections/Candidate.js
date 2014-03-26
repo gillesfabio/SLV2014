@@ -1,11 +1,10 @@
 define([
 
-  'underscore',
   'backbone',
   'App.config',
   'App.models.Candidate'
 
-], function(_, Backbone, config, CandidateModel) {
+], function(Backbone, config, CandidateModel) {
 
   'use strict';
 
