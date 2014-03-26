@@ -1,0 +1,27 @@
+-
+  round: 2
+  candidates:
+    -
+      candidate  : henri-revel
+      count      : ~
+      percentage : ~
+      cmCount    : ~
+      ccCount    : ~
+    -
+      candidate: joseph-segura
+      count      : ~
+      percentage : ~
+      cmCount    : ~
+      ccCount    : ~
+    -
+      candidate: lionel-prados
+      count      : ~
+      percentage : ~
+      cmCount    : ~
+      ccCount    : ~
+    -
+      candidate: marc-orsatti
+      count      : ~
+      percentage : ~
+      cmCount    : ~
+      ccCount    : ~

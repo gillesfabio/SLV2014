@@ -25,6 +25,7 @@ define([
     className : 'result-list',
 
     initialize: function(options) {
+
       this.options = _.extend({
         round   : 1,
         results : new ResultCollection()

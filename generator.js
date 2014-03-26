@@ -93,8 +93,8 @@ Generator.prototype.buildLists = function() {
 };
 
 Generator.prototype.buildResults = function() {
-  var file   = fs.readFileSync(SCRAPER_JSON);
-  var data   = JSON.parse(file)['data'];
+  var file = fs.readFileSync(SCRAPER_JSON);
+  var data = JSON.parse(file)['data'];
   var rounds = [
     [1, data.r1.results],
     [2, data.r2.results]
@@ -118,6 +118,24 @@ Generator.prototype.buildResults = function() {
   }.bind(this));
 };
 
+Generator.prototype.overrideResults = function() {
+  var results   = this.data.results;
+  var overrides = YAML.load(path.join(DATA_DIR, 'results.yaml'));
+  overrides.forEach(function(override) {
+    override.candidates.forEach(function(candidate) {
+      candidate.candidate = _.find(this.data.candidates, {id: candidate.candidate});
+    }, this);
+  }, this);
+  var indexes = [];
+  var found = function(r) { return _.find(overrides, function(o) { return o.round === r.round; }); };
+  for (var i = 0; i < results.length; i++) {
+    var result = results[i];
+    if (found(result)) indexes.push(i);
+  }
+  indexes.forEach(function(i) { results.splice(results.indexOf(i), 1); }, this);
+  overrides.forEach(function(override) { results.push(override); }, this);
+};
+
 Generator.prototype.createFiles = function() {
   var entities = Object.keys(this.data);
   entities.forEach(function(entity) {
@@ -134,5 +152,6 @@ Generator.prototype.build = function() {
   this.buildPrograms();
   this.buildLists();
   this.buildResults();
+  this.overrideResults();
   this.createFiles();
 };
