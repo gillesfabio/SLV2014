@@ -14,10 +14,6 @@ define([
     model : ResultModel,
     url   : config.data.results,
 
-    parse: function(res) {
-      return res.results;
-    },
-
     findByRound: function(round) {
       return this.findWhere({round: round});
     },
