@@ -207,7 +207,7 @@ button:hover, button:focus, .button:hover, .button:focus {
     }
   }
 
-  .candidate-detail-program, .candidate-detail-running-mates {
+  .candidate-detail-program, .candidate-detail-list {
     h2 {
       font-size      : rem-calc(25);
       font-weight    : 400;
@@ -307,7 +307,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 // running-mate
 // -----------------------------------------------------------------------------
-.running-mate {
+.list-person {
 
   padding: 0;
   margin: 0;
@@ -321,7 +321,7 @@ button:hover, button:focus, .button:hover, .button:focus {
     letter-spacing : -1px;
   }
 
-  h5 .running-mate-position {
+  h5 .list-person-position {
     color: #909090;
   }
 
@@ -331,7 +331,7 @@ button:hover, button:focus, .button:hover, .button:focus {
     color     : #555;
   }
 
-  .running-mate-content {
+  .list-person-content {
     border  : 1px solid $color-iron;
     padding : 0;
   }
@@ -454,9 +454,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 // Polling Places
 // -----------------------------------------------------------------------------
-.polling-place-list {
+.office-list {
 
-  .polling-place {
+  .office {
 
     border: 1px solid $color-iron;
 
@@ -588,7 +588,7 @@ a.circle {
     h3 { font-size: rem-calc(18); }
   }
 
-  .running-mate {
+  .list-person {
     p {
       text-align: center;
     }

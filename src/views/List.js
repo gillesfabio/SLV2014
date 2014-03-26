@@ -40,10 +40,10 @@ define([
     },
 
     getTemplateContext: function() {
-      var list = this.lists.findByCandidate(this.candidate.get('id'));
+      var people = this.lists.findByCandidate(this.candidate.get('id'));
       return {
         config : config,
-        list   : list.toJSON()
+        people : people.toJSON()
       };
     },
 
