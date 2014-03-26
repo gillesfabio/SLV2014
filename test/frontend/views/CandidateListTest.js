@@ -13,8 +13,8 @@ define([
   var expect = chai.expect;
 
   describe('App.views', function() {
-
     describe('App.views.CandidateListTest', function() {
+
       describe('#initialize', function() {
         it('should properly set defaults', function() {
           var view = new View();
@@ -24,12 +24,12 @@ define([
 
       describe('#getTemplateContext', function() {
         it('should properly set template context', function() {
-          var view = new View();
+          var view    = new View();
           var context = view.getTemplateContext();
           expect(context).to.have.keys(['config']);
         });
         it('should properly set the mandatory config.baseUrl', function() {
-          var view = new View();
+          var view    = new View();
           var context = view.getTemplateContext();
           expect(context.config).to.contain.keys('baseUrl');
         });

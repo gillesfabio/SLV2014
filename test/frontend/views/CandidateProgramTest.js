@@ -43,8 +43,8 @@ define([
           col.fetch({
             success: function() {
               var candidate = col.findWhere({id: 'marc-orsatti'});
-              var view = new View({candidate: candidate});
-              var context = view.getTemplateContext();
+              var view      = new View({candidate: candidate});
+              var context   = view.getTemplateContext();
               expect(context.candidate).to.deep.equal(candidate.toJSON());
               done();
             }
@@ -58,9 +58,9 @@ define([
               var candidate = col.findWhere({id: 'marc-orsatti'});
               programs.fetch({
                 success: function() {
-                  var view = new View({candidate: candidate, programs: programs});
+                  var view     = new View({candidate: candidate, programs: programs});
                   var projects = programs.candidateProjects(candidate.get('id'));
-                  var context = view.getTemplateContext();
+                  var context  = view.getTemplateContext();
                   expect(context.projects).to.deep.equal(projects);
                   done();
                 }
