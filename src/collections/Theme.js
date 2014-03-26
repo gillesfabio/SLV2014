@@ -1,20 +1,17 @@
 define([
 
+  'backbone',
   'App.config',
-  'App.models.Theme',
-  'backbone'
+  'App.models.Theme'
 
-], function(config, ThemeModel, Backbone) {
+], function(Backbone, config, ThemeModel) {
 
   'use strict';
 
   return Backbone.Collection.extend({
 
     model : ThemeModel,
-    url   : config.data.themes,
+    url   : config.data.themes
 
-    parse: function(res) {
-      return res.themes;
-    }
   });
 });
