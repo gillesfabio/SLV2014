@@ -6,7 +6,7 @@ define([
   'App.controllers.candidateDetail',
   'App.controllers.themeList',
   'App.controllers.themeDetail',
-  'App.controllers.pollingPlaceList',
+  'App.controllers.officeList',
   'App.controllers.about'
 
 ], function(
@@ -16,7 +16,7 @@ define([
   candidateDetail,
   themeList,
   themeDetail,
-  pollingPlaceList,
+  officeList,
   about) {
 
   'use strict';
@@ -28,7 +28,7 @@ define([
       'candidats/:id' : candidateDetail,
       'themes'        : themeList,
       'themes/:id'    : themeDetail,
-      'bureaux'       : pollingPlaceList,
+      'bureaux'       : officeList,
       'a-propos'      : about
     }
   });
