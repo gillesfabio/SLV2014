@@ -108,10 +108,10 @@ Generator.prototype.buildResults = function() {
       var raw              = results[id];
       var candidate        = {};
       candidate.candidate  = _.find(this.data.candidates, function(obj) { return obj.id === id; });
-      candidate.count      = raw.votes;
-      candidate.percentage = raw.expressedPct;
-      candidate.cmCount    = raw.cmCount;
-      candidate.ccCount    = raw.ccCount;
+      candidate.count      = parseInt(raw.votes, 10);
+      candidate.percentage = parseFloat(raw.expressedPct.replace(',', '.'));
+      candidate.cmCount    = parseInt(raw.cmCount, 10);
+      candidate.ccCount    = parseInt(raw.ccCount, 10);
       obj.candidates.push(candidate);
     }.bind(this));
     this.data.results.push(obj);

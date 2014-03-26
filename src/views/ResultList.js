@@ -42,8 +42,8 @@ define([
       var results = this.results.findByRound(this.round);
       if (results) results.sortCandidatesByResult();
       return {
-        config  : config,
-        results : results ? results.toJSON() : null
+        config    : config,
+        results   : results ? results.toJSON() : null
       };
     },
 
