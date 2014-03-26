@@ -3,7 +3,7 @@ define([
   'underscore',
   'backbone',
   'App.config',
-  'App.models.Result',
+  'App.models.Result'
 
 ], function(_, Backbone, config, ResultModel) {
 
