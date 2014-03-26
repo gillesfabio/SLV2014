@@ -58,7 +58,7 @@ define([
         programs  : this.programs,
         candidate : this.candidate
       });
-      this.listView = new ListListView({
+      this.listView = new ListView({
         lists     : this.lists,
         candidate : this.candidate
       });
