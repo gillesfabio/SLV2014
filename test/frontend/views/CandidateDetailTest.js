@@ -5,11 +5,11 @@ define([
   'App.views.CandidateDetail',
   'App.views.CandidateCard',
   'App.views.CandidateProgram',
-  'App.views.RunningMateList',
+  'App.views.List',
   'App.models.Candidate',
   'App.collections.Candidate',
   'App.collections.Program',
-  'App.collections.RunningMate'
+  'App.collections.List'
 
 ], function(
   $,
@@ -17,11 +17,11 @@ define([
   View,
   CandidateCardView,
   CandidateProgramView,
-  RunningMateListView,
+  ListView,
   CandidateModel,
   CandidateCollection,
   ProgramCollection,
-  RunningMateCollection) {
+  ListCollection) {
 
   /* jshint expr:true */
 
@@ -31,6 +31,7 @@ define([
 
   describe('App.views', function() {
     describe('App.views.CandidateDetailTest', function() {
+
       describe('#initialize', function() {
         it('should properly set defaults', function(done) {
           var col = new CandidateCollection();
@@ -39,7 +40,7 @@ define([
               var view = new View();
               expect(view.candidate).to.be.an.instanceof(CandidateModel);
               expect(view.programs).to.be.an.instanceof(ProgramCollection);
-              expect(view.runningMates).to.be.an.instanceof(RunningMateCollection);
+              expect(view.lists).to.be.an.instanceof(ListCollection);
               done();
             }
           });
@@ -56,9 +57,9 @@ define([
               expect(view.candidateProgramView).to.be.an.instanceof(CandidateProgramView);
               expect(view.candidateProgramView.candidate).to.deep.equal(candidate);
               expect(view.candidateProgramView.programs).to.be.an.instanceof(ProgramCollection);
-              expect(view.runningMateListView).to.be.an.instanceof(RunningMateListView);
-              expect(view.runningMateListView.candidate).to.deep.equal(candidate);
-              expect(view.runningMateListView.runningMates).to.be.an.instanceof(RunningMateCollection);
+              expect(view.listView).to.be.an.instanceof(ListView);
+              expect(view.listView.candidate).to.deep.equal(candidate);
+              expect(view.listView.lists).to.be.an.instanceof(ListCollection);
               done();
             }
           });
@@ -71,8 +72,8 @@ define([
           col.fetch({
             success: function() {
               var candidate = col.findWhere({id: 'marc-orsatti'});
-              var view = new View({candidate: candidate});
-              var context = view.getTemplateContext();
+              var view      = new View({candidate: candidate});
+              var context   = view.getTemplateContext();
               expect(context).to.have.keys(['config', 'candidate']);
               done();
             }
@@ -83,8 +84,8 @@ define([
           col.fetch({
             success: function() {
               var candidate = col.findWhere({id: 'marc-orsatti'});
-              var view = new View({candidate: candidate});
-              var context = view.getTemplateContext();
+              var view      = new View({candidate: candidate});
+              var context   = view.getTemplateContext();
               expect(context.candidate).to.deep.equal(candidate.toJSON());
               done();
             }
@@ -95,8 +96,8 @@ define([
           col.fetch({
             success: function() {
               var candidate = col.findWhere({id: 'marc-orsatti'});
-              var view = new View({candidate: candidate});
-              var context = view.getTemplateContext();
+              var view      = new View({candidate: candidate});
+              var context   = view.getTemplateContext();
               expect(context.config).to.contain.keys('baseUrl');
               done();
             }
