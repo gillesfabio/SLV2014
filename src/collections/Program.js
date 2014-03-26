@@ -1,10 +1,10 @@
 define([
 
+  'backbone',
   'App.config',
-  'App.models.Program',
-  'backbone'
+  'App.models.Program'
 
-], function(config, ProgramModel, Backbone) {
+], function(Backbone, config, ProgramModel) {
 
   'use strict';
 
@@ -12,10 +12,6 @@ define([
 
     model : ProgramModel,
     url   : config.data.programs,
-
-    parse: function(res) {
-      return res.programs;
-    },
 
     findByCandidate: function(id) {
       return this.find(function(model) {
