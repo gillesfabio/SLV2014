@@ -15,17 +15,6 @@
 {{#if results.stats}}
 <div class="results-stats">
     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 block-centered">
-      {{#if results.stats.population}}
-      <li>
-        <div class="results-stat">
-          <h5>Population</h5>
-          <ul>
-            <li class="results-percentage">{{digitGrouping results.stats.population ' '}}</li>
-            <li class="results-count">habitants</li></li>
-          </ul>
-        </div>
-      </li>
-      {{/if}}
       {{#if results.stats.registered.percentage}}
       <li>
         <div class="results-stat">
@@ -37,13 +26,13 @@
         </div>
       </li>
       {{/if}}
-      {{#if results.stats.abstention.percentage}}
+      {{#if results.stats.abstentions.percentage}}
       <li>
         <div class="results-stat">
           <h5>Abstention</h5>
           <ul>
-            <li class="results-percentage">{{toFixed results.stats.abstention.percentage 2}} %</li>
-            <li class="results-count">{{digitGrouping results.stats.abstention.count ' '}} votes</li>
+            <li class="results-percentage">{{toFixed results.stats.abstentions.percentage 2}} %</li>
+            <li class="results-count">{{digitGrouping results.stats.abstentions.count ' '}} votes</li>
           </ul>
         </div>
       </li>
