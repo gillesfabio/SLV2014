@@ -2,13 +2,12 @@
 
 var _ = require('lodash');
 
-// URL/IDs http://elections.interieur.gouv.fr/
 var SERVER_URLCONF = {
   BASE           : 'http://elections.interieur.gouv.fr/MN2014',
   DEPT_ID        : '006',
   CITY_ID        : '006123',
-  LISTS_R1_ARG   : 'C1',
-  LISTS_R2_ARG   : 'C2',
+  LISTS_R1_ID    : 'C1',
+  LISTS_R2_ID    : 'C2',
   CANDIDATES_POS : [
     [1, 'marc-orsatti'],
     [2, 'marc-moschetti'],
@@ -35,13 +34,13 @@ var SERVER_URLS = {
   LISTS_R1_BASE_URL: [
     SERVER_URLCONF.BASE,
     SERVER_URLCONF.DEPT_ID,
-    SERVER_URLCONF.LISTS_R1_ARG + SERVER_URLCONF.CITY_ID
+    SERVER_URLCONF.LISTS_R1_ID + SERVER_URLCONF.CITY_ID
   ].join('/'),
 
   LISTS_R2_BASE_URL: [
     SERVER_URLCONF.BASE,
     SERVER_URLCONF.DEPT_ID,
-    SERVER_URLCONF.LISTS_R2_ARG + SERVER_URLCONF.CITY_ID
+    SERVER_URLCONF.LISTS_R2_ID + SERVER_URLCONF.CITY_ID
   ].join('/')
 };
 
