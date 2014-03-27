@@ -4,8 +4,6 @@ var fs       = require('fs');
 var casper   = require('casper').create();
 var settings = require('./settings');
 
-console.log(JSON.stringify(settings.ROUNDS_URLS, undefined, 2));
-
 var data = {
   r1: {
     lists   : {},
@@ -53,7 +51,7 @@ casper.each(settings.ROUNDS_URLS, function(self, url) {
 
 casper.run(function() {
   formatLists([1]);
-  formatResults([1]);
+  formatResults([1, 2]);
   fs.write('scrap-data.json', JSON.stringify({data: data}, undefined, 2), 'w');
   this.exit();
 });
