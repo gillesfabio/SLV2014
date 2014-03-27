@@ -1,33 +1,10 @@
 'use strict';
 
-var fs = require('fs');
-var casper = require('casper').create();
+var fs       = require('fs');
+var casper   = require('casper').create();
+var settings = require('./settings');
 
-var CANDIDATES_IDS = [
-  ['marc-orsatti', 'Marc Orsatti'],
-  ['marc-moschetti', 'Marc Moschetti'],
-  ['joseph-segura', 'Joseph Segura'],
-  ['lionel-prados', 'Lionel Prados'],
-  ['henri-revel', 'Henri Revel'],
-  ['francoise-benne', 'Françoise Benne']
-];
-
-var LISTS_URLS = {
-  r1: [
-    ['marc-orsatti', 'http://elections.interieur.gouv.fr/MN2014/006/C1006123L001.html'],
-    ['marc-moschetti', 'http://elections.interieur.gouv.fr/MN2014/006/C1006123L002.html'],
-    ['joseph-segura', 'http://elections.interieur.gouv.fr/MN2014/006/C1006123L003.html'],
-    ['lionel-prados', 'http://elections.interieur.gouv.fr/MN2014/006/C1006123L004.html'],
-    ['henri-revel', 'http://elections.interieur.gouv.fr/MN2014/006/C1006123L005.html'],
-    ['francoise-benne', 'http://elections.interieur.gouv.fr/MN2014/006/C1006123L006.html']
-  ]
-};
-
-var ROUNDS_URLS = [
-  [1, 'http://elections.interieur.gouv.fr/MN2014/006/006123.html']
-];
-
-var POPULATION_COUNT = 29942;
+console.log(JSON.stringify(settings.ROUNDS_URLS, undefined, 2));
 
 var data = {
   r1: {
@@ -54,7 +31,7 @@ var rawData = {
 };
 
 // Lists: ROUND 1
-casper.start().each(LISTS_URLS.r1, function(self, url) {
+casper.start().each(settings.LISTS_URLS.R1, function(self, url) {
   self.thenOpen(url[1], function() {
     rawData.r1.lists[url[0]] = this.evaluate(function(getTds) {
       return getTds(document, 'table.tableau-composition-liste td');
@@ -63,7 +40,7 @@ casper.start().each(LISTS_URLS.r1, function(self, url) {
 });
 
 // Results: ALL ROUNDS
-casper.each(ROUNDS_URLS, function(self, url) {
+casper.each(settings.ROUNDS_URLS, function(self, url) {
   self.thenOpen(url[1], function() {
     rawData['r' + url[0]].stats = this.evaluate(function(getTds) {
       return getTds(document, 'table.tableau-mentions td');
@@ -89,8 +66,8 @@ function getTds(document, q) {
 }
 
 function getCandidateID(name) {
-  for (var i = 0; i < CANDIDATES_IDS.length; i++) {
-    var candidate = CANDIDATES_IDS[i];
+  for (var i = 0; i < settings.CANDIDATES_IDS.length; i++) {
+    var candidate = settings.CANDIDATES_IDS[i];
     var re        = new RegExp(name, 'gi');
     var matches   = re.exec(candidate[1]);
     if (matches && matches.length > 0) return candidate[0];
@@ -147,7 +124,7 @@ function getStats(round) {
     switch (title) {
       case 'inscrits':
         stats.registered.count = count;
-        stats.registered.percentage = 100 * count / POPULATION_COUNT;
+        stats.registered.percentage = 100 * count / settings.POPULATION_COUNT;
         break;
       case 'abstentions':
         stats.abstentions.count = count;
