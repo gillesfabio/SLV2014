@@ -4,6 +4,10 @@ var fs       = require('fs');
 var casper   = require('casper').create();
 var settings = require('./settings');
 
+// -----------------------------------------------------------------------------
+// Data
+// -----------------------------------------------------------------------------
+
 var data = {
   r1: {
     lists   : {},
@@ -28,40 +32,64 @@ var rawData = {
   }
 };
 
-// Lists: ROUND 1
-casper.start().each(settings.LISTS_URLS.R1, function(self, url) {
-  self.thenOpen(url[1], function() {
-    rawData.r1.lists[url[0]] = this.evaluate(function(getTds) {
-      return getTds(document, 'table.tableau-composition-liste td');
-    }, getTds);
+// -----------------------------------------------------------------------------
+// Start
+// -----------------------------------------------------------------------------
+
+casper.start();
+
+// -----------------------------------------------------------------------------
+// Lists
+// -----------------------------------------------------------------------------
+
+casper.then(function() {
+  this.each([1, 2], function(self, round) {
+    this.each(settings.LISTS_URLS['R' + round], function(self, candidate) {
+      var id  = candidate[0];
+      var url = candidate[1];
+      this.thenOpen(url, function() {
+        rawData['r' + round].lists[id] = this.evaluate(function() {
+          var els = document.querySelectorAll('.tableau-composition-liste td');
+          return Array.prototype.map.call(els, function(e) { return e.outerText; });
+        });
+      });
+    });
   });
 });
 
-// Results: ALL ROUNDS
-casper.each(settings.ROUNDS_URLS, function(self, url) {
-  self.thenOpen(url[1], function() {
-    rawData['r' + url[0]].stats = this.evaluate(function(getTds) {
-      return getTds(document, 'table.tableau-mentions td');
-    }, getTds);
-    rawData['r' + url[0]].results = this.evaluate(function(getTds) {
-      return getTds(document, 'table.tableau-resultats-listes td');
-    }, getTds);
+// -----------------------------------------------------------------------------
+// Results
+// -----------------------------------------------------------------------------
+
+casper.each(settings.ROUNDS_URLS, function(self, item) {
+  var round = item[0];
+  var url   = item[1];
+  this.thenOpen(url, function() {
+    rawData['r' + round].stats = this.evaluate(function() {
+      var els = document.querySelectorAll('.tableau-mentions td');
+      return Array.prototype.map.call(els, function(e) { return e.outerText; });
+    });
+    rawData['r' + round].results = this.evaluate(function() {
+      var els = document.querySelectorAll('.tableau-resultats-listes td');
+      return Array.prototype.map.call(els, function(e) { return e.outerText; });
+    });
   });
 });
+
+// -----------------------------------------------------------------------------
+// Done. And format.
+// -----------------------------------------------------------------------------
 
 casper.run(function() {
-  formatLists([1]);
-  formatResults([1, 2]);
+  formatLists();
+  formatResults();
   fs.write('scrap-data.json', JSON.stringify({data: data}, undefined, 2), 'w');
   this.exit();
 });
 
-function getTds(document, q) {
-  var elements = document.querySelectorAll(q);
-  return Array.prototype.map.call(elements, function(e) {
-    return e.outerText;
-  });
-}
+// -----------------------------------------------------------------------------
+// Helpers
+// -----------------------------------------------------------------------------
 
 function getCandidateID(name) {
   for (var i = 0; i < settings.CANDIDATES_IDS.length; i++) {
@@ -78,8 +106,12 @@ function isCandidate(name) {
   return false;
 }
 
-function formatLists(rounds) {
-  rounds.forEach(function(round) {
+// -----------------------------------------------------------------------------
+// Data formatters
+// -----------------------------------------------------------------------------
+
+function formatLists() {
+  [1, 2].forEach(function(round) {
     var lists = rawData['r' + round].lists;
     Object.keys(lists).forEach(function(key) {
       var rawList = lists[key];
@@ -100,6 +132,30 @@ function formatLists(rounds) {
       }
       data['r' + round].lists[key] = list;
     });
+  });
+}
+
+function formatResults() {
+  [1, 2].forEach(function(round) {
+    var rawResults = rawData['r' + round].results;
+    var results    = data['r' + round].results;
+    var chunck     = 6;
+    results.stats = getStats(round);
+    results.candidates = {};
+    for (var i = 0; i < rawResults.length; i += chunck) {
+      var raw  = rawResults.slice(i, i + chunck);
+      var name = raw[0];
+      var parts = name.split(' ');
+      name = parts.slice(1, parts.length - 1).join(' ');
+      name = getCandidateID(name);
+      var result = {
+        count      : parseInt(raw[1].replace(' ', ''), 10),
+        percentage : parseFloat(raw[3].replace(',', '.')),
+        cmSeats    : parseInt(raw[4].replace(' ', ''), 10),
+        ccSeats    : parseInt(raw[5].replace(' ', ''), 10)
+      };
+      results.candidates[name] = result;
+    }
   });
 }
 
@@ -143,28 +199,4 @@ function getStats(round) {
     }
   }
   return stats;
-}
-
-function formatResults(rounds) {
-  rounds.forEach(function(round) {
-    var rawResults = rawData['r' + round].results;
-    var results    = data['r' + round].results;
-    var chunck     = 6;
-    results.stats = getStats(round);
-    results.candidates = {};
-    for (var i = 0; i < rawResults.length; i += chunck) {
-      var raw  = rawResults.slice(i, i + chunck);
-      var name = raw[0];
-      var parts = name.split(' ');
-      name = parts.slice(1, parts.length - 1).join(' ');
-      name = getCandidateID(name);
-      var result = {
-        count      : parseInt(raw[1].replace(' ', ''), 10),
-        percentage : parseFloat(raw[3].replace(',', '.')),
-        cmSeats    : parseInt(raw[4].replace(' ', ''), 10),
-        ccSeats    : parseInt(raw[5].replace(' ', ''), 10)
-      };
-      results.candidates[name] = result;
-    }
-  });
 }
