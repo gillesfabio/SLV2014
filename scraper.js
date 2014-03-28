@@ -100,12 +100,6 @@ function getCandidateID(name) {
   }
 }
 
-function isCandidate(name) {
-  var candidate = getCandidateID(name);
-  if (candidate) return true;
-  return false;
-}
-
 // -----------------------------------------------------------------------------
 // Data formatters
 // -----------------------------------------------------------------------------
@@ -114,6 +108,7 @@ function formatLists() {
   [1, 2].forEach(function(round) {
     var lists = rawData['r' + round].lists;
     Object.keys(lists).forEach(function(key) {
+      console.log(key);
       var rawList = lists[key];
       var chunck  = 2;
       var list    = [];
@@ -123,7 +118,8 @@ function formatLists() {
         var name     = rawName.split(' - ')[1];
         var position = rawName.split(' - ')[0];
         name = name.split(' ').slice(1).join(' '); // Remove civility
-        if (isCandidate(name)) continue;
+        var candidateID = getCandidateID(name);
+        if (key === candidateID) continue;
         list.push({
           name     : name,
           position : parseInt(position, 10),

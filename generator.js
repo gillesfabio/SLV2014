@@ -79,15 +79,17 @@ Generator.prototype.buildLists = function() {
   rounds.forEach(function(round) {
     var lists = round[1];
     Object.keys(lists).forEach(function(id) {
-      lists[id].forEach(function(rawMate) {
-        var mate       = {};
-        mate.round     = round[0];
-        mate.candidate = _.find(this.data.candidates, function(obj) { return obj.id === id; });
-        mate.name      = rawMate.name;
-        mate.position  = rawMate.position;
-        mate.cc        = rawMate.cc;
-        this.data.lists.push(mate);
-      }.bind(this));
+      if (lists[id].length > 0) {
+        lists[id].forEach(function(rawMate) {
+          var mate       = {};
+          mate.round     = round[0];
+          mate.candidate = _.find(this.data.candidates, function(obj) { return obj.id === id; });
+          mate.name      = rawMate.name;
+          mate.position  = rawMate.position;
+          mate.cc        = rawMate.cc;
+          this.data.lists.push(mate);
+        }.bind(this));
+      }
     }.bind(this));
   }.bind(this));
 };
