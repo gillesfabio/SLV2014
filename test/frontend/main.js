@@ -39,26 +39,25 @@ requirejs.config({
     'App.collections.Theme'     : 'src/collections/Theme',
 
     // App views
-    'App.views.CandidateCard'    : 'src/views/CandidateCard',
-    'App.views.CandidateDetail'  : 'src/views/CandidateDetail',
-    'App.views.CandidateList'    : 'src/views/CandidateList',
-    'App.views.CandidateProgram' : 'src/views/CandidateProgram',
-    'App.views.Home'             : 'src/views/Home',
-    'App.views.ResultList'       : 'src/views/ResultList',
-    'App.views.Elected'          : 'src/views/Elected',
-    'App.views.OfficeList'       : 'src/views/OfficeList',
-    'App.views.List'             : 'src/views/List',
-    'App.views.ThemeDetail'      : 'src/views/ThemeDetail',
-    'App.views.ThemeList'        : 'src/views/ThemeList',
+    'App.views.CandidateCard'          : 'src/views/CandidateCard',
+    'App.views.CandidateDetailProgram' : 'src/views/CandidateDetailProgram',
+    'App.views.CandidateDetailList'    : 'src/views/CandidateDetailList',
+    'App.views.CandidateProgram'       : 'src/views/CandidateProgram',
+    'App.views.Home'                   : 'src/views/Home',
+    'App.views.ResultList'             : 'src/views/ResultList',
+    'App.views.Elected'                : 'src/views/Elected',
+    'App.views.OfficeList'             : 'src/views/OfficeList',
+    'App.views.ThemeDetail'            : 'src/views/ThemeDetail',
+    'App.views.ThemeList'              : 'src/views/ThemeList',
 
     // App controllers
-    'App.controllers.about'           : 'src/controllers/about',
-    'App.controllers.candidateDetail' : 'src/controllers/candidateDetail',
-    'App.controllers.candidateList'   : 'src/controllers/candidateList',
-    'App.controllers.home'            : 'src/controllers/home',
-    'App.controllers.officeList'      : 'src/controllers/officeList',
-    'App.controllers.themeDetail'     : 'src/controllers/themeDetail',
-    'App.controllers.themeList'       : 'src/controllers/themeList',
+    'App.controllers.about'                  : 'src/controllers/about',
+    'App.controllers.candidateDetailProgram' : 'src/controllers/candidateDetailProgram',
+    'App.controllers.candidateDetailList'    : 'src/controllers/candidateDetailList',
+    'App.controllers.home'                   : 'src/controllers/home',
+    'App.controllers.officeList'             : 'src/controllers/officeList',
+    'App.controllers.themeDetail'            : 'src/controllers/themeDetail',
+    'App.controllers.themeList'              : 'src/controllers/themeList',
 
     // App misc
     'App.config'  : 'src/config',
@@ -74,17 +73,16 @@ requirejs.config({
     'App.models.ResultTest': 'test/frontend/models/ResultTest',
 
     // Tests: views
-    'App.views.CandidateCardTest'    : 'test/frontend/views/CandidateCardTest',
-    'App.views.CandidateDetailTest'  : 'test/frontend/views/CandidateDetailTest',
-    'App.views.CandidateListTest'    : 'test/frontend/views/CandidateListTest',
-    'App.views.CandidateProgramTest' : 'test/frontend/views/CandidateProgramTest',
-    'App.views.HomeTest'             : 'test/frontend/views/HomeTest',
-    'App.views.ResultListTest'       : 'test/frontend/views/ResultListTest',
-    'App.views.ElectedTest'          : 'test/frontend/views/ElectedTest',
-    'App.views.OfficeListTest'       : 'test/frontend/views/OfficeListTest',
-    'App.views.ListTest'             : 'test/frontend/views/ListTest',
-    'App.views.ThemeDetailTest'      : 'test/frontend/views/ThemeDetailTest',
-    'App.views.ThemeListTest'        : 'test/frontend/views/ThemeListTest'
+    'App.views.CandidateCardTest'          : 'test/frontend/views/CandidateCardTest',
+    'App.views.CandidateDetailProgramTest' : 'test/frontend/views/CandidateDetailProgramTest',
+    'App.views.CandidateDetailListTest'    : 'test/frontend/views/CandidateDetailListTest',
+    'App.views.CandidateProgramTest'       : 'test/frontend/views/CandidateProgramTest',
+    'App.views.HomeTest'                   : 'test/frontend/views/HomeTest',
+    'App.views.ResultListTest'             : 'test/frontend/views/ResultListTest',
+    'App.views.ElectedTest'                : 'test/frontend/views/ElectedTest',
+    'App.views.OfficeListTest'             : 'test/frontend/views/OfficeListTest',
+    'App.views.ThemeDetailTest'            : 'test/frontend/views/ThemeDetailTest',
+    'App.views.ThemeListTest'              : 'test/frontend/views/ThemeListTest'
   },
 
   shim: {
@@ -171,14 +169,13 @@ requirejs([
     'App.models.ResultTest',
 
     'App.views.CandidateCardTest',
-    'App.views.CandidateDetailTest',
-    'App.views.CandidateListTest',
+    'App.views.CandidateDetailProgramTest',
+    'App.views.CandidateDetailListTest',
     'App.views.CandidateProgramTest',
     'App.views.HomeTest',
     'App.views.ResultListTest',
     'App.views.ElectedTest',
     'App.views.OfficeListTest',
-    'App.views.ListTest',
     'App.views.ThemeDetailTest',
     'App.views.ThemeListTest'
 

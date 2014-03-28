@@ -6,7 +6,6 @@ define([
   'App.models.Candidate',
   'App.collections.List',
   'App.views.CandidateCard',
-  'App.views.List',
   'App.config',
   'text!src/templates/candidate-detail-list.hbs'
 
@@ -17,7 +16,6 @@ define([
   CandidateModel,
   ListCollection,
   CandidateCardView,
-  ListView,
   config,
   template) {
 

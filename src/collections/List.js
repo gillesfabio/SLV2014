@@ -37,6 +37,5 @@ define([
       if (!this.hasMerged) return;
       return this.where({round: 2});
     }
-
   });
 });

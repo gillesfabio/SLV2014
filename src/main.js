@@ -43,7 +43,6 @@ requirejs.config({
     'App.views.ResultList'             : 'src/views/ResultList',
     'App.views.Elected'                : 'src/views/Elected',
     'App.views.OfficeList'             : 'src/views/OfficeList',
-    'App.views.List'                   : 'src/views/List',
     'App.views.ThemeDetail'            : 'src/views/ThemeDetail',
     'App.views.ThemeList'              : 'src/views/ThemeList',
 
