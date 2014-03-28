@@ -8,29 +8,63 @@
       <div class="row">
         {{#if hasMerged}}
         <div class="small-12 medium-6 large-6 columns">
-          <h3>1er tour (initiale)</h3>
-          <ul class="no-bullet">
-            {{#each initial}}
-            <li>{{name}} <span class="list-position">({{position}})</span></li>
-            {{/each}}
-          </ol>
+          <h3>Initiale (1er tour)</h3>
+          <table width="100%">
+            <thead>
+              <tr>
+                <th width="50">Position</th>
+                <th>Nom</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each initial}}
+              <tr>
+                <td class="list-position">{{position}}</td>
+                <td class="list-name">{{name}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
         </div>
         <div class="small-12 medium-6 large-6 columns">
-          <h3>2ème tour (fusion)</h3>
-          <ul class="no-bullet">
-            {{#each merged}}
-            <li>{{name}} <span class="list-position">({{position}})</span></li>
-            {{/each}}
-          </ol>
+          <h3>Fusionnée (2ème tour)</h3>
+          <table width="100%">
+            <thead>
+              <tr>
+                <th width="50">Position</th>
+                <th>Nom</th>
+                <th width="140">Fusion</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each merged}}
+              <tr>
+                <td class="list-position">{{position}}</td>
+                <td class="list-name">{{name}}</td>
+                <td class="list-merge">{{#if mergedFrom}}<a href="{{config.baseUrl}}#/candidats/{{mergedFrom.id}}/liste">{{mergedFrom.name}}</a>{{else}}~{{/if}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
         </div>
         {{else}}
         <div class="small-12 columns">
-          <h3>Initiale</h3>
-          <ul class="no-bullet">
-            {{#each initial}}
-            <li>{{name}} <span class="list-position">({{position}})</span></li>
-            {{/each}}
-          </ol>
+          <table>
+            <thead>
+              <tr>
+                <th width="50">Position</th>
+                <th width="100%">Nom</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each initial}}
+              <tr>
+                <td class="list-position">{{position}}</td>
+                <td class="list-name">{{name}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
         </div>
         {{/if}}
       </div>

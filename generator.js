@@ -81,17 +81,46 @@ Generator.prototype.buildLists = function() {
     Object.keys(lists).forEach(function(id) {
       if (lists[id].length > 0) {
         lists[id].forEach(function(rawMate) {
-          var mate       = {};
-          mate.round     = round[0];
-          mate.candidate = _.find(this.data.candidates, function(obj) { return obj.id === id; });
-          mate.name      = rawMate.name;
-          mate.position  = rawMate.position;
-          mate.cc        = rawMate.cc;
+          var mate        = {};
+          mate.round      = round[0];
+          mate.candidate  = _.find(this.data.candidates, function(obj) { return obj.id === id; });
+          mate.name       = rawMate.name;
+          mate.position   = rawMate.position;
+          mate.cc         = rawMate.cc;
+          mate.mergedFrom = null;
           this.data.lists.push(mate);
         }.bind(this));
       }
     }.bind(this));
   }.bind(this));
+};
+
+Generator.prototype.overrideLists = function() {
+  var group = function group(round) {
+    return _.chain(this.data.lists)
+    .filter({round: round})
+    .groupBy(function(m) { return m.candidate.id; })
+    .mapValues(function(m) { return _.map(m, function(i) { return i.name; }); })
+    .value();
+  }.bind(this);
+  var r1 = group(1);
+  var r2 = group(2);
+  var diffs = {};
+  Object.keys(r2).forEach(function(key) {
+    var r2mates = r2[key];
+    var r1mates = r1[key];
+    var diff = _.difference(r2mates, r1mates);
+    if (diff.length) diffs[key] = diff;
+  }, this);
+  Object.keys(diffs).forEach(function(key) {
+    diffs[key].forEach(function(mate) {
+      var older = _.find(this.data.lists, function(m) { return (m.round === 1 && m.name === mate); });
+      var newer = _.find(this.data.lists, function(m) { return (m.round === 2 && m.name === mate); });
+      newer.mergedFrom = _.find(this.data.candidates, {id: older.candidate.id});
+      this.data.lists = _.without(this.data.lists, newer);
+      this.data.lists.push(newer);
+    }, this);
+  }, this);
 };
 
 Generator.prototype.buildResults = function() {
@@ -156,6 +185,7 @@ Generator.prototype.build = function() {
   this.buildCandidates();
   this.buildPrograms();
   this.buildLists();
+  this.overrideLists();
   this.buildResults();
   this.overrideResults();
   this.createFiles();

@@ -59,8 +59,8 @@ define([
       return {
         config    : config,
         hasMerged : list.hasMerged(),
-        initial   : initial,
-        merged    : merged,
+        initial   : _.rest(initial, 1),
+        merged    : _.rest(merged, 1),
         candidate : this.candidate.toJSON()
       };
     },

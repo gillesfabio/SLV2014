@@ -118,8 +118,6 @@ function formatLists() {
         var name     = rawName.split(' - ')[1];
         var position = rawName.split(' - ')[0];
         name = name.split(' ').slice(1).join(' '); // Remove civility
-        var candidateID = getCandidateID(name);
-        if (key === candidateID) continue;
         list.push({
           name     : name,
           position : parseInt(position, 10),
