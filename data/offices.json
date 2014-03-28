@@ -1,0 +1,128 @@
+[
+  {
+    "number": "1",
+    "address": "Mairie\n(Hall d'Entrée)\n222, Esplanade du Levant\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Mairie"
+  },
+  {
+    "number": "2",
+    "address": "Conservatoire de Musique\n177, avenue Général Leclerc\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Action Culturelle Municipale"
+  },
+  {
+    "number": "3",
+    "address": "Gymnase Municipal\n418, Esplanade du Levant\n",
+    "opening": "8h-20h",
+    "gmapSearch": "418 Esplanade du Levant"
+  },
+  {
+    "number": "4",
+    "address": "École Maternelle Djibouti\n(Salle de Jeux)\n990 Avenue du Général de Gaulle\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Maternelle Djibouti"
+  },
+  {
+    "number": "5",
+    "address": "École Maternelle Djibouti\n(Salle de Classe 4)\n990 Avenue du Général de Gaulle\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Maternelle Djibouti"
+  },
+  {
+    "number": "6",
+    "address": "École Maternelle de la Gare\n(Réfectoire Primaire)\n91, allée Pasteur\n",
+    "opening": "8h-20h",
+    "gmapSearch": "École Maternelle de la Gare"
+  },
+  {
+    "number": "7",
+    "address": "École Maternelle de la Gare\n(Réfectoire Polyvalente)\n91, allée Pasteur\n",
+    "opening": "8h-20h",
+    "gmapSearch": "École Maternelle de la Gare"
+  },
+  {
+    "number": "8",
+    "address": "École Primaire René Cassin\n(Hall d'Entrée)\n107, avenue Pierre Ziller\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Primaire René Cassin"
+  },
+  {
+    "number": "9",
+    "address": "École Maternelle René Cassin\n(Salle de Jeux)\n179, avenue Pierre Ziller\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Primaire René Cassin"
+  },
+  {
+    "number": "10",
+    "address": "École Maternelle René Cassin\n(CLM)\n62, avenue Pierre Ziller\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Primaire René Cassin"
+  },
+  {
+    "number": "11",
+    "address": "École Maternelle Louis Ravet \n(Réfectoire Maternelle)\n249, avenue Louis Ravet\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Elémentaire Louis Ravet"
+  },
+  {
+    "number": "12",
+    "address": "École Maternelle Louis Ravet\n(Réfectoire Primaire)\n249, avenue Louis Ravet\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Elémentaire Louis Ravet"
+  },
+  {
+    "number": "13",
+    "address": "École Maternelle Louis Ravet\n(Salle Polyvalente)\n342, avenue Paul Cézanne\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Elémentaire Louis Ravet"
+  },
+  {
+    "number": "14",
+    "address": "École Maternelle Michelis 1\n(Salle de Classe)\n148, rue Pierre Lambert\n",
+    "opening": "8h-20h",
+    "gmapSearch": "École primaire publique Michelis 1"
+  },
+  {
+    "number": "15",
+    "address": "École Maternelle Les Bigaradiers\n(Salle de Jeux)\n177, corniche Fahnestock\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Maternelle Les Bigaradiers"
+  },
+  {
+    "number": "16",
+    "address": "Foyer des Anciens\n435, avenue du 11 Novembre\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Foyer Club"
+  },
+  {
+    "number": "17",
+    "address": "École Primaire Castillon II\n(Salle de Tatami)\n89, allée des Ecureuils\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Castillon"
+  },
+  {
+    "number": "18",
+    "address": "École Primaire Castillon II\n(Dortoir Maternelle)\n187, allée des Ecureuils\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Castillon"
+  },
+  {
+    "number": "19",
+    "address": "École Primaire Castillon I\n(Salle de Jeux)\n192, allée des Ecureuils\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Castillon"
+  },
+  {
+    "number": "20",
+    "address": "École Sainte-Pétronille\n1837, route de la Baronne\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Elémentaire Sainte Petronille"
+  },
+  {
+    "number": "21",
+    "address": "École Maternelle de Montaleigne\n70, chemin de la Tour Carrée\n",
+    "opening": "8h-20h",
+    "gmapSearch": "Ecole Maternelle Montaleigne"
+  }
+]
