@@ -1,24 +1,39 @@
-<div class="row">
-  <div class="small-12 columns">
-    {{#if candidate.id}}
-    <img src="{{config.baseUrl}}images/{{candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
-    {{/if}}
-  </div>
-  <div class="small-12 columns">
-    <h1>{{candidate.name}}</h1>
-    <h2>{{candidate.slogan}} ({{candidate.party}})</h2>
-    <h3>Tapez <span class="vote-number">{{candidate.voteNumber}}</span></h3>
-    <ul class="no-bullet">
-      {{#if candidate.homepage}}<li><i class="fa fa-globe"></i> <a href="{{candidate.homepage}}" target="_blank">{{candidate.homepage}}</a></li>{{/if}}
-      {{#if candidate.twitter}}<li><i class="fa fa-twitter"></i> <a href="http://twitter.com/{{candidate.twitter}}" target="_blank">@{{candidate.twitter}}</a></li>{{/if}}
-      {{#if candidate.facebook}}<li><i class="fa fa-facebook-square"></i> <a href="http://facebook.com/{{candidate.facebook}}" target="_blank">{{candidate.facebook}}</a></li>{{/if}}
-    </ul>
-    {{#if showDetailLink}}
-    <p>
-      <a href="{{config.baseUrl}}#/candidats/{{candidate.id}}" class="button radius">
-      <i class="fa fa-list-ol"></i> Mon Programme
-      </a>
-    </p>
-    {{/if}}
+<div class="candidate-card-content">
+  <div class="row">
+    <div class="small-12 columns">
+      {{#if candidate.id}}
+      <img src="{{config.baseUrl}}images/{{candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
+      {{/if}}
+    </div>
+    <div class="small-12 columns">
+      <h1>{{candidate.name}}</h1>
+      <h2>{{candidate.slogan}} ({{candidate.party}})</h2>
+      <!-- <h3>Tapez <span class="vote-number">{{candidate.voteNumber}}</span></h3> -->
+      <div class="row candidate-links clearfix">
+        <div class="small-12 small-centered columns">
+          <ul class="button-group tiny radius text-centered">
+            {{#if candidate.homepage}}
+            <li><a href="{{candidate.homepage}}" class="button secondary tiny" target="_blank"><i class="fa fa-globe"></i></a></li>
+            {{/if}}
+            {{#if candidate.twitter}}
+            <li><a href="http://twitter.com/{{candidate.twitter}}" class="button secondary tiny" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            {{/if}}
+            {{#if candidate.facebook}}
+            <li><a href="http://facebook.com/{{candidate.facebook}}" class="button secondary tiny" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+      {{#if showDetailLink}}
+      <div class="row candidate-buttons">
+        <div class="small-6 columns">
+          <a href="{{config.baseUrl}}#/candidats/{{candidate.id}}" class="button expand small radius"><i class="fa fa-list-ol"></i> Programme</a>
+        </div>
+        <div class="small-6 columns">
+          <a href="{{config.baseUrl}}#/candidats/{{candidate.id}}/liste" class="button expand small radius"><i class="fa fa-group"></i> Liste</a>
+        </div>
+      </div>
+      {{/if}}
+    </div>
   </div>
 </div>

@@ -127,7 +127,13 @@ button:hover, button:focus, .button:hover, .button:focus {
 .candidate-card {
 
   text-align: center;
-  padding: rem-calc(20);
+
+  .candidate-card-content > .row {
+    background: $color-porcelain;
+    border: 1px solid $color-iron;
+    padding: rem-calc(20);
+    margin: rem-calc(5);
+  }
 
   :last-child {
     border-bottom: none;
@@ -144,7 +150,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 
   h2 {
-    font-size      : rem-calc(18);
+    font-size      : rem-calc(16);
     color          : $slv-candidate-slogan-color;
     letter-spacing : rem-calc(-1);
     padding        : 0;
@@ -175,9 +181,36 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin-left   : rem-calc(2);
   }
 
-  ul {
-    font-size: rem-calc(14);
-    margin-bottom: rem-calc(10);
+  .candidate-buttons {
+    i {
+      font-size: rem-calc(20);
+      color: $color-white;
+    }
+  }
+
+  .candidate-links {
+
+    margin-top: rem-calc(10);
+    margin-left: auto;
+    margin-right: auto;
+
+    .button {
+      background: $color-white;
+    }
+
+    button:hover, button:focus, .button:hover, .button:focus {
+      background: $color-white;
+    }
+
+    .button-group {
+      display: inline-block;
+      margin: auto;
+    }
+
+    i {
+      font-size: rem-calc(20);
+      color: $color-chambray;
+    }
   }
 
   .unavailable-program {
@@ -574,11 +607,12 @@ a.circle {
   }
 
   .candidate-card {
-
     text-align: center;
-
     h2 {
       font-size: rem-calc(14) !important;
+    }
+    .candidate-card-content > .row {
+      padding: rem-calc(10) !important;
     }
   }
 
