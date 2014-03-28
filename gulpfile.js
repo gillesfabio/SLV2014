@@ -216,7 +216,7 @@ gulp.task('watch', function() {
     'data/**',
     'views/*.html',
     'test/**'
-  ], ['compile']);
+  ], ['compile:stylesheets']);
 });
 
 // -----------------------------------------------------------------------------

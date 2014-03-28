@@ -226,6 +226,23 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 .candidate-detail {
 
+  .candidate-card {
+    .candidate-card-content > .row {
+      background: none;
+      border: none;
+      padding: rem-calc(0);
+      margin-bottom: rem-calc(10);
+    }
+    .candidate-links {
+      .button {
+        background: $color-porcelain;
+      }
+      button:hover, button:focus, .button:hover, .button:focus {
+        background: $color-iron;
+      }
+    }
+  }
+
   .candidate-detail-program {
 
     h3 {
