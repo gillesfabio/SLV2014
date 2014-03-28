@@ -9,7 +9,7 @@ define([
   $,
   CandidateCollection,
   ProgramCollection,
-  CandidateDetailView) {
+  CandidateDetailProgramView) {
 
   'use strict';
 
@@ -20,7 +20,7 @@ define([
 
     candidates.fetch({
       success: function(candidates) {
-        var view  = new CandidateDetailView({
+        var view  = new CandidateDetailProgramView({
           candidate : candidates.findWhere({id: id}),
           programs  : new ProgramCollection()
         });

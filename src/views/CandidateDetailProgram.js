@@ -6,7 +6,6 @@ define([
   'App.models.Candidate',
   'App.collections.Program',
   'App.views.CandidateCard',
-  'App.views.CandidateProgram',
   'App.config',
   'text!src/templates/candidate-detail-program.hbs'
 
@@ -17,7 +16,6 @@ define([
   CandidateModel,
   ProgramCollection,
   CandidateCardView,
-  CandidateProgramView,
   config,
   template) {
 
@@ -40,7 +38,9 @@ define([
       this.template  = Handlebars.compile(template);
 
       this.setSubviews();
-      this.render();
+
+      this.listenTo(this.programs, 'sync', this.render);
+      this.programs.fetch();
     },
 
     setSubviews: function() {
@@ -48,23 +48,19 @@ define([
         candidate      : this.candidate,
         showDetailLink : false
       });
-      this.candidateProgramView = new CandidateProgramView({
-        programs  : this.programs,
-        candidate : this.candidate
-      });
     },
 
     getTemplateContext: function() {
       return {
         config    : config,
-        candidate : this.candidate.toJSON()
+        candidate : this.candidate.toJSON(),
+        projects  : this.programs.candidateProjects(this.candidate.get('id'))
       };
     },
 
     render: function() {
       this.$el.html(this.template(this.getTemplateContext()));
       this.$el.find('.candidate-detail-card').html(this.candidateCardView.el);
-      this.$el.find('.candidate-detail-program').html(this.candidateProgramView.el);
     }
   });
 });

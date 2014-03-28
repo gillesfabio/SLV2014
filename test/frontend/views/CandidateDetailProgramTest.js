@@ -2,26 +2,20 @@ define([
 
   'jquery',
   'chai',
-  'App.views.CandidateDetail',
+  'App.views.CandidateDetailProgram',
   'App.views.CandidateCard',
-  'App.views.CandidateProgram',
-  'App.views.List',
   'App.models.Candidate',
   'App.collections.Candidate',
-  'App.collections.Program',
-  'App.collections.List'
+  'App.collections.Program'
 
 ], function(
   $,
   chai,
   View,
   CandidateCardView,
-  CandidateProgramView,
-  ListView,
   CandidateModel,
   CandidateCollection,
-  ProgramCollection,
-  ListCollection) {
+  ProgramCollection) {
 
   /* jshint expr:true */
 
@@ -30,7 +24,7 @@ define([
   var expect = chai.expect;
 
   describe('App.views', function() {
-    describe('App.views.CandidateDetailTest', function() {
+    describe('App.views.CandidateDetailProgramTest', function() {
 
       describe('#initialize', function() {
         it('should properly set defaults', function(done) {
@@ -40,7 +34,6 @@ define([
               var view = new View();
               expect(view.candidate).to.be.an.instanceof(CandidateModel);
               expect(view.programs).to.be.an.instanceof(ProgramCollection);
-              expect(view.lists).to.be.an.instanceof(ListCollection);
               done();
             }
           });

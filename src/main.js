@@ -38,7 +38,6 @@ requirejs.config({
     'App.views.CandidateDetailProgram' : 'src/views/CandidateDetailProgram',
     'App.views.CandidateDetailList'    : 'src/views/CandidateDetailList',
     'App.views.CandidateList'          : 'src/views/CandidateList',
-    'App.views.CandidateProgram'       : 'src/views/CandidateProgram',
     'App.views.Home'                   : 'src/views/Home',
     'App.views.ResultList'             : 'src/views/ResultList',
     'App.views.Elected'                : 'src/views/Elected',

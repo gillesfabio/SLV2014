@@ -2,13 +2,10 @@ define([
 
   'jquery',
   'chai',
-  'App.views.CandidateDetail',
+  'App.views.CandidateDetailList',
   'App.views.CandidateCard',
-  'App.views.CandidateProgram',
-  'App.views.List',
   'App.models.Candidate',
   'App.collections.Candidate',
-  'App.collections.Program',
   'App.collections.List'
 
 ], function(
@@ -16,11 +13,8 @@ define([
   chai,
   View,
   CandidateCardView,
-  CandidateProgramView,
-  ListView,
   CandidateModel,
   CandidateCollection,
-  ProgramCollection,
   ListCollection) {
 
   /* jshint expr:true */
@@ -39,7 +33,6 @@ define([
             success: function() {
               var view = new View();
               expect(view.candidate).to.be.an.instanceof(CandidateModel);
-              expect(view.programs).to.be.an.instanceof(ProgramCollection);
               expect(view.lists).to.be.an.instanceof(ListCollection);
               done();
             }

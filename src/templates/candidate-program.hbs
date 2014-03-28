@@ -1,9 +1,0 @@
-<h2>Mon programme</h2>
-{{#each projects}}
-<h3 class="theme-title"><a href="<%= baseurl %>#/themes/{{this.0.theme.slug}}">{{@key}}</a></h3>
-<ul class="no-bullet candidate-program-projects">
-  {{#each this}}
-  <li>{{{md2html description}}}</li>
-  {{/each}}
-</ol>
-{{/each}}
