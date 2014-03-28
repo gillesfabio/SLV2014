@@ -47,12 +47,6 @@ define([
               expect(view.candidateCardView).to.an.instanceof(CandidateCardView);
               expect(view.candidateCardView.candidate).to.deep.equal(candidate);
               expect(view.candidateCardView.showDetailLink).to.be.false;
-              expect(view.candidateProgramView).to.be.an.instanceof(CandidateProgramView);
-              expect(view.candidateProgramView.candidate).to.deep.equal(candidate);
-              expect(view.candidateProgramView.programs).to.be.an.instanceof(ProgramCollection);
-              expect(view.listView).to.be.an.instanceof(ListView);
-              expect(view.listView.candidate).to.deep.equal(candidate);
-              expect(view.listView.lists).to.be.an.instanceof(ListCollection);
               done();
             }
           });
@@ -67,7 +61,11 @@ define([
               var candidate = col.findWhere({id: 'marc-orsatti'});
               var view      = new View({candidate: candidate});
               var context   = view.getTemplateContext();
-              expect(context).to.have.keys(['config', 'candidate']);
+              expect(context).to.have.keys([
+                'config',
+                'candidate',
+                'projects'
+              ]);
               done();
             }
           });
