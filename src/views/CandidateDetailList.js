@@ -52,13 +52,15 @@ define([
     },
 
     getTemplateContext: function() {
-      var list = this.lists.findByCandidate(this.candidate.id);
+      var filter  = function(m) { return m.get('candidate').id === this.candidate.id; }.bind(this);
+      var list    = new ListCollection(this.lists.filter(filter));
+      var initial = new ListCollection(list.initial()).toJSON();
+      var merged  = new ListCollection(list.merged()).toJSON();
       return {
         config    : config,
         hasMerged : list.hasMerged(),
-        initial   : list.initial().toJSON(),
-        merged    : list.merged().toJSON(),
-        list      : list.toJSON(),
+        initial   : initial,
+        merged    : merged,
         candidate : this.candidate.toJSON()
       };
     },

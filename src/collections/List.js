@@ -1,10 +1,11 @@
 define([
 
+  'underscore',
   'backbone',
   'App.config',
   'App.models.List'
 
-], function(Backbone, config, ListModel) {
+], function(_, Backbone, config, ListModel) {
 
   'use strict';
 
@@ -13,29 +14,23 @@ define([
     model : ListModel,
     url   : config.data.lists,
 
-    findByCandidate: function(id) {
-      var models = this.filter(function(model) {
-        return model.get('candidate').id === id;
-      });
-      return new this.constructor(models);
-    },
-
-    findByRound: function(round) {
-      var models = this.where({round: round});
-      if (models) return new this.constructor(models);
-    },
-
     hasMerged: function() {
-      if (this.findByRound(2).length > 0) return true;
+      var filter = function(r, m) { return m.get('round') === r; };
+      var r1 = this.filter(filter.bind(null, 1));
+      var r2 = this.filter(filter.bind(null, 2));
+      r1 = r1.map(function(m) { return m.get('name'); });
+      r2 = r2.map(function(m) { return m.get('name'); });
+      if (_.difference(r2, r1).length) return true;
       return false;
     },
 
     initial: function() {
-      return this.findByRound(1);
+      return this.where({round: 1});
     },
 
     merged: function() {
-      return this.findByRound(2);
+      if (!this.hasMerged) return;
+      return this.where({round: 2});
     }
   });
 });
