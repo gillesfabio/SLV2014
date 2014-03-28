@@ -244,14 +244,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 
   .candidate-detail-program {
-
     h3 {
       font-size      : rem-calc(18);
       text-transform : uppercase;
       color          : $color-steel-blue;
       margin         : rem-calc(20 0 20 0);
     }
-
     h3 a {
       color: $color-steel-blue;
     }
@@ -266,9 +264,22 @@ button:hover, button:focus, .button:hover, .button:focus {
       padding        : rem-calc(0 0 10 0);
       color          : $color-chambray;
       border-bottom  : 1px solid $color-iron;
+      text-align     : center;
     }
     h2 small, h2 small a {
       color : $color-chambray;
+    }
+  }
+
+  .candidate-detail-list {
+    ul {
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+    }
+    .list-position {
+      color: $color-chambray;
     }
   }
 }
@@ -633,11 +644,11 @@ a.circle {
     }
   }
 
-  .candidate-detail {
-    h2, h3, h4, h5, h6 { text-align: center; }
-    h2 { font-size: rem-calc(20); }
-    h3 { font-size: rem-calc(18); }
-  }
+  // .candidate-detail {
+  //   h2, h3, h4, h5, h6 { text-align: center; }
+  //   h2 { font-size: rem-calc(20); }
+  //   h3 { font-size: rem-calc(18); }
+  // }
 
   .list-person {
     p {

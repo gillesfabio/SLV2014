@@ -3,7 +3,8 @@ define([
   'backbone',
   'App.controllers.home',
   'App.controllers.candidateList',
-  'App.controllers.candidateDetail',
+  'App.controllers.candidateDetailProgram',
+  'App.controllers.candidateDetailList',
   'App.controllers.themeList',
   'App.controllers.themeDetail',
   'App.controllers.officeList',
@@ -13,7 +14,8 @@ define([
   Backbone,
   home,
   candidateList,
-  candidateDetail,
+  candidateDetailProgram,
+  candidateDetailList,
   themeList,
   themeDetail,
   officeList,
@@ -23,13 +25,14 @@ define([
 
   return Backbone.Router.extend({
     routes: {
-      ''              : home,
-      'candidats'     : candidateList,
-      'candidats/:id' : candidateDetail,
-      'themes'        : themeList,
-      'themes/:id'    : themeDetail,
-      'bureaux'       : officeList,
-      'a-propos'      : about
+      ''                        : home,
+      'candidats'               : candidateList,
+      'candidats/:id/liste'     : candidateDetailList,
+      'candidats/:id/programme' : candidateDetailProgram,
+      'themes'                  : themeList,
+      'themes/:id'              : themeDetail,
+      'bureaux'                 : officeList,
+      'a-propos'                : about
     }
   });
 });

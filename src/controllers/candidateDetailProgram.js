@@ -3,14 +3,12 @@ define([
   'jquery',
   'App.collections.Candidate',
   'App.collections.Program',
-  'App.collections.List',
-  'App.views.CandidateDetail',
+  'App.views.CandidateDetailProgram'
 
 ], function(
   $,
   CandidateCollection,
   ProgramCollection,
-  ListCollection,
   CandidateDetailView) {
 
   'use strict';
@@ -24,8 +22,7 @@ define([
       success: function(candidates) {
         var view  = new CandidateDetailView({
           candidate : candidates.findWhere({id: id}),
-          programs  : new ProgramCollection(),
-          lists     : new ListCollection()
+          programs  : new ProgramCollection()
         });
         $content.html(view.el);
       },

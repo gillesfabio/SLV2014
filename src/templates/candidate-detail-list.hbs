@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="candidate-detail-card"></div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <div class="candidate-detail-list">
+      <h2>Mes Colistiers</h2>
+      <div class="row">
+        {{#if hasMerged}}
+        <div class="small-12 medium-6 large-6 columns">
+          <h3>1er tour (initiale)</h3>
+          <ul class="no-bullet">
+            {{#each initial}}
+            <li>{{name}} <span class="list-position">({{position}})</span></li>
+            {{/each}}
+          </ol>
+        </div>
+        <div class="small-12 medium-6 large-6 columns">
+          <h3>2ème tour (fusion)</h3>
+          <ul class="no-bullet">
+            {{#each merged}}
+            <li>{{name}} <span class="list-position">({{position}})</span></li>
+            {{/each}}
+          </ol>
+        </div>
+        {{else}}
+        <div class="small-12 columns">
+          <h3>Initiale</h3>
+          <ul class="no-bullet">
+            {{#each initial}}
+            <li>{{name}} <span class="list-position">({{position}})</span></li>
+            {{/each}}
+          </ol>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
