@@ -245,10 +245,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 
   .candidate-detail-program {
     h3 {
-      font-size      : rem-calc(18);
-      text-transform : uppercase;
+      font-size      : rem-calc(22);
+      font-variant   : small-caps;
       color          : $color-steel-blue;
       margin         : rem-calc(20 0 20 0);
+      text-align     : center;
     }
     h3 a {
       color: $color-steel-blue;
