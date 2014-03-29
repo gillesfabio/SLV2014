@@ -451,38 +451,41 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .results {
-  border        : 1px solid $color-iron;
+
   margin-bottom : rem-calc(20);
-}
 
-.results-header {
-  background  : $color-porcelain;
-  padding     : rem-calc(20);
-  text-align  : center;
-  font-size   : rem-calc(18);
-  font-weight : 200;
-}
+  h2 {
+    font-size      : rem-calc(22);
+    font-weight    : bold;
+    letter-spacing : -1px;
+    font-variant   : small-caps;
+    border-bottom  : 1px solid $color-iron;
+    padding        : rem-calc(15 0 15 0);
+    margin         : rem-calc(20 0 20 0);
+    text-align     : center;
+  }
 
-.results-content {
+  .results-content {
 
-  padding: rem-calc(20);
+    li {
 
-  li {
+      text-align: center;
 
-    text-align: center;
+      h5 {
+        font-size   : rem-calc(13);
+        font-weight : normal;
+      }
 
-    h5 {
-      font-size   : rem-calc(13);
-      font-weight : normal;
-    }
-
-    h6 {
-      font-size   : rem-calc(16);
-      font-weight : normal;
-      color       : $color-chambray;
+      h6 {
+        font-size   : rem-calc(16);
+        font-weight : normal;
+        color       : $color-chambray;
+      }
     }
   }
+
 }
+
 
 .results-stats {
 
