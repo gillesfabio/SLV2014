@@ -1,0 +1,25 @@
+<div class="office">
+  <h3><small>{{office.number}} —</small> {{office.name}}</h3>
+  <div class="office-results">
+    <table>
+      <thead>
+        <tr>
+          <th>Liste</th>
+          <th>%</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#withSortedCandidates candidates}}
+        {{#each this}}
+        <tr>
+          <td class="office-results-name">{{candidate.name}}</td>
+          <td class="office-results-percentage">{{toFixed percentage 2}}</td>
+          <td class="office-results-count">{{digitGrouping count}}</td>
+        </tr>
+        {{/each}}
+        {{/withSortedCandidates}}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -19,7 +19,11 @@ define([
     url   : config.data.officesResults,
 
     comparator: function(model) {
-      return model.get('office').number;
+      return parseInt(model.get('office').number, 10);
+    },
+
+    findByRound: function(round) {
+      return new this.constructor(this.where({round: round}));
     },
 
     bestOrWorstCandidateScore: function(type, candidate) {

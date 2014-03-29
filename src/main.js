@@ -112,6 +112,7 @@ requirejs([
   'swag',
   'App.Router',
   'text!src/templates/_candidate-result.hbs',
+  'text!src/templates/_office-result.hbs',
 
   'modernizr',
   'foundation',
@@ -124,7 +125,8 @@ requirejs([
   Handlebars,
   Swag,
   Router,
-  candidateResultPartial) {
+  candidateResultPartial,
+  officeResultPartial) {
 
   'use strict';
 
@@ -133,6 +135,7 @@ requirejs([
 
   // Handlebars partials
   Handlebars.registerPartial('candidateResult', candidateResultPartial);
+  Handlebars.registerPartial('officeResult', officeResultPartial);
 
   domReady(function() {
     $(document).foundation();

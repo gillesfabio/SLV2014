@@ -1,9 +1,10 @@
 define([
 
+  'underscore',
   'handlebars',
   'markdown',
 
-], function(Handlebars, markdown) {
+], function(_, Handlebars, markdown) {
 
   'use strict';
 
@@ -28,4 +29,9 @@ define([
   Handlebars.registerHelper('lastname', function(id) {
     if (id) return id.split('-')[1];
   });
+
+  Handlebars.registerHelper('withSortedCandidates', function(context, options) {
+    return options.fn(_.sortBy(context, function(m) { return -m.count; }));
+  });
+
 });

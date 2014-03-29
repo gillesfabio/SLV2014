@@ -38,7 +38,10 @@ define([
     getTemplateContext: function() {
       return {
         config  : config,
-        results : this.results.toJSON()
+        results : {
+          r1: this.results.findByRound(1).toJSON(),
+          r2: this.results.findByRound(2).toJSON()
+        }
       };
     },
 

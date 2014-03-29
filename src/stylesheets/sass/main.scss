@@ -535,29 +535,55 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .office-list, .office-result-list {
 
+  h2 {
+    font-size      : rem-calc(22);
+    font-weight    : bold;
+    letter-spacing : -1px;
+    font-variant   : small-caps;
+    padding-bottom : rem-calc(15);
+    margin-bottom  : rem-calc(20);
+    text-align     : center;
+  }
+
+
   .office {
 
     border: 1px solid $color-iron;
 
-    h2 {
-      text-align     : center;
-      font-size      : rem-calc(15);
+    h3 {
+      text-align     : left;
+      font-size      : rem-calc(14);
       background     : $color-porcelain;
       padding        : rem-calc(10);
       margin         : 0;
       font-weight    : bold;
     }
 
-    h2 small {
+    h3 small {
       font-size   : rem-calc(15);
       font-weight : normal;
     }
 
-    h3 {
-      font-size   : rem-calc(14);
-      font-weight : bold;
-      text-align  : center;
-      padding-top : rem-calc(20)
+    .office-results table {
+      border: none;
+      width: 100%;
+    }
+
+    .office-results th:nth-child(n+2) {
+      text-align: right;
+    }
+
+    .office-results-percentage, .office-results-count {
+      text-align: right;
+    }
+
+    .office-results-name {
+      color: $color-chambray;
+    }
+
+    .office-results {
+      padding: rem-calc(10);
+      font-size: rem-calc(14);
     }
 
     .office-address {
@@ -685,6 +711,12 @@ a.circle {
   .list-person {
     p {
       text-align: center;
+    }
+  }
+
+  .office-list, .office-result-list {
+    .office-results {
+      font-size: rem-calc(13) !important;
     }
   }
 }
