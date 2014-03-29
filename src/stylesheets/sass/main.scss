@@ -90,7 +90,7 @@ i {
 // Content
 // -----------------------------------------------------------------------------
 #content {
-  padding: rem-calc(20 10 20 10);
+  padding: rem-calc(10 10 20 10);
 }
 
 .welcome {
@@ -451,9 +451,11 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 }
 
-.results {
+.result-list {
+  margin-bottom: rem-calc(20);
+}
 
-  margin-bottom : rem-calc(20);
+.results {
 
   h2 {
     font-size      : rem-calc(22);
@@ -461,8 +463,8 @@ button:hover, button:focus, .button:hover, .button:focus {
     letter-spacing : -1px;
     font-variant   : small-caps;
     border-bottom  : 1px solid $color-iron;
-    padding        : rem-calc(15 0 15 0);
-    margin         : rem-calc(20 0 20 0);
+    padding-bottom : rem-calc(15);
+    margin-bottom  : rem-calc(20);
     text-align     : center;
   }
 
@@ -486,7 +488,6 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 
 }
-
 
 .results-stats {
 
@@ -527,6 +528,7 @@ button:hover, button:focus, .button:hover, .button:focus {
     }
   }
 }
+
 // -----------------------------------------------------------------------------
 // Polling Places
 // -----------------------------------------------------------------------------
