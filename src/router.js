@@ -8,6 +8,7 @@ define([
   'App.controllers.themeList',
   'App.controllers.themeDetail',
   'App.controllers.officeList',
+  'App.controllers.officeResultList',
   'App.controllers.about'
 
 ], function(
@@ -19,6 +20,7 @@ define([
   themeList,
   themeDetail,
   officeList,
+  officeResultList,
   about) {
 
   'use strict';
@@ -32,6 +34,7 @@ define([
       'themes'                  : themeList,
       'themes/:id'              : themeDetail,
       'bureaux'                 : officeList,
+      'bureaux/resultats'       : officeResultList,
       'a-propos'                : about
     }
   });

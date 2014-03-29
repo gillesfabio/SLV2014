@@ -42,6 +42,7 @@ requirejs.config({
     'App.views.ResultList'             : 'src/views/ResultList',
     'App.views.Elected'                : 'src/views/Elected',
     'App.views.OfficeList'             : 'src/views/OfficeList',
+    'App.views.OfficeResultList'       : 'src/views/OfficeResultList',
     'App.views.ThemeDetail'            : 'src/views/ThemeDetail',
     'App.views.ThemeList'              : 'src/views/ThemeList',
 
@@ -52,6 +53,7 @@ requirejs.config({
     'App.controllers.candidateList'          : 'src/controllers/candidateList',
     'App.controllers.home'                   : 'src/controllers/home',
     'App.controllers.officeList'             : 'src/controllers/officeList',
+    'App.controllers.officeResultList'       : 'src/controllers/officeResultList',
     'App.controllers.themeDetail'            : 'src/controllers/themeDetail',
     'App.controllers.themeList'              : 'src/controllers/themeList',
 
@@ -132,8 +134,8 @@ requirejs([
 
   domReady(function() {
     $(document).foundation();
-    $('.top-bar ul.right li').click(function() {
-      $('.top-bar').removeClass('expanded');
+    $('.top-bar ul.right li.link').click(function() {
+      $('.toggle-topbar').click();
     });
     var router = new Router();
     Backbone.history.start({root: window.APP_BASE_URL});
