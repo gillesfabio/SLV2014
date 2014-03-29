@@ -1,1 +1,20 @@
-resultats par bureau
+<h1>Résultats par bureau de vote</h1>
+
+<ul class="small-block-grid-1 medium-block-grid-3">
+  {{#each results}}
+  <li>
+    <div class="office">
+      <h2><small>{{office.number}} —</small> {{office.name}}</h2>
+      {{#is round 1}}
+      <h3>1<sup>er</sup> tour</h3>
+      {{#each candidates}}
+      <div class="row">
+        <div class="small-6 columns">{{candidate.name}}</div>
+        <div class="small-6 columns">{{percentage}} ({{count}} votes)</div>
+      </div>
+      {{/each}}
+      {{/is}}
+    </div>
+  </li>
+  {{/each}}
+</ul>

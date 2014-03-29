@@ -530,9 +530,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 // -----------------------------------------------------------------------------
-// Polling Places
+// Offices
 // -----------------------------------------------------------------------------
-.office-list {
+
+.office-list, .office-result-list {
 
   .office {
 
@@ -540,7 +541,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
     h2 {
       text-align     : center;
-      font-size      : rem-calc(16);
+      font-size      : rem-calc(15);
       background     : $color-porcelain;
       padding        : rem-calc(10);
       margin         : 0;
@@ -548,17 +549,30 @@ button:hover, button:focus, .button:hover, .button:focus {
     }
 
     h2 small {
-      font-size   : rem-calc(14);
+      font-size   : rem-calc(15);
       font-weight : normal;
     }
 
-    p {
-      font-size  : rem-calc(13);
-      padding    : rem-calc(10);
+    h3 {
+      font-size   : rem-calc(14);
+      font-weight : bold;
+      text-align  : center;
+      padding-top : rem-calc(20)
+    }
+
+    .office-address {
+      font-size   : rem-calc(15);
+      font-weight : normal;
+      text-align  : center;
+      padding     : rem-calc(20 0 10 0);
+    }
+
+    .office-gmap {
+      font-size  : rem-calc(14);
       text-align : center;
     }
 
-    p + p {
+    .office-hours {
       margin     : 0;
       padding    : 0;
       text-align : center;
@@ -569,6 +583,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 // Utilities
 // -----------------------------------------------------------------------------
+
 a.circle {
   color: transparent;
 }

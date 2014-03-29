@@ -18,20 +18,22 @@ requirejs.config({
     'swag'              : 'vendor/swag/lib/swag',
 
     // App models
-    'App.models.Candidate' : 'src/models/Candidate',
-    'App.models.Result'    : 'src/models/Result',
-    'App.models.Office'    : 'src/models/Office',
-    'App.models.Program'   : 'src/models/Program',
-    'App.models.List'      : 'src/models/List',
-    'App.models.Theme'     : 'src/models/Theme',
+    'App.models.Candidate'    : 'src/models/Candidate',
+    'App.models.Result'       : 'src/models/Result',
+    'App.models.Office'       : 'src/models/Office',
+    'App.models.OfficeResult' : 'src/models/OfficeResult',
+    'App.models.Program'      : 'src/models/Program',
+    'App.models.List'         : 'src/models/List',
+    'App.models.Theme'        : 'src/models/Theme',
 
     // App collections
-    'App.collections.Candidate' : 'src/collections/Candidate',
-    'App.collections.Result'    : 'src/collections/Result',
-    'App.collections.Office'    : 'src/collections/Office',
-    'App.collections.Program'   : 'src/collections/Program',
-    'App.collections.List'      : 'src/collections/List',
-    'App.collections.Theme'     : 'src/collections/Theme',
+    'App.collections.Candidate'    : 'src/collections/Candidate',
+    'App.collections.Result'       : 'src/collections/Result',
+    'App.collections.Office'       : 'src/collections/Office',
+    'App.collections.OfficeResult' : 'src/collections/OfficeResult',
+    'App.collections.Program'      : 'src/collections/Program',
+    'App.collections.List'         : 'src/collections/List',
+    'App.collections.Theme'        : 'src/collections/Theme',
 
     // App views
     'App.views.CandidateCard'          : 'src/views/CandidateCard',

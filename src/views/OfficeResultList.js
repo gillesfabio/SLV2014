@@ -3,11 +3,17 @@ define([
   'backbone',
   'underscore',
   'handlebars',
-  'App.collections.Office',
+  'App.collections.OfficeResult',
   'App.config',
   'text!src/templates/office-result-list.hbs'
 
-], function(Backbone, _, Handlebars, OfficeCollection, config, template) {
+], function(
+  Backbone,
+  _,
+  Handlebars,
+  OfficeResultCollection,
+  config,
+  template) {
 
   'use strict';
 
@@ -19,20 +25,20 @@ define([
     initialize: function(options) {
 
       this.options = _.extend({
-        offices: new OfficeCollection()
+        results: new OfficeResultCollection()
       }, options);
 
-      this.offices  = this.options.offices;
+      this.results  = this.options.results;
       this.template = Handlebars.compile(template);
 
-      this.listenTo(this.offices, 'sync', this.render);
-      this.offices.fetch();
+      this.listenTo(this.results, 'sync', this.render);
+      this.results.fetch();
     },
 
     getTemplateContext: function() {
       return {
         config  : config,
-        offices : this.offices.toJSON()
+        results : this.results.toJSON()
       };
     },
 

@@ -13,12 +13,13 @@ var SCRAPER_JSON = path.join(__dirname, 'scrap-data.json');
 
 var Generator = module.exports = function Generator() {
   this.data = {
-    themes     : [],
-    offices    : [],
-    candidates : [],
-    programs   : [],
-    lists      : [],
-    results    : []
+    themes         : [],
+    offices        : [],
+    officesResults : [],
+    candidates     : [],
+    programs       : [],
+    lists          : [],
+    results        : []
   };
 };
 
@@ -34,11 +35,39 @@ Generator.prototype.buildOffices = function() {
     var obj        = {};
     var raw        = yaml[key];
     obj.number     = key;
+    obj.name       = raw.name;
     obj.address    = raw.address;
     obj.opening    = raw.opening;
     obj.gmapSearch = raw.gmapSearch;
     this.data.offices.push(obj);
   }.bind(this));
+};
+
+Generator.prototype.buildOfficesResults = function() {
+  var file = path.join(DATA_DIR, 'offices-results.yaml');
+  var offices = YAML.load(file);
+  Object.keys(offices).forEach(function(office) {
+    var obj = {};
+    var raw = offices[office];
+    Object.keys(raw).forEach(function(round) {
+      var roundData = raw[round];
+      obj.office     = _.find(this.data.offices, {number: office});
+      obj.round      = (round === 'r1') ? 1 : 2;
+      obj.registered = roundData.registered;
+      obj.voters     = roundData.voters;
+      obj.expressed  = roundData.expressed;
+      obj.candidates = [];
+      Object.keys(roundData.candidates).forEach(function(id) {
+        var result        = {};
+        var candidate     = _.find(this.data.candidates, {id: id});
+        result.candidate  = candidate;
+        result.percentage = parseFloat(roundData.candidates[id].percentage);
+        result.count      = parseInt(roundData.candidates[id].count, 10);
+        obj.candidates.push(result);
+      }, this);
+    }, this);
+    this.data.officesResults.push(obj);
+  }, this);
 };
 
 Generator.prototype.buildCandidates = function() {
@@ -188,5 +217,6 @@ Generator.prototype.build = function() {
   this.overrideLists();
   this.buildResults();
   this.overrideResults();
+  this.buildOfficesResults();
   this.createFiles();
 };
