@@ -467,6 +467,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 
 .office-list, .office-result-list {
+
   h2 {
     font-size      : rem-calc(22);
     font-weight    : bold;
@@ -476,8 +477,11 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin-bottom  : rem-calc(20);
     text-align     : center;
   }
+
   .office {
+
     border: 1px solid $color-iron;
+
     h3 {
       text-align     : left;
       font-size      : rem-calc(14);
@@ -486,37 +490,56 @@ button:hover, button:focus, .button:hover, .button:focus {
       margin         : 0;
       font-weight    : bold;
     }
+
     h3 small {
       font-size   : rem-calc(15);
       font-weight : normal;
     }
-    .office-results table {
-      border: none;
-      width: 100%;
-    }
-    .office-results th:nth-child(n+2) {
-      text-align: right;
-    }
-    .office-results-percentage, .office-results-count {
-      text-align: right;
-    }
-    .office-results-name {
-      color: $color-chambray;
-    }
+
     .office-results {
-      padding: rem-calc(10);
-      font-size: rem-calc(14);
+
+      padding   : rem-calc(10);
+      font-size : rem-calc(14);
+
+      .global-stats {
+        font-size   : rem-calc(12);
+        font-weight : normal;
+      }
+
+      .global-stats li {
+        margin-right: 0;
+      }
+
+      table {
+        border : none;
+        width  : 100%;
+      }
+
+      th:nth-child(n+2) {
+        text-align: right;
+      }
+
+      .percentage, .count {
+        text-align: right;
+      }
+
+      .name {
+        color: $color-chambray;
+      }
     }
+
     .office-address {
       font-size   : rem-calc(15);
       font-weight : normal;
       text-align  : center;
       padding     : rem-calc(20 0 10 0);
     }
+
     .office-gmap {
       font-size  : rem-calc(14);
       text-align : center;
     }
+
     .office-hours {
       margin     : 0;
       padding    : 0;

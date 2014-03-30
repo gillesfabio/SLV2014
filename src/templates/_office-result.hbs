@@ -1,6 +1,11 @@
 <div class="office">
   <h3><small>{{office.number}} —</small> {{office.name}}</h3>
   <div class="office-results">
+    <ul class="inline-list global-stats">
+      <li>Ins. : {{registered}}</li>
+      <li>Vot. : {{voters}}</li>
+      <li>Exp. : {{expressed}}</li>
+    </ul>
     <table>
       <thead>
         <tr>
@@ -13,9 +18,9 @@
         {{#withSortedCandidates candidates}}
         {{#each this}}
         <tr>
-          <td class="office-results-name">{{candidate.name}}</td>
-          <td class="office-results-percentage">{{toFixed percentage 2}}</td>
-          <td class="office-results-count">{{digitGrouping count}}</td>
+          <td class="name">{{candidate.name}}</td>
+          <td class="percentage">{{toFixed percentage 2}}</td>
+          <td class="count">{{digitGrouping count}}</td>
         </tr>
         {{/each}}
         {{/withSortedCandidates}}
