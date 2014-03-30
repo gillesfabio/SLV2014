@@ -6,7 +6,7 @@
     <div class="candidate-detail-program">
       <h2>Mon programme</h2>
       {{#each projects}}
-      <h3 class="theme-title"><i class="fa fa-{{this.0.theme.icon}}"></i> <a href="<%= baseurl %>#/themes/{{this.0.theme.slug}}">{{@key}}</a></h3>
+      <h3 class="theme-title"><i class="fa fa-{{this.0.theme.icon}}"></i> <a href="{{config.baseUrl}}#/themes/{{this.0.theme.id}}">{{@key}}</a></h3>
       <ul class="no-bullet candidate-program-projects">
         {{#each this}}
         <li>{{{md2html description}}}</li>

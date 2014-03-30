@@ -23,11 +23,12 @@ define([
     className : 'office-result-list',
 
     initialize: function(options) {
-
       this.options = _.extend({
-        results: new OfficeResultCollection()
+        round   : 1,
+        results : new OfficeResultCollection()
       }, options);
 
+      this.round    = this.options.round;
       this.results  = this.options.results;
       this.template = Handlebars.compile(template);
 
@@ -36,12 +37,12 @@ define([
     },
 
     getTemplateContext: function() {
+      var results = this.results.findByRound(this.round);
       return {
-        config  : config,
-        results : {
-          r1: this.results.findByRound(1).toJSON(),
-          r2: this.results.findByRound(2).toJSON()
-        }
+        config         : config,
+        round          : this.round,
+        results        : results.toJSON(),
+        candidateStats : results.getCandidateTopFlopStats(),
       };
     },
 

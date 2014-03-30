@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 // Application constants
 // -----------------------------------------------------------------------------
+
 $slv-color-dark1: #3A539B;
 $slv-color-dark2: #4B77BE;
 $slv-color-dark2-hover: #1F3A93;
@@ -18,6 +19,7 @@ $color-steel-blue: #4B77BE;
 // -----------------------------------------------------------------------------
 // Foundation Settings Overrides
 // -----------------------------------------------------------------------------
+
 $topbar-bg: $slv-color-dark1;
 $topbar-height: 50px;
 $topbar-link-color: #fff;
@@ -37,6 +39,7 @@ $anchor-font-color-hover: $slv-color-dark2;
 // -----------------------------------------------------------------------------
 // Load Foundation
 // -----------------------------------------------------------------------------
+
 @import "foundation/_settings";
 @import "foundation";
 @import "normalize";
@@ -44,6 +47,7 @@ $anchor-font-color-hover: $slv-color-dark2;
 // -----------------------------------------------------------------------------
 // General
 // -----------------------------------------------------------------------------
+
 html {
   -webkit-font-smoothing: antialiased;
 }
@@ -65,14 +69,12 @@ i {
 // -----------------------------------------------------------------------------
 // Top Bar
 // -----------------------------------------------------------------------------
+
 .top-bar {
-
   text-transform: uppercase;
-
   h1 {
     text-align: left;
   }
-
   .name h1 a {
     font-size: rem-calc(16);
   }
@@ -89,29 +91,16 @@ i {
 // -----------------------------------------------------------------------------
 // Content
 // -----------------------------------------------------------------------------
+
 #content {
   padding: rem-calc(10 10 20 10);
 }
 
-.welcome {
-
-  background    : $color-porcelain;
-  padding       : rem-calc(20);
-  margin-bottom : rem-calc(20);
-  border        : 1px solid $color-iron;
-
-  p {
-    font-size : rem-calc(16);
-    margin    : 0;
-  }
-}
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
 .button {
-
   background: $slv-color-dark1;
-
   i {
     color: #ececec;
   }
@@ -124,21 +113,18 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 // candidate-card
 // -----------------------------------------------------------------------------
+
 .candidate-card {
-
   text-align: center;
-
   .candidate-card-content > .row {
     background: $color-porcelain;
     border: 1px solid $color-iron;
     padding: rem-calc(20);
     margin: rem-calc(5);
   }
-
   :last-child {
     border-bottom: none;
   }
-
   h1 {
     color          : #555;
     padding        : 0;
@@ -148,7 +134,6 @@ button:hover, button:focus, .button:hover, .button:focus {
     font-weight    : 200;
     border-bottom  : none;
   }
-
   h2 {
     font-size      : rem-calc(16);
     color          : $slv-candidate-slogan-color;
@@ -156,7 +141,6 @@ button:hover, button:focus, .button:hover, .button:focus {
     padding        : 0;
     margin         : rem-calc(5 0 5 0);
   }
-
   h3 {
     font-size      : rem-calc(18);
     color          : $color-chambray;
@@ -165,7 +149,6 @@ button:hover, button:focus, .button:hover, .button:focus {
     height         : rem-calc(30);
     line-height    : rem-calc(30);
   }
-
   h3 .vote-number {
     font-size     : rem-calc(15);
     width         : rem-calc(25);
@@ -180,52 +163,38 @@ button:hover, button:focus, .button:hover, .button:focus {
     font-weight   : bold;
     margin-left   : rem-calc(2);
   }
-
   .candidate-buttons {
     i {
       font-size: rem-calc(20);
       color: $color-white;
     }
   }
-
   .candidate-links {
-
     margin-top: rem-calc(10);
     margin-left: auto;
     margin-right: auto;
-
     .button {
       background: $color-white;
     }
-
     button:hover, button:focus, .button:hover, .button:focus {
       background: $color-white;
     }
-
     .button-group {
       display: inline-block;
       margin: auto;
     }
-
     i {
       font-size: rem-calc(20);
       color: $color-chambray;
     }
-  }
-
-  .unavailable-program {
-    text-transform : uppercase;
-    font-size      : rem-calc(15);
-    font-weight    : bold;
-    color          : #909090;
   }
 }
 
 // -----------------------------------------------------------------------------
 // candidate-detail
 // -----------------------------------------------------------------------------
-.candidate-detail {
 
+.candidate-detail {
   .candidate-card {
     .candidate-card-content > .row {
       background: none;
@@ -242,7 +211,6 @@ button:hover, button:focus, .button:hover, .button:focus {
       }
     }
   }
-
   .candidate-detail-program {
     h3 {
       font-size      : rem-calc(22);
@@ -255,8 +223,8 @@ button:hover, button:focus, .button:hover, .button:focus {
       color: $color-steel-blue;
     }
   }
-
-  .candidate-detail-program, .candidate-detail-list {
+  .candidate-detail-program,
+  .candidate-detail-list {
     h2 {
       font-size      : rem-calc(25);
       font-weight    : 400;
@@ -271,7 +239,6 @@ button:hover, button:focus, .button:hover, .button:focus {
       color : $color-chambray;
     }
   }
-
   .candidate-detail-list {
     ul {
       text-align: center;
@@ -300,19 +267,16 @@ button:hover, button:focus, .button:hover, .button:focus {
 // candidate-program
 // -----------------------------------------------------------------------------
 .candidate-program-projects {
-
   p, ul {
     font-size  : rem-calc(15);
     margin     : rem-calc(10 0 10 0);
   }
-
   > li {
     background    : $color-porcelain;
     border        : 1px solid $color-iron;
     padding       : rem-calc(10);
     margin-bottom : rem-calc(10);
   }
-
   li ul li {
     list-style-type: square;
   }
@@ -321,10 +285,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 // theme-list
 // -----------------------------------------------------------------------------
+
 .theme-list {
-
   li {
-
     span {
       background  : $color-porcelain;
       border      : 1px solid $color-iron;
@@ -333,7 +296,6 @@ button:hover, button:focus, .button:hover, .button:focus {
       padding     : rem-calc(20 0 0 0);
       display     : block;
     }
-
     a {
       padding        : rem-calc(10);
       display        : inline-block;
@@ -342,7 +304,6 @@ button:hover, button:focus, .button:hover, .button:focus {
       font-weight    : 400;
       text-transform : uppercase;
     }
-
     i {
       color     : #3A539B;
       font-size : rem-calc(30);
@@ -354,8 +315,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 // theme-detail
 // -----------------------------------------------------------------------------
-.theme-detail {
 
+.theme-detail {
   h2 {
     font-weight    : 200;
     text-transform : uppercase;
@@ -364,13 +325,11 @@ button:hover, button:focus, .button:hover, .button:focus {
     padding        : rem-calc(10);
     border-bottom  : 1px solid $color-iron;
   }
-
   h4 {
     font-size      : rem-calc(16);
     text-transform : uppercase;
     font-weight    : 200;
   }
-
   .candidate-projects {
     border-bottom : 1px solid $color-iron;
     margin        : rem-calc(20 0 20 0);
@@ -381,10 +340,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 // running-mate
 // -----------------------------------------------------------------------------
 .list-person {
-
   padding: 0;
   margin: 0;
-
   h5 {
     font-size      : rem-calc(16);
     background     : $color-porcelain;
@@ -393,17 +350,14 @@ button:hover, button:focus, .button:hover, .button:focus {
     font-weight    : 400;
     letter-spacing : -1px;
   }
-
   h5 .list-person-position {
     color: #909090;
   }
-
   p {
     font-size : 80%;
     padding   : rem-calc(10);
     color     : #555;
   }
-
   .list-person-content {
     border  : 1px solid $color-iron;
     padding : 0;
@@ -414,37 +368,30 @@ button:hover, button:focus, .button:hover, .button:focus {
 // Home
 // -----------------------------------------------------------------------------
 .elected {
-
   background    : #4B77BE;
   margin-bottom : rem-calc(20);
-
   h2, h3 {
     color          : #fff;
     text-transform : uppercase;
   }
-
   h2 {
     font-size   : rem-calc(28);
     font-weight : normal;
   }
-
   h3 {
     font-size   : rem-calc(18);
     font-weight : normal;
   }
-
   h4 {
     font-size   : rem-calc(15);
     color       : $color-white;
     font-weight : normal;
   }
-
   .elected-header {
     background : #3A539B;
     padding    : rem-calc(20);
     text-align : center;
   }
-
   .elected-content {
     padding    : rem-calc(20);
     text-align : center;
@@ -456,7 +403,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .results {
-
   h2 {
     font-size      : rem-calc(22);
     font-weight    : bold;
@@ -467,18 +413,13 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin-bottom  : rem-calc(20);
     text-align     : center;
   }
-
   .results-content {
-
     li {
-
       text-align: center;
-
       h5 {
         font-size   : rem-calc(13);
         font-weight : normal;
       }
-
       h6 {
         font-size   : rem-calc(16);
         font-weight : normal;
@@ -486,17 +427,13 @@ button:hover, button:focus, .button:hover, .button:focus {
       }
     }
   }
-
 }
 
 .results-stats {
-
   .results-stat {
-
     background: $color-porcelain;
     border: 1px solid $color-iron;
     text-align: center;
-
     h5 {
       background: $color-iron;
       font-size: rem-calc(16);
@@ -504,24 +441,20 @@ button:hover, button:focus, .button:hover, .button:focus {
       padding: rem-calc(5);
       margin: 0;
     }
-
     p {
       font-size: rem-calc(15);
       color: $color-chambray;
       padding: rem-calc(10);
     }
-
     ul {
       list-style: none;
       margin: 0;
       padding: rem-calc(10);
     }
-
     .results-percentage {
       font-size: rem-calc(18);
       color: $color-chambray;
     }
-
     .results-count, p small {
       color: #909090;
       font-size: rem-calc(13);
@@ -534,7 +467,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 
 .office-list, .office-result-list {
-
   h2 {
     font-size      : rem-calc(22);
     font-weight    : bold;
@@ -544,12 +476,8 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin-bottom  : rem-calc(20);
     text-align     : center;
   }
-
-
   .office {
-
     border: 1px solid $color-iron;
-
     h3 {
       text-align     : left;
       font-size      : rem-calc(14);
@@ -558,46 +486,37 @@ button:hover, button:focus, .button:hover, .button:focus {
       margin         : 0;
       font-weight    : bold;
     }
-
     h3 small {
       font-size   : rem-calc(15);
       font-weight : normal;
     }
-
     .office-results table {
       border: none;
       width: 100%;
     }
-
     .office-results th:nth-child(n+2) {
       text-align: right;
     }
-
     .office-results-percentage, .office-results-count {
       text-align: right;
     }
-
     .office-results-name {
       color: $color-chambray;
     }
-
     .office-results {
       padding: rem-calc(10);
       font-size: rem-calc(14);
     }
-
     .office-address {
       font-size   : rem-calc(15);
       font-weight : normal;
       text-align  : center;
       padding     : rem-calc(20 0 10 0);
     }
-
     .office-gmap {
       font-size  : rem-calc(14);
       text-align : center;
     }
-
     .office-hours {
       margin     : 0;
       padding    : 0;
@@ -606,6 +525,51 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
 }
 
+.office-result-list {
+  .candidate-stats {
+    background : $color-porcelain;
+    border     : 1px solid $color-iron;
+    padding    : rem-calc(20);
+    min-height : rem-calc(280);
+    h3 {
+      font-size   : rem-calc(14);
+      font-weight : bold;
+      text-align  : center;
+    }
+    .candidate-picture {
+      text-align: center;
+    }
+    .candidate-topflop {
+      text-align: center;
+      h4 {
+        font-size: rem-calc(16);
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color-chambray;
+      }
+      ul > li {
+        font-size: rem-calc(14);
+        font-weight: normal;
+      }
+      ul > li + li {
+        font-size: rem-calc(16);
+        color: $color-chambray;
+      }
+      ul > li + li + li {
+        color: #909090;
+        font-size: rem-calc(13);
+        font-weight: normal;
+      }
+    }
+    .topflop-stats {
+    }
+    .top-stat {
+      margin-bottom: rem-calc(20);
+    }
+    .flop-stat {
+    }
+  }
+}
 // -----------------------------------------------------------------------------
 // Utilities
 // -----------------------------------------------------------------------------
@@ -634,11 +598,9 @@ a.circle {
 }
 
 .dashbox {
-
   background: $color-porcelain;
   border: 1px solid $color-iron;
   text-align: center;
-
   h5 {
     background: $color-iron;
     font-size: rem-calc(16);
@@ -646,16 +608,13 @@ a.circle {
     padding: rem-calc(10);
     margin: 0;
   }
-
   dl {
     padding: rem-calc(20 0 0 0);
   }
-
   dt {
     font-size: rem-calc(20);
     color: $color-chambray;
   }
-
   dd {
     color: #909090;
     font-size: rem-calc(13);
@@ -666,32 +625,26 @@ a.circle {
 // Media Queries
 // -----------------------------------------------------------------------------
 @media #{$small-only} {
-
   #content {
     h1 { text-align: center; }
   }
-
   .welcome {
     p {
       font-size: rem-calc(14);
     }
   }
-
   .top-bar .name h1 {
     font-size: rem-calc(10) !important;
   }
-
   .top-bar-section a {
     text-align: center;
     border-top: 1px solid #4B77BE;
   }
-
   .candidate-detail-program {
     h2 {
       font-size: rem-calc(20) !important;
     }
   }
-
   .candidate-card {
     text-align: center;
     h2 {
@@ -701,19 +654,11 @@ a.circle {
       padding: rem-calc(10) !important;
     }
   }
-
-  // .candidate-detail {
-  //   h2, h3, h4, h5, h6 { text-align: center; }
-  //   h2 { font-size: rem-calc(20); }
-  //   h3 { font-size: rem-calc(18); }
-  // }
-
   .list-person {
     p {
       text-align: center;
     }
   }
-
   .office-list, .office-result-list {
     .office-results {
       font-size: rem-calc(13) !important;

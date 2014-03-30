@@ -1,19 +1,55 @@
 <h1>Résultats par bureau de vote</h1>
 
-{{#any results.r1}}
-<h2>1<sup>er</sup> tour</h2>
-<ul class="small-block-grid-1 large-block-grid-2">
-  {{#each results.r1}}
-  <li>{{> officeResult}}</li>
-  {{/each}}
-</ul>
-{{/any}}
 
-{{#any results.r2}}
-<h2>2<sup>ème</sup> tour</h2>
-<ul class="small-block-grid-1 large-block-grid-2">
-  {{#each results}}
-  <li>{{> officeResult.r2}}</li>
-  {{/each}}
-</ul>
+{{#any results}}
+<h2>{{#is round 1}}1<sup>er</sup>{{else}}2<sup>ème</sup>{{/is}} tour</h2>
+<div class="row">
+  <div class="small-centered columns">
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+      {{#each candidateStats}}
+      <li>
+        <div class="candidate-stats">
+          <div class="row" data-equalizer>
+            <div class="small-12 medium-6 large-4 columns candidate-picture">
+              <a href="{{config.baseUrl}}#/candidats/{{candidate.id}}/programme">
+                <img src="{{config.baseUrl}}images/{{candidate.id}}.jpg" class="circle" alt="{{candidate.name}}">
+              </a>
+              <h3>{{candidate.name}}</h3>
+            </div>
+            <div class="small-12 medium-6 large-8 columns candidate-topflop">
+              <div class="row">
+                <div class="small-12 columns top-stat">
+                  <h4>Top</h4>
+                  <ul class="no-bullet">
+                    <li>{{max.office.name}}</li>
+                    <li>{{toFixed max.percentage 2}} %</li>
+                    <li>{{digitGrouping max.count}} <small>votes</small></li>
+                  </ul>
+                </div>
+                <div class="small-12 columns flop-stat">
+                  <h4>Flop</h4>
+                  <ul class="no-bullet">
+                    <li>{{min.office.name}}</li>
+                    <li>{{toFixed min.percentage 2}} %</li>
+                    <li>{{digitGrouping min.count}} <small>votes</small></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <ul class="small-block-grid-1 large-block-grid-2">
+      {{#each results}}
+      <li>{{> officeResult}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
 {{/any}}

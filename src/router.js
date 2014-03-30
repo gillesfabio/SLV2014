@@ -27,15 +27,15 @@ define([
 
   return Backbone.Router.extend({
     routes: {
-      ''                        : home,
-      'candidats'               : candidateList,
-      'candidats/:id/liste'     : candidateDetailList,
-      'candidats/:id/programme' : candidateDetailProgram,
-      'themes'                  : themeList,
-      'themes/:id'              : themeDetail,
-      'bureaux'                 : officeList,
-      'bureaux/resultats'       : officeResultList,
-      'a-propos'                : about
+      ''                         : home,
+      'candidats'                : candidateList,
+      'candidats/:id/liste'      : candidateDetailList,
+      'candidats/:id/programme'  : candidateDetailProgram,
+      'themes'                   : themeList,
+      'themes/:id'               : themeDetail,
+      'bureaux'                  : officeList,
+      'bureaux/resultats/:round' : officeResultList,
+      'a-propos'                 : about
     }
   });
 });

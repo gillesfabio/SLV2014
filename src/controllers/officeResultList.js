@@ -1,16 +1,29 @@
 define([
 
   'jquery',
+  'underscore',
   'App.views.OfficeResultList',
-  'App.collections.Office'
+  'App.collections.OfficeResult',
+  'App.config'
 
-], function($, OfficeResultListView, OfficeCollection) {
+], function(
+  $,
+  _,
+  OfficeResultListView,
+  OfficeResultCollection,
+  config) {
 
   'use strict';
 
-  var controller = function() {
+  var controller = function(round) {
+    round = parseInt(round, 10);
+    var $content = $('#content');
+    var exists = _.contains(config.enabledRounds, round);
+    if (!exists) return $content.html("Désolé, cette page n'existe pas.");
     var view = new OfficeResultListView({
-      offices: new OfficeCollection()
+      config  : config,
+      round   : round,
+      results : new OfficeResultCollection()
     });
     $('#content').html(view.el);
   };
