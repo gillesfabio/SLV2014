@@ -2,15 +2,22 @@ define([
 
   'chai',
   'App.views.OfficeList',
-  'App.collections.Office'
+  'App.collections.Office',
+  'text!../fixtures/offices.json'
 
-], function(chai, View, OfficeCollection) {
+], function(
+  chai,
+  View,
+  OfficeCollection,
+  officesFixtures) {
 
   /* jshint expr:true */
 
   'use strict';
 
   var expect = chai.expect;
+
+  officesFixtures = JSON.parse(officesFixtures);
 
   describe('App.views', function() {
     describe('App.views.OfficeListTest', function() {
@@ -33,16 +40,11 @@ define([
           var context = view.getTemplateContext();
           expect(context.config).to.contain.keys('baseUrl');
         });
-        it('should set offices in context', function(done) {
-          var col = new OfficeCollection();
-          col.fetch({
-            success: function() {
-              var view    = new View({offices: col});
-              var context = view.getTemplateContext();
-              expect(context.offices).to.deep.equal(col.toJSON());
-              done();
-            }
-          });
+        it('should set offices in context', function() {
+          var col     = new OfficeCollection(officesFixtures);
+          var view    = new View({offices: col});
+          var context = view.getTemplateContext();
+          expect(context.offices).to.deep.equal(col.toJSON());
         });
       });
     });

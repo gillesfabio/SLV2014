@@ -3,14 +3,21 @@ define([
   'chai',
   'App.views.ThemeList',
   'App.collections.Theme',
+  'text!../fixtures/themes.json'
 
-], function(chai, View, ThemeCollection) {
+], function(
+  chai,
+  View,
+  ThemeCollection,
+  themesFixtures) {
 
   /* jshint expr:true */
 
   'use strict';
 
   var expect = chai.expect;
+
+  themesFixtures = JSON.parse(themesFixtures);
 
   describe('App.views', function() {
     describe('App.views.ThemeListTest', function() {
@@ -33,16 +40,11 @@ define([
           var context = view.getTemplateContext();
           expect(context.config).to.contain.keys('baseUrl');
         });
-        it('should set themes in context', function(done) {
-          var col = new ThemeCollection();
-          col.fetch({
-            success: function() {
-              var view    = new View({themes: col});
-              var context = view.getTemplateContext();
-              expect(context.themes).to.deep.equal(col.toJSON());
-              done();
-            }
-          });
+        it('should set themes in context', function() {
+          var col     = new ThemeCollection(themesFixtures);
+          var view    = new View({themes: col});
+          var context = view.getTemplateContext();
+          expect(context.themes).to.deep.equal(col.toJSON());
         });
       });
     });

@@ -4,15 +4,27 @@ define([
   'App.views.ThemeDetail',
   'App.collections.Theme',
   'App.collections.Program',
-  'App.models.Theme'
+  'App.models.Theme',
+  'text!../fixtures/themes.json',
+  'text!../fixtures/programs.json'
 
-], function(chai, View, ThemeCollection, ProgramCollection, ThemeModel) {
+], function(
+  chai,
+  View,
+  ThemeCollection,
+  ProgramCollection,
+  ThemeModel,
+  themesFixtures,
+  programsFixtures) {
 
   /* jshint expr:true */
 
   'use strict';
 
   var expect = chai.expect;
+
+  themesFixtures   = JSON.parse(themesFixtures);
+  programsFixtures = JSON.parse(programsFixtures);
 
   describe('App.views', function() {
     describe('App.views.ThemeDetailTest', function() {
@@ -36,35 +48,21 @@ define([
           var context = view.getTemplateContext();
           expect(context.config).to.contain.keys('baseUrl');
         });
-        it('should set the theme model in context', function(done) {
-          var col = new ThemeCollection();
-          col.fetch({
-            success: function() {
-              var theme   = col.findWhere({id: 'solidarite'});
-              var view    = new View({theme: theme});
-              var context = view.getTemplateContext();
-              expect(context.theme).to.deep.equal(theme.toJSON());
-              done();
-            }
-          });
+        it('should set the theme model in context', function() {
+          var col = new ThemeCollection(themesFixtures);
+          var theme   = col.findWhere({id: 'solidarite'});
+          var view    = new View({theme: theme});
+          var context = view.getTemplateContext();
+          expect(context.theme).to.deep.equal(theme.toJSON());
         });
-        it('should set programs in context', function(done) {
-          var col      = new ThemeCollection();
-          var programs = new ProgramCollection();
-          col.fetch({
-            success: function() {
-              var theme = col.findWhere({id: 'solidarite'});
-              programs.fetch({
-                success: function() {
-                  var obj     = programs.findByThemeAndGroupByCandidate(theme.get('id'));
-                  var view    = new View({theme: theme, programs: programs});
-                  var context = view.getTemplateContext();
-                  expect(context.programs).to.deep.equal(obj);
-                  done();
-                }
-              });
-            }
-          });
+        it('should set programs in context', function() {
+          var col      = new ThemeCollection(themesFixtures);
+          var programs = new ProgramCollection(programsFixtures);
+          var theme    = col.findWhere({id: 'solidarite'});
+          var obj      = programs.findByThemeAndGroupByCandidate(theme.get('id'));
+          var view     = new View({theme: theme, programs: programs});
+          var context  = view.getTemplateContext();
+          expect(context.programs).to.deep.equal(obj);
         });
       });
     });

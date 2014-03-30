@@ -24,12 +24,12 @@ define([
 
       describe('#getTemplateContext', function() {
         it('should properly set template context', function() {
-          var view = new View();
+          var view    = new View();
           var context = view.getTemplateContext();
           expect(context).to.contain.keys(['config', 'elected']);
         });
         it('should properly set the mandatory config.baseUrl', function() {
-          var view = new View();
+          var view    = new View();
           var context = view.getTemplateContext();
           expect(context.config).to.contain.keys('baseUrl');
         });
@@ -52,7 +52,7 @@ define([
               ]
             }
           ]);
-          var view = new View({results: results});
+          var view    = new View({results: results});
           var context = view.getTemplateContext();
           expect(context.elected).to.deep.equal({candidate: 'steve', percentage: 49, count: 24});
         });
@@ -75,7 +75,7 @@ define([
               ]
             }
           ]);
-          var view = new View({results: results});
+          var view    = new View({results: results});
           var context = view.getTemplateContext();
           expect(context.elected).to.be.undefined;
         });
