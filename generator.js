@@ -34,7 +34,7 @@ Generator.prototype.buildOffices = function() {
   Object.keys(yaml).forEach(function(key) {
     var obj        = {};
     var raw        = yaml[key];
-    obj.number     = key;
+    obj.number     = parseInt(key, 10);
     obj.name       = raw.name;
     obj.address    = raw.address;
     obj.opening    = raw.opening;

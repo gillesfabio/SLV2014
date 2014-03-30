@@ -142,14 +142,16 @@ requirejs([
   'chai',
   'handlebars',
   'swag',
-  'text!src/templates/_candidate-result.hbs'
+  'text!src/templates/_candidate-result.hbs',
+  'text!src/templates/_office-result.hbs'
 
 ], function(
   mocha,
   chai,
   Handlebars,
   Swag,
-  candidateResultTemplate) {
+  candidateResultTemplate,
+  officeResultTemplate) {
 
   'use strict';
 
@@ -158,6 +160,7 @@ requirejs([
 
   // Handlebars partials
   Handlebars.registerPartial('candidateResult', candidateResultTemplate);
+  Handlebars.registerPartial('officeResult', officeResultTemplate);
 
   chai.config.includeStack = true;
   mocha.setup('bdd');
