@@ -144,7 +144,7 @@
           "voteNumber": 5
         },
         "count": null,
-        "percentage": null,
+        "percentage": 36,
         "cmCount": null,
         "ccCount": null
       },
@@ -161,7 +161,7 @@
           "voteNumber": 3
         },
         "count": null,
-        "percentage": null,
+        "percentage": 41.54,
         "cmCount": null,
         "ccCount": null
       },
@@ -178,7 +178,7 @@
           "voteNumber": 4
         },
         "count": null,
-        "percentage": null,
+        "percentage": 14.42,
         "cmCount": null,
         "ccCount": null
       },
@@ -195,7 +195,7 @@
           "voteNumber": 1
         },
         "count": null,
-        "percentage": null,
+        "percentage": 8.04,
         "cmCount": null,
         "ccCount": null
       }
