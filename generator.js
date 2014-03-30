@@ -51,7 +51,7 @@ Generator.prototype.buildOfficesResults = function() {
     var raw = offices[office];
     Object.keys(raw).forEach(function(round) {
       var roundData = raw[round];
-      obj.office     = _.find(this.data.offices, {number: office});
+      obj.office     = _.find(this.data.offices, {number: parseInt(office, 10)});
       obj.round      = (round === 'r1') ? 1 : 2;
       obj.registered = roundData.registered;
       obj.voters     = roundData.voters;
