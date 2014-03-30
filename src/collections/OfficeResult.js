@@ -19,7 +19,7 @@ define([
     url   : config.data.officesResults,
 
     comparator: function(model) {
-      return model.get('office').number;
+      if (model.has('office')) return model.get('office').number;
     },
 
     findByRound: function(round) {

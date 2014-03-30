@@ -50,10 +50,9 @@ define([
     },
 
     getTemplateContext: function() {
-      var filter  = function(m) { return m.get('candidate').id === this.candidate.id; }.bind(this);
-      var list    = new ListCollection(this.lists.filter(filter));
-      var initial = new ListCollection(list.initial()).toJSON();
-      var merged  = new ListCollection(list.merged()).toJSON();
+      var list    = this.lists.findByCandidate(this.candidate.id);
+      var initial = list.initial().toJSON();
+      var merged  = list.merged().toJSON();
       return {
         config    : config,
         hasMerged : list.hasMerged(),

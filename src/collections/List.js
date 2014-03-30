@@ -15,6 +15,10 @@ define([
     url        : config.data.lists,
     comparator : 'position',
 
+    findByCandidate: function(candidate) {
+      return new this.constructor(this.filter(function(m) { return m.get('candidate').id === candidate; }));
+    },
+
     mergeDiff: function() {
       var filter = function(r, m) { return m.get('round') === r; };
       var r1 = this.filter(filter.bind(null, 1));
@@ -30,12 +34,12 @@ define([
     },
 
     initial: function() {
-      return this.where({round: 1});
+      return new this.constructor(this.where({round: 1}));
     },
 
     merged: function() {
       if (!this.hasMerged) return;
-      return this.where({round: 2});
+      return new this.constructor(this.where({round: 2}));
     }
   });
 });
