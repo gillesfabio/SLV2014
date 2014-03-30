@@ -60,7 +60,7 @@ define([
       var total      = candidates.length;
       var passCount  = 0;
       candidates.forEach(function(candidate) {
-        if (candidate.percentage && candidate.count) passCount += 1;
+        if (candidate.percentage) passCount += 1;
       });
       return (total === passCount);
     },
