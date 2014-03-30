@@ -169,6 +169,8 @@ requirejs([
 
   require([
 
+    'App.helpers',
+
     'App.collections.ResultTest',
     'App.collections.ProgramTest',
     'App.collections.ListTest',
