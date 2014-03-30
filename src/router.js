@@ -34,7 +34,7 @@ define([
       'themes'                   : themeList,
       'themes/:id'               : themeDetail,
       'bureaux'                  : officeList,
-      'bureaux/resultats/:round' : officeResultList,
+      'resultats/:round'         : officeResultList,
       'a-propos'                 : about
     }
   });

@@ -28,19 +28,18 @@
           <ul class="right">
             <li class="link"><a href="<%= baseurl %>#/candidats">Candidats</a></li>
             <li class="link"><a href="<%= baseurl %>#/themes">Thèmes</a></li>
-            <li class="has-dropdown"><a data-href="#">Bureaux</a>
+            <li class="has-dropdown"><a data-href="#">Résultats</a>
               <ul class="dropdown">
-                <li class="link"><a href="<%= baseurl %>#/bureaux/resultats/1">Résultats 1<sup>er</sup> tour</a></li>
-                <li class="link"><a href="<%= baseurl %>#/bureaux">Adresses</a></li>
+                <li class="link"><a href="<%= baseurl %>#/resultats/1">1<sup>er</sup> tour</a></li>
               </ul>
             </li>
+            <li class="link"><a href="<%= baseurl %>#/bureaux">Bureaux</a></li>
             <li class="link"><a href="<%= baseurl %>#/a-propos">À propos</a></li>
           </ul>
         </section>
       </nav>
     </div>
-    <div id="content" class="row">
-    </div>
+    <div id="content" class="row"></div>
     <script>window.APP_BASE_URL="<%= baseurl %>";</script>
     <script>
       var _gaq = _gaq || [];
