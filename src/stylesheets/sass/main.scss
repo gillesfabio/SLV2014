@@ -368,32 +368,32 @@ button:hover, button:focus, .button:hover, .button:focus {
 // Home
 // -----------------------------------------------------------------------------
 .elected {
-  background    : #4B77BE;
+
   margin-bottom : rem-calc(20);
-  h2, h3 {
-    color          : #fff;
-    text-transform : uppercase;
-  }
+
   h2 {
-    font-size   : rem-calc(28);
-    font-weight : normal;
+    font-size      : rem-calc(22);
+    font-weight    : bold;
+    letter-spacing : -1px;
+    font-variant   : small-caps;
+    border-bottom  : 1px solid $color-iron;
+    padding-bottom : rem-calc(15);
+    margin-bottom  : rem-calc(20);
+    text-align     : center;
   }
+
   h3 {
     font-size   : rem-calc(18);
     font-weight : normal;
   }
+
   h4 {
     font-size   : rem-calc(15);
-    color       : $color-white;
     font-weight : normal;
   }
-  .elected-header {
-    background : #3A539B;
-    padding    : rem-calc(20);
-    text-align : center;
-  }
+
   .elected-content {
-    padding    : rem-calc(20);
+    padding    : rem-calc(10);
     text-align : center;
   }
 }
