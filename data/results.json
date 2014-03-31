@@ -4,7 +4,7 @@
     "stats": {
       "registered": {
         "count": 22374,
-        "percentage": 74.72446730345334
+        "percentage": 74.72
       },
       "abstentions": {
         "count": 8649,
@@ -26,6 +26,54 @@
     "candidates": [
       {
         "candidate": {
+          "id": "henri-revel",
+          "name": "Henri Revel",
+          "slogan": "Saint-Laurent pour Tous",
+          "homepage": "http://www.henrirevel.fr/",
+          "twitter": null,
+          "facebook": "henri.revel.7",
+          "programUrl": "http://www.henrirevel.fr/",
+          "party": "UMP"
+        },
+        "count": 4065,
+        "percentage": 30.66,
+        "cmCount": 0,
+        "ccCount": 0
+      },
+      {
+        "candidate": {
+          "id": "joseph-segura",
+          "name": "Joseph Segura",
+          "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+          "homepage": "http://www.josephsegura.fr/",
+          "twitter": "JSegura2014",
+          "facebook": "2014segura",
+          "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+          "party": "DVD"
+        },
+        "count": 3101,
+        "percentage": 23.38,
+        "cmCount": 0,
+        "ccCount": 0
+      },
+      {
+        "candidate": {
+          "id": "lionel-prados",
+          "name": "Lionel Prados",
+          "slogan": "Saint-Laurent-du-Var Bleu Marine",
+          "homepage": "http://www.fnmunicipales.fr/saint-laurent/",
+          "twitter": null,
+          "facebook": "lionel.prados",
+          "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
+          "party": "FN"
+        },
+        "count": 2264,
+        "percentage": 17.07,
+        "cmCount": 0,
+        "ccCount": 0
+      },
+      {
+        "candidate": {
           "id": "marc-orsatti",
           "name": "Marc Orsatti",
           "slogan": "Mieux vivre ensemble à Saint-Laurent du Var",
@@ -33,13 +81,12 @@
           "twitter": "MarcOrsatti",
           "facebook": "marc.orsatti",
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
-          "party": "PS",
-          "voteNumber": 1
+          "party": "PS"
         },
         "count": 1330,
         "percentage": 10.03,
-        "cmSeats": 0,
-        "ccSeats": 0
+        "cmCount": 0,
+        "ccCount": 0
       },
       {
         "candidate": {
@@ -50,64 +97,12 @@
           "twitter": "MarcMoschetti",
           "facebook": "moschetti.marc",
           "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE",
-          "voteNumber": 2
+          "party": "SE"
         },
         "count": 1114,
         "percentage": 8.4,
-        "cmSeats": 0,
-        "ccSeats": 0
-      },
-      {
-        "candidate": {
-          "id": "joseph-segura",
-          "name": "Joseph Segura",
-          "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
-          "homepage": "http://www.josephsegura.fr/",
-          "twitter": "JSegura2014",
-          "facebook": "2014segura",
-          "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
-          "party": "DVD",
-          "voteNumber": 3
-        },
-        "count": 3101,
-        "percentage": 23.38,
-        "cmSeats": 0,
-        "ccSeats": 0
-      },
-      {
-        "candidate": {
-          "id": "lionel-prados",
-          "name": "Lionel Prados",
-          "slogan": "Saint-Laurent-du-Var Bleu Marine",
-          "homepage": "http://www.fnmunicipales.fr/saint-laurent/",
-          "twitter": null,
-          "facebook": "lionel.prados",
-          "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
-          "party": "FN",
-          "voteNumber": 4
-        },
-        "count": 2264,
-        "percentage": 17.07,
-        "cmSeats": 0,
-        "ccSeats": 0
-      },
-      {
-        "candidate": {
-          "id": "henri-revel",
-          "name": "Henri Revel",
-          "slogan": "Saint-Laurent pour Tous",
-          "homepage": "http://www.henrirevel.fr/",
-          "twitter": null,
-          "facebook": "henri.revel.7",
-          "programUrl": "http://www.henrirevel.fr/",
-          "party": "UMP",
-          "voteNumber": 5
-        },
-        "count": 4065,
-        "percentage": 30.66,
-        "cmSeats": 0,
-        "ccSeats": 0
+        "cmCount": 0,
+        "ccCount": 0
       },
       {
         "candidate": {
@@ -118,18 +113,39 @@
           "twitter": "francoisebenne",
           "facebook": null,
           "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD",
-          "voteNumber": 6
+          "party": "DVD"
         },
         "count": 1384,
         "percentage": 10.43,
-        "cmSeats": 0,
-        "ccSeats": 0
+        "cmCount": 0,
+        "ccCount": 0
       }
     ]
   },
   {
     "round": 2,
+    "stats": {
+      "registered": {
+        "count": 22375,
+        "percentage": 74.73
+      },
+      "abstentions": {
+        "count": 8435,
+        "percentage": 37.7
+      },
+      "voters": {
+        "count": 13940,
+        "percentage": 62.3
+      },
+      "expressed": {
+        "count": 13598,
+        "percentage": 60.77
+      },
+      "nota": {
+        "count": 342,
+        "percentage": 2.45
+      }
+    },
     "candidates": [
       {
         "candidate": {
@@ -140,13 +156,12 @@
           "twitter": null,
           "facebook": "henri.revel.7",
           "programUrl": "http://www.henrirevel.fr/",
-          "party": "UMP",
-          "voteNumber": 5
+          "party": "UMP"
         },
-        "count": null,
-        "percentage": 36,
-        "cmCount": null,
-        "ccCount": null
+        "count": 4895,
+        "percentage": 35.99,
+        "cmCount": 6,
+        "ccCount": 1
       },
       {
         "candidate": {
@@ -157,13 +172,12 @@
           "twitter": "JSegura2014",
           "facebook": "2014segura",
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
-          "party": "DVD",
-          "voteNumber": 3
+          "party": "DVD"
         },
-        "count": null,
+        "count": 5649,
         "percentage": 41.54,
-        "cmCount": null,
-        "ccCount": null
+        "cmCount": 26,
+        "ccCount": 5
       },
       {
         "candidate": {
@@ -174,13 +188,12 @@
           "twitter": null,
           "facebook": "lionel.prados",
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
-          "party": "FN",
-          "voteNumber": 4
+          "party": "FN"
         },
-        "count": null,
+        "count": 1961,
         "percentage": 14.42,
-        "cmCount": null,
-        "ccCount": null
+        "cmCount": 2,
+        "ccCount": 0
       },
       {
         "candidate": {
@@ -191,13 +204,12 @@
           "twitter": "MarcOrsatti",
           "facebook": "marc.orsatti",
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
-          "party": "PS",
-          "voteNumber": 1
+          "party": "PS"
         },
-        "count": null,
-        "percentage": 8.04,
-        "cmCount": null,
-        "ccCount": null
+        "count": 1093,
+        "percentage": 8.03,
+        "cmCount": 1,
+        "ccCount": 0
       }
     ]
   }
