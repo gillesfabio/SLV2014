@@ -17,13 +17,11 @@ $color-steel-blue-hover : #1F3A93;
 // -----------------------------------------------------------------------------
 
 $topbar-bg                      : $color-chambray;
-$topbar-height                  : 50px;
 $topbar-link-color              : $color-white;
 $topbar-link-color-hover        : $color-white;
 $topbar-link-color-active       : $color-white;
 $topbar-link-color-active-hover : $color-white;
-$topbar-link-weight             : normal;
-$topbar-link-font-size          : rem-calc(14);
+$topbar-link-font-size          : rem-calc(13);
 $topbar-link-bg-hover           : $color-steel-blue-hover;
 $topbar-link-bg-active          : $color-steel-blue;
 $topbar-link-bg-active-hover    : $color-steel-blue-hover;
@@ -68,8 +66,17 @@ i {
 
 .top-bar {
   text-transform: uppercase;
-  h1         { text-align: left; }
-  .name h1 a { font-size: rem-calc(16); }
+  h1 {
+    text-align: left;
+    text-transform: normal;
+  }
+  .name h1 a {
+    font-size: rem-calc(16);
+    text-transform: none;
+  }
+  .top-bar-section li a {
+    font-weight: bold;
+  }
 }
 
 .top-bar.expanded .toggle-topbar a {
@@ -512,6 +519,17 @@ button:hover, button:focus, .button:hover, .button:focus {
     }
   }
 }
+
+// -----------------------------------------------------------------------------
+// Council
+// -----------------------------------------------------------------------------
+
+.council {
+  table {
+    width: 100%;
+  }
+}
+
 // -----------------------------------------------------------------------------
 // Utilities
 // -----------------------------------------------------------------------------

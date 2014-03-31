@@ -9,7 +9,8 @@ define([
   'App.controllers.themeDetail',
   'App.controllers.officeList',
   'App.controllers.officeResultList',
-  'App.controllers.about'
+  'App.controllers.about',
+  'App.controllers.council'
 
 ], function(
   Backbone,
@@ -21,7 +22,8 @@ define([
   themeDetail,
   officeList,
   officeResultList,
-  about) {
+  about,
+  council) {
 
   'use strict';
 
@@ -35,7 +37,8 @@ define([
       'themes/:id'               : themeDetail,
       'bureaux'                  : officeList,
       'resultats/:round'         : officeResultList,
-      'a-propos'                 : about
+      'a-propos'                 : about,
+      'conseil-municipal'        : council
     }
   });
 });

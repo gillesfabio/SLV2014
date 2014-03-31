@@ -1,0 +1,17 @@
+<h1>Conseil Municipal</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Liste</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each councilMembers}}
+    <tr>
+      <td class="name">{{name}}</td>
+      <td class="list">{{list.candidate.name}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -23,22 +23,24 @@ requirejs.config({
     'sinon' : 'vendor/sinonjs/sinon',
 
     // App models
-    'App.models.Candidate'    : 'src/models/Candidate',
-    'App.models.Result'       : 'src/models/Result',
-    'App.models.Office'       : 'src/models/Office',
-    'App.models.OfficeResult' : 'src/models/OfficeResult',
-    'App.models.Program'      : 'src/models/Program',
-    'App.models.List'         : 'src/models/List',
-    'App.models.Theme'        : 'src/models/Theme',
+    'App.models.Candidate'     : 'src/models/Candidate',
+    'App.models.Result'        : 'src/models/Result',
+    'App.models.Office'        : 'src/models/Office',
+    'App.models.OfficeResult'  : 'src/models/OfficeResult',
+    'App.models.Program'       : 'src/models/Program',
+    'App.models.List'          : 'src/models/List',
+    'App.models.Theme'         : 'src/models/Theme',
+    'App.models.CouncilMember' : 'src/models/CouncilMember',
 
     // App collections
-    'App.collections.Candidate'    : 'src/collections/Candidate',
-    'App.collections.Result'       : 'src/collections/Result',
-    'App.collections.Office'       : 'src/collections/Office',
-    'App.collections.OfficeResult' : 'src/collections/OfficeResult',
-    'App.collections.Program'      : 'src/collections/Program',
-    'App.collections.List'         : 'src/collections/List',
-    'App.collections.Theme'        : 'src/collections/Theme',
+    'App.collections.Candidate'     : 'src/collections/Candidate',
+    'App.collections.Result'        : 'src/collections/Result',
+    'App.collections.Office'        : 'src/collections/Office',
+    'App.collections.OfficeResult'  : 'src/collections/OfficeResult',
+    'App.collections.Program'       : 'src/collections/Program',
+    'App.collections.List'          : 'src/collections/List',
+    'App.collections.Theme'         : 'src/collections/Theme',
+    'App.collections.CouncilMember' : 'src/collections/CouncilMember',
 
     // App views
     'App.views.CandidateCard'          : 'src/views/CandidateCard',
@@ -51,6 +53,7 @@ requirejs.config({
     'App.views.OfficeResultList'       : 'src/views/OfficeResultList',
     'App.views.ThemeDetail'            : 'src/views/ThemeDetail',
     'App.views.ThemeList'              : 'src/views/ThemeList',
+    'App.views.Council'                : 'src/views/Council',
 
     // App controllers
     'App.controllers.about'                  : 'src/controllers/about',
@@ -61,6 +64,7 @@ requirejs.config({
     'App.controllers.officeResultList'       : 'src/controllers/officeResultList',
     'App.controllers.themeDetail'            : 'src/controllers/themeDetail',
     'App.controllers.themeList'              : 'src/controllers/themeList',
+    'App.controllers.council'                : 'src/controllers/council',
 
     // App misc
     'App.config'  : 'src/config',
@@ -86,7 +90,8 @@ requirejs.config({
     'App.views.OfficeListTest'             : 'test/frontend/views/OfficeListTest',
     'App.views.OfficeResultListTest'       : 'test/frontend/views/OfficeResultListTest',
     'App.views.ThemeDetailTest'            : 'test/frontend/views/ThemeDetailTest',
-    'App.views.ThemeListTest'              : 'test/frontend/views/ThemeListTest'
+    'App.views.ThemeListTest'              : 'test/frontend/views/ThemeListTest',
+    'App.views.CouncilTest'                : 'test/frontend/views/CouncilTest'
   },
 
   shim: {
@@ -187,7 +192,8 @@ requirejs([
     'App.views.OfficeListTest',
     'App.views.OfficeResultListTest',
     'App.views.ThemeDetailTest',
-    'App.views.ThemeListTest'
+    'App.views.ThemeListTest',
+    'App.views.CouncilTest'
 
   ], function() {
 
