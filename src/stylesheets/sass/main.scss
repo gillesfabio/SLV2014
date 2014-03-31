@@ -335,11 +335,11 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
   h3 {
     font-size   : rem-calc(18);
-    font-weight : normal;
+    font-weight : bold;
   }
   h4 {
     font-size   : rem-calc(18);
-    font-weight : normal;
+    font-weight : bold;
     color       : $color-chambray;
   }
 }
@@ -364,7 +364,7 @@ button:hover, button:focus, .button:hover, .button:focus {
       text-align: center;
       h5 {
         font-size   : rem-calc(13);
-        font-weight : normal;
+        font-weight : bold;
       }
       h6 {
         font-size   : rem-calc(16);
