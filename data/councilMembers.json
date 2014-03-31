@@ -1,176 +1,491 @@
 [
   {
-    "list": "marc-orsatti",
+    "list": {
+      "id": "marc-orsatti",
+      "name": "Marc Orsatti",
+      "slogan": "Mieux vivre ensemble à Saint-Laurent du Var",
+      "homepage": "http://marc.orsatti.over-blog.com/",
+      "twitter": "MarcOrsatti",
+      "facebook": "marc.orsatti",
+      "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
+      "party": "PS"
+    },
     "name": "Marc ORSATTI",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Joseph SEGURA",
     "cc": true
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Brigitte LIZEE-JUAN",
     "cc": true
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Michel GHETTI",
     "cc": true
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Françoise BENNE",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Albert BESSON",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Mary-Claude BAUZIT",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Patrick VILLARDRY",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Danielle HEBERT",
     "cc": true
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Thomas BERETTONI",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Nathalie FRANQUELIN",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Gilles ALLARI",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Marie-Fance CORVEST",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Marcel VAÏANI",
     "cc": true
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Corinne NESONSON",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Patrice JACQUESSON",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Florence ESPANOL",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Jean-Pierre BERNARD",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Vanessa GUERRIER-BUISINE",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Jean-Pascal DEY",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Pascale FORMISANO",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Christophe DOMINICI",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Andrée NAVARRO-GUILLOT",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Éric BONFILS",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Karine VIALE",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Christian RADIGALES",
     "cc": false
   },
   {
-    "list": "joseph-segura",
+    "list": {
+      "id": "joseph-segura",
+      "name": "Joseph Segura",
+      "slogan": "Agir pour l'avenir de Saint-Laurent-du-Var",
+      "homepage": "http://www.josephsegura.fr/",
+      "twitter": "JSegura2014",
+      "facebook": "2014segura",
+      "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
+      "party": "DVD"
+    },
     "name": "Geneviève TELMON",
     "cc": false
   },
   {
-    "list": "lionel-prados",
+    "list": {
+      "id": "lionel-prados",
+      "name": "Lionel Prados",
+      "slogan": "Saint-Laurent-du-Var Bleu Marine",
+      "homepage": "http://www.fnmunicipales.fr/saint-laurent/",
+      "twitter": null,
+      "facebook": "lionel.prados",
+      "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
+      "party": "FN"
+    },
     "name": "Lionel PRADOS",
     "cc": false
   },
   {
-    "list": "lionel-prados",
+    "list": {
+      "id": "lionel-prados",
+      "name": "Lionel Prados",
+      "slogan": "Saint-Laurent-du-Var Bleu Marine",
+      "homepage": "http://www.fnmunicipales.fr/saint-laurent/",
+      "twitter": null,
+      "facebook": "lionel.prados",
+      "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
+      "party": "FN"
+    },
     "name": "Yvette FRANCHI",
     "cc": false
   },
   {
-    "list": "henri-revel",
+    "list": {
+      "id": "henri-revel",
+      "name": "Henri Revel",
+      "slogan": "Saint-Laurent pour Tous",
+      "homepage": "http://www.henrirevel.fr/",
+      "twitter": null,
+      "facebook": "henri.revel.7",
+      "programUrl": "http://www.henrirevel.fr/",
+      "party": "UMP"
+    },
     "name": "Henri REVEL",
     "cc": true
   },
   {
-    "list": "henri-revel",
+    "list": {
+      "id": "henri-revel",
+      "name": "Henri Revel",
+      "slogan": "Saint-Laurent pour Tous",
+      "homepage": "http://www.henrirevel.fr/",
+      "twitter": null,
+      "facebook": "henri.revel.7",
+      "programUrl": "http://www.henrirevel.fr/",
+      "party": "UMP"
+    },
     "name": "Gisèle CASTEU",
     "cc": false
   },
   {
-    "list": "henri-revel",
+    "list": {
+      "id": "henri-revel",
+      "name": "Henri Revel",
+      "slogan": "Saint-Laurent pour Tous",
+      "homepage": "http://www.henrirevel.fr/",
+      "twitter": null,
+      "facebook": "henri.revel.7",
+      "programUrl": "http://www.henrirevel.fr/",
+      "party": "UMP"
+    },
     "name": "Alain MANENTI",
     "cc": false
   },
   {
-    "list": "henri-revel",
+    "list": {
+      "id": "henri-revel",
+      "name": "Henri Revel",
+      "slogan": "Saint-Laurent pour Tous",
+      "homepage": "http://www.henrirevel.fr/",
+      "twitter": null,
+      "facebook": "henri.revel.7",
+      "programUrl": "http://www.henrirevel.fr/",
+      "party": "UMP"
+    },
     "name": "Nicole ROUX-DUBOIS",
     "cc": false
   },
   {
-    "list": "henri-revel",
+    "list": {
+      "id": "henri-revel",
+      "name": "Henri Revel",
+      "slogan": "Saint-Laurent pour Tous",
+      "homepage": "http://www.henrirevel.fr/",
+      "twitter": null,
+      "facebook": "henri.revel.7",
+      "programUrl": "http://www.henrirevel.fr/",
+      "party": "UMP"
+    },
     "name": "Marc MOSCHETTI",
     "cc": false
   },
   {
-    "list": "henri-revel",
+    "list": {
+      "id": "henri-revel",
+      "name": "Henri Revel",
+      "slogan": "Saint-Laurent pour Tous",
+      "homepage": "http://www.henrirevel.fr/",
+      "twitter": null,
+      "facebook": "henri.revel.7",
+      "programUrl": "http://www.henrirevel.fr/",
+      "party": "UMP"
+    },
     "name": "Sonia HAMOUDI",
     "cc": false
   }
