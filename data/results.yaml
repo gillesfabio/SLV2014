@@ -1,27 +1,98 @@
 -
-  round: 2
+  round: 1
+  stats:
+    registered:
+      count      : 22374
+      percentage : 74.72
+    abstentions:
+      count      : 8649
+      percentage : 38.66
+    voters:
+      count      : 13725
+      percentage : 61.34
+    expressed:
+      count      : 13258
+      percentage : 59.26
+    nota:
+      count      : 467
+      percentage : 3.4
   candidates:
     -
       candidate  : henri-revel
-      count      : ~
-      percentage : 36.00
-      cmCount    : ~
-      ccCount    : ~
+      count      : 4065
+      percentage : 30.66
+      cmCount    : 0
+      ccCount    : 0
     -
       candidate: joseph-segura
-      count      : ~
-      percentage : 41.54
-      cmCount    : ~
-      ccCount    : ~
+      count      : 3101
+      percentage : 23.38
+      cmCount    : 0
+      ccCount    : 0
     -
       candidate: lionel-prados
-      count      : ~
-      percentage : 14.42
-      cmCount    : ~
-      ccCount    : ~
+      count      : 2264
+      percentage : 17.07
+      cmCount    : 0
+      ccCount    : 0
     -
       candidate: marc-orsatti
-      count      : ~
-      percentage : 8.04
-      cmCount    : ~
-      ccCount    : ~
+      count      : 1330
+      percentage : 10.03
+      cmCount    : 0
+      ccCount    : 0
+    -
+      candidate: marc-moschetti
+      count      : 1114
+      percentage : 8.40
+      cmCount    : 0
+      ccCount    : 0
+    -
+      candidate: francoise-benne
+      count      : 1384
+      percentage : 10.43
+      cmCount    : 0
+      ccCount    : 0
+-
+  round: 2
+  stats:
+    registered:
+      count      : 22375
+      percentage : 74.73
+    abstentions:
+      count      : 8435
+      percentage : 37.70
+    voters:
+      count      : 13940
+      percentage : 62.30
+    expressed:
+      count      : 13598
+      percentage : 60.77
+    nota:
+      count      : 342
+      percentage : 2.45
+  candidates:
+    -
+      candidate  : henri-revel
+      count      : 4895
+      percentage : 35.99
+      cmCount    : 6
+      ccCount    : 1
+    -
+      candidate: joseph-segura
+      count      : 5649
+      percentage : 41.54
+      cmCount    : 26
+      ccCount    : 5
+    -
+      candidate: lionel-prados
+      count      : 1961
+      percentage : 14.42
+      cmCount    : 2
+      ccCount    : 0
+    -
+      candidate: marc-orsatti
+      count      : 1093
+      percentage : 8.03
+      cmCount    : 1
+      ccCount    : 0

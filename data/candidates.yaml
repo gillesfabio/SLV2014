@@ -7,7 +7,6 @@
   facebook    : ~
   programUrl  : https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf
   party       : DVD
-  voteNumber  : 6
 -
   id          : marc-moschetti
   name        : Marc Moschetti
@@ -17,7 +16,6 @@
   facebook    : moschetti.marc
   programUrl  : http://www.marcmoschetti.fr/mon-programme/
   party       : SE
-  voteNumber  : 2
 -
   id          : marc-orsatti
   name        : Marc Orsatti
@@ -27,7 +25,6 @@
   facebook    : marc.orsatti
   programUrl  : http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html
   party       : PS
-  voteNumber  : 1
 -
   id          : lionel-prados
   name        : Lionel Prados
@@ -37,7 +34,6 @@
   facebook    : lionel.prados
   programUrl  : http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html
   party       : FN
-  voteNumber  : 4
 -
   id          : henri-revel
   name        : Henri Revel
@@ -47,7 +43,6 @@
   facebook    : henri.revel.7
   programUrl  : http://www.henrirevel.fr/
   party       : UMP
-  voteNumber  : 5
 -
   id          : joseph-segura
   name        : Joseph Segura
@@ -57,4 +52,3 @@
   facebook    : 2014segura
   programUrl  : http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3
   party       : DVD
-  voteNumber  : 3

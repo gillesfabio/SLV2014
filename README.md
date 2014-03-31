@@ -16,7 +16,6 @@ L'application statique est propulsée par :
 * [Handlebars](http://handlebarsjs.com)
 * [Foundation](http://foundation.zurb.com)
 * [SASS](http://sass-lang.com/)
-* [Compass](http://compass-style.org/)
 * [markdown-js](https://github.com/evilstreak/markdown-js)
 
 La génération du site statique est propulsée par :
