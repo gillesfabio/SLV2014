@@ -1,8 +1,8 @@
 <div class="results">
-  <div class="results-header">
+  <div class="header">
     <h2>{{#is results.round 1}}1<sup>er</sup>{{else}}2<sup>ème</sup>{{/is}} tour</h5>
   </div>
-  <div class="results-content">
+  <div class="content">
     <div class="row">
       <div class="small-centered columns">
         <ul class="small-block-grid-2 large-block-grid-{{length results.candidates}}">
@@ -17,44 +17,44 @@
     <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-4 block-centered">
       {{#if results.stats.registered.percentage}}
       <li>
-        <div class="results-stat">
+        <div class="stat">
           <h5>Inscrits</h5>
           <ul>
-            <li class="results-percentage">{{toFixed results.stats.registered.percentage 2}} %</li>
-            <li class="results-count">{{digitGrouping results.stats.registered.count ' '}} voix</li>
+            <li class="percentage">{{toFixed results.stats.registered.percentage 2}} %</li>
+            <li class="count">{{digitGrouping results.stats.registered.count ' '}} voix</li>
           </ul>
         </div>
       </li>
       {{/if}}
       {{#if results.stats.expressed.percentage}}
       <li>
-        <div class="results-stat">
+        <div class="stat">
           <h5>Exprimés</h5>
           <ul>
-            <li class="results-percentage">{{toFixed results.stats.expressed.percentage 2}} %</li>
-            <li class="results-count">{{digitGrouping results.stats.expressed.count ' '}} voix</li>
+            <li class="percentage">{{toFixed results.stats.expressed.percentage 2}} %</li>
+            <li class="count">{{digitGrouping results.stats.expressed.count ' '}} voix</li>
           </ul>
         </div>
       </li>
       {{/if}}
       {{#if results.stats.abstentions.percentage}}
       <li>
-        <div class="results-stat">
+        <div class="stat">
           <h5>Abstention</h5>
           <ul>
-            <li class="results-percentage">{{toFixed results.stats.abstentions.percentage 2}} %</li>
-            <li class="results-count">{{digitGrouping results.stats.abstentions.count ' '}} voix</li>
+            <li class="percentage">{{toFixed results.stats.abstentions.percentage 2}} %</li>
+            <li class="count">{{digitGrouping results.stats.abstentions.count ' '}} voix</li>
           </ul>
         </div>
       </li>
       {{/if}}
       {{#if results.stats.nota.percentage}}
       <li>
-        <div class="results-stat">
+        <div class="stat">
           <h5>Votes blancs-nuls</h5>
           <ul>
-            <li class="results-percentage">{{toFixed results.stats.nota.percentage 2}} %</li>
-            <li class="results-count">{{digitGrouping results.stats.nota.count ' '}} voix</li>
+            <li class="percentage">{{toFixed results.stats.nota.percentage 2}} %</li>
+            <li class="count">{{digitGrouping results.stats.nota.count ' '}} voix</li>
           </ul>
         </div>
       </li>

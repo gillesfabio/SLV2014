@@ -19,8 +19,8 @@
             <tbody>
               {{#each initial}}
               <tr>
-                <td class="list-position">{{position}}</td>
-                <td class="list-name">{{name}}</td>
+                <td class="position">{{position}}</td>
+                <td class="name">{{name}}</td>
               </tr>
               {{/each}}
             </tbody>
@@ -39,9 +39,9 @@
             <tbody>
               {{#each merged}}
               <tr>
-                <td class="list-position">{{position}}</td>
-                <td class="list-name">{{name}}</td>
-                <td class="list-merge">{{#if mergedFrom}}<a href="{{config.baseUrl}}#/candidats/{{mergedFrom.id}}/liste">{{mergedFrom.name}}</a>{{else}}~{{/if}}</td>
+                <td class="position">{{position}}</td>
+                <td class="name">{{name}}</td>
+                <td class="merge">{{#if mergedFrom}}<a href="{{config.baseUrl}}#/candidats/{{mergedFrom.id}}/liste">{{mergedFrom.name}}</a>{{else}}~{{/if}}</td>
               </tr>
               {{/each}}
             </tbody>
@@ -59,8 +59,8 @@
             <tbody>
               {{#each initial}}
               <tr>
-                <td class="list-position">{{position}}</td>
-                <td class="list-name">{{name}}</td>
+                <td class="position">{{position}}</td>
+                <td class="name">{{name}}</td>
               </tr>
               {{/each}}
             </tbody>

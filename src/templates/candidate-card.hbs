@@ -1,4 +1,4 @@
-<div class="candidate-card-content">
+<div class="content">
   <div class="row">
     <div class="small-12 columns">
       {{#if candidate.id}}
@@ -8,8 +8,7 @@
     <div class="small-12 columns">
       <h1>{{candidate.name}}</h1>
       <h2>{{candidate.slogan}} ({{candidate.party}})</h2>
-      <!-- <h3>Tapez <span class="vote-number">{{candidate.voteNumber}}</span></h3> -->
-      <div class="row candidate-links clearfix">
+      <div class="row links clearfix">
         <div class="small-12 small-centered columns">
           <ul class="button-group tiny radius text-centered">
             {{#if candidate.homepage}}
@@ -25,7 +24,7 @@
         </div>
       </div>
       {{#if showDetailLink}}
-      <div class="row candidate-buttons">
+      <div class="row actions">
         <div class="small-6 columns">
           <a href="{{config.baseUrl}}#/candidats/{{candidate.id}}/programme" class="button expand small radius"><i class="fa fa-list-ol"></i> Programme</a>
         </div>

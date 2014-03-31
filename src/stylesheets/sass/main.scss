@@ -1,40 +1,36 @@
 @import "foundation/_functions";
 
 // -----------------------------------------------------------------------------
-// Application constants
+// Colors
 // -----------------------------------------------------------------------------
 
-$slv-color-dark1: #3A539B;
-$slv-color-dark2: #4B77BE;
-$slv-color-dark2-hover: #1F3A93;
-$slv-color-light-border: #ECECEC;
-$slv-candidate-slogan-color: #909090;
-
-$color-porcelain: #ECF0F1;
-$color-iron: #DADFE1;
-$color-chambray: #3A539B;
-$color-white: #ffffff;
-$color-steel-blue: #4B77BE;
+$color-white            : #FFFFFF;
+$color-dark-gray        : #909090;
+$color-porcelain        : #ECF0F1;
+$color-iron             : #DADFE1;
+$color-chambray         : #3A539B;
+$color-steel-blue       : #4B77BE;
+$color-steel-blue-hover : #1F3A93;
 
 // -----------------------------------------------------------------------------
 // Foundation Settings Overrides
 // -----------------------------------------------------------------------------
 
-$topbar-bg: $slv-color-dark1;
-$topbar-height: 50px;
-$topbar-link-color: #fff;
-$topbar-link-color-hover: #fff;
-$topbar-link-color-active: #fff;
-$topbar-link-color-active-hover: #fff;
-$topbar-link-weight: normal;
-$topbar-link-font-size: rem-calc(14);
-$topbar-link-bg-hover: $slv-color-dark2-hover;
-$topbar-link-bg-active: $slv-color-dark2;
-$topbar-link-bg-active-hover: $slv-color-dark2-hover;
-$topbar-dropdown-bg: $slv-color-dark1;
-$topbar-dropdown-link-bg: #fff;
-$anchor-font-color: $slv-color-dark1;
-$anchor-font-color-hover: $slv-color-dark2;
+$topbar-bg                      : $color-chambray;
+$topbar-height                  : 50px;
+$topbar-link-color              : $color-white;
+$topbar-link-color-hover        : $color-white;
+$topbar-link-color-active       : $color-white;
+$topbar-link-color-active-hover : $color-white;
+$topbar-link-weight             : normal;
+$topbar-link-font-size          : rem-calc(14);
+$topbar-link-bg-hover           : $color-steel-blue-hover;
+$topbar-link-bg-active          : $color-steel-blue;
+$topbar-link-bg-active-hover    : $color-steel-blue-hover;
+$topbar-dropdown-bg             : $color-chambray;
+$topbar-dropdown-link-bg        : $color-white;
+$anchor-font-color              : $color-chambray;
+$anchor-font-color-hover        : $color-steel-blue;
 
 // -----------------------------------------------------------------------------
 // Load Foundation
@@ -56,14 +52,14 @@ h1 {
   text-transform : uppercase;
   font-size      : rem-calc(28);
   font-weight    : 200;
-  border-bottom  : 1px solid $slv-color-light-border;
+  border-bottom  : 1px solid $color-iron;
   margin-bottom  : rem-calc(20);
-  color          : $slv-color-dark1;
+  color          : $color-chambray;
   text-align     : center;
 }
 
 i {
-  color: $slv-color-dark1;
+  color: $color-chambray;
 }
 
 // -----------------------------------------------------------------------------
@@ -72,20 +68,16 @@ i {
 
 .top-bar {
   text-transform: uppercase;
-  h1 {
-    text-align: left;
-  }
-  .name h1 a {
-    font-size: rem-calc(16);
-  }
+  h1         { text-align: left; }
+  .name h1 a { font-size: rem-calc(16); }
 }
 
 .top-bar.expanded .toggle-topbar a {
-  color: #fff;
+  color: $color-white;
 }
 
 .top-bar-section ul li:hover > a {
-  background: $slv-color-dark2-hover !important;
+  background: $color-steel-blue-hover !important;
 }
 
 // -----------------------------------------------------------------------------
@@ -99,15 +91,16 @@ i {
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
+
 .button {
-  background: $slv-color-dark1;
+  background: $color-chambray;
   i {
     color: #ececec;
   }
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
-  background: $slv-color-dark2;
+  background: $color-steel-blue;
 }
 
 // -----------------------------------------------------------------------------
@@ -116,11 +109,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .candidate-card {
   text-align: center;
-  .candidate-card-content > .row {
-    background: $color-porcelain;
-    border: 1px solid $color-iron;
-    padding: rem-calc(20);
-    margin: rem-calc(5);
+  .content > .row {
+    background : $color-porcelain;
+    border     : 1px solid $color-iron;
+    padding    : rem-calc(20);
+    margin     : rem-calc(5);
   }
   :last-child {
     border-bottom: none;
@@ -136,43 +129,21 @@ button:hover, button:focus, .button:hover, .button:focus {
   }
   h2 {
     font-size      : rem-calc(16);
-    color          : $slv-candidate-slogan-color;
+    color          : $color-dark-gray;
     letter-spacing : rem-calc(-1);
     padding        : 0;
     margin         : rem-calc(5 0 5 0);
   }
-  h3 {
-    font-size      : rem-calc(18);
-    color          : $color-chambray;
-    margin         : rem-calc(5 0 5 0);
-    text-transform : uppercase;
-    height         : rem-calc(30);
-    line-height    : rem-calc(30);
-  }
-  h3 .vote-number {
-    font-size     : rem-calc(15);
-    width         : rem-calc(25);
-    height        : rem-calc(25);
-    line-height   : rem-calc(25);
-    position      : relative;
-    bottom        : rem-calc(1);
-    display       : inline-block;
-    background    : $color-chambray;
-    border-radius : 50%;
-    color         : $color-white;
-    font-weight   : bold;
-    margin-left   : rem-calc(2);
-  }
-  .candidate-buttons {
+  .actions {
     i {
       font-size: rem-calc(20);
       color: $color-white;
     }
   }
-  .candidate-links {
-    margin-top: rem-calc(10);
-    margin-left: auto;
-    margin-right: auto;
+  .links {
+    margin-top   : rem-calc(10);
+    margin-left  : auto;
+    margin-right : auto;
     .button {
       background: $color-white;
     }
@@ -180,12 +151,12 @@ button:hover, button:focus, .button:hover, .button:focus {
       background: $color-white;
     }
     .button-group {
-      display: inline-block;
-      margin: auto;
+      display : inline-block;
+      margin  : auto;
     }
     i {
-      font-size: rem-calc(20);
-      color: $color-chambray;
+      font-size : rem-calc(20);
+      color     : $color-chambray;
     }
   }
 }
@@ -196,13 +167,13 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .candidate-detail {
   .candidate-card {
-    .candidate-card-content > .row {
-      background: none;
-      border: none;
-      padding: rem-calc(0);
-      margin-bottom: rem-calc(10);
+    .content > .row {
+      background    : none;
+      border        : none;
+      padding       : rem-calc(0);
+      margin-bottom : rem-calc(10);
     }
-    .candidate-links {
+    .links {
       .button {
         background: $color-porcelain;
       }
@@ -223,8 +194,7 @@ button:hover, button:focus, .button:hover, .button:focus {
       color: $color-steel-blue;
     }
   }
-  .candidate-detail-program,
-  .candidate-detail-list {
+  .candidate-detail-program, .candidate-detail-list {
     h2 {
       font-size      : rem-calc(25);
       font-weight    : 400;
@@ -239,26 +209,27 @@ button:hover, button:focus, .button:hover, .button:focus {
       color : $color-chambray;
     }
   }
+
   .candidate-detail-list {
     ul {
       text-align: center;
     }
     h3 {
-      text-align: center;
-      font-variant: small-caps;
-      margin-bottom: rem-calc(20);
-      font-weight: 200;
+      text-align    : center;
+      font-variant  : small-caps;
+      margin-bottom : rem-calc(20);
+      font-weight   : 200;
     }
-    .list-position {
-      font-weight: bold;
-      text-align: center;
-      color: $color-chambray;
+    .position {
+      font-weight : bold;
+      text-align  : center;
+      color       : $color-chambray;
     }
-    .list-merge {
-      text-transform: uppercase;;
-      font-weight: bold;
-      letter-spacing: -1px;
-      color:  $color-chambray;
+    .merge {
+      text-transform : uppercase;;
+      font-weight    : bold;
+      letter-spacing : -1px;
+      color          :  $color-chambray;
     }
   }
 }
@@ -266,6 +237,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 // candidate-program
 // -----------------------------------------------------------------------------
+
 .candidate-program-projects {
   p, ul {
     font-size  : rem-calc(15);
@@ -330,37 +302,9 @@ button:hover, button:focus, .button:hover, .button:focus {
     text-transform : uppercase;
     font-weight    : 200;
   }
-  .candidate-projects {
+  .candidate-program {
     border-bottom : 1px solid $color-iron;
     margin        : rem-calc(20 0 20 0);
-  }
-}
-
-// -----------------------------------------------------------------------------
-// running-mate
-// -----------------------------------------------------------------------------
-.list-person {
-  padding: 0;
-  margin: 0;
-  h5 {
-    font-size      : rem-calc(16);
-    background     : $color-porcelain;
-    padding        : rem-calc(10);
-    margin         : 0;
-    font-weight    : 400;
-    letter-spacing : -1px;
-  }
-  h5 .list-person-position {
-    color: #909090;
-  }
-  p {
-    font-size : 80%;
-    padding   : rem-calc(10);
-    color     : #555;
-  }
-  .list-person-content {
-    border  : 1px solid $color-iron;
-    padding : 0;
   }
 }
 
@@ -368,9 +312,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 // Home
 // -----------------------------------------------------------------------------
 .elected {
-
-  margin-bottom : rem-calc(20);
-
+  text-align    : center;
+  margin-bottom : rem-calc(30);
   h2 {
     font-size      : rem-calc(22);
     font-weight    : bold;
@@ -381,20 +324,14 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin-bottom  : rem-calc(20);
     text-align     : center;
   }
-
   h3 {
     font-size   : rem-calc(18);
     font-weight : normal;
   }
-
   h4 {
-    font-size   : rem-calc(15);
+    font-size   : rem-calc(18);
     font-weight : normal;
-  }
-
-  .elected-content {
-    padding    : rem-calc(10);
-    text-align : center;
+    color       : $color-chambray;
   }
 }
 
@@ -413,7 +350,7 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin-bottom  : rem-calc(20);
     text-align     : center;
   }
-  .results-content {
+  .content {
     li {
       text-align: center;
       h5 {
@@ -430,34 +367,34 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .results-stats {
-  .results-stat {
-    background: $color-porcelain;
-    border: 1px solid $color-iron;
-    text-align: center;
+  .stat {
+    background : $color-porcelain;
+    border     : 1px solid $color-iron;
+    text-align : center;
     h5 {
-      background: $color-iron;
-      font-size: rem-calc(16);
-      font-weight: normal;
-      padding: rem-calc(5);
-      margin: 0;
+      background  : $color-iron;
+      font-size   : rem-calc(16);
+      font-weight : normal;
+      padding     : rem-calc(5);
+      margin      : 0;
     }
     p {
-      font-size: rem-calc(15);
-      color: $color-chambray;
-      padding: rem-calc(10);
+      font-size : rem-calc(15);
+      color     : $color-chambray;
+      padding   : rem-calc(10);
     }
     ul {
-      list-style: none;
-      margin: 0;
-      padding: rem-calc(10);
+      list-style : none;
+      margin     : 0;
+      padding    : rem-calc(10);
     }
-    .results-percentage {
-      font-size: rem-calc(18);
-      color: $color-chambray;
+    .percentage {
+      font-size : rem-calc(18);
+      color     : $color-chambray;
     }
-    .results-count, p small {
-      color: #909090;
-      font-size: rem-calc(13);
+    .count, p small {
+      color     : $color-dark-gray;
+      font-size : rem-calc(13);
     }
   }
 }
@@ -467,7 +404,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 
 .office-list, .office-result-list {
-
   h2 {
     font-size      : rem-calc(22);
     font-weight    : bold;
@@ -477,11 +413,8 @@ button:hover, button:focus, .button:hover, .button:focus {
     margin-bottom  : rem-calc(20);
     text-align     : center;
   }
-
   .office {
-
     border: 1px solid $color-iron;
-
     h3 {
       text-align     : left;
       font-size      : rem-calc(14);
@@ -490,31 +423,24 @@ button:hover, button:focus, .button:hover, .button:focus {
       margin         : 0;
       font-weight    : bold;
     }
-
     h3 small {
       font-size   : rem-calc(15);
       font-weight : normal;
     }
-
     .office-results {
-
       padding   : rem-calc(10);
       font-size : rem-calc(14);
-
       .global-stats {
         font-size   : rem-calc(12);
         font-weight : normal;
       }
-
       .global-stats li {
         margin-right: 0;
       }
-
       table {
         border : none;
         width  : 100%;
       }
-
       th:nth-child(n+2) {
         text-align: right;
       }
@@ -527,19 +453,16 @@ button:hover, button:focus, .button:hover, .button:focus {
         color: $color-chambray;
       }
     }
-
     .office-address {
       font-size   : rem-calc(15);
       font-weight : normal;
       text-align  : center;
       padding     : rem-calc(20 0 10 0);
     }
-
     .office-gmap {
       font-size  : rem-calc(14);
       text-align : center;
     }
-
     .office-hours {
       margin     : 0;
       padding    : 0;
@@ -579,17 +502,13 @@ button:hover, button:focus, .button:hover, .button:focus {
         color: $color-chambray;
       }
       ul > li + li + li {
-        color: #909090;
+        color: $color-dark-gray;
         font-size: rem-calc(13);
         font-weight: normal;
       }
     }
-    .topflop-stats {
-    }
     .top-stat {
       margin-bottom: rem-calc(20);
-    }
-    .flop-stat {
     }
   }
 }
@@ -621,47 +540,45 @@ a.circle {
 }
 
 .dashbox {
-  background: $color-porcelain;
-  border: 1px solid $color-iron;
-  text-align: center;
+  background : $color-porcelain;
+  border     : 1px solid $color-iron;
+  text-align : center;
   h5 {
-    background: $color-iron;
-    font-size: rem-calc(16);
-    font-weight: normal;
-    padding: rem-calc(10);
-    margin: 0;
+    background  : $color-iron;
+    font-size   : rem-calc(16);
+    font-weight : normal;
+    padding     : rem-calc(10);
+    margin      : 0;
   }
   dl {
     padding: rem-calc(20 0 0 0);
   }
   dt {
-    font-size: rem-calc(20);
-    color: $color-chambray;
+    font-size : rem-calc(20);
+    color     : $color-chambray;
   }
   dd {
-    color: #909090;
-    font-size: rem-calc(13);
+    color     : $color-dark-gray;
+    font-size : rem-calc(13);
   }
 }
 
 // -----------------------------------------------------------------------------
 // Media Queries
 // -----------------------------------------------------------------------------
+
 @media #{$small-only} {
   #content {
-    h1 { text-align: center; }
-  }
-  .welcome {
-    p {
-      font-size: rem-calc(14);
+    h1 {
+      text-align: center;
     }
   }
   .top-bar .name h1 {
     font-size: rem-calc(10) !important;
   }
   .top-bar-section a {
-    text-align: center;
-    border-top: 1px solid #4B77BE;
+    text-align : center;
+    border-top : 1px solid #4B77BE;
   }
   .candidate-detail-program {
     h2 {
@@ -673,7 +590,7 @@ a.circle {
     h2 {
       font-size: rem-calc(14) !important;
     }
-    .candidate-card-content > .row {
+    .content > .row {
       padding: rem-calc(10) !important;
     }
   }
