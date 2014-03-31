@@ -4,13 +4,15 @@
 // Colors
 // -----------------------------------------------------------------------------
 
-$color-white            : #FFFFFF;
-$color-dark-gray        : #909090;
-$color-porcelain        : #ECF0F1;
-$color-iron             : #DADFE1;
-$color-chambray         : #3A539B;
-$color-steel-blue       : #4B77BE;
-$color-steel-blue-hover : #1F3A93;
+$color-white                 : #FFFFFF;
+$color-dark-gray             : #909090;
+$color-porcelain             : #ECF0F1;
+$color-iron                  : #DADFE1;
+$color-chambray              : #3A539B;
+$color-steel-blue            : #4B77BE;
+$color-steel-blue-hover      : #1F3A93;
+$color-chambray-light        : #E1E6F4;
+$color-chambray-light-darker : #CFD7ED;
 
 // -----------------------------------------------------------------------------
 // Foundation Settings Overrides
@@ -525,14 +527,54 @@ button:hover, button:focus, .button:hover, .button:focus {
 // -----------------------------------------------------------------------------
 
 .council {
+  h2 {
+    font-size      : rem-calc(22);
+    font-weight    : 200;
+    text-transform : uppercase;
+    color          : $color-steel-blue;
+    margin         : rem-calc(10 0 10 0);
+    text-align     : center;
+  }
   table {
     width: 100%;
+    td {
+      font-size: rem-calc(14);
+    }
+    .candidate {
+      background     : $color-porcelain;
+      text-align     : center;
+      font-size      : rem-calc(16);
+      letter-spacing : -1px;
+      font-weight    : normal;
+      color          : $color-chambray;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .cc {
+      font-weight: bold;
+    }
+    .position {
+      color: $color-dark-gray;
+    }
   }
 }
 
 // -----------------------------------------------------------------------------
 // Utilities
 // -----------------------------------------------------------------------------
+
+.info {
+  background : $color-chambray-light;
+  border     : 1px solid $color-chambray-light-darker;
+  margin     : rem-calc(10 0 10 0);
+  padding    : rem-calc(10);
+  color      : $color-chambray;
+  p {
+    margin  : 0;
+    padding : 0;
+  }
+}
 
 a.circle {
   color: transparent;

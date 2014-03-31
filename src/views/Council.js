@@ -36,9 +36,12 @@ define([
     },
 
     getTemplateContext: function() {
+      var cmMembers = this.councilMembers.groupBySeats();
+      var ccMembers = this.councilMembers.cc().groupBySeats();
       return {
-        config  : config,
-        councilMembers : this.councilMembers.toJSON()
+        config    : config,
+        cmMembers : cmMembers,
+        ccMembers : ccMembers
       };
     },
 

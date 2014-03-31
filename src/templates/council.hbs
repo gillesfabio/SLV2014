@@ -1,17 +1,38 @@
-<h1>Conseil Municipal</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Liste</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each councilMembers}}
-    <tr>
-      <td class="name">{{name}}</td>
-      <td class="list">{{list.candidate.name}}</td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
+<h1>Conseils</h1>
+
+<div class="row">
+  <div class="small-12 medium-12 large-6 columns">
+    <h2>Conseil Municipal</h2>
+    <table>
+      <tbody>
+        {{#each cmMembers}}
+          <tr>
+            <td class="candidate">Liste {{@key}}</td>
+          </tr>
+          {{#each this}}
+          <tr>
+            <td class="name"><span class="position">{{add @index 1}} —</span> {{name}}</td>
+          </tr>
+          {{/each}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="small-12 medium-12 large-6 columns">
+    <h2>Conseil Communautaire</h2>
+    <table>
+      <tbody>
+        {{#each ccMembers}}
+          <tr>
+            <td class="candidate">Liste {{@key}}</td>
+          </tr>
+          {{#each this}}
+          <tr>
+            <td class="name"><span class="position">{{add @index 1}} —</span> {{name}}</td>
+          </tr>
+          {{/each}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

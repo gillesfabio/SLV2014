@@ -38,7 +38,7 @@ define([
       'bureaux'                  : officeList,
       'resultats/:round'         : officeResultList,
       'a-propos'                 : about,
-      'conseil-municipal'        : council
+      'conseils'                 : council
     }
   });
 });

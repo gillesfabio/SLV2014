@@ -111,11 +111,11 @@ Generator.prototype.buildLists = function() {
   }, this);
 };
 
-Generator.prototype.buildCouncil = function() {
+Generator.prototype.buildCouncilMembers = function() {
   var members = YAML.load(path.join(DATA_DIR, 'council.yaml'));
   _.each(members, function(member) {
-    member.candidate = _.find(this.data.candidates, function(m) {
-      return m.id === member.candidate;
+    member.list = _.find(this.data.candidates, function(m) {
+      return m.id === member.list;
     });
     this.data.councilMembers.push(member);
   }, this);
@@ -151,7 +151,7 @@ Generator.prototype.build = function() {
   this.buildCandidates();
   this.buildPrograms();
   this.buildLists();
-  this.buildCouncil();
+  this.buildCouncilMembers();
   this.buildResults();
   this.buildOfficesResults();
   this.createFiles();
