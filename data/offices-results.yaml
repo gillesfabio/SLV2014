@@ -22,6 +22,24 @@
       marc-moschetti:
         count      : 32
         percentage : 7.53
+  r2:
+    registered : 727
+    voters     : 450
+    expressed  : 442
+    candidates:
+      henri-revel:
+        count      : 167
+        percentage : 37.78
+      joseph-segura:
+        count      : 188
+        percentage : 42.53
+      lionel-prados:
+        count      : 49
+        percentage : 11.09
+      marc-orsatti:
+        count      : 38
+        percentage : 8.60
+
 2:
   r1:
     registered : 1029
@@ -46,6 +64,23 @@
       marc-moschetti:
         count      : 59
         percentage : 9.06
+  r2:
+    registered : 1029
+    voters     : 673
+    expressed  : 650
+    candidates:
+      henri-revel:
+        count      : 237
+        percentage : 36.46
+      joseph-segura:
+        count      : 274
+        percentage : 42.15
+      lionel-prados:
+        count      : 93
+        percentage : 14.31
+      marc-orsatti:
+        count      : 46
+        percentage : 7.08
 3:
   r1:
     registered : 946
@@ -70,6 +105,23 @@
       marc-moschetti:
         count      : 72
         percentage : 14.55
+  r2:
+    registered : 946
+    voters     : 551
+    expressed  : 541
+    candidates:
+      henri-revel:
+        count      : 189
+        percentage : 34.94
+      joseph-segura:
+        count      : 247
+        percentage : 45.66
+      lionel-prados:
+        count      : 71
+        percentage : 13.12
+      marc-orsatti:
+        count      : 34
+        percentage : 6.28
 4:
   r1:
     registered : 1049
@@ -94,6 +146,23 @@
       marc-moschetti:
         count      : 41
         percentage : 6.71
+  r2:
+    registered : 1049
+    voters     : 633
+    expressed  : 613
+    candidates:
+      henri-revel:
+        count      : 235
+        percentage : 38.34
+      joseph-segura:
+        count      : 232
+        percentage : 37.85
+      lionel-prados:
+        count      : 93
+        percentage : 15.17
+      marc-orsatti:
+        count      : 53
+        percentage : 8.65
 5:
   r1:
     registered : 756
@@ -118,6 +187,23 @@
       marc-moschetti:
         count      : 42
         percentage : 8.94
+  r2:
+    registered : 756
+    voters     : 498
+    expressed  : 488
+    candidates:
+      henri-revel:
+        count      : 165
+        percentage : 33.81
+      joseph-segura:
+        count      : 220
+        percentage : 45.08
+      lionel-prados:
+        count      : 75
+        percentage : 15.37
+      marc-orsatti:
+        count      : 28
+        percentage : 5.74
 6:
   r1:
     registered : 770
@@ -142,6 +228,23 @@
       marc-moschetti:
         count      : 33
         percentage : 6.99
+  r2:
+    registered : 770
+    voters     : 492
+    expressed  : 482
+    candidates:
+      henri-revel:
+        count      : 153
+        percentage : 31.74
+      joseph-segura:
+        count      : 229
+        percentage : 47.51
+      lionel-prados:
+        count      : 58
+        percentage : 12.03
+      marc-orsatti:
+        count      : 42
+        percentage : 8.71
 7:
   r1:
     registered : 917
@@ -166,6 +269,23 @@
       marc-moschetti:
         count      : 45
         percentage : 8.52
+  r2:
+    registered : 917
+    voters     : 550
+    expressed  : 539
+    candidates:
+      henri-revel:
+        count      : 186
+        percentage : 34.51
+      joseph-segura:
+        count      : 242
+        percentage : 44.90
+      lionel-prados:
+        count      : 75
+        percentage : 13.91
+      marc-orsatti:
+        count      : 36
+        percentage : 6.68
 8:
   r1:
     registered : 1179
@@ -190,6 +310,23 @@
       marc-moschetti:
         count      : 55
         percentage : 8.87
+  r2:
+    registered : 1179
+    voters     : 654
+    expressed  : 639
+    candidates:
+      henri-revel:
+        count      : 251
+        percentage : 39.28
+      joseph-segura:
+        count      : 211
+        percentage : 33.02
+      lionel-prados:
+        count      : 116
+        percentage : 18.15
+      marc-orsatti:
+        count      : 61
+        percentage : 9.55
 9:
   r1:
     registered : 886
@@ -214,6 +351,23 @@
       marc-moschetti:
         count      : 35
         percentage : 6.52
+  r2:
+    registered : 886
+    voters     : 551
+    expressed  : 542
+    candidates:
+      henri-revel:
+        count      : 215
+        percentage : 39.67
+      joseph-segura:
+        count      : 214
+        percentage : 39.48
+      lionel-prados:
+        count      : 71
+        percentage : 13.10
+      marc-orsatti:
+        count      : 42
+        percentage : 7.75
 10:
   r1:
     registered : 1304
@@ -238,6 +392,23 @@
       marc-moschetti:
         count      : 104
         percentage : 13.54
+  r2:
+    registered : 1304
+    voters     : 803
+    expressed  : 774
+    candidates:
+      henri-revel:
+        count      : 283
+        percentage : 36.56
+      joseph-segura:
+        count      : 301
+        percentage : 38.89
+      lionel-prados:
+        count      : 111
+        percentage : 14.34
+      marc-orsatti:
+        count      : 79
+        percentage : 10.21
 11:
   r1:
     registered : 1378
@@ -262,6 +433,23 @@
       marc-moschetti:
         count      : 47
         percentage : 5.96
+  r2:
+    registered : 1378
+    voters     : 829
+    expressed  : 809
+    candidates:
+      henri-revel:
+        count      : 329
+        percentage : 40.67
+      joseph-segura:
+        count      : 303
+        percentage : 37.45
+      lionel-prados:
+        count      : 120
+        percentage : 14.83
+      marc-orsatti:
+        count      : 57
+        percentage : 7.05
 12:
   r1:
     registered : 1659
@@ -286,6 +474,23 @@
       marc-moschetti:
         count      : 90
         percentage : 8.87
+  r2:
+    registered : 1659
+    voters     : 1085
+    expressed  : 1053
+    candidates:
+      henri-revel:
+        count      : 371
+        percentage : 35.23
+      joseph-segura:
+        count      : 475
+        percentage : 45.11
+      lionel-prados:
+        count      : 136
+        percentage : 12.92
+      marc-orsatti:
+        count      : 71
+        percentage : 6.74
 13:
   r1:
     registered : 1186
@@ -310,6 +515,23 @@
       marc-moschetti:
         count      : 60
         percentage : 8.04
+  r2:
+    registered : 1186
+    voters     : 756
+    expressed  : 746
+    candidates:
+      henri-revel:
+        count      : 257
+        percentage : 34.45
+      joseph-segura:
+        count      : 298
+        percentage : 39.95
+      lionel-prados:
+        count      : 124
+        percentage : 16.62
+      marc-orsatti:
+        count      : 67
+        percentage : 8.98
 14:
   r1:
     registered : 1159
@@ -334,6 +556,23 @@
       marc-moschetti:
         count      : 44
         percentage : 6.36
+  r2:
+    registered : 1159
+    voters     : 748
+    expressed  : 718
+    candidates:
+      henri-revel:
+        count      : 246
+        percentage : 34.26
+      joseph-segura:
+        count      : 311
+        percentage : 43.31
+      lionel-prados:
+        count      : 92
+        percentage : 12.81
+      marc-orsatti:
+        count      : 69
+        percentage : 9.61
 15:
   r1:
     registered : 1297
@@ -358,6 +597,23 @@
       marc-moschetti:
         count      : 29
         percentage : 3.88
+  r2:
+    registered : 1297
+    voters     : 785
+    expressed  : 771
+    candidates:
+      henri-revel:
+        count      : 307
+        percentage : 39.82
+      joseph-segura:
+        count      : 270
+        percentage : 35.02
+      lionel-prados:
+        count      : 104
+        percentage : 13.49
+      marc-orsatti:
+        count      : 90
+        percentage : 11.67
 16:
   r1:
     registered : 794
@@ -382,6 +638,23 @@
       marc-moschetti:
         count      : 38
         percentage : 7.97
+  r2:
+    registered : 794
+    voters     : 505
+    expressed  : 489
+    candidates:
+      henri-revel:
+        count      : 181
+        percentage : 37.01
+      joseph-segura:
+        count      : 159
+        percentage : 32.52
+      lionel-prados:
+        count      : 96
+        percentage : 19.63
+      marc-orsatti:
+        count      : 53
+        percentage : 10.84
 17:
   r1:
     registered : 1127
@@ -406,6 +679,23 @@
       marc-moschetti:
         count      : 53
         percentage : 8.48
+  r2:
+    registered : 1128
+    voters     : 660
+    expressed  : 641
+    candidates:
+      henri-revel:
+        count      : 214
+        percentage : 33.39
+      joseph-segura:
+        count      : 255
+        percentage : 39.78
+      lionel-prados:
+        count      : 107
+        percentage : 16.69
+      marc-orsatti:
+        count      : 65
+        percentage : 10.14
 18:
   r1:
     registered : 884
@@ -430,6 +720,23 @@
       marc-moschetti:
         count      : 44
         percentage : 8.45
+  r2:
+    registered : 884
+    voters     : 536
+    expressed  : 520
+    candidates:
+      henri-revel:
+        count      : 189
+        percentage : 36.35
+      joseph-segura:
+        count      : 229
+        percentage : 44.04
+      lionel-prados:
+        count      : 76
+        percentage : 14.62
+      marc-orsatti:
+        count      : 26
+        percentage : 5.00
 19:
   r1:
     registered : 1292
@@ -454,6 +761,23 @@
       marc-moschetti:
         count      : 47
         percentage : 6.48
+  r2:
+    registered : 1292
+    voters     : 781
+    expressed  : 767
+    candidates:
+      henri-revel:
+        count      : 276
+        percentage : 35.98
+      joseph-segura:
+        count      : 325
+        percentage : 42.37
+      lionel-prados:
+        count      : 116
+        percentage : 15.12
+      marc-orsatti:
+        count      : 50
+        percentage : 6.52
 20:
   r1:
     registered : 737
@@ -478,6 +802,23 @@
       marc-moschetti:
         count      : 67
         percentage : 13.16
+  r2:
+    registered : 737
+    voters     : 529
+    expressed  : 518
+    candidates:
+      henri-revel:
+        count      : 163
+        percentage : 31.47
+      joseph-segura:
+        count      : 266
+        percentage : 51.35
+      lionel-prados:
+        count      : 73
+        percentage : 14.09
+      marc-orsatti:
+        count      : 16
+        percentage : 3.09
 21:
   r1:
     registered : 1298
@@ -502,3 +843,20 @@
       marc-moschetti:
         count      : 77
         percentage : 9.21
+  r2:
+    registered : 1298
+    voters     : 871
+    expressed  : 856
+    candidates:
+      henri-revel:
+        count      : 281
+        percentage : 32.83
+      joseph-segura:
+        count      : 400
+        percentage : 46.73
+      lionel-prados:
+        count      : 105
+        percentage : 12.27
+      marc-orsatti:
+        count      : 70
+        percentage : 8.18
