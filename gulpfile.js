@@ -7,7 +7,6 @@ var minifyCSS = require('gulp-minify-css');
 var sass      = require('gulp-sass');
 var clean     = require('gulp-clean');
 var uglify    = require('gulp-uglify');
-var rename    = require('gulp-rename');
 var rjs       = require('gulp-requirejs');
 var express   = require('express');
 var swig      = require('swig');

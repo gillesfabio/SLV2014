@@ -21,7 +21,6 @@
     "gulp-minify-css": "0.3.x",
     "gulp-clean": "0.2.x",
     "gulp-uglify": "0.2.x",
-    "gulp-rename": "1.x",
     "gulp-sass": "0.7.x",
     "gulp-requirejs": "git://github.com/RobinThrift/gulp-requirejs.git#6fb08d427dda7463a07b25be3fc931f58e660b54"
   }
