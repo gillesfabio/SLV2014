@@ -7,10 +7,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Mairie"
     },
-    "round": 1,
+    "round": 2,
     "registered": 727,
-    "voters": 438,
-    "expressed": 425,
+    "voters": 450,
+    "expressed": 442,
     "candidates": [
       {
         "candidate": {
@@ -23,8 +23,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 31.06,
-        "count": 132
+        "percentage": 37.78,
+        "count": 167
       },
       {
         "candidate": {
@@ -37,8 +37,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 27.53,
-        "count": 117
+        "percentage": 42.53,
+        "count": 188
       },
       {
         "candidate": {
@@ -51,22 +51,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 13.65,
-        "count": 58
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 10.35,
-        "count": 44
+        "percentage": 11.09,
+        "count": 49
       },
       {
         "candidate": {
@@ -79,22 +65,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 9.88,
-        "count": 42
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 7.53,
-        "count": 32
+        "percentage": 8.6,
+        "count": 38
       }
     ]
   },
@@ -106,10 +78,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Action Culturelle Municipale"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1029,
-    "voters": 679,
-    "expressed": 651,
+    "voters": 673,
+    "expressed": 650,
     "candidates": [
       {
         "candidate": {
@@ -122,8 +94,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 31.8,
-        "count": 207
+        "percentage": 36.46,
+        "count": 237
       },
       {
         "candidate": {
@@ -136,8 +108,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 24.27,
-        "count": 158
+        "percentage": 42.15,
+        "count": 274
       },
       {
         "candidate": {
@@ -150,22 +122,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 16.13,
-        "count": 105
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 8.29,
-        "count": 54
+        "percentage": 14.31,
+        "count": 93
       },
       {
         "candidate": {
@@ -178,22 +136,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 10.45,
-        "count": 68
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 9.06,
-        "count": 59
+        "percentage": 7.08,
+        "count": 46
       }
     ]
   },
@@ -205,10 +149,10 @@
       "opening": "8h-20h",
       "gmapSearch": "418 Esplanade du Levant"
     },
-    "round": 1,
+    "round": 2,
     "registered": 946,
-    "voters": 513,
-    "expressed": 495,
+    "voters": 551,
+    "expressed": 541,
     "candidates": [
       {
         "candidate": {
@@ -221,8 +165,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 24.44,
-        "count": 121
+        "percentage": 34.94,
+        "count": 189
       },
       {
         "candidate": {
@@ -235,8 +179,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 30.1,
-        "count": 149
+        "percentage": 45.66,
+        "count": 247
       },
       {
         "candidate": {
@@ -249,22 +193,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 16.57,
-        "count": 82
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 4.85,
-        "count": 24
+        "percentage": 13.12,
+        "count": 71
       },
       {
         "candidate": {
@@ -277,22 +207,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 9.49,
-        "count": 47
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 14.55,
-        "count": 72
+        "percentage": 6.28,
+        "count": 34
       }
     ]
   },
@@ -304,10 +220,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Maternelle Djibouti"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1049,
-    "voters": 632,
-    "expressed": 611,
+    "voters": 633,
+    "expressed": 613,
     "candidates": [
       {
         "candidate": {
@@ -320,8 +236,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 35.68,
-        "count": 218
+        "percentage": 38.34,
+        "count": 235
       },
       {
         "candidate": {
@@ -334,8 +250,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 23.24,
-        "count": 142
+        "percentage": 37.85,
+        "count": 232
       },
       {
         "candidate": {
@@ -348,22 +264,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 18.66,
-        "count": 114
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 7.86,
-        "count": 48
+        "percentage": 15.17,
+        "count": 93
       },
       {
         "candidate": {
@@ -376,22 +278,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 7.86,
-        "count": 48
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 6.71,
-        "count": 41
+        "percentage": 8.65,
+        "count": 53
       }
     ]
   },
@@ -403,10 +291,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Maternelle Djibouti"
     },
-    "round": 1,
+    "round": 2,
     "registered": 756,
-    "voters": 482,
-    "expressed": 470,
+    "voters": 498,
+    "expressed": 488,
     "candidates": [
       {
         "candidate": {
@@ -419,8 +307,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 30.21,
-        "count": 142
+        "percentage": 33.81,
+        "count": 165
       },
       {
         "candidate": {
@@ -433,8 +321,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 22.13,
-        "count": 104
+        "percentage": 45.08,
+        "count": 220
       },
       {
         "candidate": {
@@ -447,22 +335,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 18.51,
-        "count": 87
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 12.13,
-        "count": 57
+        "percentage": 15.37,
+        "count": 75
       },
       {
         "candidate": {
@@ -475,22 +349,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 8.09,
-        "count": 38
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 8.94,
-        "count": 42
+        "percentage": 5.74,
+        "count": 28
       }
     ]
   },
@@ -502,10 +362,10 @@
       "opening": "8h-20h",
       "gmapSearch": "École Maternelle de la Gare"
     },
-    "round": 1,
+    "round": 2,
     "registered": 770,
-    "voters": 487,
-    "expressed": 472,
+    "voters": 492,
+    "expressed": 482,
     "candidates": [
       {
         "candidate": {
@@ -518,8 +378,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 27.75,
-        "count": 131
+        "percentage": 31.74,
+        "count": 153
       },
       {
         "candidate": {
@@ -532,8 +392,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 31.99,
-        "count": 151
+        "percentage": 47.51,
+        "count": 229
       },
       {
         "candidate": {
@@ -546,22 +406,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 12.5,
-        "count": 59
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 11.02,
-        "count": 52
+        "percentage": 12.03,
+        "count": 58
       },
       {
         "candidate": {
@@ -574,22 +420,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 9.75,
-        "count": 46
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 6.99,
-        "count": 33
+        "percentage": 8.71,
+        "count": 42
       }
     ]
   },
@@ -601,10 +433,10 @@
       "opening": "8h-20h",
       "gmapSearch": "École Maternelle de la Gare"
     },
-    "round": 1,
+    "round": 2,
     "registered": 917,
-    "voters": 543,
-    "expressed": 528,
+    "voters": 550,
+    "expressed": 539,
     "candidates": [
       {
         "candidate": {
@@ -617,8 +449,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 28.03,
-        "count": 148
+        "percentage": 34.51,
+        "count": 186
       },
       {
         "candidate": {
@@ -631,8 +463,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 32.39,
-        "count": 171
+        "percentage": 44.9,
+        "count": 242
       },
       {
         "candidate": {
@@ -645,22 +477,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 15.15,
-        "count": 80
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 7.95,
-        "count": 42
+        "percentage": 13.91,
+        "count": 75
       },
       {
         "candidate": {
@@ -673,22 +491,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 7.95,
-        "count": 42
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 8.52,
-        "count": 45
+        "percentage": 6.68,
+        "count": 36
       }
     ]
   },
@@ -700,10 +504,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Primaire René Cassin"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1179,
-    "voters": 644,
-    "expressed": 620,
+    "voters": 654,
+    "expressed": 639,
     "candidates": [
       {
         "candidate": {
@@ -716,8 +520,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 32.58,
-        "count": 202
+        "percentage": 39.28,
+        "count": 251
       },
       {
         "candidate": {
@@ -730,8 +534,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 15.97,
-        "count": 99
+        "percentage": 33.02,
+        "count": 211
       },
       {
         "candidate": {
@@ -744,22 +548,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 21.94,
-        "count": 136
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 9.84,
-        "count": 61
+        "percentage": 18.15,
+        "count": 116
       },
       {
         "candidate": {
@@ -772,22 +562,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 10.81,
-        "count": 67
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 8.87,
-        "count": 55
+        "percentage": 9.55,
+        "count": 61
       }
     ]
   },
@@ -799,10 +575,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Primaire René Cassin"
     },
-    "round": 1,
+    "round": 2,
     "registered": 886,
-    "voters": 548,
-    "expressed": 537,
+    "voters": 551,
+    "expressed": 542,
     "candidates": [
       {
         "candidate": {
@@ -815,8 +591,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 32.03,
-        "count": 172
+        "percentage": 39.67,
+        "count": 215
       },
       {
         "candidate": {
@@ -829,8 +605,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 13.41,
-        "count": 72
+        "percentage": 39.48,
+        "count": 214
       },
       {
         "candidate": {
@@ -843,22 +619,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 15.64,
-        "count": 84
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 22.16,
-        "count": 119
+        "percentage": 13.1,
+        "count": 71
       },
       {
         "candidate": {
@@ -871,22 +633,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 10.24,
-        "count": 55
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 6.52,
-        "count": 35
+        "percentage": 7.75,
+        "count": 42
       }
     ]
   },
@@ -898,10 +646,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Primaire René Cassin"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1304,
-    "voters": 794,
-    "expressed": 768,
+    "voters": 803,
+    "expressed": 774,
     "candidates": [
       {
         "candidate": {
@@ -914,8 +662,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 27.08,
-        "count": 208
+        "percentage": 36.56,
+        "count": 283
       },
       {
         "candidate": {
@@ -928,8 +676,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 23.18,
-        "count": 178
+        "percentage": 38.89,
+        "count": 301
       },
       {
         "candidate": {
@@ -942,22 +690,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 16.28,
-        "count": 125
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 10.29,
-        "count": 79
+        "percentage": 14.34,
+        "count": 111
       },
       {
         "candidate": {
@@ -970,22 +704,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 9.64,
-        "count": 74
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 13.54,
-        "count": 104
+        "percentage": 10.21,
+        "count": 79
       }
     ]
   },
@@ -997,10 +717,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Elémentaire Louis Ravet"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1378,
-    "voters": 812,
-    "expressed": 788,
+    "voters": 829,
+    "expressed": 809,
     "candidates": [
       {
         "candidate": {
@@ -1013,8 +733,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 34.01,
-        "count": 268
+        "percentage": 40.67,
+        "count": 329
       },
       {
         "candidate": {
@@ -1027,8 +747,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 19.92,
-        "count": 157
+        "percentage": 37.45,
+        "count": 303
       },
       {
         "candidate": {
@@ -1041,22 +761,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 17.51,
-        "count": 138
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 12.31,
-        "count": 97
+        "percentage": 14.83,
+        "count": 120
       },
       {
         "candidate": {
@@ -1069,22 +775,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 10.28,
-        "count": 81
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 5.96,
-        "count": 47
+        "percentage": 7.05,
+        "count": 57
       }
     ]
   },
@@ -1096,10 +788,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Elémentaire Louis Ravet"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1659,
-    "voters": 1057,
-    "expressed": 1015,
+    "voters": 1085,
+    "expressed": 1053,
     "candidates": [
       {
         "candidate": {
@@ -1112,8 +804,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 29.95,
-        "count": 304
+        "percentage": 35.23,
+        "count": 371
       },
       {
         "candidate": {
@@ -1126,8 +818,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 23.15,
-        "count": 235
+        "percentage": 45.11,
+        "count": 475
       },
       {
         "candidate": {
@@ -1140,22 +832,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 16.95,
-        "count": 172
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 12.71,
-        "count": 129
+        "percentage": 12.92,
+        "count": 136
       },
       {
         "candidate": {
@@ -1168,22 +846,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 8.37,
-        "count": 85
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 8.87,
-        "count": 90
+        "percentage": 6.74,
+        "count": 71
       }
     ]
   },
@@ -1195,9 +859,9 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Elémentaire Louis Ravet"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1186,
-    "voters": 762,
+    "voters": 756,
     "expressed": 746,
     "candidates": [
       {
@@ -1211,8 +875,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 27.08,
-        "count": 202
+        "percentage": 34.45,
+        "count": 257
       },
       {
         "candidate": {
@@ -1225,8 +889,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 21.31,
-        "count": 159
+        "percentage": 39.95,
+        "count": 298
       },
       {
         "candidate": {
@@ -1239,22 +903,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 19.03,
-        "count": 142
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 13.4,
-        "count": 100
+        "percentage": 16.62,
+        "count": 124
       },
       {
         "candidate": {
@@ -1267,22 +917,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 11.13,
-        "count": 83
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 8.04,
-        "count": 60
+        "percentage": 8.98,
+        "count": 67
       }
     ]
   },
@@ -1294,10 +930,10 @@
       "opening": "8h-20h",
       "gmapSearch": "École primaire publique Michelis 1"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1159,
-    "voters": 727,
-    "expressed": 692,
+    "voters": 748,
+    "expressed": 718,
     "candidates": [
       {
         "candidate": {
@@ -1310,8 +946,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 33.38,
-        "count": 231
+        "percentage": 34.26,
+        "count": 246
       },
       {
         "candidate": {
@@ -1324,8 +960,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 22.98,
-        "count": 159
+        "percentage": 43.31,
+        "count": 311
       },
       {
         "candidate": {
@@ -1338,22 +974,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 15.9,
-        "count": 110
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 10.69,
-        "count": 74
+        "percentage": 12.81,
+        "count": 92
       },
       {
         "candidate": {
@@ -1366,22 +988,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 10.69,
-        "count": 74
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 6.36,
-        "count": 44
+        "percentage": 9.61,
+        "count": 69
       }
     ]
   },
@@ -1393,10 +1001,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Maternelle Les Bigaradiers"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1297,
-    "voters": 772,
-    "expressed": 747,
+    "voters": 785,
+    "expressed": 771,
     "candidates": [
       {
         "candidate": {
@@ -1409,8 +1017,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 36.44,
-        "count": 273
+        "percentage": 39.82,
+        "count": 307
       },
       {
         "candidate": {
@@ -1423,8 +1031,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 20.21,
-        "count": 151
+        "percentage": 35.02,
+        "count": 270
       },
       {
         "candidate": {
@@ -1437,22 +1045,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 15.26,
-        "count": 114
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 8.3,
-        "count": 62
+        "percentage": 13.49,
+        "count": 104
       },
       {
         "candidate": {
@@ -1465,22 +1059,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 15.8,
-        "count": 118
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 3.88,
-        "count": 29
+        "percentage": 11.67,
+        "count": 90
       }
     ]
   },
@@ -1492,10 +1072,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Foyer Club"
     },
-    "round": 1,
+    "round": 2,
     "registered": 794,
-    "voters": 507,
-    "expressed": 477,
+    "voters": 505,
+    "expressed": 489,
     "candidates": [
       {
         "candidate": {
@@ -1508,8 +1088,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 33.33,
-        "count": 159
+        "percentage": 37.01,
+        "count": 181
       },
       {
         "candidate": {
@@ -1522,8 +1102,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 15.09,
-        "count": 72
+        "percentage": 32.52,
+        "count": 159
       },
       {
         "candidate": {
@@ -1536,22 +1116,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 20.96,
-        "count": 100
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 9.64,
-        "count": 46
+        "percentage": 19.63,
+        "count": 96
       },
       {
         "candidate": {
@@ -1564,22 +1130,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 13,
-        "count": 62
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 7.97,
-        "count": 38
+        "percentage": 10.84,
+        "count": 53
       }
     ]
   },
@@ -1591,10 +1143,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Castillon"
     },
-    "round": 1,
-    "registered": 1127,
-    "voters": 657,
-    "expressed": 625,
+    "round": 2,
+    "registered": 1128,
+    "voters": 660,
+    "expressed": 641,
     "candidates": [
       {
         "candidate": {
@@ -1607,8 +1159,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 27.52,
-        "count": 172
+        "percentage": 33.39,
+        "count": 214
       },
       {
         "candidate": {
@@ -1621,8 +1173,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 21.76,
-        "count": 136
+        "percentage": 39.78,
+        "count": 255
       },
       {
         "candidate": {
@@ -1635,22 +1187,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 21.44,
-        "count": 134
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 8.64,
-        "count": 54
+        "percentage": 16.69,
+        "count": 107
       },
       {
         "candidate": {
@@ -1663,22 +1201,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 12.16,
-        "count": 76
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 8.48,
-        "count": 53
+        "percentage": 10.14,
+        "count": 65
       }
     ]
   },
@@ -1690,10 +1214,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Castillon"
     },
-    "round": 1,
+    "round": 2,
     "registered": 884,
-    "voters": 537,
-    "expressed": 521,
+    "voters": 536,
+    "expressed": 520,
     "candidates": [
       {
         "candidate": {
@@ -1706,8 +1230,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 30.52,
-        "count": 159
+        "percentage": 36.35,
+        "count": 189
       },
       {
         "candidate": {
@@ -1720,8 +1244,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 28.79,
-        "count": 150
+        "percentage": 44.04,
+        "count": 229
       },
       {
         "candidate": {
@@ -1734,22 +1258,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 15.55,
-        "count": 81
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 9.6,
-        "count": 50
+        "percentage": 14.62,
+        "count": 76
       },
       {
         "candidate": {
@@ -1762,22 +1272,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 7.1,
-        "count": 37
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 8.45,
-        "count": 44
+        "percentage": 5,
+        "count": 26
       }
     ]
   },
@@ -1789,10 +1285,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Castillon"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1292,
-    "voters": 751,
-    "expressed": 725,
+    "voters": 781,
+    "expressed": 767,
     "candidates": [
       {
         "candidate": {
@@ -1805,8 +1301,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 32.14,
-        "count": 233
+        "percentage": 35.98,
+        "count": 276
       },
       {
         "candidate": {
@@ -1819,8 +1315,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 23.59,
-        "count": 171
+        "percentage": 42.37,
+        "count": 325
       },
       {
         "candidate": {
@@ -1833,22 +1329,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 17.79,
-        "count": 129
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 9.93,
-        "count": 72
+        "percentage": 15.12,
+        "count": 116
       },
       {
         "candidate": {
@@ -1861,22 +1343,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 10.07,
-        "count": 73
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 6.48,
-        "count": 47
+        "percentage": 6.52,
+        "count": 50
       }
     ]
   },
@@ -1888,10 +1356,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Elémentaire Sainte Petronille"
     },
-    "round": 1,
+    "round": 2,
     "registered": 737,
-    "voters": 526,
-    "expressed": 509,
+    "voters": 529,
+    "expressed": 518,
     "candidates": [
       {
         "candidate": {
@@ -1904,8 +1372,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 27.5,
-        "count": 140
+        "percentage": 31.47,
+        "count": 163
       },
       {
         "candidate": {
@@ -1918,8 +1386,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 29.86,
-        "count": 152
+        "percentage": 51.35,
+        "count": 266
       },
       {
         "candidate": {
@@ -1932,22 +1400,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 16.5,
-        "count": 84
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 7.27,
-        "count": 37
+        "percentage": 14.09,
+        "count": 73
       },
       {
         "candidate": {
@@ -1960,22 +1414,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 5.7,
-        "count": 29
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 13.16,
-        "count": 67
+        "percentage": 3.09,
+        "count": 16
       }
     ]
   },
@@ -1987,10 +1427,10 @@
       "opening": "8h-20h",
       "gmapSearch": "Ecole Maternelle Montaleigne"
     },
-    "round": 1,
+    "round": 2,
     "registered": 1298,
-    "voters": 857,
-    "expressed": 836,
+    "voters": 871,
+    "expressed": 856,
     "candidates": [
       {
         "candidate": {
@@ -2003,8 +1443,8 @@
           "programUrl": "http://www.henrirevel.fr/",
           "party": "UMP"
         },
-        "percentage": 29.07,
-        "count": 243
+        "percentage": 32.83,
+        "count": 281
       },
       {
         "candidate": {
@@ -2017,8 +1457,8 @@
           "programUrl": "http://www.slideshare.net/josephsegura/segura-programme8pages-a4v3",
           "party": "DVD"
         },
-        "percentage": 26.08,
-        "count": 218
+        "percentage": 46.73,
+        "count": 400
       },
       {
         "candidate": {
@@ -2031,22 +1471,8 @@
           "programUrl": "http://www.fnmunicipales.fr/saint-laurent/Mes-propositions-pour-Saint-Laurent-du-Var_a22.html",
           "party": "FN"
         },
-        "percentage": 15.55,
-        "count": 130
-      },
-      {
-        "candidate": {
-          "id": "francoise-benne",
-          "name": "Françoise Benne",
-          "slogan": "Pour Saint-Laurent, l'énergie d'une équipe",
-          "homepage": "http://www.francoisebenne.fr/",
-          "twitter": "francoisebenne",
-          "facebook": null,
-          "programUrl": "https://www.dropbox.com/s/ndjhcmlrvgtrw6j/BENNE%20-%20DISCOURS%20DU%2010%20DEC%202013-%201e%20REUNION%20PUBLIQUE.pdf",
-          "party": "DVD"
-        },
-        "percentage": 9.93,
-        "count": 83
+        "percentage": 12.27,
+        "count": 105
       },
       {
         "candidate": {
@@ -2059,22 +1485,8 @@
           "programUrl": "http://marc.orsatti.over-blog.com/2014/03/un-projet-pour-tous-les-laurentins.html",
           "party": "PS"
         },
-        "percentage": 10.17,
-        "count": 85
-      },
-      {
-        "candidate": {
-          "id": "marc-moschetti",
-          "name": "Marc Moschetti",
-          "slogan": "Le Parti des Laurentins",
-          "homepage": "http://www.marcmoschetti.fr/",
-          "twitter": "MarcMoschetti",
-          "facebook": "moschetti.marc",
-          "programUrl": "http://www.marcmoschetti.fr/mon-programme/",
-          "party": "SE"
-        },
-        "percentage": 9.21,
-        "count": 77
+        "percentage": 8.18,
+        "count": 70
       }
     ]
   }
