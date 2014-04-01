@@ -5,7 +5,7 @@ define(function() {
   return {
     baseUrl       : window.APP_BASE_URL,
     dataUrl       : window.APP_BASE_URL + 'data/data.json', // backward compatibility
-    enabledRounds : [1],
+    enabledRounds : [1, 2],
     data: {
       themes         : window.APP_BASE_URL + 'data/themes.json',
       offices        : window.APP_BASE_URL + 'data/offices.json',
