@@ -17,7 +17,6 @@ define([
     className : 'office-list',
 
     initialize: function(options) {
-
       this.options = _.extend({
         offices: new OfficeCollection()
       }, options);

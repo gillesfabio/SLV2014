@@ -3,9 +3,7 @@ define(function() {
   'use strict';
 
   return {
-    baseUrl       : window.APP_BASE_URL,
-    dataUrl       : window.APP_BASE_URL + 'data/data.json', // backward compatibility
-    enabledRounds : [1, 2],
+    baseUrl : window.APP_BASE_URL,
     data: {
       themes         : window.APP_BASE_URL + 'data/themes.json',
       offices        : window.APP_BASE_URL + 'data/offices.json',

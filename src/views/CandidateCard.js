@@ -13,11 +13,10 @@ define([
 
   return Backbone.View.extend({
 
-    tagName: 'div',
-    className: 'candidate-card',
+    tagName   : 'div',
+    className : 'candidate-card',
 
     initialize: function(options) {
-
       this.options = _.extend({
         candidate      : new CandidateModel(),
         showDetailLink : false

@@ -27,7 +27,6 @@ define([
     className : 'candidate-detail',
 
     initialize: function(options) {
-
       this.options = _.extend({
         candidate : new CandidateModel(),
         lists     : new ListCollection()

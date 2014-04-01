@@ -25,7 +25,6 @@ define([
     className : 'result-list',
 
     initialize: function(options) {
-
       this.options = _.extend({
         round   : 1,
         results : new ResultCollection()
@@ -43,8 +42,8 @@ define([
       var results = this.results.findByRound(this.round);
       if (results) results.sortCandidatesByResult();
       return {
-        config    : config,
-        results   : results ? results.toJSON() : null
+        config  : config,
+        results : results ? results.toJSON() : null
       };
     },
 

@@ -2,7 +2,7 @@ define([
 
   'underscore',
   'handlebars',
-  'markdown',
+  'markdown'
 
 ], function(_, Handlebars, markdown) {
 
@@ -10,11 +10,6 @@ define([
 
   Handlebars.registerHelper('md2html', function(md) {
     return new Handlebars.SafeString(markdown.toHTML(md));
-  });
-
-  Handlebars.registerHelper('formatAddress', function(address) {
-    address = address.replace(/\n/g, '<br>');
-    return new Handlebars.SafeString(address);
   });
 
   Handlebars.registerHelper('gmapsLink', function(search) {

@@ -23,7 +23,6 @@ define([
     className : 'council',
 
     initialize: function(options) {
-
       this.options = _.extend({
         councilMembers: new CouncilMemberCollection()
       }, options);

@@ -25,7 +25,6 @@ define([
     className : 'elected',
 
     initialize: function(options) {
-
       this.options = _.extend({
         results : new ResultCollection()
       }, options);
@@ -39,8 +38,8 @@ define([
 
     getTemplateContext: function() {
       return {
-        config     : config,
-        elected    : this.results.getElected()
+        config  : config,
+        elected : this.results.getElected()
       };
     },
 

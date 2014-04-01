@@ -44,9 +44,9 @@ Generator.prototype.buildOffices = function() {
 Generator.prototype.buildOfficesResults = function() {
   var offices = YAML.load(path.join(DATA_DIR, 'offices-results.yaml'));
   Object.keys(offices).forEach(function(office) {
-    var obj = {};
     var raw = offices[office];
     Object.keys(raw).forEach(function(round) {
+      var obj = {};
       var roundData = raw[round];
       obj.office     = _.find(this.data.offices, {number: parseInt(office, 10)});
       obj.round      = (round === 'r1') ? 1 : 2;
@@ -62,8 +62,8 @@ Generator.prototype.buildOfficesResults = function() {
         result.count      = parseInt(roundData.candidates[id].count, 10);
         obj.candidates.push(result);
       }, this);
+      this.data.officesResults.push(obj);
     }, this);
-    this.data.officesResults.push(obj);
   }, this);
 };
 

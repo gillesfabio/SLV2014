@@ -5,9 +5,7 @@ define(['backbone'], function(Backbone) {
   return Backbone.Model.extend({
 
     sortCandidatesByResult: function() {
-
       if (!this.collection) return;
-
       var round         = parseInt(this.get('round'), 10);
       var candidates    = this.get('candidates');
       var sort          = function(c) { return -c.percentage; };
