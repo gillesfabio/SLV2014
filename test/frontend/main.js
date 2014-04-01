@@ -72,10 +72,11 @@ requirejs.config({
     'App.Router'  : 'src/router',
 
     // Tests: collections
-    'App.collections.ResultTest'       : 'test/frontend/collections/ResultTest',
-    'App.collections.ProgramTest'      : 'test/frontend/collections/ProgramTest',
-    'App.collections.ListTest'         : 'test/frontend/collections/ListTest',
-    'App.collections.OfficeResultTest' : 'test/frontend/collections/OfficeResultTest',
+    'App.collections.ResultTest'        : 'test/frontend/collections/ResultTest',
+    'App.collections.ProgramTest'       : 'test/frontend/collections/ProgramTest',
+    'App.collections.ListTest'          : 'test/frontend/collections/ListTest',
+    'App.collections.OfficeResultTest'  : 'test/frontend/collections/OfficeResultTest',
+    'App.collections.CouncilMemberTest' : 'test/frontend/collections/CouncilMemberTest',
 
     // Tests: models
     'App.models.ResultTest': 'test/frontend/models/ResultTest',
@@ -180,6 +181,7 @@ requirejs([
     'App.collections.ProgramTest',
     'App.collections.ListTest',
     'App.collections.OfficeResultTest',
+    'App.collections.CouncilMemberTest',
 
     'App.models.ResultTest',
 

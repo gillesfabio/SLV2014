@@ -33,18 +33,28 @@ define([
         it('should return a proper context', function() {
           var view    = new View();
           var context = view.getTemplateContext();
-          expect(context).to.have.keys(['config', 'councilMembers']);
+          expect(context).to.have.keys([
+            'config',
+            'cmMembers',
+            'ccMembers'
+          ]);
         });
         it('should set the mandatory config.baseUrl variable in context', function() {
           var view    = new View();
           var context = view.getTemplateContext();
           expect(context.config).to.contain.keys('baseUrl');
         });
-        it('should set offices in context', function() {
+        it('should correctly set "cmMembers" in context', function() {
           var col     = new CouncilMemberCollection(councilMembersFixtures);
           var view    = new View({councilMembers: col});
           var context = view.getTemplateContext();
-          expect(context.councilMembers).to.deep.equal(col.toJSON());
+          expect(context.cmMembers).to.deep.equal(col.groupBySeats());
+        });
+        it('should correctly set "ccMembers" in context', function() {
+          var col     = new CouncilMemberCollection(councilMembersFixtures);
+          var view    = new View({councilMembers: col});
+          var context = view.getTemplateContext();
+          expect(context.ccMembers).to.deep.equal(col.cc().groupBySeats());
         });
       });
     });
