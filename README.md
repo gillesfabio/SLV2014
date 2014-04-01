@@ -1,14 +1,10 @@
 # SLV2014.fr
 
-Code source de l'application [SLV2014.fr](http://slv2014.fr).
+Code source du site [SLV2014.fr](http://slv2014.fr).
 
 SLV2014.fr permet d'accéder aux résultats, ainsi qu'aux profils
 et programmes des différents candidats aux élections municipales 2014
 de [Saint-Laurent-du-Var](https://goo.gl/maps/dk7RO) (Alpes-Maritimes, France).
-
-Les données sont formatées au format [YAML](http://www.yaml.org/) et accessibles
-dans le dossier `data`. Ces données ont été récupérées depuis les programmes
-officiels, sans aucune modification.
 
 L'application statique est propulsée par :
 
@@ -29,10 +25,6 @@ Les icônes proviennent du projet [Font Awesome](http://fontawesome.io/) et
 le serveur local est propulsé par [Express](http://expressjs.com).
 
 ### Installation
-
-*Vous devez disposer d'un environnement de développement [Node.js](http://nodejs.org),
-ainsi que du logiciel de gestion de versions décentralisé [Git](http://git-scm.com/)
-sur votre ordinateur pour pouvoir installer et utiliser cette application.*
 
 Cloner le dépôt et lancer la commande `make install` :
 
