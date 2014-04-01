@@ -6,24 +6,6 @@ SLV2014.fr permet d'accéder aux résultats, ainsi qu'aux profils
 et programmes des différents candidats aux élections municipales 2014
 de [Saint-Laurent-du-Var](https://goo.gl/maps/dk7RO) (Alpes-Maritimes, France).
 
-L'application statique est propulsée par :
-
-* [Backbone](http://backbonejs.org)
-* [Handlebars](http://handlebarsjs.com)
-* [Foundation](http://foundation.zurb.com)
-* [SASS](http://sass-lang.com/)
-* [markdown-js](https://github.com/evilstreak/markdown-js)
-
-La génération du site statique est propulsée par :
-
-* [Node](http://nodejs.org)
-* [gulp](http://gulpjs.com)
-* [Swig](http://paularmstrong.github.io/swig/)
-* [yaml.js](https://github.com/jeremyfa/yaml.js)
-
-Les icônes proviennent du projet [Font Awesome](http://fontawesome.io/) et
-le serveur local est propulsé par [Express](http://expressjs.com).
-
 ### Installation
 
 Cloner le dépôt et lancer la commande `make install` :
